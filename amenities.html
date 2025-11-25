@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="cat">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Places - Serveis</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF',
+                        secondary: '#10B981',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .language-selector {
+            transition: all 0.3s ease;
+        }
+        .language-selector:hover {
+            transform: scale(1.1);
+        }
+        .amenity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-xl font-bold text-primary">Smart Places</h1>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Inici</a>
+                    <a href="building.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">L'Edifici</a>
+                    <a href="spaces.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Espais</a>
+                    <a href="amenities.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Serveis</a>
+                    <a href="location.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Ubicació</a>
+                    <a href="contact.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contacte</a>
+                    <div class="flex space-x-2">
+                        <button class="language-selector text-xs px-2 py-1 rounded bg-primary text-white" data-lang="cat">CAT</button>
+                        <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300" data-lang="es">ES</button>
+                        <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300" data-lang="en">EN</button>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-primary to-secondary text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Serveis i Comoditats</h1>
+                <p class="text-xl max-w-3xl mx-auto">Tot el que necessites per fer créixer el teu negoci en un sol lloc</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Amenities -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Serveis Inclosos</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Tots els serveis essencials inclosos en el teu lloguer mensual</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="amenity-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="text-primary mb-4">
+                        <i data-feather="wifi" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Internet d'Alta Velocitat</h3>
+                    <p class="text-gray-600">Fibra òptica simètrica de 1Gb amb redundància i cobertura WiFi 6 completa.</p>
+                </div>
+                <div class="amenity-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="text-primary mb-4">
+                        <i data-feather="shield" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Seguretat 24/7</h3>
+                    <p class="text-gray-600">Sistema de videovigilància, control d'accés per targeta i servei de seguretat.</p>
+                </div>
+                <div class="amenity-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="text-primary mb-4">
+                        <i data-feather="thermometer" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Climatització</h3>
+                    <p class="text-gray-600">Sistema de climatització independent per zona amb control de temperatura.</p>
+                </div>
+                <div class="amenity-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="text-primary mb-4">
+                        <i data-feather="car" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Aparcament Privat</h3>
+                    <p class="text-gray-600">Places d'aparcament assignades amb accés controlat i videovigilància.</p>
+                </div>
+                <div class="amenity-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="text-primary mb-4">
+                        <i data-feather="phone" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Recepció Virtual</h3>
+                    <p class="text-gray-600">Servei de recepció de paquets i correspondència amb notificacions.</p>
+                </div>
+                <div class="amenity-card bg-white p-6 rounded-lg shadow-md transition duration-300">
+                    <div class="text-primary mb-4">
+                        <i data-feather="tool" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Manteniment</h3>
+                    <p class="text-gray-600">Servei de manteniment i neteja inclòs amb atenció personalitzada.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Meeting Rooms -->
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Sales de Reunions</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Espais equipats per a reunions, presentacions i esdeveniments</p>
+            </div>
+            <div class="grid lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="http://static.photos/office/800x600/14" alt="Sala de reunions petita" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Sala Petita</h3>
+                        <p class="text-gray-600 mb-4">Perfecta per a reunions íntimes i videoconferències.</p>
+                        <ul class="space-y-2 text-sm text-gray-600 mb-4">
+                            <li class="flex items-center"><i data-feather="users" class="w-4 h-4 text-primary mr-2"></i>4-6 persones</li>
+                            <li class="flex items-center"><i data-feather="monitor" class="w-4 h-4 text-primary mr-2"></i>Pantalla 55" 4K</li>
+                            <li class="flex items-center"><i data-feather="video" class="w-4 h-4 text-primary mr-2"></i>Sistema videoconferència</li>
+                            <li class="flex items-center"><i data-feather="coffee" class="w-4 h-4 text-primary mr-2"></i>Servei de cafè</li>
+                        </ul>
+                        <div class="text-primary font-bold">25€/hora</div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="http://static.photos/office/800x600/15" alt="Sala de reunions mitjana" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Sala Mitjana</h3>
+                        <p class="text-gray-600 mb-4">Ideal per a reunions d'equip i presentacions.</p>
+                        <ul class="space-y-2 text-sm text-gray-600 mb-4">
+                            <li class="flex items-center"><i data-feather="users" class="w-4 h-4 text-primary mr-2"></i>8-12 persones</li>
+                            <li class="flex items-center"><i data-feather="monitor" class="w-4 h-4 text-primary mr-2"></i>Pantalla 65" 4K</li>
+                            <li class="flex items-center"><i data-feather="video" class="w-4 h-4 text-primary mr-2"></i>Sistema audiovisual complet</li>
+                            <li class="flex items-center"><i data-feather="edit-3" class="w-4 h-4 text-primary mr-2"></i>Pissarra digital</li>
+                        </ul>
+                        <div class="text-primary font-bold">45€/hora</div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="http://static.photos/office/800x600/16" alt="Sala de conferències" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Sala de Conferències</h3>
+                        <p class="text-gray-600 mb-4">Espai premium per a esdeveniments i grans reunions.</p>
+                        <ul class="space-y-2 text-sm text-gray-600 mb-4">
+                            <li class="flex items-center"><i data-feather="users" class="w-4 h-4 text-primary mr-2"></i>20-30 persones</li>
+                            <li class="flex items-center"><i data-feather="monitor" class="w-4 h-4 text-primary mr-2"></i>Pantalla 75" 4K</li>
+                            <li class="flex items-center"><i data-feather="mic" class="w-4 h-4 text-primary mr-2"></i>Sistema de so professional</li>
+                            <li class="flex items-center"><i data-feather="camera" class="w-4 h-4 text-primary mr-2"></i>Càmeres 360°</li>
+                        </ul>
+                        <div class="text-primary font-bold">80€/hora</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Additional Services -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Serveis Addicionals</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Serveis opcionals per millorar la teva experiència de treball</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="printer" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Impressió i Escaneig</h3>
+                    <p class="text-gray-600 text-sm mb-3">Impressores multifunció d'alta qualitat disponibles 24/7</p>
+                    <div class="text-primary font-medium">0,10€/pàgina</div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="coffee" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Servei de Cafè</h3>
+                    <p class="text-gray-600 text-sm mb-3">Màquina de cafè professional amb varietat de begudes</p>
+                    <div class="text-primary font-medium">Inclòs</div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="truck" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Servei de Missatgeria</h3>
+                    <p class="text-gray-600 text-sm mb-3">Recollida i lliurament de paquets i documentació</p>
+                    <div class="text-primary font-medium">15€/servei</div>
+                </div>
+                <div class="text-center">
+                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="headphones" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Suport Tècnic</h3>
+                    <p class="text-gray-600 text-sm mb-3">Assistència tècnica per a equipament i sistemes</p>
+                    <div class="text-primary font-medium">50€/hora</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Common Areas -->
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Zones Comunes</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Espais compartits per al descans, networking i col·laboració</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="http://static.photos/office/800x600/17" alt="Àrea de descans" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Àrea de Descans</h3>
+                        <p class="text-gray-600 mb-4">Espai còmode per relaxar-se i fer networking informal.</p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Sofàs i seients còmodes</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Zona de cafè i snacks</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Revistes i premsa diària</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>WiFi d'alta velocitat</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="http://static.photos/office/800x600/18" alt="Terrassa exterior" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Terrassa Exterior</h3>
+                        <p class="text-gray-600 mb-4">Espai a l'aire lliure per a reunions informals i descans.</p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Mobiliari exterior</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Zona enjardinada</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Vistes panoràmiques</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Accés controlat</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Services -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Serveis Empresarials</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Suport professional per al creixement del teu negoci</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-primary mb-4">
+                        <i data-feather="briefcase" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Domiciliació Fiscal</h3>
+                    <p class="text-gray-600 mb-4">Utilitza la nostra adreça per a la teva activitat empresarial.</p>
+                    <div class="text-primary font-bold">50€/mes</div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-primary mb-4">
+                        <i data-feather="users" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Networking Events</h3>
+                    <p class="text-gray-600 mb-4">Esdeveniments mensuals per connectar amb altres empreses.</p>
+                    <div class="text-primary font-bold">Inclòs</div>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-primary mb-4">
+                        <i data-feather="book-open" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Consultoria</h3>
+                    <p class="text-gray-600 mb-4">Assessorament empresarial i legal amb professionals.</p>
+                    <div class="text-primary font-bold">Sota consulta</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Descobreix Tots els Nostres Serveis</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Programa una visita per veure de primera mà totes les comoditats i serveis que oferim.</p>
+            <a href="contact.html" class="bg-white text-primary px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition">Programa una Visita</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Smart Places</h3>
+                    <p class="text-gray-400">Espais d'oficina premium a Terrassa dissenyats per a empreses modernes.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Enllaços Ràpids</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Inici</a></li>
+                        <li><a href="building.html" class="text-gray-400 hover:text-white">L'Edifici</a></li>
+                        <li><a href="spaces.html" class="text-gray-400 hover:text-white">Espais Disponibles</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contacta'ns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacte</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="mr-2 w-4 h-4 mt-1"></i>
+                            <span>Carretera de Rubí, 292 Terrassa</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="phone" class="mr-2 w-4 h-4 mt-1"></i>
+                            <span>+34 123 456 789</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="mail" class="mr-2 w-4 h-4 mt-1"></i>
+                            <span>admin@canmirgestions.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white">Política de Privacitat</a></li>
+                        <li><a href="cookie-policy.html" class="text-gray-400 hover:text-white">Política de Cookies</a></li>
+                        <li><a href="legal-notice.html" class="text-gray-400 hover:text-white">Avís Legal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© <span id="current-year">2025</span> Smart Places. Tots els drets reservats.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>feather.replace();</script>
+    <script>
+        // Update footer year automatically
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>

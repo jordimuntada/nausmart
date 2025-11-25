@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="cat">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Places - L'Edifici</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF',
+                        secondary: '#10B981',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .language-selector {
+            transition: all 0.3s ease;
+        }
+        .language-selector:hover {
+            transform: scale(1.1);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-xl font-bold text-primary">Smart Places</h1>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Inici</a>
+                    <a href="building.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">L'Edifici</a>
+                    <a href="spaces.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Espais</a>
+                    <a href="amenities.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Serveis</a>
+                    <a href="location.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Ubicació</a>
+                    <a href="contact.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contacte</a>
+                    <div class="flex space-x-2">
+                        <button class="language-selector text-xs px-2 py-1 rounded bg-primary text-white" data-lang="cat">CAT</button>
+                        <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300" data-lang="es">ES</button>
+                        <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300" data-lang="en">EN</button>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-primary to-secondary text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">El Nostre Edifici</h1>
+                <p class="text-xl max-w-3xl mx-auto">Un espai d'oficina modern dissenyat per a la productivitat i la col·laboració amb les millors instal·lacions de Terrassa</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Building Overview -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Arquitectura Moderna i Funcional</h2>
+                    <p class="text-gray-600 mb-6">Smart Places ofereix un total de 2.500 m² distribuïts en 3 plantes, recentment renovat el 2023 per proporcionar l'entorn professional perfecte per al teu negoci.</p>
+                    <div class="grid grid-cols-2 gap-4 mb-6">
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h3 class="font-bold text-primary text-2xl">2.500 m²</h3>
+                            <p class="text-gray-600">Superfície total</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h3 class="font-bold text-primary text-2xl">3</h3>
+                            <p class="text-gray-600">Plantes d'oficina</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h3 class="font-bold text-primary text-2xl">2023</h3>
+                            <p class="text-gray-600">Any de renovació</p>
+                        </div>
+                        <div class="bg-gray-50 p-4 rounded-lg">
+                            <h3 class="font-bold text-primary text-2xl">50+</h3>
+                            <p class="text-gray-600">Places d'aparcament</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <img src="http://static.photos/office/1200x800/1" alt="Exterior de l'edifici Smart Places" class="rounded-lg shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Building Features -->
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Característiques de l'Edifici</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Cada detall ha estat pensat per oferir el millor entorn de treball</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-primary mb-4">
+                        <i data-feather="shield" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Seguretat Avançada</h3>
+                    <p class="text-gray-600">Sistema de seguretat 24/7 amb control d'accés per targeta i videovigilància.</p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-primary mb-4">
+                        <i data-feather="thermometer" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Climatització</h3>
+                    <p class="text-gray-600">Sistema de climatització independent per zona amb control de temperatura.</p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-primary mb-4">
+                        <i data-feather="zap" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Eficiència Energètica</h3>
+                    <p class="text-gray-600">Il·luminació LED i sistemes d'estalvi energètic per reduir costos.</p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-primary mb-4">
+                        <i data-feather="wifi" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Connectivitat</h3>
+                    <p class="text-gray-600">Fibra òptica d'alta velocitat i cobertura WiFi completa.</p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-primary mb-4">
+                        <i data-feather="users" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Zones Comunes</h3>
+                    <p class="text-gray-600">Àrees de descans, sales de reunions i espais de networking.</p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-primary mb-4">
+                        <i data-feather="car" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Aparcament</h3>
+                    <p class="text-gray-600">Ampli aparcament privat amb places reservades per a cada oficina.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floor Plans -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Distribució per Plantes</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Cada planta està dissenyada per maximitzar l'eficiència i el confort</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="http://static.photos/office/800x600/4" alt="Planta baixa" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Planta Baixa</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Recepció i lobby</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Sala de reunions gran</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Àrea de descans</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Oficines de 50-100 m²</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="http://static.photos/office/800x600/5" alt="Primera planta" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Primera Planta</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Oficines de 75-150 m²</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Sales de reunions petites</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Zona de networking</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Terrassa exterior</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="http://static.photos/office/800x600/6" alt="Segona planta" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Segona Planta</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Oficines de 100-200 m²</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Sala de conferències</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Espai coworking</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Vistes panoràmiques</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Vols veure l'edifici en persona?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Programa una visita per descobrir tots els detalls i trobar l'espai perfecte per al teu negoci.</p>
+            <a href="contact.html" class="bg-white text-primary px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition">Programa una Visita</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Smart Places</h3>
+                    <p class="text-gray-400">Espais d'oficina premium a Terrassa dissenyats per a empreses modernes.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Enllaços Ràpids</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Inici</a></li>
+                        <li><a href="building.html" class="text-gray-400 hover:text-white">L'Edifici</a></li>
+                        <li><a href="spaces.html" class="text-gray-400 hover:text-white">Espais Disponibles</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contacta'ns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacte</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="mr-2 w-4 h-4 mt-1"></i>
+                            <span>Carretera de Rubí, 292 Terrassa</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="phone" class="mr-2 w-4 h-4 mt-1"></i>
+                            <span>+34 123 456 789</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="mail" class="mr-2 w-4 h-4 mt-1"></i>
+                            <span>admin@canmirgestions.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white">Política de Privacitat</a></li>
+                        <li><a href="cookie-policy.html" class="text-gray-400 hover:text-white">Política de Cookies</a></li>
+                        <li><a href="legal-notice.html" class="text-gray-400 hover:text-white">Avís Legal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© <span id="current-year">2025</span> Smart Places. Tots els drets reservats.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>feather.replace();</script>
+    <script>
+        // Update footer year automatically
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>

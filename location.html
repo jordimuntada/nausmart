@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="cat">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Places - Ubicació</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF',
+                        secondary: '#10B981',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .language-selector {
+            transition: all 0.3s ease;
+        }
+        .language-selector:hover {
+            transform: scale(1.1);
+        }
+        .location-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-xl font-bold text-primary">Smart Places</h1>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Inici</a>
+                    <a href="building.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">L'Edifici</a>
+                    <a href="spaces.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Espais</a>
+                    <a href="amenities.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Serveis</a>
+                    <a href="location.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Ubicació</a>
+                    <a href="contact.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contacte</a>
+                    <div class="flex space-x-2">
+                        <button class="language-selector text-xs px-2 py-1 rounded bg-primary text-white" data-lang="cat">CAT</button>
+                        <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300" data-lang="es">ES</button>
+                        <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300" data-lang="en">EN</button>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-primary to-secondary text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Ubicació Estratègica</h1>
+                <p class="text-xl max-w-3xl mx-auto">Al cor de Terrassa, amb excel·lents connexions de transport i tots els serveis a l'abast</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Al Centre de Tot</h2>
+                    <p class="text-gray-600 mb-6">Smart Places està ubicat en una zona privilegiada de Terrassa, oferint fàcil accés a Barcelona i excel·lents connexions de transport públic i privat.</p>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 rounded-full p-2 mr-4">
+                                <i data-feather="map-pin" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900">Adreça</h3>
+                                <p class="text-gray-600">Carretera de Rubí, 292, 08221 Terrassa, Barcelona</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 rounded-full p-2 mr-4">
+                                <i data-feather="clock" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900">Temps a Barcelona</h3>
+                                <p class="text-gray-600">30 minuts en cotxe, 45 minuts en transport públic</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <div class="bg-primary bg-opacity-10 rounded-full p-2 mr-4">
+                                <i data-feather="navigation" class="w-5 h-5 text-primary"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-gray-900">Accessibilitat</h3>
+                                <p class="text-gray-600">Accés directe a l'AP-7 i C-58, estació FGC a 5 minuts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-gray-200 rounded-lg h-96 flex items-center justify-center">
+                    <!-- Placeholder for map - in a real implementation, you would integrate Google Maps or similar -->
+                    <div class="text-center">
+                        <i data-feather="map" class="w-16 h-16 text-gray-400 mx-auto mb-4"></i>
+                        <p class="text-gray-500">Mapa interactiu</p>
+                        <p class="text-sm text-gray-400">Carretera de Rubí, 292 Terrassa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Transportation -->
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Connexions de Transport</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Múltiples opcions de transport per arribar còmodament a Smart Places</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="location-card bg-white p-6 rounded-lg shadow-md transition duration-300 text-center">
+                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="car" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">En Cotxe</h3>
+                    <p class="text-gray-600 text-sm mb-3">Accés directe des de l'AP-7 i C-58</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Barcelona: 30 min</li>
+                        <li>• Sabadell: 15 min</li>
+                        <li>• Manresa: 25 min</li>
+                    </ul>
+                </div>
+                <div class="location-card bg-white p-6 rounded-lg shadow-md transition duration-300 text-center">
+                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="zap" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">FGC</h3>
+                    <p class="text-gray-600 text-sm mb-3">Estació Terrassa Rambla a 5 minuts</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Pl. Catalunya: 45 min</li>
+                        <li>• Sabadell: 20 min</li>
+                        <li>• Manresa: 30 min</li>
+                    </ul>
+                </div>
+                <div class="location-card bg-white p-6 rounded-lg shadow-md transition duration-300 text-center">
+                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="truck" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Autobús</h3>
+                    <p class="text-gray-600 text-sm mb-3">Múltiples línies urbanes i interurbanes</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Línies 1, 4, 7</li>
+                        <li>• Parada a 2 minuts</li>
+                        <li>• Connexió Barcelona</li>
+                    </ul>
+                </div>
+                <div class="location-card bg-white p-6 rounded-lg shadow-md transition duration-300 text-center">
+                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="navigation-2" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Aeroport</h3>
+                    <p class="text-gray-600 text-sm mb-3">Connexió directa amb l'Aeroport del Prat</p>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• 45 min en cotxe</li>
+                        <li>• 1h 15min transport públic</li>
+                        <li>• Servei taxi disponible</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Nearby Services -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Serveis a Prop</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Tot el que necessites per al dia a dia a pocs minuts de distància</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="http://static.photos/city/800x600/1" alt="Restaurants i cafès" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Restaurants i Cafès</h3>
+                        <p class="text-gray-600 mb-4">Àmplia varietat gastronòmica per a esmorzars, dinars i reunions de negoci.</p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>Restaurant La Terrassa (2 min)</li>
+                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>Cafè Central (1 min)</li>
+                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>Pizzeria Milano (3 min)</li>
+                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>Sushi Terrassa (5 min)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="http://static.photos/city/800x600/2" alt="Bancs i serveis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Bancs i Serveis</h3>
+                        <p class="text-gray-600 mb-4">Serveis bancaris, farmàcies i altres serveis essencials molt a prop.</p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>CaixaBank (1 min)</li>
+                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>Farmàcia Central (2 min)</li>
+                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>Correus (3 min)</li>
+                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>Gestoria Terrassa (1 min)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <img src="http://static.photos/city/800x600/3" alt="Comerços i serveis" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Comerços i Serveis</h3>
+                        <p class="text-gray-600 mb-4">Botigues, supermercats i serveis diversos per a totes les necessitats.</p>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>Mercadona (5 min)</li>
+                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>Centre Comercial (10 min)</li>
+                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>Papereria (2 min)</li>
+                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>Tintoreria (3 min)</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Parking Information -->
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Aparcament i Accessibilitat</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Facilitats d'aparcament i accés adaptat per a tothom</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-primary bg-opacity-10 rounded-full p-3 mr-4">
+                            <i data-feather="car" class="w-8 h-8 text-primary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Aparcament Privat</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>50+ places d'aparcament</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>Places assignades per oficina</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>Accés controlat 24/7</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>Videovigilància</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>Places per a visitants</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>Punts de càrrega elèctrica</li>
+                    </ul>
+                </div>
+                <div class="bg-white p-8 rounded-lg shadow-md">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-primary bg-opacity-10 rounded-full p-3 mr-4">
+                            <i data-feather="heart" class="w-8 h-8 text-primary"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-gray-900">Accessibilitat</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>Accés adaptat per a cadires de rodes</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>Ascensor a totes les plantes</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>Banys adaptats</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>Places d'aparcament reservades</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>Senyalització en braille</li>
+                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>Rampes d'accés</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Directions -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Com Arribar</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Instruccions detallades per arribar a Smart Places</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-primary bg-opacity-5 p-8 rounded-lg">
+                    <h3 class="text-xl font-bold text-primary mb-4">Des de Barcelona</h3>
+                    <ol class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5">1</span>
+                            <span>Agafa l'AP-7 direcció Lleida/Tarragona</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5">2</span>
+                            <span>Sortida 25 - Terrassa Oest</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5">3</span>
+                            <span>Segueix indicacions cap al centre de Terrassa</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5">4</span>
+                            <span>Gira a la dreta a Business Street</span>
+                        </li>
+                    </ol>
+                </div>
+                <div class="bg-secondary bg-opacity-5 p-8 rounded-lg">
+                    <h3 class="text-xl font-bold text-secondary mb-4">Transport Públic</h3>
+                    <ol class="space-y-3 text-gray-700">
+                        <li class="flex items-start">
+                            <span class="bg-secondary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5">1</span>
+                            <span>FGC des de Pl. Catalunya fins Terrassa Rambla</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-secondary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5">2</span>
+                            <span>Camina 5 minuts fins a Business Street</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-secondary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5">3</span>
+                            <span>O agafa l'autobús línia 4 (2 parades)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="bg-secondary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5">4</span>
+                            <span>Smart Places al número 123</span>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Vine a Descobrir la Ubicació</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Programa una visita per veure de primera mà les avantatges de la nostra ubicació estratègica.</p>
+            <a href="contact.html" class="bg-white text-primary px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition">Programa una Visita</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Smart Places</h3>
+                    <p class="text-gray-400">Espais d'oficina premium a Terrassa dissenyats per a empreses modernes.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Enllaços Ràpids</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Inici</a></li>
+                        <li><a href="building.html" class="text-gray-400 hover:text-white">L'Edifici</a></li>
+                        <li><a href="spaces.html" class="text-gray-400 hover:text-white">Espais Disponibles</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contacta'ns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacte</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="mr-2 w-4 h-4 mt-1"></i>
+                            <span>Carretera de Rubí, 292 Terrassa</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="phone" class="mr-2 w-4 h-4 mt-1"></i>
+                            <span>+34 123 456 789</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="mail" class="mr-2 w-4 h-4 mt-1"></i>
+                            <span>admin@canmirgestions.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white">Política de Privacitat</a></li>
+                        <li><a href="cookie-policy.html" class="text-gray-400 hover:text-white">Política de Cookies</a></li>
+                        <li><a href="legal-notice.html" class="text-gray-400 hover:text-white">Avís Legal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© <span id="current-year">2025</span> Smart Places. Tots els drets reservats.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>feather.replace();</script>
+    <script>
+        // Update footer year automatically
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>

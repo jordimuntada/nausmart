@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="cat">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Places - Contacte</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <!-- Cal.com embed script -->
+    <script type="text/javascript">
+        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.q = cal.q || []; p(cal, ar); return; } }; C.Cal.ns = {}; C.Cal.q = C.Cal.q || []; d.head.appendChild(d.createElement("script")).src = A; })(window, "https://app.cal.com/embed/embed.js");
+    </script>
+    <!-- Typeform embed script -->
+    <script src="//embed.typeform.com/next/embed.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF',
+                        secondary: '#10B981',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .language-selector {
+            transition: all 0.3s ease;
+        }
+        .language-selector:hover {
+            transform: scale(1.1);
+        }
+        .contact-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-xl font-bold text-primary">Smart Places</h1>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Inici</a>
+                    <a href="building.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">L'Edifici</a>
+                    <a href="spaces.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Espais</a>
+                    <a href="amenities.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Serveis</a>
+                    <a href="location.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Ubicació</a>
+                    <a href="contact.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contacte</a>
+                    <div class="flex space-x-2">
+                        <button class="language-selector text-xs px-2 py-1 rounded bg-primary text-white" data-lang="cat">CAT</button>
+                        <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300" data-lang="es">ES</button>
+                        <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300" data-lang="en">EN</button>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-primary to-secondary text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Contacta amb Nosaltres</h1>
+                <p class="text-xl max-w-3xl mx-auto">Estem aquí per ajudar-te a trobar l'espai perfecte per al teu negoci</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Methods -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Com Pots Contactar-nos</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Múltiples formes de posar-te en contacte amb el nostre equip</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="contact-card bg-white p-8 rounded-lg shadow-md transition duration-300 text-center">
+                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                        <i data-feather="phone" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Telèfon</h3>
+                    <p class="text-gray-600 mb-4">Parla directament amb el nostre equip comercial</p>
+                    <a href="tel:+34123456789" class="text-primary font-bold text-lg hover:underline">+34 123 456 789</a>
+                    <p class="text-sm text-gray-500 mt-2">Dilluns a Divendres: 9:00 - 18:00</p>
+                </div>
+                <div class="contact-card bg-white p-8 rounded-lg shadow-md transition duration-300 text-center">
+                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                        <i data-feather="mail" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Email</h3>
+                    <p class="text-gray-600 mb-4">Envia'ns un correu i et respondrem aviat</p>
+                    <a href="mailto:admin@canmirgestions.com" class="text-primary font-bold text-lg hover:underline">admin@canmirgestions.com</a>
+                    <p class="text-sm text-gray-500 mt-2">Resposta en menys de 24h</p>
+                </div>
+                <div class="contact-card bg-white p-8 rounded-lg shadow-md transition duration-300 text-center">
+                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                        <i data-feather="calendar" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Programa una Visita</h3>
+                    <p class="text-gray-600 mb-4">Reserva una cita per veure les instal·lacions</p>
+                    <button id="schedule-visit-btn" class="bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-opacity-90 transition">Reservar Cita</button>
+                    <p class="text-sm text-gray-500 mt-2">Disponible tots els dies laborables</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Envia'ns un Missatge</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Omple el formulari i ens posarem en contacte amb tu el més aviat possible</p>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg p-8">
+                <form class="grid md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nom complet *</label>
+                        <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-primary focus:border-primary">
+                    </div>
+                    <div>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                        <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-primary focus:border-primary">
+                    </div>
+                    <div>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Telèfon</label>
+                        <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-primary focus:border-primary">
+                    </div>
+                    <div>
+                        <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Empresa</label>
+                        <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-primary focus:border-primary">
+                    </div>
+                    <div>
+                        <label for="space-type" class="block text-sm font-medium text-gray-700 mb-2">Tipus d'espai</label>
+                        <select id="space-type" name="space-type" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-primary focus:border-primary">
+                            <option value="">Selecciona una opció</option>
+                            <option value="small">Oficina petita (25-50 m²)</option>
+                            <option value="medium">Oficina mitjana (75-125 m²)</option>
+                            <option value="large">Oficina gran (150-300 m²)</option>
+                            <option value="coworking">Espai coworking</option>
+                            <option value="meeting-room">Sala de reunions</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="budget" class="block text-sm font-medium text-gray-700 mb-2">Pressupost mensual</label>
+                        <select id="budget" name="budget" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-primary focus:border-primary">
+                            <option value="">Selecciona un rang</option>
+                            <option value="500-1000">500€ - 1.000€</option>
+                            <option value="1000-2000">1.000€ - 2.000€</option>
+                            <option value="2000-3000">2.000€ - 3.000€</option>
+                            <option value="3000+">Més de 3.000€</option>
+                        </select>
+                    </div>
+                    <div class="md:col-span-2">
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Missatge *</label>
+                        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-primary focus:border-primary" placeholder="Explica'ns les teves necessitats i com et podem ajudar..."></textarea>
+                    </div>
+                    <div class="md:col-span-2">
+                        <div class="flex items-start">
+                            <input type="checkbox" id="privacy" name="privacy" required class="mt-1 mr-3">
+                            <label for="privacy" class="text-sm text-gray-600">
+                                Accepto la <a href="#" class="text-primary hover:underline">política de privacitat</a> i el tractament de les meves dades personals *
+                            </label>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2">
+                        <div class="flex items-start">
+                            <input type="checkbox" id="newsletter" name="newsletter" class="mt-1 mr-3">
+                            <label for="newsletter" class="text-sm text-gray-600">
+                                Vull rebre informació sobre ofertes i novetats de Smart Places
+                            </label>
+                        </div>
+                    </div>
+                    <div class="md:col-span-2">
+                        <button type="submit" class="w-full bg-primary text-white px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition">
+                            Enviar Missatge
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Office Hours & Location -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Horaris d'Atenció</h2>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center py-3 border-b border-gray-200">
+                            <span class="font-medium text-gray-900">Dilluns - Divendres</span>
+                            <span class="text-gray-600">9:00 - 18:00</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-200">
+                            <span class="font-medium text-gray-900">Dissabte</span>
+                            <span class="text-gray-600">10:00 - 14:00</span>
+                        </div>
+                        <div class="flex justify-between items-center py-3 border-b border-gray-200">
+                            <span class="font-medium text-gray-900">Diumenge</span>
+                            <span class="text-gray-600">Tancat</span>
+                        </div>
+                    </div>
+                    <div class="mt-8 p-6 bg-primary bg-opacity-5 rounded-lg">
+                        <h3 class="font-bold text-primary mb-2">Visites fora d'horari</h3>
+                        <p class="text-gray-600 text-sm">Podem organitzar visites fora de l'horari habitual prèvia cita. Contacta'ns per coordinar una visita que s'adapti al teu horari.</p>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Com Arribar</h2>
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-start">
+                            <i data-feather="map-pin" class="w-5 h-5 text-primary mr-3 mt-1"></i>
+                            <div>
+                                <h3 class="font-medium text-gray-900">Adreça</h3>
+                                <p class="text-gray-600">Carretera de Rubí, 292<br>08221 Terrassa, Barcelona</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-feather="car" class="w-5 h-5 text-primary mr-3 mt-1"></i>
+                            <div>
+                                <h3 class="font-medium text-gray-900">Aparcament</h3>
+                                <p class="text-gray-600">Aparcament privat gratuït per a visitants</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i data-feather="zap" class="w-5 h-5 text-primary mr-3 mt-1"></i>
+                            <div>
+                                <h3 class="font-medium text-gray-900">Transport públic</h3>
+                                <p class="text-gray-600">FGC Terrassa Rambla (5 min a peu)<br>Autobús línies 1, 4, 7</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="location.html" class="inline-flex items-center text-primary font-medium hover:underline">
+                        <span>Veure mapa i indicacions detallades</span>
+                        <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Preguntes Freqüents</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Respostes a les preguntes més habituals sobre Smart Places</p>
+            </div>
+            <div class="space-y-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Quin és el contracte mínim de lloguer?</h3>
+                    <p class="text-gray-600">Oferim contractes flexibles a partir de 6 mesos, amb possibilitat de renovació mensual després del període inicial.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Què inclou el preu del lloguer?</h3>
+                    <p class="text-gray-600">El preu inclou internet d'alta velocitat, climatització, seguretat 24/7, neteja, manteniment i accés a les zones comunes.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Puc visitar les instal·lacions abans de decidir?</h3>
+                    <p class="text-gray-600">Per descomptat! Oferim visites guiades gratuïtes de dilluns a divendres. Pots programar una cita trucant-nos o omplint el formulari.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Hi ha places d'aparcament disponibles?</h3>
+                    <p class="text-gray-600">Sí, cada oficina té places d'aparcament assignades incloses en el preu. També disposem de places addicionals si les necessites.</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Puc personalitzar l'espai segons les meves necessitats?</h3>
+                    <p class="text-gray-600">Absolutament. Treballem amb tu per adaptar l'espai a les necessitats específiques del teu negoci, incloent distribució i decoració.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Preparat per Començar?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">No esperis més per trobar l'oficina perfecta per al teu negoci. Contacta'ns avui mateix!</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                <button id="book-visit-btn" class="bg-white text-primary px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition">Programa una Visita</button>
+                <a href="tel:+34123456789" class="border-2 border-white text-white px-8 py-4 rounded-md font-bold hover:bg-white hover:bg-opacity-10 transition">Truca Ara</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Smart Places</h3>
+                    <p class="text-gray-400">Espais d'oficina premium a Terrassa dissenyats per a empreses modernes.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Enllaços Ràpids</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Inici</a></li>
+                        <li><a href="building.html" class="text-gray-400 hover:text-white">L'Edifici</a></li>
+                        <li><a href="spaces.html" class="text-gray-400 hover:text-white">Espais Disponibles</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contacta'ns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacte</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="mr-2 w-4 h-4 mt-1"></i>
+                            <span>Carretera de Rubí, 292, Terrassa</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="phone" class="mr-2 w-4 h-4 mt-1"></i>
+                            <span>+34 123 456 789</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="mail" class="mr-2 w-4 h-4 mt-1"></i>
+                            <span>admin@canmirgestions.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white">Política de Privacitat</a></li>
+                        <li><a href="cookie-policy.html" class="text-gray-400 hover:text-white">Política de Cookies</a></li>
+                        <li><a href="legal-notice.html" class="text-gray-400 hover:text-white">Avís Legal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© <span id="current-year">2025</span> Smart Places. Tots els drets reservats.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>feather.replace();</script>
+    <script>
+        // Typeform configuration
+        const TYPEFORM_CONFIG = {
+            formId: 'YOUR_TYPEFORM_ID', // Replace with your actual Typeform ID
+            calLink: 'smartplaces/visit' // Your Cal.com booking link
+        };
+
+        // Initialize Typeform and Cal.com integration
+        function initializeBookingFlow() {
+            // Initialize Cal.com when available
+            if (typeof Cal !== 'undefined') {
+                Cal("init", {origin:"https://app.cal.com"});
+            } else {
+                // Retry after a short delay if Cal.com hasn't loaded yet
+                setTimeout(initializeBookingFlow, 100);
+                return;
+            }
+
+            // Set up scheduling buttons with Typeform pre-step
+            const scheduleBtn = document.getElementById('schedule-visit-btn');
+            const bookBtn = document.getElementById('book-visit-btn');
+            
+            if (scheduleBtn) {
+                scheduleBtn.addEventListener('click', function() {
+                    openTypeformModal();
+                });
+            }
+            
+            if (bookBtn) {
+                bookBtn.addEventListener('click', function() {
+                    openTypeformModal();
+                });
+            }
+        }
+
+        // Open Typeform modal
+        function openTypeformModal() {
+            // Create Typeform embed
+            const { createWidget } = window.tf;
+            
+            createWidget(TYPEFORM_CONFIG.formId, {
+                container: document.body,
+                width: '100%',
+                height: '100%',
+                opacity: 100,
+                hideHeaders: true,
+                hideFooter: true,
+                onSubmit: function(data) {
+                    // Close Typeform and open Cal.com
+                    setTimeout(() => {
+                        openCalcomBooking(data);
+                    }, 1000);
+                },
+                onClose: function() {
+                    // Handle form close without submission
+                    console.log('Typeform closed without submission');
+                }
+            });
+        }
+
+        // Open Cal.com booking with pre-filled data from Typeform
+        function openCalcomBooking(typeformData) {
+            // Extract relevant data from Typeform submission
+            const prefillData = extractTypeformData(typeformData);
+            
+            // Open Cal.com with prefilled data
+            Cal("ui", {
+                "styles": {
+                    "branding": {
+                        "brandColor": "#1E40AF"
+                    }
+                },
+                "hideEventTypeDetails": false,
+                "layout": "month_view",
+                "prefill": prefillData
+            });
+        }
+
+        // Extract and format data from Typeform for Cal.com prefill
+        function extractTypeformData(data) {
+            const prefillData = {};
+            
+            if (data && data.answers) {
+                data.answers.forEach(answer => {
+                    switch(answer.field.ref) {
+                        case 'name':
+                        case 'full_name':
+                            prefillData.name = answer.text || answer.choice?.label;
+                            break;
+                        case 'email':
+                            prefillData.email = answer.email;
+                            break;
+                        case 'phone':
+                        case 'phone_number':
+                            prefillData.phone = answer.phone_number;
+                            break;
+                        case 'company':
+                        case 'company_name':
+                            prefillData.metadata = {
+                                ...prefillData.metadata,
+                                company: answer.text || answer.choice?.label
+                            };
+                            break;
+                    }
+                });
+            }
+            
+            return prefillData;
+        }
+
+        // Update footer year automatically
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+
+            // Initialize booking flow (Typeform + Cal.com)
+            initializeBookingFlow();
+        });
+    </script>
+</body>
+</html>

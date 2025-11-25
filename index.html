@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="cat">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Places - Premium Office Spaces in Terrassa</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <!-- Cal.com embed script -->
+    <script type="text/javascript">
+        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.q = cal.q || []; p(cal, ar); return; } }; C.Cal.ns = {}; C.Cal.q = C.Cal.q || []; d.head.appendChild(d.createElement("script")).src = A; })(window, "https://app.cal.com/embed/embed.js");
+    </script>
+    <!-- Typeform embed script -->
+    <script src="//embed.typeform.com/next/embed.js"></script>
+    <!-- Environment configuration -->
+    <script>
+        // Set environment variables for client-side use
+        // In production, this should be replaced with actual environment variable injection
+        window.WHATSAPP_PHONE = '+34123456789'; // Default - replace with actual number
+        
+        // Configuration for Smart Places
+        const CONFIG = {
+            // WhatsApp configuration
+            WHATSAPP_PHONE: window.WHATSAPP_PHONE || '+34123456789', // Default fallback number
+            
+            // WhatsApp message templates by language
+            WHATSAPP_MESSAGES: {
+                cat: 'Hola! M\'agradaria programar una visita a Smart Places per veure els espais d\'oficina disponibles.',
+                es: 'Hola! Me gustaría programar una visita a Smart Places para ver los espacios de oficina disponibles.',
+                en: 'Hello! I would like to schedule a visit to Smart Places to see the available office spaces.'
+            }
+        };
+
+        // Function to generate WhatsApp URL
+        function generateWhatsAppURL(language = 'cat') {
+            const phone = CONFIG.WHATSAPP_PHONE.replace(/[^\d]/g, ''); // Remove non-digits
+            const message = encodeURIComponent(CONFIG.WHATSAPP_MESSAGES[language] || CONFIG.WHATSAPP_MESSAGES.cat);
+            return `https://wa.me/${phone}?text=${message}`;
+        }
+    </script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF',
+                        secondary: '#10B981',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(30,64,175,0.9) 0%, rgba(16,185,129,0.7) 100%);
+        }
+        .language-selector {
+            transition: all 0.3s ease;
+        }
+        .language-selector:hover {
+            transform: scale(1.1);
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-xl font-bold text-primary">Smart Places</h1>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                    <a href="building.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">The Building</a>
+                    <a href="spaces.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Spaces</a>
+                    <a href="amenities.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Amenities</a>
+                    <a href="location.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Location</a>
+                    <a href="contact.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    <div class="flex space-x-2">
+                        <button class="language-selector text-xs px-2 py-1 rounded bg-primary text-white">CAT</button>
+                        <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300">ES</button>
+                        <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300">EN</button>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight mb-4">Premium Office Spaces in Terrassa</h1>
+                    <p class="text-xl mb-8">Modern, flexible workspaces designed for growing businesses with state-of-the-art facilities and strategic location.</p>
+                    <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+                        <a href="https://wa.me/34123456789?text=Hola!%20M%27agradaria%20programar%20una%20visita%20a%20Smart%20Places%20per%20veure%20els%20espais%20d%27oficina%20disponibles." target="_blank" id="schedule-visit-btn" class="bg-white text-primary px-6 py-3 rounded-md font-medium hover:bg-opacity-90 transition text-center">Programar Visita</a>
+                        <button class="border-2 border-white text-white px-6 py-3 rounded-md font-medium hover:bg-white hover:bg-opacity-10 transition">Explorar Espais</button>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <img src="http://static.photos/office/1200x630/1" alt="Smart Places Building" class="rounded-lg shadow-2xl">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Features -->
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Smart Places</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Designed to help your business thrive with premium facilities and location advantages</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-primary mb-4">
+                        <i data-feather="map-pin" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Prime Location</h3>
+                    <p class="text-gray-600">Just 30 minutes from Barcelona with excellent transport links and highway access.</p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-primary mb-4">
+                        <i data-feather="wifi" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Modern Infrastructure</h3>
+                    <p class="text-gray-600">High-speed fiber internet, advanced security systems, and climate control throughout.</p>
+                </div>
+                <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
+                    <div class="text-primary mb-4">
+                        <i data-feather="layout" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Flexible Spaces</h3>
+                    <p class="text-gray-600">Customizable office configurations to perfectly match your business needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Building Showcase -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Building</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">A modern office space designed for productivity and collaboration</p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div>
+                    <img src="http://static.photos/office/1024x576/2" alt="Building Exterior" class="rounded-lg shadow-lg mb-4">
+                    <img src="http://static.photos/office/1024x576/3" alt="Lobby Area" class="rounded-lg shadow-lg">
+                </div>
+                <div class="flex flex-col justify-center">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Modern Architecture Meets Functionality</h3>
+                    <p class="text-gray-600 mb-6">Smart Places offers a total of 2,500 m² spread across 3 floors, recently renovated to provide the perfect professional environment for your business.</p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-primary mr-2 mt-1 w-4 h-4"></i>
+                            <span class="text-gray-700">Year of renovation: 2023</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-primary mr-2 mt-1 w-4 h-4"></i>
+                            <span class="text-gray-700">Total size: 2,500 m²</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-primary mr-2 mt-1 w-4 h-4"></i>
+                            <span class="text-gray-700">3 floors of office space</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="check" class="text-primary mr-2 mt-1 w-4 h-4"></i>
+                            <span class="text-gray-700">Ample parking available</span>
+                        </li>
+                    </ul>
+                    <button class="mt-6 self-start bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-opacity-90 transition">See More Details</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Ready to Elevate Your Workspace?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Contact us today to schedule a tour and see how Smart Places can help your business grow.</p>
+            <a href="https://wa.me/34123456789?text=Hola!%20M%27agradaria%20programar%20una%20visita%20a%20Smart%20Places%20per%20veure%20els%20espais%20d%27oficina%20disponibles." target="_blank" id="book-visit-btn" class="bg-white text-primary px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition text-center inline-block">Programar Visita Ara</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Smart Places</h3>
+                    <p class="text-gray-400">Premium office spaces in Terrassa designed for modern businesses.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
+                        <li><a href="building.html" class="text-gray-400 hover:text-white">The Building</a></li>
+                        <li><a href="spaces.html" class="text-gray-400 hover:text-white">Available Spaces</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="mr-2 w-4 h-4 mt-1"></i>
+                            <span>Carretera de Rubí, 292 Terrassa</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="phone" class="mr-2 w-4 h-4 mt-1"></i>
+                            <span>+34 123 456 789</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="mail" class="mr-2 w-4 h-4 mt-1"></i>
+                            <span>admin@canmirgestions.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                        <li><a href="cookie-policy.html" class="text-gray-400 hover:text-white">Cookie Policy</a></li>
+                        <li><a href="legal-notice.html" class="text-gray-400 hover:text-white">Legal Notice</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© <span id="current-year">2025</span> Smart Places. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>feather.replace();</script>
+    <script>
+        // Internationalization data
+        const translations = {
+            en: {
+                title: "Smart Places - Premium Office Spaces in Terrassa",
+                nav: {
+                    home: "Home",
+                    building: "The Building",
+                    spaces: "Spaces",
+                    amenities: "Amenities",
+                    location: "Location",
+                    contact: "Contact"
+                },
+                hero: {
+                    title: "Premium Office Spaces in Terrassa",
+                    subtitle: "Modern, flexible workspaces designed for growing businesses with state-of-the-art facilities and strategic location.",
+                    scheduleVisit: "Schedule a Visit",
+                    exploreSpaces: "Explore Spaces"
+                },
+                features: {
+                    title: "Why Choose Smart Places",
+                    subtitle: "Designed to help your business thrive with premium facilities and location advantages",
+                    location: {
+                        title: "Prime Location",
+                        description: "Just 30 minutes from Barcelona with excellent transport links and highway access."
+                    },
+                    infrastructure: {
+                        title: "Modern Infrastructure",
+                        description: "High-speed fiber internet, advanced security systems, and climate control throughout."
+                    },
+                    flexible: {
+                        title: "Flexible Spaces",
+                        description: "Customizable office configurations to perfectly match your business needs."
+                    }
+                },
+                building: {
+                    title: "Our Building",
+                    subtitle: "A modern office space designed for productivity and collaboration",
+                    mainTitle: "Modern Architecture Meets Functionality",
+                    description: "Smart Places offers a total of 2,500 m² spread across 3 floors, recently renovated to provide the perfect professional environment for your business.",
+                    features: [
+                        "Year of renovation: 2023",
+                        "Total size: 2,500 m²",
+                        "3 floors of office space",
+                        "Ample parking available"
+                    ],
+                    seeMore: "See More Details"
+                },
+                cta: {
+                    title: "Ready to Elevate Your Workspace?",
+                    subtitle: "Contact us today to schedule a tour and see how Smart Places can help your business grow.",
+                    button: "Book Your Visit Now"
+                },
+                footer: {
+                    description: "Premium office spaces in Terrassa designed for modern businesses.",
+                    quickLinks: "Quick Links",
+                    contact: "Contact",
+                    legal: "Legal",
+                    links: {
+                        home: "Home",
+                        building: "The Building",
+                        spaces: "Available Spaces",
+                        contact: "Contact Us"
+                    },
+                    contactInfo: {
+                        address: "Carretera de Rubí, 292 Terrassa",
+                        phone: "+34 123 456 789",
+                        email: "admin@canmirgestions.com"
+                    },
+                    legalLinks: {
+                        privacy: "Privacy Policy",
+                        cookies: "Cookie Policy",
+                        legal: "Legal Notice"
+                    },
+                    copyright: "All rights reserved."
+                }
+            },
+            es: {
+                title: "Smart Places - Espacios de Oficina Premium en Terrassa",
+                nav: {
+                    home: "Inicio",
+                    building: "El Edificio",
+                    spaces: "Espacios",
+                    amenities: "Servicios",
+                    location: "Ubicación",
+                    contact: "Contacto"
+                },
+                hero: {
+                    title: "Espacios de Oficina Premium en Terrassa",
+                    subtitle: "Espacios de trabajo modernos y flexibles diseñados para empresas en crecimiento con instalaciones de última generación y ubicación estratégica.",
+                    scheduleVisit: "Programar Visitar",
+                    exploreSpaces: "Explorar Espacios"
+                },
+                features: {
+                    title: "Por Qué Elegir Smart Places",
+                    subtitle: "Diseñado para ayudar a tu negocio a prosperar con instalaciones premium y ventajas de ubicación",
+                    location: {
+                        title: "Ubicación Privilegiada",
+                        description: "A solo 30 minutos de Barcelona con excelentes conexiones de transporte y acceso a autopistas."
+                    },
+                    infrastructure: {
+                        title: "Infraestructura Moderna",
+                        description: "Internet de fibra de alta velocidad, sistemas de seguridad avanzados y climatización en todo el edificio."
+                    },
+                    flexible: {
+                        title: "Espacios Flexibles",
+                        description: "Configuraciones de oficina personalizables para adaptarse perfectamente a las necesidades de tu negocio."
+                    }
+                },
+                building: {
+                    title: "Nuestro Edificio",
+                    subtitle: "Un espacio de oficina moderno diseñado para la productividad y la colaboración",
+                    mainTitle: "La Arquitectura Moderna se Encuentra con la Funcionalidad",
+                    description: "Smart Places ofrece un total de 2.500 m² distribuidos en 3 plantas, recientemente renovado para proporcionar el entorno profesional perfecto para tu negocio.",
+                    features: [
+                        "Año de renovación: 2023",
+                        "Superficie total: 2.500 m²",
+                        "3 plantas de espacio de oficina",
+                        "Amplio aparcamiento disponible"
+                    ],
+                    seeMore: "Ver Más Detalles"
+                },
+                cta: {
+                    title: "¿Listo para Elevar tu Espacio de Trabajo?",
+                    subtitle: "Contáctanos hoy para programar una visita y ver cómo Smart Places puede ayudar a crecer tu negocio.",
+                    button: "Programar Visitar Ahora"
+                },
+                footer: {
+                    description: "Espacios de oficina premium en Terrassa diseñados para empresas modernas.",
+                    quickLinks: "Enlaces Rápidos",
+                    contact: "Contacto",
+                    legal: "Legal",
+                    links: {
+                        home: "Inicio",
+                        building: "El Edificio",
+                        spaces: "Espacios Disponibles",
+                        contact: "Contáctanos"
+                    },
+                    contactInfo: {
+                        address: "Carretera de Rubí, 292 Terrassa",
+                        phone: "+34 123 456 789",
+                        email: "admin@canmirgestions.com"
+                    },
+                    legalLinks: {
+                        privacy: "Política de Privacidad",
+                        cookies: "Política de Cookies",
+                        legal: "Aviso Legal"
+                    },
+                    copyright: "Todos los derechos reservados."
+                }
+            },
+            cat: {
+                title: "Smart Places - Espais d'Oficina Premium a Terrassa",
+                nav: {
+                    home: "Inici",
+                    building: "L'Edifici",
+                    spaces: "Espais",
+                    amenities: "Serveis",
+                    location: "Ubicació",
+                    contact: "Contacte"
+                },
+                hero: {
+                    title: "Espais d'Oficina Premium a Terrassa",
+                    subtitle: "Espais de treball moderns i flexibles dissenyats per a empreses en creixement amb instal·lacions d'última generació i ubicació estratègica.",
+                    scheduleVisit: "Programar Visitar",
+                    exploreSpaces: "Explorar Espais"
+                },
+                features: {
+                    title: "Per Què Triar Smart Places",
+                    subtitle: "Dissenyat per ajudar el teu negoci a prosperar amb instal·lacions premium i avantatges d'ubicació",
+                    location: {
+                        title: "Ubicació Privilegiada",
+                        description: "A només 30 minuts de Barcelona amb excel·lents connexions de transport i accés a autopistes."
+                    },
+                    infrastructure: {
+                        title: "Infraestructura Moderna",
+                        description: "Internet de fibra d'alta velocitat, sistemes de seguretat avançats i climatització a tot l'edifici."
+                    },
+                    flexible: {
+                        title: "Espais Flexibles",
+                        description: "Configuracions d'oficina personalitzables per adaptar-se perfectament a les necessitats del teu negoci."
+                    }
+                },
+                building: {
+                    title: "El Nostre Edifici",
+                    subtitle: "Un espai d'oficina modern dissenyat per a la productivitat i la col·laboració",
+                    mainTitle: "L'Arquitectura Moderna es Troba amb la Funcionalitat",
+                    description: "Smart Places ofereix un total de 2.500 m² distribuïts en 3 plantes, recentment renovat per proporcionar l'entorn professional perfecte per al teu negoci.",
+                    features: [
+                        "Any de renovació: 2023",
+                        "Superfície total: 2.500 m²",
+                        "3 plantes d'espai d'oficina",
+                        "Ampli aparcament disponible"
+                    ],
+                    seeMore: "Veure Més Detalls"
+                },
+                cta: {
+                    title: "Preparat per Elevar el teu Espai de Treball?",
+                    subtitle: "Contacta'ns avui per programar una visita i veure com Smart Places pot ajudar a fer créixer el teu negoci.",
+                    button: "Programar Visitar Ara"
+                },
+                footer: {
+                    description: "Espais d'oficina premium a Terrassa dissenyats per a empreses modernes.",
+                    quickLinks: "Enllaços Ràpids",
+                    contact: "Contacte",
+                    legal: "Legal",
+                    links: {
+                        home: "Inici",
+                        building: "L'Edifici",
+                        spaces: "Espais Disponibles",
+                        contact: "Contacta'ns"
+                    },
+                    contactInfo: {
+                        address: "Carretera de Rubí, 292 Terrassa",
+                        phone: "+34 123 456 789",
+                        email: "admin@canmirgestions.com"
+                    },
+                    legalLinks: {
+                        privacy: "Política de Privacitat",
+                        cookies: "Política de Cookies",
+                        legal: "Avís Legal"
+                    },
+                    copyright: "Tots els drets reservats."
+                }
+            }
+        };
+
+        // Current language state
+        let currentLanguage = 'cat';
+
+        // Language switching functionality
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('smartplaces-language', lang);
+            updateContent();
+            updateLanguageButtons();
+            updatePageLanguage();
+        }
+
+        function updateContent() {
+            const t = translations[currentLanguage];
+            
+            // Update page title
+            document.title = t.title;
+            
+            // Update navigation
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks[0].textContent = t.nav.home;
+            navLinks[1].textContent = t.nav.building;
+            navLinks[2].textContent = t.nav.spaces;
+            navLinks[3].textContent = t.nav.amenities;
+            navLinks[4].textContent = t.nav.location;
+            navLinks[5].textContent = t.nav.contact;
+            
+            // Update hero section
+            document.querySelector('.hero-gradient h1').textContent = t.hero.title;
+            document.querySelector('.hero-gradient p').textContent = t.hero.subtitle;
+            document.querySelector('.hero-gradient button:first-of-type').textContent = t.hero.scheduleVisit;
+            document.querySelector('.hero-gradient button:last-of-type').textContent = t.hero.exploreSpaces;
+            
+            // Update features section
+            const featuresSection = document.querySelector('.bg-gray-50');
+            featuresSection.querySelector('h2').textContent = t.features.title;
+            featuresSection.querySelector('p').textContent = t.features.subtitle;
+            
+            const featureCards = featuresSection.querySelectorAll('.feature-card');
+            featureCards[0].querySelector('h3').textContent = t.features.location.title;
+            featureCards[0].querySelector('p').textContent = t.features.location.description;
+            featureCards[1].querySelector('h3').textContent = t.features.infrastructure.title;
+            featureCards[1].querySelector('p').textContent = t.features.infrastructure.description;
+            featureCards[2].querySelector('h3').textContent = t.features.flexible.title;
+            featureCards[2].querySelector('p').textContent = t.features.flexible.description;
+            
+            // Update building section
+            const buildingSection = document.querySelector('.py-16:not(.bg-gray-50):not(.bg-primary)');
+            buildingSection.querySelector('h2').textContent = t.building.title;
+            buildingSection.querySelector('.text-center p').textContent = t.building.subtitle;
+            buildingSection.querySelector('h3').textContent = t.building.mainTitle;
+            buildingSection.querySelector('.flex.flex-col p').textContent = t.building.description;
+            
+            const buildingFeatures = buildingSection.querySelectorAll('li span');
+            buildingFeatures.forEach((span, index) => {
+                span.textContent = t.building.features[index];
+            });
+            buildingSection.querySelector('button').textContent = t.building.seeMore;
+            
+            // Update CTA section
+            const ctaSection = document.querySelector('.bg-primary');
+            ctaSection.querySelector('h2').textContent = t.cta.title;
+            ctaSection.querySelector('p').textContent = t.cta.subtitle;
+            ctaSection.querySelector('button').textContent = t.cta.button;
+            
+            // Update footer
+            const footer = document.querySelector('footer');
+            footer.querySelector('p').textContent = t.footer.description;
+            
+            const footerSections = footer.querySelectorAll('div > h4');
+            footerSections[0].textContent = t.footer.quickLinks;
+            footerSections[1].textContent = t.footer.contact;
+            footerSections[2].textContent = t.footer.legal;
+            
+            const footerLinks = footer.querySelectorAll('ul')[0].querySelectorAll('a');
+            footerLinks[0].textContent = t.footer.links.home;
+            footerLinks[1].textContent = t.footer.links.building;
+            footerLinks[2].textContent = t.footer.links.spaces;
+            footerLinks[3].textContent = t.footer.links.contact;
+            
+            const contactInfo = footer.querySelectorAll('ul')[1].querySelectorAll('span');
+            contactInfo[0].textContent = t.footer.contactInfo.address;
+            contactInfo[1].textContent = t.footer.contactInfo.phone;
+            contactInfo[2].textContent = t.footer.contactInfo.email;
+            
+            const legalLinks = footer.querySelectorAll('ul')[2].querySelectorAll('a');
+            legalLinks[0].textContent = t.footer.legalLinks.privacy;
+            legalLinks[1].textContent = t.footer.legalLinks.cookies;
+            legalLinks[2].textContent = t.footer.legalLinks.legal;
+            
+            const copyrightText = footer.querySelector('.border-t p');
+            copyrightText.innerHTML = `© <span id="current-year">${new Date().getFullYear()}</span> Smart Places. ${t.footer.copyright}`;
+        }
+
+        function updateLanguageButtons() {
+            const buttons = document.querySelectorAll('.language-selector');
+            buttons.forEach(button => {
+                button.classList.remove('bg-primary', 'text-white');
+                button.classList.add('border-gray-300');
+            });
+            
+            const activeButton = document.querySelector(`[data-lang="${currentLanguage}"]`);
+            if (activeButton) {
+                activeButton.classList.add('bg-primary', 'text-white');
+                activeButton.classList.remove('border-gray-300');
+            }
+        }
+
+        function updatePageLanguage() {
+            document.documentElement.lang = currentLanguage;
+        }
+
+        // Initialize language system
+        function initializeLanguage() {
+            // Load saved language or default to Catalan
+            const savedLanguage = localStorage.getItem('smartplaces-language') || 'cat';
+            currentLanguage = savedLanguage;
+            
+            // Add data attributes to language buttons
+            const buttons = document.querySelectorAll('.language-selector');
+            buttons[0].setAttribute('data-lang', 'cat');
+            buttons[1].setAttribute('data-lang', 'es');
+            buttons[2].setAttribute('data-lang', 'en');
+            
+            // Add click event listeners
+            buttons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const lang = button.getAttribute('data-lang');
+                    switchLanguage(lang);
+                });
+            });
+            
+            // Update content and UI
+            updateContent();
+            updateLanguageButtons();
+            updatePageLanguage();
+        }
+
+        // Typeform configuration
+        const TYPEFORM_CONFIG = {
+            formId: 'YOUR_TYPEFORM_ID', // Replace with your actual Typeform ID
+            calLink: 'smartplaces/visit' // Your Cal.com booking link
+        };
+
+        // Initialize WhatsApp booking flow
+        function initializeBookingFlow() {
+            console.log('Initializing booking flow...');
+            
+            // Set up scheduling buttons with WhatsApp links
+            const scheduleBtn = document.getElementById('schedule-visit-btn');
+            const bookBtn = document.getElementById('book-visit-btn');
+            
+            console.log('Schedule button:', scheduleBtn);
+            console.log('Book button:', bookBtn);
+            
+            if (scheduleBtn) {
+                scheduleBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('Schedule button clicked');
+                    openWhatsAppChat();
+                });
+            }
+            
+            if (bookBtn) {
+                bookBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('Book button clicked');
+                    openWhatsAppChat();
+                });
+            }
+            
+            // Also add event listeners to any buttons with the text content
+            const allButtons = document.querySelectorAll('button');
+            allButtons.forEach(button => {
+                const text = button.textContent.trim().toLowerCase();
+                if (text.includes('programar') || text.includes('book') || text.includes('visitar')) {
+                    console.log('Adding WhatsApp handler to button:', button.textContent);
+                    button.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        console.log('Button clicked:', button.textContent);
+                        openWhatsAppChat();
+                    });
+                }
+            });
+        }
+
+        // Open WhatsApp chat
+        function openWhatsAppChat() {
+            console.log('Opening WhatsApp chat...');
+            const whatsappURL = generateWhatsAppURL(currentLanguage);
+            console.log('WhatsApp URL:', whatsappURL);
+            window.open(whatsappURL, '_blank');
+        }
+
+        // Update footer year automatically
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        });
+        
+        // Mobile menu toggle functionality would go here
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize language system
+            initializeLanguage();
+            
+            // Initialize booking flow (Typeform + Cal.com)
+            initializeBookingFlow();
+            
+            // Animation for feature cards
+            const featureCards = document.querySelectorAll('.feature-card');
+            featureCards.forEach(card => {
+                card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="cat">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Places - Espais</title>
+    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/feather-icons"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#1E40AF',
+                        secondary: '#10B981',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .language-selector {
+            transition: all 0.3s ease;
+        }
+        .language-selector:hover {
+            transform: scale(1.1);
+        }
+        .space-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <h1 class="text-xl font-bold text-primary">Smart Places</h1>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Inici</a>
+                    <a href="building.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">L'Edifici</a>
+                    <a href="spaces.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Espais</a>
+                    <a href="amenities.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Serveis</a>
+                    <a href="location.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Ubicació</a>
+                    <a href="contact.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contacte</a>
+                    <div class="flex space-x-2">
+                        <button class="language-selector text-xs px-2 py-1 rounded bg-primary text-white" data-lang="cat">CAT</button>
+                        <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300" data-lang="es">ES</button>
+                        <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300" data-lang="en">EN</button>
+                    </div>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100">
+                        <i data-feather="menu"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-primary to-secondary text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Espais Disponibles</h1>
+                <p class="text-xl max-w-3xl mx-auto">Troba l'oficina perfecta per al teu negoci amb espais flexibles i configuracions personalitzables</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Space Categories -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Tipus d'Espais</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Des d'oficines individuals fins a espais corporatius, tenim l'opció perfecta per a cada necessitat</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="space-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
+                    <img src="http://static.photos/office/800x600/7" alt="Oficina petita" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Oficines Petites</h3>
+                        <p class="text-gray-600 mb-4">Perfectes per a startups i petites empreses que busquen un espai professional.</p>
+                        <ul class="space-y-2 text-sm text-gray-600 mb-4">
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>25-50 m²</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>2-6 persones</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Mobiliari inclòs</li>
+                        </ul>
+                        <div class="text-primary font-bold text-lg">Des de 800€/mes</div>
+                    </div>
+                </div>
+                <div class="space-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
+                    <img src="http://static.photos/office/800x600/8" alt="Oficina mitjana" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Oficines Mitjanes</h3>
+                        <p class="text-gray-600 mb-4">Ideals per a empreses en creixement que necessiten més espai i flexibilitat.</p>
+                        <ul class="space-y-2 text-sm text-gray-600 mb-4">
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>75-125 m²</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>8-15 persones</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Sala de reunions privada</li>
+                        </ul>
+                        <div class="text-primary font-bold text-lg">Des de 1.500€/mes</div>
+                    </div>
+                </div>
+                <div class="space-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
+                    <img src="http://static.photos/office/800x600/9" alt="Oficina gran" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-3">Oficines Grans</h3>
+                        <p class="text-gray-600 mb-4">Espais corporatius per a empreses establertes amb necessitats específiques.</p>
+                        <ul class="space-y-2 text-sm text-gray-600 mb-4">
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>150-300 m²</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>20-40 persones</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Múltiples sales de reunions</li>
+                        </ul>
+                        <div class="text-primary font-bold text-lg">Des de 2.800€/mes</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Available Spaces -->
+    <section class="bg-gray-50 py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Espais Actualment Disponibles</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Consulta els nostres espais disponibles i troba el perfecte per al teu negoci</p>
+            </div>
+            <div class="grid lg:grid-cols-2 gap-8">
+                <!-- Space 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="grid md:grid-cols-2">
+                        <img src="http://static.photos/office/600x400/10" alt="Oficina A1" class="w-full h-48 md:h-full object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-xl font-bold">Oficina A1</h3>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Disponible</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Oficina lluminosa a la planta baixa amb accés directe al jardí.</p>
+                            <div class="space-y-2 text-sm mb-4">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Superfície:</span>
+                                    <span class="font-medium">85 m²</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Capacitat:</span>
+                                    <span class="font-medium">8-10 persones</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Planta:</span>
+                                    <span class="font-medium">Planta baixa</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Aparcament:</span>
+                                    <span class="font-medium">3 places incloses</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="text-primary font-bold text-lg">1.200€/mes</div>
+                                <button class="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition">Més Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Space 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="grid md:grid-cols-2">
+                        <img src="http://static.photos/office/600x400/11" alt="Oficina B2" class="w-full h-48 md:h-full object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-xl font-bold">Oficina B2</h3>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Disponible</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Espai modern a la primera planta amb terrassa privada.</p>
+                            <div class="space-y-2 text-sm mb-4">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Superfície:</span>
+                                    <span class="font-medium">120 m²</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Capacitat:</span>
+                                    <span class="font-medium">12-15 persones</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Planta:</span>
+                                    <span class="font-medium">Primera planta</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Aparcament:</span>
+                                    <span class="font-medium">4 places incloses</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="text-primary font-bold text-lg">1.800€/mes</div>
+                                <button class="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition">Més Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Space 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="grid md:grid-cols-2">
+                        <img src="http://static.photos/office/600x400/12" alt="Oficina C3" class="w-full h-48 md:h-full object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-xl font-bold">Oficina C3</h3>
+                                <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Aviat disponible</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Oficina premium a la segona planta amb vistes panoràmiques.</p>
+                            <div class="space-y-2 text-sm mb-4">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Superfície:</span>
+                                    <span class="font-medium">200 m²</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Capacitat:</span>
+                                    <span class="font-medium">20-25 persones</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Planta:</span>
+                                    <span class="font-medium">Segona planta</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Aparcament:</span>
+                                    <span class="font-medium">6 places incloses</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="text-primary font-bold text-lg">3.200€/mes</div>
+                                <button class="bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed">Aviat</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Space 4 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="grid md:grid-cols-2">
+                        <img src="http://static.photos/office/600x400/13" alt="Espai Coworking" class="w-full h-48 md:h-full object-cover">
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-3">
+                                <h3 class="text-xl font-bold">Espai Coworking</h3>
+                                <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Disponible</span>
+                            </div>
+                            <p class="text-gray-600 mb-4">Espai compartit flexible per a professionals independents.</p>
+                            <div class="space-y-2 text-sm mb-4">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Superfície:</span>
+                                    <span class="font-medium">150 m²</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Capacitat:</span>
+                                    <span class="font-medium">30 persones</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Modalitat:</span>
+                                    <span class="font-medium">Flexible</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-600">Inclou:</span>
+                                    <span class="font-medium">Tot inclòs</span>
+                                </div>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <div class="text-primary font-bold text-lg">Des de 150€/mes</div>
+                                <button class="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition">Més Info</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customization Options -->
+    <section class="py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Personalització d'Espais</h2>
+                <p class="max-w-2xl mx-auto text-gray-600">Adaptem cada oficina a les teves necessitats específiques</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="layout" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Distribució</h3>
+                    <p class="text-gray-600 text-sm">Configurem l'espai segons les teves necessitats operatives</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="palette" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Decoració</h3>
+                    <p class="text-gray-600 text-sm">Personalitza colors i estil segons la teva marca</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="monitor" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Tecnologia</h3>
+                    <p class="text-gray-600 text-sm">Equipament tecnològic adaptat a les teves necessitats</p>
+                </div>
+                <div class="text-center">
+                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <i data-feather="home" class="w-8 h-8 text-primary"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-2">Mobiliari</h3>
+                    <p class="text-gray-600 text-sm">Selecció de mobiliari ergonòmic i funcional</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-primary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold mb-6">Troba el teu Espai Ideal</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Programa una visita per veure tots els espais disponibles i descobrir quin s'adapta millor al teu negoci.</p>
+            <a href="contact.html" class="bg-white text-primary px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition">Programa una Visita</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Smart Places</h3>
+                    <p class="text-gray-400">Espais d'oficina premium a Terrassa dissenyats per a empreses modernes.</p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Enllaços Ràpids</h4>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="text-gray-400 hover:text-white">Inici</a></li>
+                        <li><a href="building.html" class="text-gray-400 hover:text-white">L'Edifici</a></li>
+                        <li><a href="spaces.html" class="text-gray-400 hover:text-white">Espais Disponibles</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contacta'ns</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contacte</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i data-feather="map-pin" class="mr-2 w-4 h-4 mt-1"></i>
+                            <span>Carretera de Rubí, 292 Terrassa</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="phone" class="mr-2 w-4 h-4 mt-1"></i>
+                            <span>+34 123 456 789</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i data-feather="mail" class="mr-2 w-4 h-4 mt-1"></i>
+                            <span>admin@canmirgestions.com</span>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-2">
+                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white">Política de Privacitat</a></li>
+                        <li><a href="cookie-policy.html" class="text-gray-400 hover:text-white">Política de Cookies</a></li>
+                        <li><a href="legal-notice.html" class="text-gray-400 hover:text-white">Avís Legal</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>© <span id="current-year">2025</span> Smart Places. Tots els drets reservats.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>feather.replace();</script>
+    <script>
+        // Update footer year automatically
+        document.addEventListener('DOMContentLoaded', function() {
+            const yearElement = document.getElementById('current-year');
+            if (yearElement) {
+                yearElement.textContent = new Date().getFullYear();
+            }
+        });
+    </script>
+</body>
+</html>
