@@ -2,7 +2,7 @@
 const CONFIG = {
     // WhatsApp configuration
     // Note: For production, set this environment variable in your deployment platform
-    WHATSAPP_PHONE: window.WHATSAPP_PHONE || '+34123456789', // Default fallback number
+    WHATSAPP_PHONE: window.WHATSAPP_PHONE || '+34626381615', // Default fallback number
     
     // WhatsApp message templates by language
     WHATSAPP_MESSAGES: {
