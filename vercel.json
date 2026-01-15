@@ -1,16 +1,6 @@
 {
   "version": 2,
   "public": true,
-  "routes": [
-    {
-      "src": "/(.*)\\.(html)$",
-      "dest": "/$1.html"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -41,12 +31,6 @@
           "value": "public, max-age=3600"
         }
       ]
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/",
-      "destination": "/index.html"
     }
   ]
 }
