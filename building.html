@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+s<!DOCTYPE html>
 <html lang="cat">
 <head>
     <meta charset="UTF-8">
@@ -40,16 +40,16 @@
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
-                        <h1 class="text-xl font-bold text-primary">Smart Places</h1>
+                        <img src="logo.png" alt="Smart Places" class="h-8 w-auto">
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Inici</a>
-                    <a href="building.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">L'Edifici</a>
-                    <a href="spaces.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Espais</a>
-                    <a href="amenities.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Serveis</a>
-                    <a href="location.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Ubicació</a>
-                    <a href="contact.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contacte</a>
+                    <a href="index.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-home">Inici</a>
+                    <a href="building.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-building">L'Edifici</a>
+                    <a href="spaces.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-spaces">Espais</a>
+                    <a href="amenities.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-amenities">Serveis</a>
+                    <a href="location.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-location">Ubicació</a>
+                    <a href="contact.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-contact">Contacte</a>
                     <div class="flex space-x-2">
                         <button class="language-selector text-xs px-2 py-1 rounded bg-primary text-white" data-lang="cat">CAT</button>
                         <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300" data-lang="es">ES</button>
@@ -69,8 +69,8 @@
     <section class="bg-gradient-to-r from-primary to-secondary text-white py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">El Nostre Edifici</h1>
-                <p class="text-xl max-w-3xl mx-auto">Un espai d'oficina modern dissenyat per a la productivitat i la col·laboració amb les millors instal·lacions de Terrassa</p>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6" data-translate="hero-title">El Nostre Edifici</h1>
+                <p class="text-xl max-w-3xl mx-auto" data-translate="hero-subtitle">Un espai d'oficina modern dissenyat per a la productivitat i la col·laboració amb les millors instal·lacions de Terrassa del 2026</p>
             </div>
         </div>
     </section>
@@ -80,24 +80,24 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Arquitectura Moderna i Funcional</h2>
-                    <p class="text-gray-600 mb-6">Smart Places ofereix un total de 2.500 m² distribuïts en 3 plantes, recentment renovat el 2023 per proporcionar l'entorn professional perfecte per al teu negoci.</p>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6" data-translate="overview-title">Arquitectura Moderna i Funcional</h2>
+                    <p class="text-gray-600 mb-6" data-translate="overview-description">Smart Places ofereix un total de 2.500 m² distribuïts en 3 plantes, entrada, escales comunes i recinte exterior, properament renovat el 2026 per proporcionar l'entorn professional perfecte per al teu negoci.</p>
                     <div class="grid grid-cols-2 gap-4 mb-6">
                         <div class="bg-gray-50 p-4 rounded-lg">
                             <h3 class="font-bold text-primary text-2xl">2.500 m²</h3>
-                            <p class="text-gray-600">Superfície total</p>
+                            <p class="text-gray-600" data-translate="overview-total-area">Superfície total</p>
                         </div>
                         <div class="bg-gray-50 p-4 rounded-lg">
                             <h3 class="font-bold text-primary text-2xl">3</h3>
-                            <p class="text-gray-600">Plantes d'oficina</p>
+                            <p class="text-gray-600" data-translate="overview-floors">Plantes d'oficina</p>
                         </div>
                         <div class="bg-gray-50 p-4 rounded-lg">
-                            <h3 class="font-bold text-primary text-2xl">2023</h3>
-                            <p class="text-gray-600">Any de renovació</p>
+                            <h3 class="font-bold text-primary text-2xl">2026</h3>
+                            <p class="text-gray-600" data-translate="overview-renovation">Any de renovació</p>
                         </div>
                         <div class="bg-gray-50 p-4 rounded-lg">
-                            <h3 class="font-bold text-primary text-2xl">50+</h3>
-                            <p class="text-gray-600">Places d'aparcament</p>
+                            <h3 class="font-bold text-primary text-2xl">25+</h3>
+                            <p class="text-gray-600" data-translate="overview-parking">Places d'aparcament</p>
                         </div>
                     </div>
                 </div>
@@ -112,51 +112,51 @@
     <section class="bg-gray-50 py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Característiques de l'Edifici</h2>
-                <p class="max-w-2xl mx-auto text-gray-600">Cada detall ha estat pensat per oferir el millor entorn de treball</p>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-translate="features-title">Característiques de l'Edifici</h2>
+                <p class="max-w-2xl mx-auto text-gray-600" data-translate="features-subtitle">Pensat per oferir el millor entorn de treball</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
                     <div class="text-primary mb-4">
                         <i data-feather="shield" class="w-10 h-10"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Seguretat Avançada</h3>
-                    <p class="text-gray-600">Sistema de seguretat 24/7 amb control d'accés per targeta i videovigilància.</p>
+                    <h3 class="text-xl font-bold mb-3" data-translate="feature-security-title">Seguretat Avançada</h3>
+                    <p class="text-gray-600" data-translate="feature-security-desc">Sistema de seguretat 24/7 amb control d'accés per targeta i videovigilància.</p>
                 </div>
                 <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
                     <div class="text-primary mb-4">
                         <i data-feather="thermometer" class="w-10 h-10"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Climatització</h3>
-                    <p class="text-gray-600">Sistema de climatització independent per zona amb control de temperatura.</p>
+                    <h3 class="text-xl font-bold mb-3" data-translate="feature-climate-title">Climatització</h3>
+                    <p class="text-gray-600" data-translate="feature-climate-desc">Al gust del consumidor, cada empresa pot instal·lar el seu propi sistema de climatització.</p>
                 </div>
                 <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
                     <div class="text-primary mb-4">
                         <i data-feather="zap" class="w-10 h-10"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Eficiència Energètica</h3>
-                    <p class="text-gray-600">Il·luminació LED i sistemes d'estalvi energètic per reduir costos.</p>
+                    <h3 class="text-xl font-bold mb-3" data-translate="feature-energy-title">Eficiència Energètica</h3>
+                    <p class="text-gray-600" data-translate="feature-energy-desc">Il·luminació LED i sistemes d'estalvi energètic per reduir costos.</p>
                 </div>
                 <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
                     <div class="text-primary mb-4">
                         <i data-feather="wifi" class="w-10 h-10"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Connectivitat</h3>
-                    <p class="text-gray-600">Fibra òptica d'alta velocitat i cobertura WiFi completa.</p>
+                    <h3 class="text-xl font-bold mb-3" data-translate="feature-connectivity-title">Connectivitat</h3>
+                    <p class="text-gray-600" data-translate="feature-connectivity-desc">Fibra òptica d'alta velocitat i cobertura WiFi completa.</p>
                 </div>
                 <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
                     <div class="text-primary mb-4">
                         <i data-feather="users" class="w-10 h-10"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Zones Comunes</h3>
-                    <p class="text-gray-600">Àrees de descans, sales de reunions i espais de networking.</p>
+                    <h3 class="text-xl font-bold mb-3" data-translate="feature-common-title">Zones Comunes</h3>
+                    <p class="text-gray-600" data-translate="feature-common-desc">Àrees de descans, sales de reunions i espais de networking.</p>
                 </div>
                 <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
                     <div class="text-primary mb-4">
                         <i data-feather="car" class="w-10 h-10"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Aparcament</h3>
-                    <p class="text-gray-600">Ampli aparcament privat amb places reservades per a cada oficina.</p>
+                    <h3 class="text-xl font-bold mb-3" data-translate="feature-parking-title">Aparcament</h3>
+                    <p class="text-gray-600" data-translate="feature-parking-desc">Ampli aparcament amb places reservades per a cada espai d'oficina.</p>
                 </div>
             </div>
         </div>
@@ -166,43 +166,43 @@
     <section class="py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Distribució per Plantes</h2>
-                <p class="max-w-2xl mx-auto text-gray-600">Cada planta està dissenyada per maximitzar l'eficiència i el confort</p>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-translate="floors-title">Distribució per Plantes</h2>
+                <p class="max-w-2xl mx-auto text-gray-600" data-translate="floors-subtitle">Cada planta està dissenyada per maximitzar l'eficiència i el confort</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                     <img src="http://static.photos/office/800x600/4" alt="Planta baixa" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Planta Baixa</h3>
+                        <h3 class="text-xl font-bold mb-3" data-translate="floor-ground-title">Planta Baixa</h3>
                         <ul class="space-y-2 text-gray-600">
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Recepció i lobby</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Sala de reunions gran</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Àrea de descans</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Oficines de 50-100 m²</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i><span data-translate="floor-ground-reception">Recepció i lobby</span></li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i><span data-translate="floor-ground-meeting">Sala de reunions gran</span></li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i><span data-translate="floor-ground-rest">Àrea de descans</span></li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i><span data-translate="floor-ground-offices">Oficines de 50-240 m²</span></li>
                         </ul>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                     <img src="http://static.photos/office/800x600/5" alt="Primera planta" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Primera Planta</h3>
+                        <h3 class="text-xl font-bold mb-3" data-translate="floor-first-title">Primera Planta</h3>
                         <ul class="space-y-2 text-gray-600">
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Oficines de 75-150 m²</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Sales de reunions petites</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Zona de networking</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Terrassa exterior</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i><span data-translate="floor-first-offices">Oficines de 240 m²</span></li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i><span data-translate="floor-first-meetings">Sales de reunions petites</span></li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i><span data-translate="floor-first-networking">Zona de networking</span></li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i><span data-translate="floor-first-nature">Naturalesa a tocar</span></li>
                         </ul>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                     <img src="http://static.photos/office/800x600/6" alt="Segona planta" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Segona Planta</h3>
+                        <h3 class="text-xl font-bold mb-3" data-translate="floor-second-title">Segona Planta</h3>
                         <ul class="space-y-2 text-gray-600">
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Oficines de 100-200 m²</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Sala de conferències</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Espai coworking</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Vistes panoràmiques</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i><span data-translate="floor-second-offices">Oficines de 100-200 m²</span></li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i><span data-translate="floor-second-meeting">Sala de reunions</span></li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i><span data-translate="floor-second-nature">Natura a tocar</span></li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i><span data-translate="floor-second-views">Vistes panoràmiques</span></li>
                         </ul>
                     </div>
                 </div>
@@ -213,9 +213,9 @@
     <!-- Call to Action -->
     <section class="bg-primary text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-6">Vols veure l'edifici en persona?</h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto">Programa una visita per descobrir tots els detalls i trobar l'espai perfecte per al teu negoci.</p>
-            <a href="contact.html" class="bg-white text-primary px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition">Programa una Visita</a>
+            <h2 class="text-3xl font-bold mb-6" data-translate="cta-title">Vols veure l'edifici en persona?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto" data-translate="cta-subtitle">Programa una visita per descobrir tots els detalls i trobar l'espai perfecte per al teu negoci.</p>
+            <a href="contact.html" class="bg-white text-primary px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition" data-translate="cta-button">Programa una Visita</a>
         </div>
     </section>
 
@@ -224,20 +224,20 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Smart Places</h3>
-                    <p class="text-gray-400">Espais d'oficina a Terrassa dissenyats per a empreses amb entorn tranquil.</p>
+                    <h3 class="text-xl font-bold mb-4">RealBrave</h3>
+                    <p class="text-gray-400" data-translate="footer-description">Espais d'oficina a Terrassa dissenyats per a empreses amb entorn tranquil.</p>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Enllaços Ràpids</h4>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer-quick-links">Enllaços Ràpids</h4>
                     <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-400 hover:text-white">Inici</a></li>
-                        <li><a href="building.html" class="text-gray-400 hover:text-white">L'Edifici</a></li>
-                        <li><a href="spaces.html" class="text-gray-400 hover:text-white">Espais Disponibles</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contacta'ns</a></li>
+                        <li><a href="index.html" class="text-gray-400 hover:text-white" data-translate="nav-home">Inici</a></li>
+                        <li><a href="building.html" class="text-gray-400 hover:text-white" data-translate="nav-building">L'Edifici</a></li>
+                        <li><a href="spaces.html" class="text-gray-400 hover:text-white" data-translate="nav-spaces">Espais Disponibles</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white" data-translate="nav-contact">Contacta'ns</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Contacte</h4>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer-contact">Contacte</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-start">
                             <i data-feather="map-pin" class="mr-2 w-4 h-4 mt-1"></i>
@@ -245,7 +245,7 @@
                         </li>
                         <li class="flex items-start">
                             <i data-feather="phone" class="mr-2 w-4 h-4 mt-1"></i>
-                            <span>+34 123 456 789</span>
+                            <span>+34 626 381 615</span>
                         </li>
                         <li class="flex items-start">
                             <i data-feather="mail" class="mr-2 w-4 h-4 mt-1"></i>
@@ -254,28 +254,284 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer-legal">Legal</h4>
                     <ul class="space-y-2">
-                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white">Política de Privacitat</a></li>
-                        <li><a href="cookie-policy.html" class="text-gray-400 hover:text-white">Política de Cookies</a></li>
-                        <li><a href="legal-notice.html" class="text-gray-400 hover:text-white">Avís Legal</a></li>
+                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white" data-translate="footer-privacy">Política de Privacitat</a></li>
+                        <li><a href="cookie-policy.html" class="text-gray-400 hover:text-white" data-translate="footer-cookies">Política de Cookies</a></li>
+                        <li><a href="legal-notice.html" class="text-gray-400 hover:text-white" data-translate="footer-legal-notice">Avís Legal</a></li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>© <span id="current-year">2025</span> Smart Places. Tots els drets reservats.</p>
+                <p>© <span id="current-year">2026</span> <span data-translate="footer-rights">Smart Places. Tots els drets reservats.</span></p>
             </div>
         </div>
     </footer>
 
     <script>feather.replace();</script>
     <script>
-        // Update footer year automatically
+        // Translation system
+        const translations = {
+            cat: {
+                // Navigation
+                'nav-home': 'Inici',
+                'nav-building': 'L\'Edifici',
+                'nav-spaces': 'Espais',
+                'nav-amenities': 'Serveis',
+                'nav-location': 'Ubicació',
+                'nav-contact': 'Contacte',
+                
+                // Hero Section
+                'hero-title': 'El Nostre Edifici',
+                'hero-subtitle': 'Un espai d\'oficina modern dissenyat per a la productivitat i la col·laboració amb les millors instal·lacions de Terrassa del 2026',
+                
+                // Building Overview
+                'overview-title': 'Arquitectura Moderna i Funcional',
+                'overview-description': 'RealBrave ofereix un total de 2.500 m² distribuïts en 3 plantes, entrada, escales comunes i recinte exterior, properament renovat el 2026 per proporcionar l\'entorn professional perfecte per al teu negoci.',
+                'overview-total-area': 'Superfície total',
+                'overview-floors': 'Plantes d\'oficina',
+                'overview-renovation': 'Any de renovació',
+                'overview-parking': 'Places d\'aparcament',
+                
+                // Building Features
+                'features-title': 'Característiques de l\'Edifici',
+                'features-subtitle': 'Pensat per oferir el millor entorn de treball',
+                'feature-security-title': 'Seguretat Avançada',
+                'feature-security-desc': 'Sistema de seguretat 24/7 amb control d\'accés per targeta i videovigilància.',
+                'feature-climate-title': 'Climatització',
+                'feature-climate-desc': 'Al gust del consumidor, cada empresa pot instal·lar el seu propi sistema de climatització.',
+                'feature-energy-title': 'Eficiència Energètica',
+                'feature-energy-desc': 'Il·luminació LED i sistemes d\'estalvi energètic per reduir costos.',
+                'feature-connectivity-title': 'Connectivitat',
+                'feature-connectivity-desc': 'Fibra òptica d\'alta velocitat i cobertura WiFi completa.',
+                'feature-common-title': 'Zones Comunes',
+                'feature-common-desc': 'Àrees de descans, sales de reunions i espais de networking.',
+                'feature-parking-title': 'Aparcament',
+                'feature-parking-desc': 'Ampli aparcament amb places reservades per a cada espai d\'oficina.',
+                
+                // Floor Plans
+                'floors-title': 'Distribució per Plantes',
+                'floors-subtitle': 'Cada planta està dissenyada per maximitzar l\'eficiència i el confort',
+                'floor-ground-title': 'Planta Baixa',
+                'floor-ground-reception': 'Recepció i lobby',
+                'floor-ground-meeting': 'Sala de reunions gran',
+                'floor-ground-rest': 'Àrea de descans',
+                'floor-ground-offices': 'Oficines de 50-240 m²',
+                'floor-first-title': 'Primera Planta',
+                'floor-first-offices': 'Oficines de 240 m²',
+                'floor-first-meetings': 'Sales de reunions petites',
+                'floor-first-networking': 'Zona de networking',
+                'floor-first-nature': 'Naturalesa a tocar',
+                'floor-second-title': 'Segona Planta',
+                'floor-second-offices': 'Oficines de 100-200 m²',
+                'floor-second-meeting': 'Sala de reunions',
+                'floor-second-nature': 'Natura a tocar',
+                'floor-second-views': 'Vistes panoràmiques',
+                
+                // Call to Action
+                'cta-title': 'Vols veure l\'edifici en persona?',
+                'cta-subtitle': 'Programa una visita per descobrir tots els detalls i trobar l\'espai perfecte per al teu negoci.',
+                'cta-button': 'Programa una Visita',
+                
+                // Footer
+                'footer-description': 'Espais d\'oficina a Terrassa dissenyats per a empreses amb entorn tranquil.',
+                'footer-quick-links': 'Enllaços Ràpids',
+                'footer-contact': 'Contacte',
+                'footer-legal': 'Legal',
+                'footer-privacy': 'Política de Privacitat',
+                'footer-cookies': 'Política de Cookies',
+                'footer-legal-notice': 'Avís Legal',
+                'footer-rights': 'RealBrave. Tots els drets reservats.'
+            },
+            es: {
+                // Navigation
+                'nav-home': 'Inicio',
+                'nav-building': 'El Edificio',
+                'nav-spaces': 'Espacios',
+                'nav-amenities': 'Servicios',
+                'nav-location': 'Ubicación',
+                'nav-contact': 'Contacto',
+                
+                // Hero Section
+                'hero-title': 'Nuestro Edificio',
+                'hero-subtitle': 'Un espacio de oficina moderno diseñado para la productividad y la colaboración con las mejores instalaciones de Terrassa del 2026',
+                
+                // Building Overview
+                'overview-title': 'Arquitectura Moderna y Funcional',
+                'overview-description': 'RealBrave ofrece un total de 2.500 m² distribuidos en 3 plantas, entrada, escaleras comunes y recinto exterior, próximamente renovado en 2026 para proporcionar el entorno profesional perfecto para tu negocio.',
+                'overview-total-area': 'Superficie total',
+                'overview-floors': 'Plantas de oficina',
+                'overview-renovation': 'Año de renovación',
+                'overview-parking': 'Plazas de aparcamiento',
+                
+                // Building Features
+                'features-title': 'Características del Edificio',
+                'features-subtitle': 'Pensado para ofrecer el mejor entorno de trabajo',
+                'feature-security-title': 'Seguridad Avanzada',
+                'feature-security-desc': 'Sistema de seguridad 24/7 con control de acceso por tarjeta y videovigilancia.',
+                'feature-climate-title': 'Climatización',
+                'feature-climate-desc': 'Al gusto del consumidor, cada empresa puede instalar su propio sistema de climatización.',
+                'feature-energy-title': 'Eficiencia Energética',
+                'feature-energy-desc': 'Iluminación LED y sistemas de ahorro energético para reducir costos.',
+                'feature-connectivity-title': 'Conectividad',
+                'feature-connectivity-desc': 'Fibra óptica de alta velocidad y cobertura WiFi completa.',
+                'feature-common-title': 'Zonas Comunes',
+                'feature-common-desc': 'Áreas de descanso, salas de reuniones y espacios de networking.',
+                'feature-parking-title': 'Aparcamiento',
+                'feature-parking-desc': 'Amplio aparcamiento con plazas reservadas para cada espacio de oficina.',
+                
+                // Floor Plans
+                'floors-title': 'Distribución por Plantas',
+                'floors-subtitle': 'Cada planta está diseñada para maximizar la eficiencia y el confort',
+                'floor-ground-title': 'Planta Baja',
+                'floor-ground-reception': 'Recepción y lobby',
+                'floor-ground-meeting': 'Sala de reuniones grande',
+                'floor-ground-rest': 'Área de descanso',
+                'floor-ground-offices': 'Oficinas de 50-240 m²',
+                'floor-first-title': 'Primera Planta',
+                'floor-first-offices': 'Oficinas de 240 m²',
+                'floor-first-meetings': 'Salas de reuniones pequeñas',
+                'floor-first-networking': 'Zona de networking',
+                'floor-first-nature': 'Naturaleza al alcance',
+                'floor-second-title': 'Segunda Planta',
+                'floor-second-offices': 'Oficinas de 100-200 m²',
+                'floor-second-meeting': 'Sala de reuniones',
+                'floor-second-nature': 'Natura al alcance',
+                'floor-second-views': 'Vistas panorámicas',
+                
+                // Call to Action
+                'cta-title': '¿Quieres ver el edificio en persona?',
+                'cta-subtitle': 'Programa una visita para descubrir todos los detalles y encontrar el espacio perfecto para tu negocio.',
+                'cta-button': 'Programa una Visita',
+                
+                // Footer
+                'footer-description': 'Espacios de oficina en Terrassa diseñados para empresas con entorno tranquilo.',
+                'footer-quick-links': 'Enlaces Rápidos',
+                'footer-contact': 'Contacto',
+                'footer-legal': 'Legal',
+                'footer-privacy': 'Política de Privacidad',
+                'footer-cookies': 'Política de Cookies',
+                'footer-legal-notice': 'Aviso Legal',
+                'footer-rights': 'RealBrave. Todos los derechos reservados.'
+            },
+            en: {
+                // Navigation
+                'nav-home': 'Home',
+                'nav-building': 'The Building',
+                'nav-spaces': 'Spaces',
+                'nav-amenities': 'Amenities',
+                'nav-location': 'Location',
+                'nav-contact': 'Contact',
+                
+                // Hero Section
+                'hero-title': 'Our Building',
+                'hero-subtitle': 'A modern office space designed for productivity and collaboration with the best facilities in Terrassa 2026',
+                
+                // Building Overview
+                'overview-title': 'Modern and Functional Architecture',
+                'overview-description': 'RealBrave offers a total of 2,500 m² distributed across 3 floors, entrance, common stairs and exterior premises, soon to be renovated in 2026 to provide the perfect professional environment for your business.',
+                'overview-total-area': 'Total area',
+                'overview-floors': 'Office floors',
+                'overview-renovation': 'Renovation year',
+                'overview-parking': 'Parking spaces',
+                
+                // Building Features
+                'features-title': 'Building Features',
+                'features-subtitle': 'Designed to offer the best working environment',
+                'feature-security-title': 'Advanced Security',
+                'feature-security-desc': '24/7 security system with card access control and video surveillance.',
+                'feature-climate-title': 'Climate Control',
+                'feature-climate-desc': 'To the consumer\'s taste, each company can install its own climate control system.',
+                'feature-energy-title': 'Energy Efficiency',
+                'feature-energy-desc': 'LED lighting and energy saving systems to reduce costs.',
+                'feature-connectivity-title': 'Connectivity',
+                'feature-connectivity-desc': 'High-speed fiber optic and complete WiFi coverage.',
+                'feature-common-title': 'Common Areas',
+                'feature-common-desc': 'Rest areas, meeting rooms and networking spaces.',
+                'feature-parking-title': 'Parking',
+                'feature-parking-desc': 'Ample parking with reserved spaces for each office space.',
+                
+                // Floor Plans
+                'floors-title': 'Floor Distribution',
+                'floors-subtitle': 'Each floor is designed to maximize efficiency and comfort',
+                'floor-ground-title': 'Ground Floor',
+                'floor-ground-reception': 'Reception and lobby',
+                'floor-ground-meeting': 'Large meeting room',
+                'floor-ground-rest': 'Rest area',
+                'floor-ground-offices': 'Offices 50-240 m²',
+                'floor-first-title': 'First Floor',
+                'floor-first-offices': 'Offices 240 m²',
+                'floor-first-meetings': 'Small meeting rooms',
+                'floor-first-networking': 'Networking area',
+                'floor-first-nature': 'Nature at hand',
+                'floor-second-title': 'Second Floor',
+                'floor-second-offices': 'Offices 100-200 m²',
+                'floor-second-meeting': 'Meeting room',
+                'floor-second-nature': 'Nature at hand',
+                'floor-second-views': 'Panoramic views',
+                
+                // Call to Action
+                'cta-title': 'Want to see the building in person?',
+                'cta-subtitle': 'Schedule a visit to discover all the details and find the perfect space for your business.',
+                'cta-button': 'Schedule a Visit',
+                
+                // Footer
+                'footer-description': 'Office spaces in Terrassa designed for companies with a peaceful environment.',
+                'footer-quick-links': 'Quick Links',
+                'footer-contact': 'Contact',
+                'footer-legal': 'Legal',
+                'footer-privacy': 'Privacy Policy',
+                'footer-cookies': 'Cookie Policy',
+                'footer-legal-notice': 'Legal Notice',
+                'footer-rights': 'RealBrave. All rights reserved.'
+            }
+        };
+
+        let currentLanguage = 'cat';
+
+        function translatePage(lang) {
+            currentLanguage = lang;
+            const elements = document.querySelectorAll('[data-translate]');
+            
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+
+            // Update language selector buttons
+            document.querySelectorAll('.language-selector').forEach(btn => {
+                btn.classList.remove('bg-primary', 'text-white');
+                btn.classList.add('border', 'border-gray-300');
+                if (btn.getAttribute('data-lang') === lang) {
+                    btn.classList.remove('border', 'border-gray-300');
+                    btn.classList.add('bg-primary', 'text-white');
+                }
+            });
+
+            // Update HTML lang attribute
+            document.documentElement.lang = lang;
+        }
+
+        // Initialize translation system
         document.addEventListener('DOMContentLoaded', function() {
+            // Update footer year automatically
             const yearElement = document.getElementById('current-year');
             if (yearElement) {
                 yearElement.textContent = new Date().getFullYear();
             }
+
+            // Add event listeners to language selector buttons
+            document.querySelectorAll('.language-selector').forEach(button => {
+                button.addEventListener('click', function() {
+                    const lang = this.getAttribute('data-lang');
+                    translatePage(lang);
+                });
+            });
+
+            // Initialize with Catalan
+            translatePage('cat');
         });
     </script>
 </body>

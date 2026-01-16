@@ -1,0 +1,45 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E40AF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#10B981;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1E40AF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0F172A;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Logo Icon - Modern Building/House -->
+  <g transform="translate(10, 8)">
+    <!-- Main building structure -->
+    <rect x="0" y="20" width="24" height="24" rx="2" fill="url(#logoGradient)" />
+    
+    <!-- Building details -->
+    <rect x="3" y="23" width="4" height="4" rx="1" fill="white" opacity="0.9" />
+    <rect x="8" y="23" width="4" height="4" rx="1" fill="white" opacity="0.9" />
+    <rect x="14" y="23" width="4" height="4" rx="1" fill="white" opacity="0.9" />
+    
+    <rect x="3" y="30" width="4" height="4" rx="1" fill="white" opacity="0.9" />
+    <rect x="8" y="30" width="4" height="4" rx="1" fill="white" opacity="0.9" />
+    <rect x="14" y="30" width="4" height="4" rx="1" fill="white" opacity="0.9" />
+    
+    <rect x="3" y="37" width="4" height="7" rx="1" fill="white" opacity="0.9" />
+    <rect x="14" y="37" width="4" height="7" rx="1" fill="white" opacity="0.9" />
+    
+    <!-- Door -->
+    <rect x="8" y="35" width="4" height="9" rx="1" fill="white" />
+    <circle cx="11" cy="39" r="0.5" fill="#1E40AF" />
+    
+    <!-- Roof -->
+    <polygon points="0,20 12,8 24,20" fill="#0F172A" />
+    <polygon points="2,20 12,12 22,20" fill="url(#logoGradient)" />
+  </g>
+  
+  <!-- Company Name -->
+  <text x="50" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="url(#textGradient)">Real</text>
+  <text x="50" y="42" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="url(#textGradient)">Brave</text>
+  
+  <!-- Tagline -->
+  <text x="120" y="35" font-family="Arial, sans-serif" font-size="10" fill="#64748B" font-style="italic">Real Estate Excellence</text>
+</svg>
