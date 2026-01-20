@@ -10,8 +10,13 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WBML7DR9');</script>
     <!-- End Google Tag Manager -->
-    <title>Smart Places - Premium Office Spaces in Terrassa</title>
-    <link rel="icon" type="image/x-icon" href="/static/favicon.ico">
+    <title>RealBrave - Premium Office Spaces in Terrassa</title>
+    <!-- Favicon and App Icons -->
+    <link rel="icon" type="image/svg+xml" href="realbrave_logo3.svg">
+    <link rel="icon" type="image/svg+xml" href="realbrave_logo3.svg" sizes="any">
+    <link rel="apple-touch-icon" href="realbrave_logo3.svg">
+    <link rel="mask-icon" href="realbrave_logo3.svg" color="#242954">
+    <meta name="theme-color" content="#242954">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
@@ -27,16 +32,16 @@
         // In production, this should be replaced with actual environment variable injection
         window.WHATSAPP_PHONE = '+34626381615'; // WhatsApp number from .env
         
-        // Configuration for Smart Places
+        // Configuration for RealBrave
         const CONFIG = {
             // WhatsApp configuration
             WHATSAPP_PHONE: window.WHATSAPP_PHONE || '+34626381615', // Default fallback number
             
             // WhatsApp message templates by language
             WHATSAPP_MESSAGES: {
-                cat: 'Hola! M\'agradaria programar una visita a Smart Places per veure els espais d\'oficina disponibles.',
-                es: 'Hola! Me gustaría programar una visita a Smart Places para ver los espacios de oficina disponibles.',
-                en: 'Hello! I would like to schedule a visit to Smart Places to see the available office spaces.'
+                cat: 'Hola! M\'agradaria programar una visita a RealBrave per veure els espais d\'oficina disponibles.',
+                es: 'Hola! Me gustaría programar una visita a RealBrave para ver los espacios de oficina disponibles.',
+                en: 'Hello! I would like to schedule a visit to RealBrave to see the available office spaces.'
             }
         };
 
@@ -381,7 +386,7 @@
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
-                        <img src="logo.png" alt="Smart Places" class="h-8 w-auto">
+                        <img src="realbrave_logo2.svg" alt="RealBrave" class="h-12 w-auto">
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
@@ -418,7 +423,7 @@
             
             <!-- Slide 1: Main Hero Content -->
             <div class="carousel-slide" data-slide="0">
-                <div class="slide-background" style="background-image: url('http://static.photos/office/1920x1080/1');"></div>
+                <div class="slide-background" style="background-image: url('working-space-1-canmir.png');"></div>
                 <div class="slide-overlay"></div>
                 <div class="slide-content">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
@@ -433,7 +438,7 @@
                             </div>
                             <div class="hidden md:block">
                                 <div class="relative">
-                                    <img id="hero-rotating-image" src="render_1.jpg" alt="Smart Places Building Interior" class="rounded-lg shadow-2xl transition-opacity duration-1000">
+                                    <img id="hero-rotating-image" src="render_1.jpg" alt="RealBrave Building Interior" class="rounded-lg shadow-2xl transition-opacity duration-1000">
                                     <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
                                 </div>
                             </div>
@@ -444,7 +449,7 @@
             
             <!-- Slide 2: Refurbishment Notice -->
             <div class="carousel-slide" data-slide="1">
-                <div class="slide-background" style="background-image: url('http://static.photos/construction/1920x1080/1');"></div>
+                <div class="slide-background"></div>
                 <div class="slide-overlay refurbishment-slide"></div>
                 <div class="slide-content">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
@@ -466,7 +471,7 @@
             
             <!-- Slide 3: New Construction/Completion Notice -->
             <div class="carousel-slide" data-slide="2">
-                <div class="slide-background" style="background-image: url('http://static.photos/construction/1920x1080/2');"></div>
+                <div class="slide-background"></div>
                 <div class="slide-overlay refurbishment-slide"></div>
                 <div class="slide-content">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
@@ -477,8 +482,8 @@
                             <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">Oficines en construcció i finalitzades el 2026</h1>
                             <p class="text-xl md:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto">Descobreix els nostres nous espais d'oficines, dissenyats per a la innovació i la productivitat, disponibles a partir del 2026.</p>
                             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
-                                <a href="#" class="bg-white text-red-600 px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg">Més Informació</a>
-                                <button class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition">Contacta'ns</button>
+                                <a href="building.html" class="bg-white text-red-600 px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg">Més Informació</a>
+                                <button id="contacta-ns-btn" class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition">Contacta'ns</button>
                             </div>
                         </div>
                     </div>
@@ -487,7 +492,7 @@
             
             <!-- Slide 4: Render 1 -->
             <div class="carousel-slide" data-slide="3">
-                <div class="slide-background" style="background-image: url('render_1.jpg');"></div>
+                <div class="slide-background" style="background-image: url('working-space-1-canmir-2.png');"></div>
                 <div class="slide-overlay" style="background: linear-gradient(135deg, rgba(30,64,175,0.8) 0%, rgba(16,185,129,0.6) 100%);"></div>
                 <div class="slide-content">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
@@ -495,8 +500,8 @@
                             <div class="refurbishment-badge">
                                 🏢 Architectural Vision
                             </div>
-                            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">Future Smart Places Design</h1>
-                            <p class="text-xl md:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto">Discover the architectural vision for Smart Places - a modern office complex designed to inspire innovation and productivity in the heart of Terrassa.</p>
+                            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">Future RealBrave Design</h1>
+                            <p class="text-xl md:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto">Discover the architectural vision for RealBrave - a modern office complex designed to inspire innovation and productivity in the heart of Terrassa.</p>
                             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
                                 <a href="#" class="bg-white text-primary px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg">Explore Design Features</a>
                                 <button class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition">Schedule a Tour</button>
@@ -508,7 +513,7 @@
             
             <!-- Slide 5: Render 2 -->
             <div class="carousel-slide" data-slide="4">
-                <div class="slide-background" style="background-image: url('render_2.jpg');"></div>
+                <div class="slide-background" style="background-image: url('working-space-1-canmir-3.png');"></div>
                 <div class="slide-overlay" style="background: linear-gradient(135deg, rgba(16,185,129,0.8) 0%, rgba(5,150,105,0.6) 100%);"></div>
                 <div class="slide-content">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
@@ -529,14 +534,14 @@
             
             <!-- Slide 6: Additional Content -->
             <div class="carousel-slide" data-slide="5">
-                <div class="slide-background" style="background-image: url('http://static.photos/office/1920x1080/3');"></div>
+                <div class="slide-background" style="background-image: url('working-space-1-canmir-4.png');"></div>
                 <div class="slide-overlay" style="background: linear-gradient(135deg, rgba(16,185,129,0.9) 0%, rgba(5,150,105,0.8) 100%);"></div>
                 <div class="slide-content">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
                         <div class="grid md:grid-cols-2 gap-8 items-center">
                             <div class="hidden md:block">
                                 <div class="relative">
-                                    <img src="http://static.photos/office/800x600/4" alt="Smart Places Amenities" class="rounded-lg shadow-2xl">
+                                    <img src="working-space-1-canmir-4.png" alt="RealBrave Amenities" class="rounded-lg shadow-2xl">
                                     <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
                                 </div>
                             </div>
@@ -575,7 +580,7 @@
             
             <!-- Slide 7: New Render 2 Slide -->
             <div class="carousel-slide" data-slide="6">
-                <div class="slide-background" style="background-image: url('render_2.jpg');"></div>
+                <div class="slide-background"></div>
                 <div class="slide-overlay" style="background: linear-gradient(135deg, rgba(59,130,246,0.8) 0%, rgba(147,51,234,0.6) 100%);"></div>
                 <div class="slide-content">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
@@ -587,7 +592,7 @@
                             <p class="text-xl md:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto">Step into the future of workspace design. Our innovative office environment fosters creativity, collaboration, and success for forward-thinking businesses.</p>
                             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
                                 <a href="#" class="bg-white text-blue-600 px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg">Discover Innovation</a>
-                                <button class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition">Join Our Community</button>
+                                <a href="comunitat.html" class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition text-center">Join Our Community</a>
                             </div>
                         </div>
                     </div>
@@ -618,7 +623,7 @@
     <section class="bg-gray-50 py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose Smart Places</h2>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose RealBrave</h2>
                 <p class="max-w-2xl mx-auto text-gray-600">Designed to help your business thrive with premium facilities and location advantages</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
@@ -656,12 +661,12 @@
             </div>
             <div class="grid md:grid-cols-2 gap-8">
                 <div>
-                    <img src="render_1.jpg" alt="Smart Places Architectural Render 1" class="rounded-lg shadow-lg mb-4">
-                    <img src="render_2.jpg" alt="Smart Places Architectural Render 2" class="rounded-lg shadow-lg">
+                    <img src="render_1.jpg" alt="RealBrave Architectural Render 1" class="rounded-lg shadow-lg mb-4">
+                    <img src="render_2.jpg" alt="RealBrave Architectural Render 2" class="rounded-lg shadow-lg">
                 </div>
                 <div class="flex flex-col justify-center">
                     <h3 class="text-2xl font-bold text-gray-900 mb-4">Modern Architecture Meets Functionality</h3>
-                    <p class="text-gray-600 mb-6">Smart Places offers a total of 2,500 m² spread across 3 floors, recently renovated to provide the perfect professional environment for your business.</p>
+                    <p class="text-gray-600 mb-6">RealBrave offers a total of 2,500 m² spread across 3 floors, recently renovated to provide the perfect professional environment for your business.</p>
                     <ul class="space-y-3">
                         <li class="flex items-start">
                             <i data-feather="check" class="text-primary mr-2 mt-1 w-4 h-4"></i>
@@ -690,7 +695,7 @@
     <section class="bg-primary text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl font-bold mb-6">Ready to Elevate Your Workspace?</h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto">Contact us today to schedule a tour and see how Smart Places can help your business grow.</p>
+            <p class="text-xl mb-8 max-w-3xl mx-auto">Contact us today to schedule a tour and see how RealBrave can help your business grow.</p>
             <a href="#" target="_blank" id="book-visit-btn" class="bg-white text-primary px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition text-center inline-block">Programar Visita Ara</a>
         </div>
     </section>
@@ -700,7 +705,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
-                    <h3 class="text-xl font-bold mb-4">Smart Places</h3>
+                    <h3 class="text-xl font-bold mb-4">RealBrave</h3>
                     <p class="text-gray-400">Premium office spaces in Terrassa designed for modern businesses.</p>
                 </div>
                 <div>
@@ -721,7 +726,7 @@
                         </li>
                         <li class="flex items-start">
                             <i data-feather="phone" class="mr-2 w-4 h-4 mt-1"></i>
-                            <span>+34 123 456 789</span>
+                            <span>+34 930 107 830</span>
                         </li>
                         <li class="flex items-start">
                             <i data-feather="mail" class="mr-2 w-4 h-4 mt-1"></i>
@@ -739,7 +744,7 @@
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>© <span id="current-year">2025</span> Smart Places. All rights reserved.</p>
+                <p>© <span id="current-year">2025</span> RealBrave. All rights reserved.</p>
             </div>
         </div>
     </footer>
@@ -772,7 +777,7 @@
         // Internationalization data
         const translations = {
             en: {
-                title: "Smart Places - Premium Office Spaces in Terrassa",
+                title: "RealBrave - Premium Office Spaces in Terrassa",
                 nav: {
                     home: "Home",
                     building: "The Building",
@@ -788,7 +793,7 @@
                     exploreSpaces: "Explore Spaces"
                 },
                 features: {
-                    title: "Why Choose Smart Places",
+                    title: "Why Choose RealBrave",
                     subtitle: "Designed to help your business thrive with premium facilities and location advantages",
                     location: {
                         title: "Prime Location",
@@ -807,7 +812,7 @@
                     title: "Our Building",
                     subtitle: "A modern office space designed for productivity and collaboration",
                     mainTitle: "Modern Architecture Meets Functionality",
-                    description: "Smart Places offers a total of 2,500 m² spread across 3 floors, recently renovated to provide the perfect professional environment for your business.",
+                    description: "RealBrave offers a total of 2,500 m² spread across 3 floors, recently renovated to provide the perfect professional environment for your business.",
                     features: [
                         "Year of renovation: 2023",
                         "Total size: 2,500 m²",
@@ -818,7 +823,7 @@
                 },
                 cta: {
                     title: "Ready to Elevate Your Workspace?",
-                    subtitle: "Contact us today to schedule a tour and see how Smart Places can help your business grow.",
+                    subtitle: "Contact us today to schedule a tour and see how RealBrave can help your business grow.",
                     button: "Schedule a Tour Now"
                 },
                 footer: {
@@ -868,8 +873,8 @@
                     },
                     slide4: {
                         badge: "🏢 Architectural Vision",
-                        title: "Future Smart Places Design",
-                        description: "Discover the architectural vision for Smart Places - a modern office complex designed to inspire innovation and productivity in the heart of Terrassa.",
+                        title: "Future RealBrave Design",
+                        description: "Discover the architectural vision for RealBrave - a modern office complex designed to inspire innovation and productivity in the heart of Terrassa.",
                         exploreDesign: "Explore Design Features",
                         scheduleTour: "Schedule a Tour"
                     },
@@ -901,7 +906,7 @@
                 }
             },
             es: {
-                title: "Smart Places - Espacios de Oficina Premium en Terrassa",
+                title: "RealBrave - Espacios de Oficina Premium en Terrassa",
                 nav: {
                     home: "Inicio",
                     building: "El Edificio",
@@ -917,7 +922,7 @@
                     exploreSpaces: "Explorar Espacios"
                 },
                 features: {
-                    title: "Por Qué Elegir Smart Places",
+                    title: "Por Qué Elegir RealBrave",
                     subtitle: "Diseñado para ayudar a tu negocio a prosperar con instalaciones premium y ventajas de ubicación",
                     location: {
                         title: "Ubicación Privilegiada",
@@ -936,7 +941,7 @@
                     title: "Nuestro Edificio",
                     subtitle: "Un espacio de oficina moderno diseñado para la productividad y la colaboración",
                     mainTitle: "La Arquitectura Moderna se Encuentra con la Funcionalidad",
-                    description: "Smart Places ofrece un total de 2.500 m² distribuidos en 3 plantas, recientemente renovado para proporcionar el entorno profesional perfecto para tu negocio.",
+                    description: "RealBrave ofrece un total de 2.500 m² distribuidos en 3 plantas, recientemente renovado para proporcionar el entorno profesional perfecto para tu negocio.",
                     features: [
                         "Año de renovación: 2023",
                         "Superficie total: 2.500 m²",
@@ -947,7 +952,7 @@
                 },
                 cta: {
                     title: "¿Listo para Elevar tu Espacio de Trabajo?",
-                    subtitle: "Contáctanos hoy para programar una visita y ver cómo Smart Places puede ayudar a crecer tu negocio.",
+                    subtitle: "Contáctanos hoy para programar una visita y ver cómo RealBrave puede ayudar a crecer tu negocio.",
                     button: "Programar Visita Ahora"
                 },
                 footer: {
@@ -963,7 +968,7 @@
                     },
                     contactInfo: {
                         address: "Carretera de Rubí, 292 Terrassa",
-                        phone: "+34 123 456 789",
+                        phone: "+34 930 107 830",
                         email: "admin@canmirgestions.com"
                     },
                     legalLinks: {
@@ -997,8 +1002,8 @@
                     },
                     slide4: {
                         badge: "🏢 Visión Arquitectónica",
-                        title: "Diseño Futuro de Smart Places",
-                        description: "Descubre la visión arquitectónica de Smart Places: un complejo de oficinas moderno diseñado para inspirar innovación y productividad en el corazón de Terrassa.",
+                        title: "Diseño Futuro de RealBrave",
+                        description: "Descubre la visión arquitectónica de RealBrave: un complejo de oficinas moderno diseñado para inspirar innovación y productividad en el corazón de Terrassa.",
                         exploreDesign: "Explorar Características",
                         scheduleTour: "Programar Visita"
                     },
@@ -1030,7 +1035,7 @@
                 }
             },
             cat: {
-                title: "Smart Places - Espais d'Oficina Premium a Terrassa",
+                title: "RealBrave - Espais d'Oficina Premium a Terrassa",
                 nav: {
                     home: "Inici",
                     building: "L'Edifici",
@@ -1046,7 +1051,7 @@
                     exploreSpaces: "Explorar Espais"
                 },
                 features: {
-                    title: "Per Què Triar Smart Places",
+                    title: "Per Què Triar RealBrave",
                     subtitle: "Dissenyat per ajudar el teu negoci a prosperar amb instal·lacions premium i avantatges d'ubicació",
                     location: {
                         title: "Ubicació Privilegiada",
@@ -1065,7 +1070,7 @@
                     title: "El Nostre Edifici",
                     subtitle: "Un espai d'oficina modern dissenyat per a la productivitat i la col·laboració",
                     mainTitle: "L'Arquitectura Moderna es Troba amb la Funcionalitat",
-                    description: "Smart Places ofereix un total de 2.500 m² distribuïts en 3 plantes, recentment renovat per proporcionar l'entorn professional perfecte per al teu negoci.",
+                    description: "RealBrave ofereix un total de 2.500 m² distribuïts en 3 plantes, recentment renovat per proporcionar l'entorn professional perfecte per al teu negoci.",
                     features: [
                         "Any de renovació: 2023",
                         "Superfície total: 2.500 m²",
@@ -1076,7 +1081,7 @@
                 },
                 cta: {
                     title: "Preparat per Elevar el teu Espai de Treball?",
-                    subtitle: "Contacta'ns avui per programar una visita i veure com Smart Places pot ajudar a fer créixer el teu negoci.",
+                    subtitle: "Contacta'ns avui per programar una visita i veure com RealBrave pot ajudar a fer créixer el teu negoci.",
                     button: "Programar Visita Ara"
                 },
                 footer: {
@@ -1092,7 +1097,7 @@
                     },
                     contactInfo: {
                         address: "Carretera de Rubí, 292 Terrassa",
-                        phone: "+34 123 456 789",
+                        phone: "+34 930 107 830",
                         email: "admin@canmirgestions.com"
                     },
                     legalLinks: {
@@ -1126,8 +1131,8 @@
                     },
                     slide4: {
                         badge: "🏢 Visió Arquitectònica",
-                        title: "Disseny Futur de Smart Places",
-                        description: "Descobreix la visió arquitectònica de Smart Places: un complex d'oficines modern dissenyat per inspirar innovació i productivitat al cor de Terrassa.",
+                        title: "Disseny Futur de RealBrave",
+                        description: "Descobreix la visió arquitectònica de RealBrave: un complex d'oficines modern dissenyat per inspirar innovació i productivitat al cor de Terrassa.",
                         exploreDesign: "Explorar Característiques",
                         scheduleTour: "Programar Visita"
                     },
@@ -1284,7 +1289,7 @@
                 if (legalLinks[2]) legalLinks[2].textContent = t.footer.legalLinks.legal;
                 
                 const copyrightElement = footer.querySelector('.border-t p');
-                if (copyrightElement) copyrightElement.innerHTML = `© <span id="current-year">${new Date().getFullYear()}</span> Smart Places. ${t.footer.copyright}`;
+                if (copyrightElement) copyrightElement.innerHTML = `© <span id="current-year">${new Date().getFullYear()}</span> RealBrave. ${t.footer.copyright}`;
             }
             
             // Update WhatsApp tooltip when content is updated
@@ -1463,9 +1468,11 @@
             // Set up scheduling buttons with WhatsApp links
             const scheduleBtn = document.getElementById('schedule-visit-btn');
             const bookBtn = document.getElementById('book-visit-btn');
+            const contactaNsBtn = document.getElementById('contacta-ns-btn');
             
             console.log('Schedule button:', scheduleBtn);
             console.log('Book button:', bookBtn);
+            console.log('Contacta\'ns button:', contactaNsBtn);
             
             if (scheduleBtn) {
                 scheduleBtn.addEventListener('click', function(e) {
@@ -1479,6 +1486,14 @@
                 bookBtn.addEventListener('click', function(e) {
                     e.preventDefault();
                     console.log('Book button clicked');
+                    openWhatsAppChat();
+                });
+            }
+            
+            if (contactaNsBtn) {
+                contactaNsBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    console.log('Contacta\'ns button clicked');
                     openWhatsAppChat();
                 });
             }
@@ -1500,6 +1515,19 @@
                         element.removeAttribute('href');
                         element.style.cursor = 'pointer';
                     }
+                }
+                
+                // Handle "Explorar Espais" buttons - redirect to spaces.html
+                if (text.includes('explorar espais') || text.includes('explore spaces') || text.includes('explorar espacios')) {
+                    console.log('Adding spaces.html redirect to element:', element.textContent);
+                    element.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        console.log('Explorar Espais button clicked:', element.textContent);
+                        window.location.href = 'spaces.html';
+                    });
+                    
+                    // Set cursor pointer style
+                    element.style.cursor = 'pointer';
                 }
             });
             // Initialize WhatsApp floating button

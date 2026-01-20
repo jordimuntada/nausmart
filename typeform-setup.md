@@ -1,7 +1,7 @@
 # Typeform + Cal.com Integration Setup Guide
 
 ## Overview
-This implementation adds a Typeform pre-qualification step before Cal.com booking for the "Programar Visitar" buttons on the Smart Places website.
+This implementation adds a Typeform pre-qualification step before Cal.com booking for the "Programar Visitar" buttons on the RealBrave website.
 
 ## Setup Instructions
 

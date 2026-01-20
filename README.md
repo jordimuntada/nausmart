@@ -1,4 +1,4 @@
-# Smart Places - WhatsApp Integration
+# RealBrave - WhatsApp Integration
 
 This project includes WhatsApp integration for the "Programar visita" (Schedule Visit) buttons.
 
@@ -36,9 +36,9 @@ https://wa.me/[PHONE_NUMBER]?text=[ENCODED_MESSAGE]
 ### Message Templates
 
 The system includes pre-configured messages in three languages:
-- **Catalan**: "Hola! M'agradaria programar una visita a Smart Places per veure els espais d'oficina disponibles."
-- **Spanish**: "Hola! Me gustaría programar una visita a Smart Places para ver los espacios de oficina disponibles."
-- **English**: "Hello! I would like to schedule a visit to Smart Places to see the available office spaces."
+- **Catalan**: "Hola! M'agradaria programar una visita a RealBrave per veure els espais d'oficina disponibles."
+- **Spanish**: "Hola! Me gustaría programar una visita a RealBrave para ver los espacios de oficina disponibles."
+- **English**: "Hello! I would like to schedule a visit to RealBrave to see the available office spaces."
 
 ### Files Modified
 

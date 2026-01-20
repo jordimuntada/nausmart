@@ -1,4 +1,4 @@
-// Configuration file for Smart Places
+// Configuration file for RealBrave
 const CONFIG = {
     // WhatsApp configuration
     // Note: For production, set this environment variable in your deployment platform
@@ -6,9 +6,9 @@ const CONFIG = {
     
     // WhatsApp message templates by language
     WHATSAPP_MESSAGES: {
-        cat: 'Hola! M\'agradaria programar una visita a Smart Places per veure els espais d\'oficina disponibles.',
-        es: 'Hola! Me gustaría programar una visita a Smart Places para ver los espacios de oficina disponibles.',
-        en: 'Hello! I would like to schedule a visit to Smart Places to see the available office spaces.'
+        cat: 'Hola! M\'agradaria programar una visita a RealBrave per veure els espais d\'oficina disponibles.',
+        es: 'Hola! Me gustaría programar una visita a RealBrave para ver los espacios de oficina disponibles.',
+        en: 'Hello! I would like to schedule a visit to RealBrave to see the available office spaces.'
     }
 };
 
