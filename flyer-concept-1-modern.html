@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RealBrave - Oficines Premium a Terrassa - Modern</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .flyer {
+            width: 210mm;
+            height: 297mm;
+            background: white;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 50px rgba(0,0,0,0.1);
+        }
+        
+        /* Modern Minimalist Design */
+        .geometric-bg {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 40%;
+            background: linear-gradient(135deg, #1E40AF 0%, #10B981 100%);
+            clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+            opacity: 0.1;
+        }
+        
+        .container {
+            padding: 80px 60px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .logo {
+            width: 150px;
+            height: 50px;
+            background: linear-gradient(135deg, #1E40AF, #10B981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 900;
+            font-size: 32px;
+            margin-bottom: 60px;
+        }
+        
+        .headline {
+            font-size: 72px;
+            font-weight: 900;
+            line-height: 1.1;
+            color: #0F172A;
+            margin-bottom: 30px;
+            letter-spacing: -2px;
+        }
+        
+        .highlight {
+            background: linear-gradient(135deg, #1E40AF, #10B981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subheadline {
+            font-size: 24px;
+            color: #6B7280;
+            font-weight: 300;
+            margin-bottom: 60px;
+            line-height: 1.5;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .feature {
+            text-align: left;
+        }
+        
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: #F9FAFB;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+        
+        .feature-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1F2937;
+            margin-bottom: 8px;
+        }
+        
+        .feature-desc {
+            font-size: 14px;
+            color: #6B7280;
+            line-height: 1.5;
+        }
+        
+        .info-section {
+            background: #F9FAFB;
+            padding: 40px;
+            border-radius: 20px;
+            margin-bottom: 50px;
+        }
+        
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+        
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+        
+        .info-icon {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1E40AF;
+            font-size: 20px;
+        }
+        
+        .info-content h3 {
+            font-size: 14px;
+            color: #6B7280;
+            font-weight: 400;
+            margin-bottom: 4px;
+        }
+        
+        .info-content p {
+            font-size: 16px;
+            color: #1F2937;
+            font-weight: 600;
+        }
+        
+        .cta-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 40px;
+            background: linear-gradient(135deg, #1E40AF, #10B981);
+            border-radius: 20px;
+            color: white;
+        }
+        
+        .cta-text {
+            flex: 1;
+        }
+        
+        .cta-title {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+        
+        .cta-subtitle {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .cta-button {
+            background: white;
+            color: #1E40AF;
+            padding: 20px 40px;
+            border-radius: 12px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .bottom-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+        }
+        
+        .website {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1E40AF;
+        }
+        
+        .contact {
+            text-align: right;
+        }
+        
+        .contact-item {
+            font-size: 16px;
+            color: #6B7280;
+            margin-bottom: 5px;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+            .flyer {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="flyer">
+        <div class="geometric-bg"></div>
+        <div class="container">
+            <div>
+                <div class="logo">RealBrave</div>
+                
+                <h1 class="headline">
+                    Oficines al teu <span class="highlight">gust</span><br>
+                    a Terrassa!
+                </h1>
+                
+                <p class="subheadline">
+                    Espais de treball moderns i flexibles per fer créixer<br>
+                    el teu negoci al cor del Vallès
+                </p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <div class="feature-icon">📍</div>
+                        <div class="feature-title">Ubicació Premium</div>
+                        <div class="feature-desc">A 30 minuts de Barcelona amb excel·lents connexions</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">💼</div>
+                        <div class="feature-title">Espais Flexibles</div>
+                        <div class="feature-desc">Des de 160m² fins a 480m² adaptables al teu negoci</div>
+                    </div>
+                    <div class="feature">
+                        <div class="feature-icon">🏢</div>
+                        <div class="feature-title">Tot Inclòs</div>
+                        <div class="feature-desc">Serveis, manteniment i aparcament privat</div>
+                    </div>
+                </div>
+                
+                <div class="info-section">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <div class="info-icon">📅</div>
+                            <div class="info-content">
+                                <h3>Visites disponibles</h3>
+                                <p>Dilluns a Divendres</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">🕐</div>
+                            <div class="info-content">
+                                <h3>Horari d'atenció</h3>
+                                <p>9:00 - 18:00</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div class="info-content">
+                                <h3>Ubicació</h3>
+                                <p>Carretera de Rubí, 292<br>08221 Terrassa</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <div class="info-icon">💰</div>
+                            <div class="info-content">
+                                <h3>Preus des de</h3>
+                                <p>1.120€/mes</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div>
+                <div class="cta-section">
+                    <div class="cta-text">
+                        <div class="cta-title">Apunta't ara!</div>
+                        <div class="cta-subtitle">Programa una visita personalitzada</div>
+                    </div>
+                    <a href="#" class="cta-button">Reservar Visita</a>
+                </div>
+                
+                <div class="bottom-info">
+                    <div class="website">www.realbrave.eu</div>
+                    <div class="contact">
+                        <div class="contact-item">📞 +34 930 107 830</div>
+                        <div class="contact-item">✉️ admin@canmirgestions.com</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

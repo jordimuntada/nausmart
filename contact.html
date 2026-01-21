@@ -259,7 +259,7 @@
                             </div>
                         </div>
                         <div class="flex items-start">
-                            <i data-feather="car" class="w-5 h-5 text-primary mr-3 mt-1"></i>
+                            <i data-feather="truck" class="w-5 h-5 text-primary mr-3 mt-1"></i>
                             <div>
                                 <h3 class="font-medium text-gray-900" data-translate="location-parking-title">Aparcament</h3>
                                 <p class="text-gray-600" data-translate="location-parking-desc">Aparcament privat gratuït per a visitants</p>
@@ -864,14 +864,53 @@
                 contactForm.addEventListener('submit', handleFormSubmission);
             }
             
-            // Initialize feather icons
-            try {
-                if (typeof feather !== 'undefined') {
-                    feather.replace();
+            // Initialize feather icons with multiple attempts
+            function initializeFeatherIcons() {
+                try {
+                    if (typeof feather !== 'undefined') {
+                        feather.replace();
+                        console.log('Feather icons initialized successfully');
+                    } else {
+                        console.warn('Feather library not loaded');
+                        // Fallback: add simple text icons
+                        addFallbackIcons();
+                    }
+                } catch (error) {
+                    console.warn('Feather icons initialization failed:', error);
+                    addFallbackIcons();
                 }
-            } catch (error) {
-                console.warn('Feather icons initialization failed:', error);
             }
+            
+            // Fallback function to add simple SVG icons
+            function addFallbackIcons() {
+                const iconMap = {
+                    'phone': '📞',
+                    'mail': '📧',
+                    'calendar': '📅',
+                    'menu': '☰',
+                    'map-pin': '📍',
+                    'truck': '🚛',
+                    'zap': '⚡',
+                    'arrow-right': '→'
+                };
+                
+                document.querySelectorAll('[data-feather]').forEach(icon => {
+                    const iconName = icon.getAttribute('data-feather');
+                    if (iconMap[iconName] && !icon.innerHTML.trim()) {
+                        icon.innerHTML = iconMap[iconName];
+                        icon.style.fontSize = '1.2em';
+                        icon.style.display = 'inline-block';
+                    }
+                });
+            }
+            
+            // Try to initialize icons immediately
+            initializeFeatherIcons();
+            
+            // Try again after a short delay in case the library loads late
+            setTimeout(() => {
+                initializeFeatherIcons();
+            }, 1000);
         });
     </script>
 </body>
