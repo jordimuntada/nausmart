@@ -12,14 +12,16 @@
     <!-- End Google Tag Manager -->
     <title>RealBrave - Contacte</title>
     <!-- Favicon and App Icons -->
-    <link rel="icon" type="image/svg+xml" href="realbrave_logo3.svg">
-    <link rel="icon" type="image/svg+xml" href="realbrave_logo3.svg" sizes="any">
-    <link rel="apple-touch-icon" href="realbrave_logo3.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-32x32.png">
     <link rel="mask-icon" href="realbrave_logo3.svg" color="#242954">
     <meta name="theme-color" content="#242954">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
     <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <!-- Supabase JavaScript SDK -->
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
     <!-- Cal.com embed script -->
     <script type="text/javascript">
         (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.q = cal.q || []; p(cal, ar); return; } }; C.Cal.ns = {}; C.Cal.q = C.Cal.q || []; d.head.appendChild(d.createElement("script")).src = A; })(window, "https://app.cal.com/embed/embed.js");
@@ -49,8 +51,15 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
         }
-    </style>
-</head>
+    </style>    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YDM8TFYBP4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YDM8TFYBP4');
+    </script></head>
 <body class="font-sans antialiased">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBML7DR9"
@@ -59,19 +68,19 @@
     <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+            <div class="flex justify-between h-20">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
-                        <img src="realbrave_logo2.svg" alt="RealBrave" class="h-12 w-auto">
+                        <img src="realbrave_logo2.svg" alt="RealBrave" class="h-16 w-auto">
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Inici</a>
-                    <a href="building.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">L'Edifici</a>
-                    <a href="spaces.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Espais</a>
-                    <a href="amenities.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Serveis</a>
-                    <a href="location.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Ubicació</a>
-                    <a href="contact.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contacte</a>
+                    <a href="index.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-home">Inici</a>
+                    <a href="building.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-building">L'Edifici</a>
+                    <a href="spaces.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-spaces">Espais</a>
+                    <a href="amenities.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-amenities">Serveis</a>
+                    <a href="location.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-location">Ubicació</a>
+                    <a href="contact.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-contact">Contacte</a>
                     <div class="flex space-x-2">
                         <button class="language-selector text-xs px-2 py-1 rounded bg-primary text-white" data-lang="cat">CAT</button>
                         <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300" data-lang="es">ES</button>
@@ -91,8 +100,8 @@
     <section class="bg-gradient-to-r from-primary to-secondary text-white py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Contacta amb Nosaltres</h1>
-                <p class="text-xl max-w-3xl mx-auto">Estem aquí per ajudar-te a trobar l'espai perfecte per al teu negoci</p>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6" data-translate="hero-title">Contacta amb Nosaltres</h1>
+                <p class="text-xl max-w-3xl mx-auto" data-translate="hero-subtitle">Estem aquí per ajudar-te a trobar l'espai perfecte per al teu negoci</p>
             </div>
         </div>
     </section>
@@ -101,36 +110,36 @@
     <section class="py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Com Pots Contactar-nos</h2>
-                <p class="max-w-2xl mx-auto text-gray-600">Múltiples formes de posar-te en contacte amb el nostre equip</p>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-translate="contact-methods-title">Com Pots Contactar-nos</h2>
+                <p class="max-w-2xl mx-auto text-gray-600" data-translate="contact-methods-subtitle">Múltiples formes de posar-te en contacte amb el nostre equip</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="contact-card bg-white p-8 rounded-lg shadow-md transition duration-300 text-center">
                     <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                         <i data-feather="phone" class="w-8 h-8 text-primary"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Telèfon</h3>
-                    <p class="text-gray-600 mb-4">Parla directament amb el nostre equip comercial</p>
+                    <h3 class="text-xl font-bold mb-4" data-translate="contact-phone-title">Telèfon</h3>
+                    <p class="text-gray-600 mb-4" data-translate="contact-phone-desc">Parla directament amb el nostre equip comercial</p>
 <a href="tel:+34930107830" class="text-primary font-bold text-lg hover:underline">+34 930 107 830</a>
-                    <p class="text-sm text-gray-500 mt-2">Dilluns a Divendres: 9:00 - 18:00</p>
+                    <p class="text-sm text-gray-500 mt-2" data-translate="contact-phone-hours">Dilluns a Divendres: 9:00 - 18:00</p>
                 </div>
                 <div class="contact-card bg-white p-8 rounded-lg shadow-md transition duration-300 text-center">
                     <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                         <i data-feather="mail" class="w-8 h-8 text-primary"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Email</h3>
-                    <p class="text-gray-600 mb-4">Envia'ns un correu i et respondrem aviat</p>
+                    <h3 class="text-xl font-bold mb-4" data-translate="contact-email-title">Email</h3>
+                    <p class="text-gray-600 mb-4" data-translate="contact-email-desc">Envia'ns un correu i et respondrem aviat</p>
                     <a href="mailto:admin@canmirgestions.com" class="text-primary font-bold text-lg hover:underline">admin@canmirgestions.com</a>
-                    <p class="text-sm text-gray-500 mt-2">Resposta en menys de 24h</p>
+                    <p class="text-sm text-gray-500 mt-2" data-translate="contact-email-response">Resposta en menys de 24h</p>
                 </div>
                 <div class="contact-card bg-white p-8 rounded-lg shadow-md transition duration-300 text-center">
                     <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                         <i data-feather="calendar" class="w-8 h-8 text-primary"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-4">Programa una Visita</h3>
-                    <p class="text-gray-600 mb-4">Reserva una cita per veure les instal·lacions</p>
-                    <a href="#" id="whatsapp-link" class="bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-opacity-90 transition inline-block text-center">Reservar Cita</a>
-                    <p class="text-sm text-gray-500 mt-2">Disponible tots els dies laborables</p>
+                    <h3 class="text-xl font-bold mb-4" data-translate="contact-visit-title">Programa una Visita</h3>
+                    <p class="text-gray-600 mb-4" data-translate="contact-visit-desc">Reserva una cita per veure les instal·lacions</p>
+                    <a href="https://wa.me/34626381615" id="whatsapp-link" class="bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-opacity-90 transition inline-block text-center" data-translate="contact-visit-button">Reservar Cita</a>
+                    <p class="text-sm text-gray-500 mt-2" data-translate="contact-visit-availability">Disponible tots els dies laborables</p>
                 </div>
             </div>
         </div>
@@ -140,64 +149,62 @@
     <section class="bg-gray-50 py-16">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Envia'ns un Missatge</h2>
-                <p class="max-w-2xl mx-auto text-gray-600">Omple el formulari i ens posarem en contacte amb tu el més aviat possible</p>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-translate="form-title">Envia'ns un Missatge</h2>
+                <p class="max-w-2xl mx-auto text-gray-600" data-translate="form-subtitle">Omple el formulari i ens posarem en contacte amb tu el més aviat possible</p>
             </div>
             <div class="bg-white rounded-lg shadow-lg p-8">
                 <form class="grid md:grid-cols-2 gap-6">
                     <div>
-                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nom complet *</label>
+                        <label for="name" class="block text-sm font-medium text-gray-700 mb-2" data-translate="form-name-label">Nom complet *</label>
                         <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-primary focus:border-primary">
                     </div>
                     <div>
-                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email *</label>
+                        <label for="email" class="block text-sm font-medium text-gray-700 mb-2" data-translate="form-email-label">Email *</label>
                         <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-primary focus:border-primary">
                     </div>
                     <div>
-                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-2">Telèfon</label>
+                        <label for="phone" class="block text-sm font-medium text-gray-700 mb-2" data-translate="form-phone-label">Telèfon</label>
                         <input type="tel" id="phone" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-primary focus:border-primary">
                     </div>
                     <div>
-                        <label for="company" class="block text-sm font-medium text-gray-700 mb-2">Empresa</label>
+                        <label for="company" class="block text-sm font-medium text-gray-700 mb-2" data-translate="form-company-label">Empresa</label>
                         <input type="text" id="company" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-primary focus:border-primary">
                     </div>
                     <div>
-                        <label for="space-type" class="block text-sm font-medium text-gray-700 mb-2">Tipus d'espai</label>
+                        <label for="space-type" class="block text-sm font-medium text-gray-700 mb-2" data-translate="form-space-type-label">Tipus d'espai</label>
                         <select id="space-type" name="space-type" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-primary focus:border-primary">
-                            <option value="">Selecciona una opció</option>
-                            <option value="small">Oficina petita (25-50 m²)</option>
-                            <option value="medium">Oficina mitjana (75-125 m²)</option>
-                            <option value="large">Oficina gran (150-300 m²)</option>
-                            <option value="coworking">Espai coworking</option>
-                            <option value="meeting-room">Sala de reunions</option>
+                            <option value="" data-translate="form-space-type-placeholder">Selecciona una opció</option>
+                            <option value="small" data-translate="form-space-type-small">Oficina petita (25-50 m²)</option>
+                            <option value="medium" data-translate="form-space-type-medium">Oficina mitjana (75-125 m²)</option>
+                            <option value="large" data-translate="form-space-type-large">Oficina gran (150-300 m²)</option>
                         </select>
                     </div>
                     <div>
-                        <label for="budget" class="block text-sm font-medium text-gray-700 mb-2">Pressupost mensual</label>
+                        <label for="budget" class="block text-sm font-medium text-gray-700 mb-2" data-translate="form-budget-label">Pressupost mensual</label>
                         <select id="budget" name="budget" class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-primary focus:border-primary">
-                            <option value="">Selecciona un rang</option>
-                            <option value="500-1000">500€ - 1.000€</option>
-                            <option value="1000-2000">1.000€ - 2.000€</option>
-                            <option value="2000-3000">2.000€ - 3.000€</option>
-                            <option value="3000+">Més de 3.000€</option>
+                            <option value="" data-translate="form-budget-placeholder">Selecciona un rang</option>
+                            <option value="500-1000" data-translate="form-budget-500-1000">500€ - 1.000€</option>
+                            <option value="1000-2000" data-translate="form-budget-1000-2000">1.000€ - 2.000€</option>
+                            <option value="2000-3000" data-translate="form-budget-2000-3000">2.000€ - 3.000€</option>
+                            <option value="3000+" data-translate="form-budget-3000+">Més de 3.000€</option>
                         </select>
                     </div>
                     <div class="md:col-span-2">
-                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Missatge *</label>
-                        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-primary focus:border-primary" placeholder="Explica'ns les teves necessitats i com et podem ajudar..."></textarea>
+                        <label for="message" class="block text-sm font-medium text-gray-700 mb-2" data-translate="form-message-label">Missatge *</label>
+                        <textarea id="message" name="message" rows="4" required class="w-full px-4 py-3 border border-gray-300 rounded-md focus:ring-primary focus:border-primary" data-translate-placeholder="form-message-placeholder"></textarea>
                     </div>
                     <div class="md:col-span-2">
                         <div class="flex items-start">
                             <input type="checkbox" id="privacy" name="privacy" required class="mt-1 mr-3">
-                            <label for="privacy" class="text-sm text-gray-600">
-                                Accepto la <a href="#" class="text-primary hover:underline">política de privacitat</a> i el tractament de les meves dades personals *
+                            <label for="privacy" class="text-sm text-gray-600" data-translate="form-privacy-label">
+                                Accepto la <a href="privacy-policy.html" class="text-primary hover:underline">política de privacitat</a> i el tractament de les meves dades personals *
                             </label>
                         </div>
                     </div>
                     <div class="md:col-span-2">
                         <div class="flex items-start">
                             <input type="checkbox" id="newsletter" name="newsletter" class="mt-1 mr-3">
-                            <label for="newsletter" class="text-sm text-gray-600">
+                            <label for="newsletter" class="text-sm text-gray-600" data-translate="form-newsletter-label">
                                 Vull rebre informació sobre ofertes i novetats de RealBrave
                             </label>
                         </div>
@@ -207,7 +214,7 @@
                         <input type="text" id="hp_email" name="hp_email" tabindex="-1" autocomplete="off">
                     </div>
                     <div class="md:col-span-2">
-                        <button type="submit" class="w-full bg-primary text-white px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition">
+                        <button type="submit" class="w-full bg-primary text-white px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition" data-translate="form-submit-button">
                             Enviar Missatge
                         </button>
                     </div>
@@ -221,53 +228,53 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12">
                 <div>
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Horaris d'Atenció</h2>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6" data-translate="hours-title">Horaris d'Atenció</h2>
                     <div class="space-y-4">
                         <div class="flex justify-between items-center py-3 border-b border-gray-200">
-                            <span class="font-medium text-gray-900">Dilluns - Divendres</span>
+                            <span class="font-medium text-gray-900" data-translate="schedule-weekdays">Dilluns - Divendres</span>
                             <span class="text-gray-600">9:00 - 18:00</span>
                         </div>
                         <div class="flex justify-between items-center py-3 border-b border-gray-200">
-                            <span class="font-medium text-gray-900">Dissabte</span>
+                            <span class="font-medium text-gray-900" data-translate="schedule-saturday">Dissabte</span>
                             <span class="text-gray-600">10:00 - 14:00</span>
                         </div>
                         <div class="flex justify-between items-center py-3 border-b border-gray-200">
-                            <span class="font-medium text-gray-900">Diumenge</span>
-                            <span class="text-gray-600">Tancat</span>
+                            <span class="font-medium text-gray-900" data-translate="schedule-sunday">Diumenge</span>
+                            <span class="text-gray-600" data-translate="schedule-closed">Tancat</span>
                         </div>
                     </div>
                     <div class="mt-8 p-6 bg-primary bg-opacity-5 rounded-lg">
-                        <h3 class="font-bold text-primary mb-2">Visites fora d'horari</h3>
-                        <p class="text-gray-600 text-sm">Podem organitzar visites fora de l'horari habitual prèvia cita. Contacta'ns per coordinar una visita que s'adapti al teu horari.</p>
+                        <h3 class="font-bold text-primary mb-2" data-translate="after-hours-title">Visites fora d'horari</h3>
+                        <p class="text-gray-600 text-sm" data-translate="after-hours-desc">Podem organitzar visites fora de l'horari habitual prèvia cita. Contacta'ns per coordinar una visita que s'adapti al teu horari.</p>
                     </div>
                 </div>
                 <div>
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Com Arribar</h2>
+                    <h2 class="text-3xl font-bold text-gray-900 mb-6" data-translate="directions-title">Com Arribar</h2>
                     <div class="space-y-4 mb-6">
                         <div class="flex items-start">
                             <i data-feather="map-pin" class="w-5 h-5 text-primary mr-3 mt-1"></i>
                             <div>
-                                <h3 class="font-medium text-gray-900">Adreça</h3>
+                                <h3 class="font-medium text-gray-900" data-translate="location-address-title">Adreça</h3>
                                 <p class="text-gray-600">Carretera de Rubí, 292<br>08221 Terrassa, Barcelona</p>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <i data-feather="car" class="w-5 h-5 text-primary mr-3 mt-1"></i>
                             <div>
-                                <h3 class="font-medium text-gray-900">Aparcament</h3>
-                                <p class="text-gray-600">Aparcament privat gratuït per a visitants</p>
+                                <h3 class="font-medium text-gray-900" data-translate="location-parking-title">Aparcament</h3>
+                                <p class="text-gray-600" data-translate="location-parking-desc">Aparcament privat gratuït per a visitants</p>
                             </div>
                         </div>
                         <div class="flex items-start">
                             <i data-feather="zap" class="w-5 h-5 text-primary mr-3 mt-1"></i>
                             <div>
-                                <h3 class="font-medium text-gray-900">Transport públic</h3>
-                                <p class="text-gray-600">FGC Les Fonts (5 min a peu)<br>Autobús línies 1, 4, 7</p>
+                                <h3 class="font-medium text-gray-900" data-translate="location-transport-title">Transport públic</h3>
+                                <p class="text-gray-600" data-translate="location-transport-desc">FGC Les Fonts (5 min a peu)<br>Autobús línies 1, 4, 7</p>
                             </div>
                         </div>
                     </div>
                     <a href="location.html" class="inline-flex items-center text-primary font-medium hover:underline">
-                        <span>Veure mapa i indicacions detallades</span>
+                        <span data-translate="location-detailed-link">Veure mapa i indicacions detallades</span>
                         <i data-feather="arrow-right" class="w-4 h-4 ml-2"></i>
                     </a>
                 </div>
@@ -279,29 +286,29 @@
     <section class="bg-gray-50 py-16">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Preguntes Freqüents</h2>
-                <p class="max-w-2xl mx-auto text-gray-600">Respostes a les preguntes més habituals sobre RealBrave</p>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-translate="faq-title">Preguntes Freqüents</h2>
+                <p class="max-w-2xl mx-auto text-gray-600" data-translate="faq-subtitle">Respostes a les preguntes més habituals sobre RealBrave</p>
             </div>
             <div class="space-y-6">
                 <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-lg font-bold text-gray-900 mb-3">Quin és el contracte mínim de lloguer?</h3>
-                    <p class="text-gray-600">Oferim contractes flexibles a partir de 6 mesos, amb possibilitat de renovació mensual després del període inicial.</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3" data-translate="faq1-question">Quin és el contracte mínim de lloguer?</h3>
+                    <p class="text-gray-600" data-translate="faq1-answer">Oferim contractes flexibles a partir de 6 mesos, amb possibilitat de renovació mensual després del període inicial.</p>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-lg font-bold text-gray-900 mb-3">Què inclou el preu del lloguer?</h3>
-                    <p class="text-gray-600">El preu inclou internet d'alta velocitat, climatització, seguretat 24/7, neteja, manteniment i accés a les zones comunes.</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3" data-translate="faq2-question">Què inclou el preu del lloguer?</h3>
+                    <p class="text-gray-600" data-translate="faq2-answer">El preu inclou internet d'alta velocitat, climatització, seguretat 24/7, neteja, manteniment i accés a les zones comunes.</p>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-lg font-bold text-gray-900 mb-3">Puc visitar les instal·lacions abans de decidir?</h3>
-                    <p class="text-gray-600">Per descomptat! Oferim visites guiades gratuïtes de dilluns a divendres. Pots programar una cita trucant-nos o omplint el formulari.</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3" data-translate="faq3-question">Puc visitar les instal·lacions abans de decidir?</h3>
+                    <p class="text-gray-600" data-translate="faq3-answer">Per descomptat! Oferim visites guiades gratuïtes de dilluns a divendres. Pots programar una cita trucant-nos o omplint el formulari.</p>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-lg font-bold text-gray-900 mb-3">Hi ha places d'aparcament disponibles?</h3>
-                    <p class="text-gray-600">Sí, cada oficina té places d'aparcament assignades incloses en el preu. També disposem de places addicionals si les necessites.</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3" data-translate="faq4-question">Hi ha places d'aparcament disponibles?</h3>
+                    <p class="text-gray-600" data-translate="faq4-answer">Sí, cada oficina té places d'aparcament assignades incloses en el preu. També disposem de places addicionals si les necessites.</p>
                 </div>
                 <div class="bg-white rounded-lg shadow-md p-6">
-                    <h3 class="text-lg font-bold text-gray-900 mb-3">Puc personalitzar l'espai segons les meves necessitats?</h3>
-                    <p class="text-gray-600">Absolutament. Treballem amb tu per adaptar l'espai a les necessitats específiques del teu negoci, incloent distribució i decoració.</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3" data-translate="faq5-question">Puc personalitzar l'espai segons les meves necessitats?</h3>
+                    <p class="text-gray-600" data-translate="faq5-answer">Absolutament. Treballem amb tu per adaptar l'espai a les necessitats específiques del teu negoci, incloent distribució i decoració.</p>
                 </div>
             </div>
         </div>
@@ -310,11 +317,11 @@
     <!-- Call to Action -->
     <section class="bg-primary text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-6">Preparat per Començar?</h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto">No esperis més per trobar l'oficina perfecta per al teu negoci. Contacta'ns avui mateix!</p>
+            <h2 class="text-3xl font-bold mb-6" data-translate="cta-title">Preparat per Començar?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto" data-translate="cta-subtitle">No esperis més per trobar l'oficina perfecta per al teu negoci. Contacta'ns avui mateix!</p>
             <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-                <a href="#" id="book-visit-btn" class="bg-white text-primary px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition inline-block text-center">Programa una Visita</a>
-<a href="tel:+34930107830" class="border-2 border-white text-white px-8 py-4 rounded-md font-bold hover:bg-white hover:bg-opacity-10 transition">Truca Ara</a>
+                <a href="https://wa.me/34626381615" id="book-visit-btn" class="bg-white text-primary px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition inline-block text-center" data-translate="cta-book-visit">Programa una Visita</a>
+                <a href="tel:+34930107830" class="border-2 border-white text-white px-8 py-4 rounded-md font-bold hover:bg-white hover:bg-opacity-10 transition" data-translate="cta-call-now">Truca Ara</a>
             </div>
         </div>
     </section>
@@ -325,19 +332,19 @@
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4">RealBrave</h3>
-                    <p class="text-gray-400">Espais d'oficina a Terrassa dissenyats per a empreses amb entorn tranquil.</p>
+                    <p class="text-gray-400" data-translate="footer-description">Espais d'oficina a Terrassa dissenyats per a empreses amb entorn tranquil.</p>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Enllaços Ràpids</h4>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer-quick-links">Enllaços Ràpids</h4>
                     <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-400 hover:text-white">Inici</a></li>
-                        <li><a href="building.html" class="text-gray-400 hover:text-white">L'Edifici</a></li>
-                        <li><a href="spaces.html" class="text-gray-400 hover:text-white">Espais Disponibles</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contacta'ns</a></li>
+                        <li><a href="index.html" class="text-gray-400 hover:text-white" data-translate="nav-home">Inici</a></li>
+                        <li><a href="building.html" class="text-gray-400 hover:text-white" data-translate="nav-building">L'Edifici</a></li>
+                        <li><a href="spaces.html" class="text-gray-400 hover:text-white" data-translate="nav-spaces">Espais Disponibles</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white" data-translate="nav-contact">Contacta'ns</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Contacte</h4>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer-contact">Contacte</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-start">
                             <i data-feather="map-pin" class="mr-2 w-4 h-4 mt-1"></i>
@@ -354,45 +361,492 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer-legal">Legal</h4>
                     <ul class="space-y-2">
-                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white">Política de Privacitat</a></li>
-                        <li><a href="cookie-policy.html" class="text-gray-400 hover:text-white">Política de Cookies</a></li>
-                        <li><a href="legal-notice.html" class="text-gray-400 hover:text-white">Avís Legal</a></li>
+                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white" data-translate="footer-privacy">Política de Privacitat</a></li>
+                        <li><a href="cookie-policy.html" class="text-gray-400 hover:text-white" data-translate="footer-cookies">Política de Cookies</a></li>
+                        <li><a href="legal-notice.html" class="text-gray-400 hover:text-white" data-translate="footer-legal-notice">Avís Legal</a></li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>© <span id="current-year">2025</span> RealBrave. Tots els drets reservats.</p>
+                <p>© <span id="current-year">2025</span> RealBrave. <span data-translate="footer-rights">Tots els drets reservats.</span></p>
             </div>
         </div>
     </footer>
 
-    <script>feather.replace();</script>
     <script>
+        // Translation system
+        const translations = {
+            cat: {
+                // Page title
+                'page-title': 'RealBrave - Contacte',
+                
+                // Navigation
+                'nav-home': 'Inici',
+                'nav-building': 'L\'Edifici',
+                'nav-spaces': 'Espais',
+                'nav-amenities': 'Serveis',
+                'nav-location': 'Ubicació',
+                'nav-contact': 'Contacte',
+                
+                // Hero Section
+                'hero-title': 'Contacta amb Nosaltres',
+                'hero-subtitle': 'Estem aquí per ajudar-te a trobar l\'espai perfecte per al teu negoci',
+                
+                // Contact Methods
+                'contact-methods-title': 'Com Pots Contactar-nos',
+                'contact-methods-subtitle': 'Múltiples formes de posar-te en contacte amb el nostre equip',
+                'contact-phone-title': 'Telèfon',
+                'contact-phone-desc': 'Parla directament amb el nostre equip comercial',
+                'contact-phone-hours': 'Dilluns a Divendres: 9:00 - 18:00',
+                'contact-email-title': 'Email',
+                'contact-email-desc': 'Envia\'ns un correu i et respondrem aviat',
+                'contact-email-response': 'Resposta en menys de 24h',
+                'contact-visit-title': 'Programa una Visita',
+                'contact-visit-desc': 'Reserva una cita per veure les instal·lacions',
+                'contact-visit-button': 'Reservar Cita',
+                'contact-visit-availability': 'Disponible tots els dies laborables',
+                
+                // Contact Form
+                'form-title': 'Envia\'ns un Missatge',
+                'form-subtitle': 'Omple el formulari i ens posarem en contacte amb tu el més aviat possible',
+                'form-name-label': 'Nom complet *',
+                'form-email-label': 'Email *',
+                'form-phone-label': 'Telèfon',
+                'form-company-label': 'Empresa',
+                'form-space-type-label': 'Tipus d\'espai',
+                'form-space-type-placeholder': 'Selecciona una opció',
+                'form-space-type-small': 'Oficina petita (25-50 m²)',
+                'form-space-type-medium': 'Oficina mitjana (75-125 m²)',
+                'form-space-type-large': 'Oficina gran (150-300 m²)',
+                'form-budget-label': 'Pressupost mensual',
+                'form-budget-placeholder': 'Selecciona un rang',
+                'form-budget-500-1000': '500€ - 1.000€',
+                'form-budget-1000-2000': '1.000€ - 2.000€',
+                'form-budget-2000-3000': '2.000€ - 3.000€',
+                'form-budget-3000+': 'Més de 3.000€',
+                'form-message-label': 'Missatge *',
+                'form-message-placeholder': 'Explica\'ns les teves necessitats i com et podem ajudar...',
+                'form-privacy-label': 'Accepto la política de privacitat i el tractament de les meves dades personals *',
+                'form-newsletter-label': 'Vull rebre informació sobre ofertes i novetats de RealBrave',
+                'form-submit-button': 'Enviar Missatge',
+                
+                // Office Hours & Location
+                'hours-title': 'Horaris d\'Atenció',
+                'directions-title': 'Com Arribar',
+                'schedule-weekdays': 'Dilluns - Divendres',
+                'schedule-saturday': 'Dissabte',
+                'schedule-sunday': 'Diumenge',
+                'schedule-closed': 'Tancat',
+                'after-hours-title': 'Visites fora d\'horari',
+                'after-hours-desc': 'Podem organitzar visites fora de l\'horari habitual prèvia cita. Contacta\'ns per coordinar una visita que s\'adapti al teu horari.',
+                'location-address-title': 'Adreça',
+                'location-parking-title': 'Aparcament',
+                'location-parking-desc': 'Aparcament privat gratuït per a visitants',
+                'location-transport-title': 'Transport públic',
+                'location-transport-desc': 'FGC Les Fonts (5 min a peu)<br>Autobús línies 1, 4, 7',
+                'location-detailed-link': 'Veure mapa i indicacions detallades',
+                
+                // FAQ
+                'faq-title': 'Preguntes Freqüents',
+                'faq-subtitle': 'Respostes a les preguntes més habituals sobre RealBrave',
+                'faq1-question': 'Quin és el contracte mínim de lloguer?',
+                'faq1-answer': 'Oferim contractes flexibles a partir de 6 mesos, amb possibilitat de renovació mensual després del període inicial.',
+                'faq2-question': 'Què inclou el preu del lloguer?',
+                'faq2-answer': 'El preu inclou internet d\'alta velocitat, climatització, seguretat 24/7, neteja, manteniment i accés a les zones comunes.',
+                'faq3-question': 'Puc visitar les instal·lacions abans de decidir?',
+                'faq3-answer': 'Per descomptat! Oferim visites guiades gratuïtes de dilluns a divendres. Pots programar una cita trucant-nos o omplint el formulari.',
+                'faq4-question': 'Hi ha places d\'aparcament disponibles?',
+                'faq4-answer': 'Sí, cada oficina té places d\'aparcament assignades incloses en el preu. També disposem de places addicionals si les necessites.',
+                'faq5-question': 'Puc personalitzar l\'espai segons les meves necessitats?',
+                'faq5-answer': 'Absolutament. Treballem amb tu per adaptar l\'espai a les necessitats específiques del teu negoci, incloent distribució i decoració.',
+                
+                // CTA
+                'cta-title': 'Preparat per Començar?',
+                'cta-subtitle': 'No esperis més per trobar l\'oficina perfecta per al teu negoci. Contacta\'ns avui mateix!',
+                'cta-book-visit': 'Programa una Visita',
+                'cta-call-now': 'Truca Ara',
+                
+                // Footer
+                'footer-description': 'Espais d\'oficina a Terrassa dissenyats per a empreses amb entorn tranquil.',
+                'footer-quick-links': 'Enllaços Ràpids',
+                'footer-contact': 'Contacte',
+                'footer-legal': 'Legal',
+                'footer-privacy': 'Política de Privacitat',
+                'footer-cookies': 'Política de Cookies',
+                'footer-legal-notice': 'Avís Legal',
+                'footer-rights': 'Tots els drets reservats.'
+            },
+            es: {
+                // Page title
+                'page-title': 'RealBrave - Contacto',
+                
+                // Navigation
+                'nav-home': 'Inicio',
+                'nav-building': 'El Edificio',
+                'nav-spaces': 'Espacios',
+                'nav-amenities': 'Servicios',
+                'nav-location': 'Ubicación',
+                'nav-contact': 'Contacto',
+                
+                // Hero Section
+                'hero-title': 'Contacta con Nosotros',
+                'hero-subtitle': 'Estamos aquí para ayudarte a encontrar el espacio perfecto para tu negocio',
+                
+                // Contact Methods
+                'contact-methods-title': 'Cómo Puedes Contactarnos',
+                'contact-methods-subtitle': 'Múltiples formas de ponerte en contacto con nuestro equipo',
+                'contact-phone-title': 'Teléfono',
+                'contact-phone-desc': 'Habla directamente con nuestro equipo comercial',
+                'contact-phone-hours': 'Lunes a Viernes: 9:00 - 18:00',
+                'contact-email-title': 'Email',
+                'contact-email-desc': 'Envíanos un correo y te responderemos pronto',
+                'contact-email-response': 'Respuesta en menos de 24h',
+                'contact-visit-title': 'Programa una Visita',
+                'contact-visit-desc': 'Reserva una cita para ver las instalaciones',
+                'contact-visit-button': 'Reservar Cita',
+                'contact-visit-availability': 'Disponible todos los días laborables',
+                
+                // Contact Form
+                'form-title': 'Envíanos un Mensaje',
+                'form-subtitle': 'Completa el formulario y nos pondremos en contacto contigo lo antes posible',
+                'form-name-label': 'Nombre completo *',
+                'form-email-label': 'Email *',
+                'form-phone-label': 'Teléfono',
+                'form-company-label': 'Empresa',
+                'form-space-type-label': 'Tipo de espacio',
+                'form-space-type-placeholder': 'Selecciona una opción',
+                'form-space-type-small': 'Oficina pequeña (25-50 m²)',
+                'form-space-type-medium': 'Oficina mediana (75-125 m²)',
+                'form-space-type-large': 'Oficina grande (150-300 m²)',
+                'form-budget-label': 'Presupuesto mensual',
+                'form-budget-placeholder': 'Selecciona un rango',
+                'form-budget-500-1000': '500€ - 1.000€',
+                'form-budget-1000-2000': '1.000€ - 2.000€',
+                'form-budget-2000-3000': '2.000€ - 3.000€',
+                'form-budget-3000+': 'Más de 3.000€',
+                'form-message-label': 'Mensaje *',
+                'form-message-placeholder': 'Explícanos tus necesidades y cómo podemos ayudarte...',
+                'form-privacy-label': 'Acepto la política de privacidad y el tratamiento de mis datos personales *',
+                'form-newsletter-label': 'Quiero recibir información sobre ofertas y novedades de RealBrave',
+                'form-submit-button': 'Enviar Mensaje',
+                
+                // Office Hours & Location
+                'hours-title': 'Horarios de Atención',
+                'directions-title': 'Cómo Llegar',
+                'schedule-weekdays': 'Lunes - Viernes',
+                'schedule-saturday': 'Sábado',
+                'schedule-sunday': 'Domingo',
+                'schedule-closed': 'Cerrado',
+                'after-hours-title': 'Visitas fuera de horario',
+                'after-hours-desc': 'Podemos organizar visitas fuera del horario habitual previa cita. Contáctanos para coordinar una visita que se adapte a tu horario.',
+                'location-address-title': 'Dirección',
+                'location-parking-title': 'Aparcamiento',
+                'location-parking-desc': 'Aparcamiento privado gratuito para visitantes',
+                'location-transport-title': 'Transporte público',
+                'location-transport-desc': 'FGC Les Fonts (5 min a pie)<br>Autobús líneas 1, 4, 7',
+                'location-detailed-link': 'Ver mapa e indicaciones detalladas',
+                
+                // FAQ
+                'faq-title': 'Preguntas Frecuentes',
+                'faq-subtitle': 'Respuestas a las preguntas más habituales sobre RealBrave',
+                'faq1-question': '¿Cuál es el contrato mínimo de alquiler?',
+                'faq1-answer': 'Ofrecemos contratos flexibles a partir de 6 meses, con posibilidad de renovación mensual después del período inicial.',
+                'faq2-question': '¿Qué incluye el precio del alquiler?',
+                'faq2-answer': 'El precio incluye internet de alta velocidad, climatización, seguridad 24/7, limpieza, mantenimiento y acceso a las zonas comunes.',
+                'faq3-question': '¿Puedo visitar las instalaciones antes de decidir?',
+                'faq3-answer': '¡Por supuesto! Ofrecemos visitas guiadas gratuitas de lunes a viernes. Puedes programar una cita llamándonos o completando el formulario.',
+                'faq4-question': '¿Hay plazas de aparcamiento disponibles?',
+                'faq4-answer': 'Sí, cada oficina tiene plazas de aparcamiento asignadas incluidas en el precio. También disponemos de plazas adicionales si las necesitas.',
+                'faq5-question': '¿Puedo personalizar el espacio según mis necesidades?',
+                'faq5-answer': 'Absolutamente. Trabajamos contigo para adaptar el espacio a las necesidades específicas de tu negocio, incluyendo distribución y decoración.',
+                
+                // CTA
+                'cta-title': '¿Listo para Empezar?',
+                'cta-subtitle': 'No esperes más para encontrar la oficina perfecta para tu negocio. ¡Contáctanos hoy mismo!',
+                'cta-book-visit': 'Programar Visita',
+                'cta-call-now': 'Llamar Ahora',
+                
+                // Footer
+                'footer-description': 'Espacios de oficina en Terrassa diseñados para empresas con entorno tranquilo.',
+                'footer-quick-links': 'Enlaces Rápidos',
+                'footer-contact': 'Contacto',
+                'footer-legal': 'Legal',
+                'footer-privacy': 'Política de Privacidad',
+                'footer-cookies': 'Política de Cookies',
+                'footer-legal-notice': 'Aviso Legal',
+                'footer-rights': 'Todos los derechos reservados.'
+            },
+            en: {
+                // Page title
+                'page-title': 'RealBrave - Contact',
+                
+                // Navigation
+                'nav-home': 'Home',
+                'nav-building': 'The Building',
+                'nav-spaces': 'Spaces',
+                'nav-amenities': 'Amenities',
+                'nav-location': 'Location',
+                'nav-contact': 'Contact',
+                
+                // Hero Section
+                'hero-title': 'Contact Us',
+                'hero-subtitle': 'We are here to help you find the perfect space for your business',
+                
+                // Contact Methods
+                'contact-methods-title': 'How You Can Contact Us',
+                'contact-methods-subtitle': 'Multiple ways to get in touch with our team',
+                
+                // Contact Form
+                'form-title': 'Send Us a Message',
+                'form-subtitle': 'Fill out the form and we will get back to you as soon as possible',
+                
+                // Office Hours
+                'hours-title': 'Office Hours',
+                'directions-title': 'How to Get Here',
+                
+                // FAQ
+                'faq-title': 'Frequently Asked Questions',
+                'faq-subtitle': 'Answers to the most common questions about RealBrave',
+                
+                // CTA
+                'cta-title': 'Ready to Get Started?',
+                'cta-subtitle': 'Don\'t wait any longer to find the perfect office for your business. Contact us today!',
+                'cta-book-visit': 'Schedule Visit',
+                'cta-call-now': 'Call Now',
+                
+                // Footer
+                'footer-description': 'Office spaces in Terrassa designed for businesses with a peaceful environment.',
+                'footer-quick-links': 'Quick Links',
+                'footer-contact': 'Contact',
+                'footer-legal': 'Legal',
+                'footer-privacy': 'Privacy Policy',
+                'footer-cookies': 'Cookie Policy',
+                'footer-legal-notice': 'Legal Notice',
+                'footer-rights': 'All rights reserved.'
+            }
+        };
+
+        // Current language state
+        let currentLanguage = localStorage.getItem('smartplaces-language') || 'cat';
+
         // WhatsApp configuration
         const WHATSAPP_PHONE = '+34930107830';
-        const WHATSAPP_MESSAGE = 'Hola! M\'agradaria programar una visita a RealBrave per veure els espais d\'oficina disponibles.';
+        const WHATSAPP_MESSAGES = {
+            cat: 'Hola! M\'agradaria programar una visita a RealBrave per veure els espais d\'oficina disponibles.',
+            es: '¡Hola! Me gustaría programar una visita a RealBrave para ver los espacios de oficina disponibles.',
+            en: 'Hello! I would like to schedule a visit to RealBrave to see the available office spaces.'
+        };
+
+        // Language switching functionality
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('smartplaces-language', lang);
+            updateContent();
+            updateLanguageButtons();
+            updatePageLanguage();
+            updateWhatsAppLinks(); // Update WhatsApp links with new language
+        }
+
+        function updateContent() {
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[currentLanguage] && translations[currentLanguage][key]) {
+                    element.textContent = translations[currentLanguage][key];
+                }
+            });
+            
+            // Update page title
+            document.title = translations[currentLanguage]['page-title'];
+        }
+
+        function updateLanguageButtons() {
+            const buttons = document.querySelectorAll('.language-selector');
+            buttons.forEach(button => {
+                const lang = button.getAttribute('data-lang');
+                if (lang === currentLanguage) {
+                    button.className = 'language-selector text-xs px-2 py-1 rounded bg-primary text-white';
+                } else {
+                    button.className = 'language-selector text-xs px-2 py-1 rounded border border-gray-300';
+                }
+            });
+        }
+
+        function updatePageLanguage() {
+            document.documentElement.lang = currentLanguage;
+        }
 
         // Function to generate WhatsApp URL
         function generateWhatsAppURL() {
             const phone = WHATSAPP_PHONE.replace(/[^\d]/g, ''); // Remove non-digits
-            const message = encodeURIComponent(WHATSAPP_MESSAGE);
+            const message = encodeURIComponent(WHATSAPP_MESSAGES[currentLanguage] || WHATSAPP_MESSAGES.cat);
             return `https://wa.me/${phone}?text=${message}`;
         }
 
-        // Initialize WhatsApp links
+        function updateWhatsAppLinks() {
+            const whatsappURL = generateWhatsAppURL();
+            
+            const whatsappLink = document.getElementById('whatsapp-link');
+            const bookBtn = document.getElementById('book-visit-btn');
+            
+            if (whatsappLink) {
+                whatsappLink.href = whatsappURL;
+            }
+            
+            if (bookBtn) {
+                bookBtn.href = whatsappURL;
+            }
+        }
+
+        // Initialize Supabase client
+        const SUPABASE_URL = 'https://ofqxvygsjneccemymtws.supabase.co';
+        const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9mcXh2eWdzam5lY2NlbXltdHdzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MDc4MzQsImV4cCI6MjA2MTQ4MzgzNH0.Ko5b4QaVUZT2sbhl_PjZ8nE7NN0kp6__jOE29dc1-3g';
+        const supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+
+        // Form submission handler
+        async function handleFormSubmission(event) {
+            event.preventDefault();
+            
+            const form = event.target;
+            const submitButton = form.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            
+            // Show loading state
+            submitButton.disabled = true;
+            submitButton.textContent = currentLanguage === 'cat' ? 'Enviant...' :
+                                      currentLanguage === 'es' ? 'Enviando...' : 'Sending...';
+            
+            try {
+                // Get form data
+                const formData = new FormData(form);
+                
+                // Validate required fields
+                const name = formData.get('name');
+                const email = formData.get('email');
+                const message = formData.get('message');
+                const privacy = formData.get('privacy');
+                
+                if (!name || !email || !message || !privacy) {
+                    throw new Error(currentLanguage === 'cat' ? 'Si us plau, omple tots els camps obligatoris.' :
+                                   currentLanguage === 'es' ? 'Por favor, completa todos los campos obligatorios.' :
+                                   'Please fill in all required fields.');
+                }
+                
+                // Check for honeypot
+                if (formData.get('hp_email')) {
+                    throw new Error('Bot detected');
+                }
+                
+                // Prepare data for Supabase
+                const submissionData = {
+                    full_name: name,
+                    email: email,
+                    phone: formData.get('phone') || null,
+                    company: formData.get('company') || null,
+                    space_type: formData.get('space-type') || null,
+                    budget: formData.get('budget') || null,
+                    message: message,
+                    privacy_consent: !!privacy,
+                    newsletter_subscription: !!formData.get('newsletter'),
+                    source: 'contact_form'
+                };
+                
+                // Submit to Supabase
+                const { data, error } = await supabaseClient
+                    .from('Realbrave-contactforms')
+                    .insert([submissionData]);
+                
+                if (error) {
+                    throw error;
+                }
+                
+                // Show success message
+                showMessage('success',
+                    currentLanguage === 'cat' ? 'Missatge enviat correctament! Ens posarem en contacte amb tu aviat.' :
+                    currentLanguage === 'es' ? '¡Mensaje enviado correctamente! Nos pondremos en contacto contigo pronto.' :
+                    'Message sent successfully! We will get back to you soon.'
+                );
+                
+                // Reset form
+                form.reset();
+                
+            } catch (error) {
+                console.error('Form submission error:', error);
+                
+                let errorMessage = currentLanguage === 'cat' ? 'Hi ha hagut un error enviant el missatge. Si us plau, torna-ho a intentar.' :
+                                  currentLanguage === 'es' ? 'Ha ocurrido un error al enviar el mensaje. Por favor, inténtalo de nuevo.' :
+                                  'There was an error sending the message. Please try again.';
+                
+                if (error.message && !error.message.includes('Bot detected')) {
+                    errorMessage = error.message;
+                }
+                
+                showMessage('error', errorMessage);
+            } finally {
+                // Reset button
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+            }
+        }
+        
+        // Show success/error message
+        function showMessage(type, text) {
+            // Remove existing message
+            const existing = document.querySelector('.form-message');
+            if (existing) {
+                existing.remove();
+            }
+            
+            // Create message element
+            const message = document.createElement('div');
+            message.className = `form-message p-4 rounded-md mb-4 ${type === 'success' ? 'bg-green-50 text-green-800 border border-green-200' : 'bg-red-50 text-red-800 border border-red-200'}`;
+            message.textContent = text;
+            
+            // Insert message before form
+            const form = document.querySelector('form');
+            form.parentNode.insertBefore(message, form);
+            
+            // Scroll to message
+            message.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            
+            // Auto-remove success messages after 5 seconds
+            if (type === 'success') {
+                setTimeout(() => {
+                    if (message.parentNode) {
+                        message.remove();
+                    }
+                }, 5000);
+            }
+        }
+
+        // Initialize language system
         document.addEventListener('DOMContentLoaded', function() {
+            // Set up language switchers
+            const languageButtons = document.querySelectorAll('.language-selector');
+            languageButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const lang = button.getAttribute('data-lang');
+                    switchLanguage(lang);
+                });
+            });
+
+            // Initialize with saved language or default
+            updateContent();
+            updateLanguageButtons();
+            updatePageLanguage();
+            
+            // Update footer year automatically
             const yearElement = document.getElementById('current-year');
             if (yearElement) {
                 yearElement.textContent = new Date().getFullYear();
             }
-
+            
             // Set up WhatsApp links
+            const whatsappURL = generateWhatsAppURL();
             const whatsappLink = document.getElementById('whatsapp-link');
             const bookBtn = document.getElementById('book-visit-btn');
-            
-            const whatsappURL = generateWhatsAppURL();
             
             if (whatsappLink) {
                 whatsappLink.href = whatsappURL;
@@ -404,16 +858,19 @@
                 bookBtn.target = '_blank';
             }
 
-            // Honeypot field validation for contact form
-            const contactForm = document.querySelector('form'); // Assuming this is the main contact form
+            // Set up contact form submission
+            const contactForm = document.querySelector('form');
             if (contactForm) {
-                contactForm.addEventListener('submit', function(event) {
-                    const honeypotField = document.getElementById('hp_email');
-                    if (honeypotField && honeypotField.value) {
-                        console.warn('Bot detected via honeypot field!');
-                        event.preventDefault(); // Stop form submission
-                    }
-                });
+                contactForm.addEventListener('submit', handleFormSubmission);
+            }
+            
+            // Initialize feather icons
+            try {
+                if (typeof feather !== 'undefined') {
+                    feather.replace();
+                }
+            } catch (error) {
+                console.warn('Feather icons initialization failed:', error);
             }
         });
     </script>

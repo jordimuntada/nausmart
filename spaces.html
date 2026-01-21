@@ -12,14 +12,14 @@
     <!-- End Google Tag Manager -->
     <title>RealBrave - Espais</title>
     <!-- Favicon and App Icons -->
-    <link rel="icon" type="image/svg+xml" href="realbrave_logo3.svg">
-    <link rel="icon" type="image/svg+xml" href="realbrave_logo3.svg" sizes="any">
-    <link rel="apple-touch-icon" href="realbrave_logo3.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-32x32.png">
     <link rel="mask-icon" href="realbrave_logo3.svg" color="#242954">
     <meta name="theme-color" content="#242954">
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
+    <script src="config.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -43,8 +43,15 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
         }
-    </style>
-</head>
+    </style>    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YDM8TFYBP4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YDM8TFYBP4');
+    </script></head>
 <body class="font-sans antialiased">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBML7DR9"
@@ -53,19 +60,19 @@
     <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+            <div class="flex justify-between h-20">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
-                        <img src="realbrave_logo2.svg" alt="RealBrave" class="h-12 w-auto">
+                        <img src="realbrave_logo2.svg" alt="RealBrave" class="h-16 w-auto">
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Inici</a>
-                    <a href="building.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">L'Edifici</a>
-                    <a href="spaces.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Espais</a>
-                    <a href="amenities.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Serveis</a>
-                    <a href="location.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Ubicació</a>
-                    <a href="contact.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contacte</a>
+                    <a href="index.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-home">Inici</a>
+                    <a href="building.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-building">L'Edifici</a>
+                    <a href="spaces.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-spaces">Espais</a>
+                    <a href="amenities.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-amenities">Serveis</a>
+                    <a href="location.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-location">Ubicació</a>
+                    <a href="contact.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-contact">Contacte</a>
                     <div class="flex space-x-2">
                         <button class="language-selector text-xs px-2 py-1 rounded bg-primary text-white" data-lang="cat">CAT</button>
                         <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300" data-lang="es">ES</button>
@@ -85,8 +92,8 @@
     <section class="bg-gradient-to-r from-primary to-secondary text-white py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Espais Actualment Disponibles</h1>
-                <p class="text-xl max-w-3xl mx-auto">Consulta els nostres espais disponibles i troba el perfecte per al teu negoci</p>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6" data-translate="hero-title">Espais Actualment Disponibles</h1>
+                <p class="text-xl max-w-3xl mx-auto" data-translate="hero-subtitle">Consulta els nostres espais disponibles i troba el perfecte per al teu negoci</p>
             </div>
         </div>
     </section>
@@ -95,50 +102,50 @@
     <section class="py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Tipus d'Espais</h2>
-                <p class="max-w-2xl mx-auto text-gray-600">Des d'oficines individuals fins a espais corporatius, tenim l'opció perfecta per a cada necessitat</p>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-translate="categories-title">Tipus d'Espais</h2>
+                <p class="max-w-2xl mx-auto text-gray-600" data-translate="categories-subtitle">Edifici amb planta baixa (vestíbul d'entrada) i 3 plantes per a oficines de 480 m² cadascuna. Cada planta es pot dividir en 2 o 3 àrees per empreses diferents, o llogar-se completa a una sola empresa</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="space-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=800&h=600&fit=crop" alt="Oficina petita" class="w-full h-48 object-cover">
+                    <img src="working-space-1-canmir.png" alt="Àrea petita" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Oficines Petites</h3>
-                        <p class="text-gray-600 mb-4">Perfectes per a startups i petites empreses que busquen un espai professional amb tot el necessari per començar.</p>
+                        <h3 class="text-xl font-bold mb-3">Àrea Petita</h3>
+                        <p class="text-gray-600 mb-4">Perfecta per a startups i petites empreses. Una tercera part d'una planta dividida en 3 àrees.</p>
                         <ul class="space-y-2 text-sm text-gray-600 mb-4">
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>25-50 m²</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>2-6 persones</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Mobiliari inclòs</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Internet d'alta velocitat</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>160 m²</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>12-18 persones</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Espai diàfan configurable</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Accés a serveis comuns</li>
                         </ul>
-                        <div class="text-primary font-bold text-lg">Des de 800€/mes</div>
+                        <div class="text-primary font-bold text-lg">Des de 1.120€/mes</div>
                     </div>
                 </div>
                 <div class="space-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=800&h=600&fit=crop" alt="Oficina mitjana" class="w-full h-48 object-cover">
+                    <img src="working-space-1-canmir-2.png" alt="Àrea mitjana" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Oficines Mitjanes</h3>
-                        <p class="text-gray-600 mb-4">Ideals per a empreses en creixement que necessiten més espai, flexibilitat i zones de reunions privades.</p>
+                        <h3 class="text-xl font-bold mb-3">Àrea Mitjana</h3>
+                        <p class="text-gray-600 mb-4">Ideal per a empreses en creixement. La meitat d'una planta dividida en 2 àrees.</p>
                         <ul class="space-y-2 text-sm text-gray-600 mb-4">
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>75-125 m²</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>8-15 persones</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Sala de reunions privada</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Zona de descans</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>240 m²</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>20-30 persones</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Espai per oficines i zona de reunions</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Major privacitat</li>
                         </ul>
-                        <div class="text-primary font-bold text-lg">Des de 1.500€/mes</div>
+                        <div class="text-primary font-bold text-lg">Des de 1.680€/mes</div>
                     </div>
                 </div>
                 <div class="space-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?w=800&h=600&fit=crop" alt="Oficina gran" class="w-full h-48 object-cover">
+                    <img src="working-space-1-canmir-3.png" alt="Planta completa" class="w-full h-48 object-cover">
                     <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Oficines Grans</h3>
-                        <p class="text-gray-600 mb-4">Espais corporatius per a empreses establertes amb necessitats específiques i requeriments d'alta representativitat.</p>
+                        <h3 class="text-xl font-bold mb-3">Planta Completa</h3>
+                        <p class="text-gray-600 mb-4">Espai corporatiu complet. Una planta sencera de 480 m² per a una sola empresa amb màxima flexibilitat.</p>
                         <ul class="space-y-2 text-sm text-gray-600 mb-4">
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>150-300 m²</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>20-40 persones</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Múltiples sales de reunions</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Recepció privada</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>480 m²</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>40-60 persones</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Distribució totalment personalitzable</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Exclusivitat i representativitat</li>
                         </ul>
-                        <div class="text-primary font-bold text-lg">Des de 2.800€/mes</div>
+                        <div class="text-primary font-bold text-lg">Des de 3.360€/mes</div>
                     </div>
                 </div>
             </div>
@@ -155,14 +162,14 @@
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <!-- Workplace -->
                 <div class="space-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop" alt="Espai de treball" class="w-full h-48 object-cover">
+                    <img src="working-space-1-canmir.png" alt="Espai de treball" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3">Espai de Treball</h3>
-                        <p class="text-gray-600 mb-4">Zones de treball col·laboratiu amb tecnologia avançada i ambient inspirador.</p>
+                        <p class="text-gray-600 mb-4">Espais de treball llogats i dissenyats segons les necessitats de cada empresa inquilina.</p>
                         <ul class="space-y-2 text-sm text-gray-600 mb-4">
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Tecnologia integrada</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Personalització per l'inquilí</li>
                             <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Espai flexible</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Ambient col·laboratiu</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Disseny a mida</li>
                         </ul>
                         <div class="text-primary font-bold text-lg">Inclòs en lloguer</div>
                     </div>
@@ -170,29 +177,29 @@
 
                 <!-- Meeting Room -->
                 <div class="space-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=300&fit=crop" alt="Sala de reunions" class="w-full h-48 object-cover">
+                    <img src="render_1.jpg" alt="Sala de reunions" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3">Sala de Reunions</h3>
-                        <p class="text-gray-600 mb-4">Sales modernes equipades per a reunions executives i presentacions professionals.</p>
+                        <p class="text-gray-600 mb-4">Sales de reunions gestionades i equipades pels inquilins segons les seves necessitats.</p>
                         <ul class="space-y-2 text-sm text-gray-600 mb-4">
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Equipament audiovisual</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Videoconferència</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Privacitat total</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Gestionades per inquilins</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Equipament personalitzable</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Ús exclusiu per àrea</li>
                         </ul>
-                        <div class="text-primary font-bold text-lg">Des de 50€/hora</div>
+                        <div class="text-primary font-bold text-lg">Segons inquilí</div>
                     </div>
                 </div>
 
                 <!-- Entrance Hall -->
                 <div class="space-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=400&h=300&fit=crop" alt="Vestíbul d'entrada" class="w-full h-48 object-cover">
+                    <img src="realbrave_entrance_hall_brave_hub_2.png" alt="Vestíbul d'entrada" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3">Vestíbul d'Entrada</h3>
-                        <p class="text-gray-600 mb-4">Espai d'acollida elegant i professional que causa una primera impressió excel·lent.</p>
+                        <p class="text-gray-600 mb-4">Espai comú gestionat per RealBrave. Inclou vestíbul, ascensors, banys i àrees comunes.</p>
                         <ul class="space-y-2 text-sm text-gray-600 mb-4">
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Recepció 24/7</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Zona d'espera</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Disseny modern</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Gestionat per RealBrave</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Manteniment inclòs</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Espais comuns</li>
                         </ul>
                         <div class="text-primary font-bold text-lg">Accés compartit</div>
                     </div>
@@ -200,14 +207,14 @@
 
                 <!-- Great Nature -->
                 <div class="space-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400&h=300&fit=crop" alt="Espai natural" class="w-full h-48 object-cover">
+                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Espai natural" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <h3 class="text-xl font-bold mb-3">Espai Natural</h3>
-                        <p class="text-gray-600 mb-4">Zones verdes i terrasses per a reunions informals i moments de desconnexió.</p>
+                        <p class="text-gray-600 mb-4">Entorn envoltat de naturalesa per gaudir de moments de desconnexió en una àrea verda.</p>
                         <ul class="space-y-2 text-sm text-gray-600 mb-4">
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Jardí vertical</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Terrasses privades</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Ambient relaxant</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Entorn natural</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Zona verda propera</li>
+                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Ambient tranquil</li>
                         </ul>
                         <div class="text-primary font-bold text-lg">Accés inclòs</div>
                     </div>
@@ -224,182 +231,248 @@
                 <p class="max-w-2xl mx-auto text-gray-600">Consulta els nostres espais disponibles i troba el perfecte per al teu negoci</p>
             </div>
             <div class="grid lg:grid-cols-3 gap-8">
-                <!-- Space 1A -->
+                <!-- Primera Planta - Àrea A -->
                 <div class="space-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop" alt="Planta 1A" class="w-full h-48 object-cover">
+                    <img src="working-space-1-canmir-3.png" alt="Primera Planta A" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold">Planta 1A</h3>
+                            <h3 class="text-xl font-bold">1a Planta - Àrea A</h3>
                             <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded font-medium">Disponible</span>
                         </div>
-                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Un espai vibrant i connectat amb la natura; la llum del matí inunda l'estança gràcies al seu accés directe al jardí vertical, ideal per a equips que busquen un ambient fresc i inspirador.</p>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Oficina a primera planta amb excel·lent il·luminació natural. Espai versàtil que es pot adaptar a diferents configuracions segons les necessitats.</p>
                         <div class="space-y-2 text-sm mb-4">
                             <div class="flex justify-between">
                                 <span class="text-gray-600">Superfície:</span>
-                                <span class="font-medium">85 m²</span>
+                                <span class="font-medium">160 m²</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600">Capacitat:</span>
-                                <span class="font-medium">8-10 persones</span>
+                                <span class="font-medium">12-18 persones</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-gray-600">Aparcament:</span>
-                                <span class="font-medium">3 places</span>
+                                <span class="text-gray-600">Configuració:</span>
+                                <span class="font-medium">Tercera part de planta</span>
                             </div>
                         </div>
                         <div class="flex justify-between items-center">
-                            <div class="text-primary font-bold text-lg">1.200€/mes</div>
-                            <button class="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition">Més Info</button>
+                            <div class="text-primary font-bold text-lg">1.120€/mes</div>
+                            <button onclick="openSpaceWhatsApp({
+                                name: '1a Planta - Àrea A',
+                                surface: '160 m²',
+                                capacity: '12-18 persones',
+                                configuration: 'Tercera part de planta',
+                                price: '1.120€/mes'
+                            })" class="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition">Més Info</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Space 1B -->
+                <!-- Primera Planta - Sencera -->
                 <div class="space-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&h=400&fit=crop" alt="Planta 1B" class="w-full h-48 object-cover">
+                    <img src="working-space-1-canmir-4.png" alt="Primera Planta Completa" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold">Planta 1B</h3>
+                            <h3 class="text-xl font-bold">1a Planta - Completa</h3>
                             <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded font-medium">Disponible</span>
                         </div>
-                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Disseny industrial modern amb sostres alts i conductes a la vista. La seva terrassa privada de 20m² és el lloc perfecte per a reunions informals o pauses creatives a l'aire lliure.</p>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Planta sencera de 480 m² per a empreses que necessitin màxim espai i privacitat. Distribució totalment personalitzable.</p>
                         <div class="space-y-2 text-sm mb-4">
                             <div class="flex justify-between">
                                 <span class="text-gray-600">Superfície:</span>
-                                <span class="font-medium">120 m²</span>
+                                <span class="font-medium">480 m²</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600">Capacitat:</span>
-                                <span class="font-medium">12-15 persones</span>
+                                <span class="font-medium">40-60 persones</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-gray-600">Aparcament:</span>
-                                <span class="font-medium">4 places</span>
+                                <span class="text-gray-600">Configuració:</span>
+                                <span class="font-medium">Planta sencera</span>
                             </div>
                         </div>
                         <div class="flex justify-between items-center">
-                            <div class="text-primary font-bold text-lg">1.800€/mes</div>
-                            <button class="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition">Més Info</button>
+                            <div class="text-primary font-bold text-lg">3.360€/mes</div>
+                            <button onclick="openSpaceWhatsApp({
+                                name: '1a Planta - Completa',
+                                surface: '480 m²',
+                                capacity: '40-60 persones',
+                                configuration: 'Planta sencera',
+                                price: '3.360€/mes'
+                            })" class="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition">Més Info</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Space 2A -->
+                <!-- Segona Planta - Àrea A -->
                 <div class="space-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1497366412874-3415097a27e7?w=600&h=400&fit=crop" alt="Planta 2A" class="w-full h-48 object-cover">
+                    <img src="working-space-1-canmir-8.png" alt="Segona Planta A" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold">Planta 2A</h3>
-                            <span class="bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded font-medium">En negociació</span>
-                        </div>
-                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">L'equilibri perfecte entre elegància i funcionalitat. Aquesta oficina cantonera ofereix una panoràmica urbana espectacular, amb acabats de fusta clara que transmeten serenor i professionalitat.</p>
-                        <div class="space-y-2 text-sm mb-4">
-                            <div class="flex justify-between">
-                                <span class="text-gray-600">Superfície:</span>
-                                <span class="font-medium">150 m²</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-gray-600">Capacitat:</span>
-                                <span class="font-medium">15-20 persones</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-gray-600">Aparcament:</span>
-                                <span class="font-medium">5 places</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="text-primary font-bold text-lg">2.500€/mes</div>
-                            <button class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-opacity-90 transition">En Procés</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Space 2B -->
-                <div class="space-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=600&h=400&fit=crop" alt="Planta 2B" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold">Planta 2B</h3>
+                            <h3 class="text-xl font-bold">2a Planta - Àrea A</h3>
                             <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded font-medium">Disponible</span>
                         </div>
-                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Un 'open space' totalment diàfan dissenyat per a la col·laboració radical. Compta amb zones de 'soft seating' integrades i una acústica optimitzada per a un flux de treball sense distraccions.</p>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Espai tranquil a segona planta, ideal per a treballs que requereixen concentració. Excellent per a despatxos professionals o empreses de serveis.</p>
                         <div class="space-y-2 text-sm mb-4">
                             <div class="flex justify-between">
                                 <span class="text-gray-600">Superfície:</span>
-                                <span class="font-medium">90 m²</span>
+                                <span class="font-medium">240 m²</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600">Capacitat:</span>
-                                <span class="font-medium">10-12 persones</span>
+                                <span class="font-medium">20-30 persones</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-gray-600">Aparcament:</span>
-                                <span class="font-medium">2 places</span>
+                                <span class="text-gray-600">Configuració:</span>
+                                <span class="font-medium">Meitat de planta</span>
                             </div>
                         </div>
                         <div class="flex justify-between items-center">
-                            <div class="text-primary font-bold text-lg">1.400€/mes</div>
-                            <button class="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition">Més Info</button>
+                            <div class="text-primary font-bold text-lg">1.680€/mes</div>
+                            <button onclick="openSpaceWhatsApp({
+                                name: '2a Planta - Àrea A',
+                                surface: '240 m²',
+                                capacity: '20-30 persones',
+                                configuration: 'Meitat de planta',
+                                price: '1.680€/mes'
+                            })" class="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition">Més Info</button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Space 3A -->
+                <!-- Segona Planta - Àrea B -->
                 <div class="space-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&h=400&fit=crop" alt="Planta 3A" class="w-full h-48 object-cover">
+                    <img src="working-space-1-canmir-9.png" alt="Segona Planta B" class="w-full h-48 object-cover">
                     <div class="p-6">
                         <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold">Planta 3A</h3>
-                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded font-medium">Disponible</span>
-                        </div>
-                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Un refugi de silenci i concentració a l'última planta. Amb vistes al cel i una entrada de llum zenital, és l'espai definitiu per a empreses tecnològiques o estudis d'arquitectura.</p>
-                        <div class="space-y-2 text-sm mb-4">
-                            <div class="flex justify-between">
-                                <span class="text-gray-600">Superfície:</span>
-                                <span class="font-medium">110 m²</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-gray-600">Capacitat:</span>
-                                <span class="font-medium">12-14 persones</span>
-                            </div>
-                            <div class="flex justify-between">
-                                <span class="text-gray-600">Aparcament:</span>
-                                <span class="font-medium">3 places</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="text-primary font-bold text-lg">1.750€/mes</div>
-                            <button class="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition">Més Info</button>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Space 3B -->
-                <div class="space-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
-                    <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=600&h=400&fit=crop" alt="Planta 3B" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-3">
-                            <h3 class="text-xl font-bold">Planta 3B</h3>
+                            <h3 class="text-xl font-bold">2a Planta - Àrea B</h3>
                             <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded font-medium">Reservat</span>
                         </div>
-                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">La joia de l'edifici: una suite executiva premium que inclou tres sales de juntes privades envidrades i un office propi totalment equipat per a la màxima exclusivitat.</p>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Espai reservat per a empresa establerta. Configuració òptima per a equips de mitjana dimensió amb zones diferenciades de treball.</p>
                         <div class="space-y-2 text-sm mb-4">
                             <div class="flex justify-between">
                                 <span class="text-gray-600">Superfície:</span>
-                                <span class="font-medium">200 m²</span>
+                                <span class="font-medium">240 m²</span>
                             </div>
                             <div class="flex justify-between">
                                 <span class="text-gray-600">Capacitat:</span>
-                                <span class="font-medium">20-25 persones</span>
+                                <span class="font-medium">20-30 persones</span>
                             </div>
                             <div class="flex justify-between">
-                                <span class="text-gray-600">Aparcament:</span>
-                                <span class="font-medium">6 places</span>
+                                <span class="text-gray-600">Configuració:</span>
+                                <span class="font-medium">Meitat de planta</span>
                             </div>
                         </div>
                         <div class="flex justify-between items-center">
-                            <div class="text-primary font-bold text-lg">3.200€/mes</div>
+                            <div class="text-primary font-bold text-lg">1.680€/mes</div>
                             <button class="bg-gray-400 text-white px-4 py-2 rounded cursor-not-allowed">Reservat</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tercera Planta - Àrea A -->
+                <div class="space-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
+                    <img src="working-space-1-canmir-10.png" alt="Tercera Planta A" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold">3a Planta - Àrea A</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded font-medium">Disponible</span>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Espai privilegiat a tercera planta amb vistes panoràmiques i màxima tranquil·litat. Excel·lent per a equips creatius i empreses que valoren un ambient inspirador.</p>
+                        <div class="space-y-2 text-sm mb-4">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Superfície:</span>
+                                <span class="font-medium">240 m²</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Capacitat:</span>
+                                <span class="font-medium">20-30 persones</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Configuració:</span>
+                                <span class="font-medium">Meitat de planta</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="text-primary font-bold text-lg">1.680€/mes</div>
+                            <button onclick="openSpaceWhatsApp({
+                                name: '3a Planta - Àrea A',
+                                surface: '240 m²',
+                                capacity: '20-30 persones',
+                                configuration: 'Meitat de planta',
+                                price: '1.680€/mes'
+                            })" class="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition">Més Info</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tercera Planta - Àrea B -->
+                <div class="space-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
+                    <img src="working-space-1-canmir-11.png" alt="Tercera Planta B" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold">3a Planta - Àrea B</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded font-medium">Disponible</span>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Espai complementari a tercera planta amb la mateixa qualitat i prestacions que l'àrea A. Perfecte per a empreses que busquen exclusivitat i tranquil·litat.</p>
+                        <div class="space-y-2 text-sm mb-4">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Superfície:</span>
+                                <span class="font-medium">240 m²</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Capacitat:</span>
+                                <span class="font-medium">20-30 persones</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Configuració:</span>
+                                <span class="font-medium">Meitat de planta</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="text-primary font-bold text-lg">1.680€/mes</div>
+                            <button onclick="openSpaceWhatsApp({
+                                name: '3a Planta - Àrea B',
+                                surface: '240 m²',
+                                capacity: '20-30 persones',
+                                configuration: 'Meitat de planta',
+                                price: '1.680€/mes'
+                            })" class="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition">Més Info</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tercera Planta - Completa -->
+                <div class="space-card bg-white rounded-lg shadow-lg overflow-hidden transition duration-300">
+                    <img src="working-space-1-canmir.png" alt="Tercera Planta Completa" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold">3a Planta - Completa</h3>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded font-medium">Disponible</span>
+                        </div>
+                        <p class="text-gray-600 mb-4 text-sm leading-relaxed">Planta sencera de 480 m² amb vistes espectaculars i màxima privacitat. L'opció premium per a empreses que busquen representativitat i exclusivitat absoluta.</p>
+                        <div class="space-y-2 text-sm mb-4">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Superfície:</span>
+                                <span class="font-medium">480 m²</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Capacitat:</span>
+                                <span class="font-medium">40-60 persones</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Configuració:</span>
+                                <span class="font-medium">Planta sencera</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="text-primary font-bold text-lg">3.360€/mes</div>
+                            <button onclick="openSpaceWhatsApp({
+                                name: '3a Planta - Completa',
+                                surface: '480 m²',
+                                capacity: '40-60 persones',
+                                configuration: 'Planta sencera',
+                                price: '3.360€/mes'
+                            })" class="bg-primary text-white px-4 py-2 rounded hover:bg-opacity-90 transition">Més Info</button>
                         </div>
                     </div>
                 </div>
@@ -412,7 +485,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">Personalització d'Espais</h2>
-                <p class="max-w-2xl mx-auto text-gray-600">Com a llogater, tens la llibertat de finalitzar i personalitzar l'espai que llogues segons els teus desitjos. <br> Ens encarregarem de proporcionar tots els subministraments necessaris i estem treballant per embellir els espais comuns com escales, ascensors i el vestíbul d'entrada.</p>
+                <p class="max-w-2xl mx-auto text-gray-600">Com a llogater, tens la llibertat de finalitzar i personalitzar l'espai que llogues segons els teus desitjos. <br><br> Ens encarregarem de proporcionar tots els subministraments necessaris i estem treballant per embellir els espais comuns com escales, ascensors i el vestíbul d'entrada.</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center">
@@ -420,28 +493,28 @@
                         <i data-feather="layout" class="w-8 h-8 text-primary"></i>
                     </div>
                     <h3 class="text-lg font-bold mb-2">Distribució Flexible</h3>
-                    <p class="text-gray-600 text-sm">Adapta l'espai segons les teves necessitats operatives i flux de treball.</p>
+                    <p class="text-gray-600 text-sm">Configura l'espai segons les teves necessitats operatives específiques. Adapta la distribució per optimitzar el teu flux de treball i crear l'ambient perfecte per al teu equip.</p>
                 </div>
                 <div class="text-center">
                     <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                         <i data-feather="palette" class="w-8 h-8 text-primary"></i>
                     </div>
-                    <h3 class="text-lg font-bold mb-2">Decoració Personalitzada</h3>
-                    <p class="text-gray-600 text-sm">Personalitza els colors, l'estil i la marca per reflectir la teva identitat corporativa.</p>
+                    <h3 class="text-lg font-bold mb-2">Decoració i Identitat</h3>
+                    <p class="text-gray-600 text-sm">Personalitza completament els colors, l'estil i elements decoratius per reflectir la identitat única de la teva empresa i crear un espai que inspire.</p>
                 </div>
                 <div class="text-center">
                     <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <i data-feather="monitor" class="w-8 h-8 text-primary"></i>
+                        <i data-feather="zap" class="w-8 h-8 text-primary"></i>
                     </div>
-                    <h3 class="text-lg font-bold mb-2">Tecnologia Avançada</h3>
-                    <p class="text-gray-600 text-sm">Accedeix a equipament tecnològic modern i adaptat a les teves operacions diàries.</p>
+                    <h3 class="text-lg font-bold mb-2">Infraestructura Completa</h3>
+                    <p class="text-gray-600 text-sm">Gaudeix de tots els subministraments essencials inclosos: electricitat, aigua, climatització i connexions preparades per a les teves instal·lacions tecnològiques.</p>
                 </div>
                 <div class="text-center">
                     <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <i data-feather="grid" class="w-8 h-8 text-primary"></i>
+                        <i data-feather="star" class="w-8 h-8 text-primary"></i>
                     </div>
-                    <h3 class="text-lg font-bold mb-2">Mobiliari Ergonòmic</h3>
-                    <p class="text-gray-600 text-sm">Tria entre una selecció de mobiliari ergonòmic i funcional per al màxim confort.</p>
+                    <h3 class="text-lg font-bold mb-2">Espais Comuns Premium</h3>
+                    <p class="text-gray-600 text-sm">Beneficia't del nostre compromís d'embellir contínuament les àrees comunes: escales, ascensors i vestíbul d'entrada amb un disseny modern i elegant.</p>
                 </div>
             </div>
         </div>
@@ -450,9 +523,9 @@
     <!-- Call to Action -->
     <section class="bg-primary text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-6">Troba el teu Espai Ideal</h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto">Programa una visita per veure tots els espais disponibles i descobrir quin s'adapta millor al teu negoci.</p>
-            <a href="contact.html" class="bg-white text-primary px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition">Programa una Visita</a>
+            <h2 class="text-3xl font-bold mb-6" data-translate="cta-title">Troba el teu Espai Ideal</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto" data-translate="cta-subtitle">Programa una visita per veure tots els espais disponibles i descobrir quin s'adapta millor al teu negoci.</p>
+            <a href="contact.html" class="bg-white text-primary px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition" data-translate="cta-button">Programa una Visita</a>
         </div>
     </section>
 
@@ -462,19 +535,19 @@
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4">RealBrave</h3>
-                    <p class="text-gray-400">Espais d'oficina a Terrassa dissenyats per a empreses amb entorn tranquil.</p>
+                    <p class="text-gray-400" data-translate="footer-description">Espais d'oficina a Terrassa dissenyats per a empreses amb entorn tranquil.</p>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Enllaços Ràpids</h4>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer-quick-links">Enllaços Ràpids</h4>
                     <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-400 hover:text-white">Inici</a></li>
-                        <li><a href="building.html" class="text-gray-400 hover:text-white">L'Edifici</a></li>
-                        <li><a href="spaces.html" class="text-gray-400 hover:text-white">Espais Disponibles</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contacta'ns</a></li>
+                        <li><a href="index.html" class="text-gray-400 hover:text-white" data-translate="nav-home">Inici</a></li>
+                        <li><a href="building.html" class="text-gray-400 hover:text-white" data-translate="nav-building">L'Edifici</a></li>
+                        <li><a href="spaces.html" class="text-gray-400 hover:text-white" data-translate="nav-spaces">Espais Disponibles</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white" data-translate="nav-contact">Contacta'ns</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Contacte</h4>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer-contact">Contacte</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-start">
                             <i data-feather="map-pin" class="mr-2 w-4 h-4 mt-1"></i>
@@ -491,27 +564,330 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer-legal">Legal</h4>
                     <ul class="space-y-2">
-                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white">Política de Privacitat</a></li>
-                        <li><a href="cookie-policy.html" class="text-gray-400 hover:text-white">Política de Cookies</a></li>
-                        <li><a href="legal-notice.html" class="text-gray-400 hover:text-white">Avís Legal</a></li>
+                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white" data-translate="footer-privacy">Política de Privacitat</a></li>
+                        <li><a href="cookie-policy.html" class="text-gray-400 hover:text-white" data-translate="footer-cookies">Política de Cookies</a></li>
+                        <li><a href="legal-notice.html" class="text-gray-400 hover:text-white" data-translate="footer-legal-notice">Avís Legal</a></li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>© <span id="current-year">2025</span> RealBrave. Tots els drets reservats.</p>
+                <p>© <span id="current-year">2025</span> RealBrave. <span data-translate="footer-rights">Tots els drets reservats.</span></p>
             </div>
         </div>
     </footer>
 
-    <script>feather.replace();</script>
     <script>
-        // Update footer year automatically
+        // Enhanced WhatsApp function with space details
+        function generateSpaceWhatsAppURL(spaceData, language = 'cat') {
+            const phone = CONFIG.WHATSAPP_PHONE.replace(/[^\d]/g, ''); // Remove non-digits
+            
+            const messages = {
+                cat: `Hola! M'agradaria obtenir més informació sobre l'espai "${spaceData.name}".
+
+📍 Detalls de l'espai:
+• Superfície: ${spaceData.surface}
+• Capacitat: ${spaceData.capacity}
+• Configuració: ${spaceData.configuration}
+• Preu: ${spaceData.price}
+
+Podríeu proporcionar-me més informació i programar una visita? Gràcies!`,
+
+                es: `¡Hola! Me gustaría obtener más información sobre el espacio "${spaceData.name}".
+
+📍 Detalles del espacio:
+• Superficie: ${spaceData.surface}
+• Capacidad: ${spaceData.capacity}
+• Configuración: ${spaceData.configuration}
+• Precio: ${spaceData.price}
+
+¿Podrían proporcionarme más información y programar una visita? ¡Gracias!`,
+
+                en: `Hello! I would like to get more information about the space "${spaceData.name}".
+
+📍 Space details:
+• Surface: ${spaceData.surface}
+• Capacity: ${spaceData.capacity}
+• Configuration: ${spaceData.configuration}
+• Price: ${spaceData.price}
+
+Could you provide me with more information and schedule a visit? Thank you!`
+            };
+            
+            const message = encodeURIComponent(messages[language] || messages.cat);
+            return `https://wa.me/${phone}?text=${message}`;
+        }
+
+        // Function to handle space info button clicks
+        function openSpaceWhatsApp(spaceData) {
+            const url = generateSpaceWhatsAppURL(spaceData, currentLanguage);
+            window.open(url, '_blank');
+        }
+
+        // Translation system
+        const translations = {
+            cat: {
+                // Page title
+                'page-title': 'RealBrave - Espais',
+                
+                // Navigation
+                'nav-home': 'Inici',
+                'nav-building': 'L\'Edifici',
+                'nav-spaces': 'Espais',
+                'nav-amenities': 'Serveis',
+                'nav-location': 'Ubicació',
+                'nav-contact': 'Contacte',
+                
+                // Hero Section
+                'hero-title': 'Espais Actualment Disponibles',
+                'hero-subtitle': 'Consulta els nostres espais disponibles i troba el perfecte per al teu negoci',
+                
+                // Categories
+                'categories-title': 'Tipus d\'Espais',
+                'categories-subtitle': 'Edifici amb planta baixa (vestíbul d\'entrada) i 3 plantes per a oficines de 480 m² cadascuna. Cada planta es pot dividir en 2 o 3 àrees per empreses diferents, o llogar-se completa a una sola empresa',
+                
+                // Space listings
+                'space-from': 'Des de',
+                'space-month': 'mes',
+                'space-small-title': 'Oficina Petita',
+                'space-small-desc': 'Perfecta per a freelancers i petites empreses',
+                'space-small-size': 'Mida: 20-50 m²',
+                'space-medium-title': 'Oficina Mitjana',
+                'space-medium-desc': 'Ideal per a equips en creixement',
+                'space-medium-size': 'Mida: 50-100 m²',
+                'space-large-title': 'Oficina Gran',
+                'space-large-desc': 'Per a empreses establertes i departaments',
+                'space-large-size': 'Mida: 100-200 m²',
+                'space-corporate-title': 'Espai Corporatiu',
+                'space-corporate-desc': 'Per a empreses amb necessitats específiques',
+                'space-corporate-size': 'Mida: 200+ m²',
+                
+                // Features
+                'features-title': 'Inclòs en Tots els Espais',
+                'features-subtitle': 'Tots els nostres espais inclouen aquests beneficis essencials',
+                'feature-security': 'Seguretat 24/7',
+                'feature-internet': 'Fibra òptica d\'alta velocitat',
+                'feature-meeting': 'Accés a sales de reunions',
+                'feature-parking': 'Aparcament disponible',
+                'feature-kitchen': 'Cuina compartida',
+                'feature-cleaning': 'Servei de neteja',
+                
+                // CTA
+                'cta-title': 'Troba el teu Espai Ideal',
+                'cta-subtitle': 'Programa una visita per veure tots els espais disponibles i descobrir quin s\'adapta millor al teu negoci.',
+                'cta-button': 'Programa una Visita',
+                
+                // Footer
+                'footer-description': 'Espais d\'oficina premium a Terrassa dissenyats per a empreses modernes.',
+                'footer-quick-links': 'Enllaços Ràpids',
+                'footer-contact': 'Contacte',
+                'footer-legal': 'Legal',
+                'footer-privacy': 'Política de Privacitat',
+                'footer-cookies': 'Política de Cookies',
+                'footer-legal-notice': 'Avís Legal',
+                'footer-rights': 'Tots els drets reservats.'
+            },
+            es: {
+                // Page title
+                'page-title': 'RealBrave - Espacios',
+                
+                // Navigation
+                'nav-home': 'Inicio',
+                'nav-building': 'El Edificio',
+                'nav-spaces': 'Espacios',
+                'nav-amenities': 'Servicios',
+                'nav-location': 'Ubicación',
+                'nav-contact': 'Contacto',
+                
+                // Hero Section
+                'hero-title': 'Espacios Actualmente Disponibles',
+                'hero-subtitle': 'Consulta nuestros espacios disponibles y encuentra el perfecto para tu negocio',
+                
+                // Categories
+                'categories-title': 'Tipos de Espacios',
+                'categories-subtitle': 'Edificio con planta baja (vestíbulo de entrada) y 3 plantas para oficinas de 480 m² cada una. Cada planta se puede dividir en 2 o 3 áreas para empresas diferentes, o alquilarse completa a una sola empresa',
+                
+                // Space listings
+                'space-from': 'Desde',
+                'space-month': 'mes',
+                'space-small-title': 'Oficina Pequeña',
+                'space-small-desc': 'Perfecta para freelancers y pequeñas empresas',
+                'space-small-size': 'Tamaño: 20-50 m²',
+                'space-medium-title': 'Oficina Mediana',
+                'space-medium-desc': 'Ideal para equipos en crecimiento',
+                'space-medium-size': 'Tamaño: 50-100 m²',
+                'space-large-title': 'Oficina Grande',
+                'space-large-desc': 'Para empresas establecidas y departamentos',
+                'space-large-size': 'Tamaño: 100-200 m²',
+                'space-corporate-title': 'Espacio Corporativo',
+                'space-corporate-desc': 'Para empresas con necesidades específicas',
+                'space-corporate-size': 'Tamaño: 200+ m²',
+                
+                // Features
+                'features-title': 'Incluido en Todos los Espacios',
+                'features-subtitle': 'Todos nuestros espacios incluyen estos beneficios esenciales',
+                'feature-security': 'Seguridad 24/7',
+                'feature-internet': 'Fibra óptica de alta velocidad',
+                'feature-meeting': 'Acceso a salas de reuniones',
+                'feature-parking': 'Aparcamiento disponible',
+                'feature-kitchen': 'Cocina compartida',
+                'feature-cleaning': 'Servicio de limpieza',
+                
+                // CTA
+                'cta-title': '¿Listo para Visitar Nuestros Espacios?',
+                'cta-subtitle': 'Contáctanos hoy para programar una visita y encontrar el espacio perfecto para tu negocio.',
+                'cta-button': 'Programar Visita',
+                
+                // Footer
+                'footer-description': 'Espacios de oficina premium en Terrassa diseñados para empresas modernas.',
+                'footer-quick-links': 'Enlaces Rápidos',
+                'footer-contact': 'Contacto',
+                'footer-legal': 'Legal',
+                'footer-privacy': 'Política de Privacidad',
+                'footer-cookies': 'Política de Cookies',
+                'footer-legal-notice': 'Aviso Legal',
+                'footer-rights': 'Todos los derechos reservados.'
+            },
+            en: {
+                // Page title
+                'page-title': 'RealBrave - Spaces',
+                
+                // Navigation
+                'nav-home': 'Home',
+                'nav-building': 'The Building',
+                'nav-spaces': 'Spaces',
+                'nav-amenities': 'Amenities',
+                'nav-location': 'Location',
+                'nav-contact': 'Contact',
+                
+                // Hero Section
+                'hero-title': 'Currently Available Spaces',
+                'hero-subtitle': 'Browse our available spaces and find the perfect one for your business',
+                
+                // Categories
+                'categories-title': 'Space Types',
+                'categories-subtitle': 'Building with ground floor (entrance hall) and 3 office floors of 480 m² each. Each floor can be divided into 2 or 3 areas for different companies, or rented complete to a single company',
+                
+                // Space listings
+                'space-from': 'From',
+                'space-month': 'month',
+                'space-small-title': 'Small Office',
+                'space-small-desc': 'Perfect for freelancers and small companies',
+                'space-small-size': 'Size: 20-50 m²',
+                'space-medium-title': 'Medium Office',
+                'space-medium-desc': 'Ideal for growing teams',
+                'space-medium-size': 'Size: 50-100 m²',
+                'space-large-title': 'Large Office',
+                'space-large-desc': 'For established companies and departments',
+                'space-large-size': 'Size: 100-200 m²',
+                'space-corporate-title': 'Corporate Space',
+                'space-corporate-desc': 'For companies with specific needs',
+                'space-corporate-size': 'Size: 200+ m²',
+                
+                // Features
+                'features-title': 'Included in All Spaces',
+                'features-subtitle': 'All our spaces include these essential benefits',
+                'feature-security': '24/7 Security',
+                'feature-internet': 'High-speed fiber internet',
+                'feature-meeting': 'Access to meeting rooms',
+                'feature-parking': 'Parking available',
+                'feature-kitchen': 'Shared kitchen',
+                'feature-cleaning': 'Cleaning service',
+                
+                // CTA
+                'cta-title': 'Ready to Visit Our Spaces?',
+                'cta-subtitle': 'Contact us today to schedule a visit and find the perfect space for your business.',
+                'cta-button': 'Schedule Visit',
+                
+                // Footer
+                'footer-description': 'Premium office spaces in Terrassa designed for modern businesses.',
+                'footer-quick-links': 'Quick Links',
+                'footer-contact': 'Contact',
+                'footer-legal': 'Legal',
+                'footer-privacy': 'Privacy Policy',
+                'footer-cookies': 'Cookie Policy',
+                'footer-legal-notice': 'Legal Notice',
+                'footer-rights': 'All rights reserved.'
+            }
+        };
+
+        // Current language state
+        let currentLanguage = localStorage.getItem('smartplaces-language') || 'cat';
+
+        // Language switching functionality
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('smartplaces-language', lang);
+            updateContent();
+            updateLanguageButtons();
+            updatePageLanguage();
+        }
+
+        function updateContent() {
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[currentLanguage] && translations[currentLanguage][key]) {
+                    element.textContent = translations[currentLanguage][key];
+                }
+            });
+            
+            // Update page title
+            document.title = translations[currentLanguage]['page-title'];
+        }
+
+        function updateLanguageButtons() {
+            const buttons = document.querySelectorAll('.language-selector');
+            buttons.forEach(button => {
+                const lang = button.getAttribute('data-lang');
+                if (lang === currentLanguage) {
+                    button.className = 'language-selector text-xs px-2 py-1 rounded bg-primary text-white';
+                } else {
+                    button.className = 'language-selector text-xs px-2 py-1 rounded border border-gray-300';
+                }
+            });
+        }
+
+        function updatePageLanguage() {
+            document.documentElement.lang = currentLanguage;
+        }
+
+        // Initialize language system
         document.addEventListener('DOMContentLoaded', function() {
+            // Set up language switchers
+            const languageButtons = document.querySelectorAll('.language-selector');
+            languageButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const lang = button.getAttribute('data-lang');
+                    switchLanguage(lang);
+                });
+            });
+
+            // Initialize with saved language or default
+            updateContent();
+            updateLanguageButtons();
+            updatePageLanguage();
+            
+            // Update footer year automatically
             const yearElement = document.getElementById('current-year');
             if (yearElement) {
                 yearElement.textContent = new Date().getFullYear();
+            }
+            
+            // Initialize feather icons
+            try {
+                if (typeof feather !== 'undefined') {
+                    feather.replace();
+                    // Force re-initialization after a short delay to ensure all icons load
+                    setTimeout(() => {
+                        feather.replace();
+                    }, 100);
+                } else {
+                    console.warn('Feather icons library not loaded');
+                }
+            } catch (error) {
+                console.warn('Feather icons initialization failed:', error);
             }
         });
     </script>

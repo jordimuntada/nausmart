@@ -12,9 +12,9 @@
     <!-- End Google Tag Manager -->
     <title>RealBrave - Serveis</title>
     <!-- Favicon and App Icons -->
-    <link rel="icon" type="image/svg+xml" href="realbrave_logo3.svg">
-    <link rel="icon" type="image/svg+xml" href="realbrave_logo3.svg" sizes="any">
-    <link rel="apple-touch-icon" href="realbrave_logo3.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-32x32.png">
     <link rel="mask-icon" href="realbrave_logo3.svg" color="#242954">
     <meta name="theme-color" content="#242954">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -43,8 +43,15 @@
             transform: translateY(-5px);
             box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
         }
-    </style>
-</head>
+    </style>    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YDM8TFYBP4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YDM8TFYBP4');
+    </script></head>
 <body class="font-sans antialiased">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBML7DR9"
@@ -53,19 +60,19 @@
     <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+            <div class="flex justify-between h-20">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
-                        <img src="realbrave_logo2.svg" alt="RealBrave" class="h-12 w-auto">
+                        <img src="realbrave_logo2.svg" alt="RealBrave" class="h-16 w-auto">
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Inici</a>
-                    <a href="building.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">L'Edifici</a>
-                    <a href="spaces.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Espais</a>
-                    <a href="amenities.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Serveis</a>
-                    <a href="location.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Ubicació</a>
-                    <a href="contact.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contacte</a>
+                    <a href="index.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-home">Inici</a>
+                    <a href="building.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-building">L'Edifici</a>
+                    <a href="spaces.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-spaces">Espais</a>
+                    <a href="amenities.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-amenities">Serveis</a>
+                    <a href="location.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-location">Ubicació</a>
+                    <a href="contact.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-contact">Contacte</a>
                     <div class="flex space-x-2">
                         <button class="language-selector text-xs px-2 py-1 rounded bg-primary text-white" data-lang="cat">CAT</button>
                         <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300" data-lang="es">ES</button>
@@ -85,8 +92,8 @@
     <section class="bg-gradient-to-r from-primary to-secondary text-white py-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">Serveis i Comoditats</h1>
-                <p class="text-xl max-w-3xl mx-auto">Tot el que necessites per fer créixer el teu negoci en un sol lloc</p>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6" data-translate="hero-title">Serveis i Comoditats</h1>
+                <p class="text-xl max-w-3xl mx-auto" data-translate="hero-subtitle">Tot el que necessites per fer créixer el teu negoci</p>
             </div>
         </div>
     </section>
@@ -95,8 +102,8 @@
     <section class="py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Serveis Inclosos</h2>
-                <p class="max-w-2xl mx-auto text-gray-600">Tots els serveis essencials inclosos en el teu lloguer mensual</p>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-translate="core-title">Serveis Inclosos</h2>
+                <p class="max-w-2xl mx-auto text-gray-600" data-translate="core-subtitle">Els serveis essencials inclosos (no tots) en el teu lloguer mensual</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="amenity-card bg-white p-6 rounded-lg shadow-md transition duration-300">
@@ -104,42 +111,42 @@
                         <i data-feather="wifi" class="w-10 h-10"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Internet d'Alta Velocitat</h3>
-                    <p class="text-gray-600">Fibra òptica simètrica de 1Gb amb redundància i cobertura WiFi 6 completa.</p>
+                    <p class="text-gray-600">Fibra òptica d'última generació.</p>
                 </div>
                 <div class="amenity-card bg-white p-6 rounded-lg shadow-md transition duration-300">
                     <div class="text-primary mb-4">
                         <i data-feather="shield" class="w-10 h-10"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Seguretat 24/7</h3>
-                    <p class="text-gray-600">Sistema de videovigilància, control d'accés per targeta i servei de seguretat.</p>
+                    <p class="text-gray-600">Sistema de videovigilància i control d'accés per targeta.</p>
                 </div>
                 <div class="amenity-card bg-white p-6 rounded-lg shadow-md transition duration-300">
                     <div class="text-primary mb-4">
                         <i data-feather="thermometer" class="w-10 h-10"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Climatització</h3>
-                    <p class="text-gray-600">Sistema de climatització independent per zona amb control de temperatura.</p>
+                    <p class="text-gray-600">Sistema de climatització independent per cada empresa inquilina.</p>
                 </div>
                 <div class="amenity-card bg-white p-6 rounded-lg shadow-md transition duration-300">
                     <div class="text-primary mb-4">
                         <i data-feather="car" class="w-10 h-10"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Aparcament Privat</h3>
-                    <p class="text-gray-600">Places d'aparcament assignades amb accés controlat i videovigilància.</p>
+                    <p class="text-gray-600">Places d'aparcament assignades.</p>
                 </div>
                 <div class="amenity-card bg-white p-6 rounded-lg shadow-md transition duration-300">
                     <div class="text-primary mb-4">
                         <i data-feather="phone" class="w-10 h-10"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Recepció Virtual</h3>
-                    <p class="text-gray-600">Servei de recepció de paquets i correspondència amb notificacions.</p>
+                    <p class="text-gray-600">Servei de recepció de paquets i correspondència.</p>
                 </div>
                 <div class="amenity-card bg-white p-6 rounded-lg shadow-md transition duration-300">
                     <div class="text-primary mb-4">
                         <i data-feather="tool" class="w-10 h-10"></i>
                     </div>
                     <h3 class="text-xl font-bold mb-3">Manteniment</h3>
-                    <p class="text-gray-600">Servei de manteniment i neteja inclòs amb atenció personalitzada.</p>
+                    <p class="text-gray-600">Servei de manteniment i neteja.</p>
                 </div>
             </div>
         </div>
@@ -149,8 +156,8 @@
     <section class="bg-gray-50 py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Sales de Reunions</h2>
-                <p class="max-w-3xl mx-auto text-gray-600">A RealBrave, cada empresa gestiona i organitza els seus propis espais de reunió dins del seu espai arrendat. No oferim sales de reunions compartides, garantint així la màxima privacitat i control total sobre les vostres necessitats empresarials.</p>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-translate="meeting-title">Sales de Reunions</h2>
+                <p class="max-w-3xl mx-auto text-gray-600" data-translate="meeting-subtitle">A RealBrave, cada empresa gestiona i organitza els seus propis espais de reunió dins del seu espai arrendat. No oferim sales de reunions compartides, garantint així la màxima privacitat i control total sobre les vostres necessitats empresarials.</p>
             </div>
             <div class="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
                 <div class="bg-white rounded-lg shadow-lg p-8">
@@ -193,7 +200,7 @@
     </section>
 
     <!-- Additional Services -->
-    <section class="py-16">
+    <section class="py-16 hidden" data-section="additional-services">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">Serveis Addicionals</h2>
@@ -237,7 +244,7 @@
     </section>
 
     <!-- Common Areas -->
-    <section class="bg-gray-50 py-16">
+    <section class="bg-gray-50 py-16 hidden" data-section="common-areas">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
                 <h2 class="text-3xl font-bold text-gray-900 mb-4">Zones Comunes</h2>
@@ -278,8 +285,8 @@
     <section class="py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Serveis Empresarials</h2>
-                <p class="max-w-2xl mx-auto text-gray-600">Suport professional per al creixement del teu negoci</p>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-translate="business-title">Serveis Empresarials</h2>
+                <p class="max-w-2xl mx-auto text-gray-600" data-translate="business-subtitle">Suport professional per al creixement del teu negoci</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="bg-white p-6 rounded-lg shadow-md">
@@ -313,9 +320,9 @@
     <!-- Call to Action -->
     <section class="bg-primary text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-6">Descobreix Tots els Nostres Serveis</h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto">Programa una visita per veure de primera mà totes les comoditats i serveis que oferim.</p>
-            <a href="contact.html" class="bg-white text-primary px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition">Programa una Visita</a>
+            <h2 class="text-3xl font-bold mb-6" data-translate="cta-title">Descobreix Tots els Nostres Serveis</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto" data-translate="cta-subtitle">Programa una visita per veure de primera mà totes les comoditats i serveis que oferim.</p>
+            <a href="contact.html" class="bg-white text-primary px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition" data-translate="cta-button">Programa una Visita</a>
         </div>
     </section>
 
@@ -325,19 +332,19 @@
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4">RealBrave</h3>
-                    <p class="text-gray-400">Espais d'oficina a Terrassa dissenyats per a empreses amb entorn tranquil.</p>
+                    <p class="text-gray-400" data-translate="footer-description">Espais d'oficina a Terrassa dissenyats per a empreses amb entorn tranquil.</p>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Enllaços Ràpids</h4>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer-quick-links">Enllaços Ràpids</h4>
                     <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-400 hover:text-white">Inici</a></li>
-                        <li><a href="building.html" class="text-gray-400 hover:text-white">L'Edifici</a></li>
-                        <li><a href="spaces.html" class="text-gray-400 hover:text-white">Espais Disponibles</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contacta'ns</a></li>
+                        <li><a href="index.html" class="text-gray-400 hover:text-white" data-translate="nav-home">Inici</a></li>
+                        <li><a href="building.html" class="text-gray-400 hover:text-white" data-translate="nav-building">L'Edifici</a></li>
+                        <li><a href="spaces.html" class="text-gray-400 hover:text-white" data-translate="nav-spaces">Espais Disponibles</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white" data-translate="nav-contact">Contacta'ns</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Contacte</h4>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer-contact">Contacte</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-start">
                             <i data-feather="map-pin" class="mr-2 w-4 h-4 mt-1"></i>
@@ -354,27 +361,308 @@
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer-legal">Legal</h4>
                     <ul class="space-y-2">
-                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white">Política de Privacitat</a></li>
-                        <li><a href="cookie-policy.html" class="text-gray-400 hover:text-white">Política de Cookies</a></li>
-                        <li><a href="legal-notice.html" class="text-gray-400 hover:text-white">Avís Legal</a></li>
+                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white" data-translate="footer-privacy">Política de Privacitat</a></li>
+                        <li><a href="cookie-policy.html" class="text-gray-400 hover:text-white" data-translate="footer-cookies">Política de Cookies</a></li>
+                        <li><a href="legal-notice.html" class="text-gray-400 hover:text-white" data-translate="footer-legal-notice">Avís Legal</a></li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>© <span id="current-year">2025</span> RealBrave. Tots els drets reservats.</p>
+                <p>© <span id="current-year">2025</span> RealBrave. <span data-translate="footer-rights">Tots els drets reservats.</span></p>
             </div>
         </div>
     </footer>
 
-    <script>feather.replace();</script>
     <script>
-        // Update footer year automatically
+        // Translation system
+        const translations = {
+            cat: {
+                // Page title
+                'page-title': 'RealBrave - Serveis',
+                
+                // Navigation
+                'nav-home': 'Inici',
+                'nav-building': 'L\'Edifici',
+                'nav-spaces': 'Espais',
+                'nav-amenities': 'Serveis',
+                'nav-location': 'Ubicació',
+                'nav-contact': 'Contacte',
+                
+                // Hero Section
+                'hero-title': 'Serveis i Comoditats',
+                'hero-subtitle': 'Tot el que necessites per fer créixer el teu negoci',
+                
+                // Core Amenities
+                'core-title': 'Serveis Inclosos',
+                'core-subtitle': 'Els serveis essencials inclosos (no tots) en el teu lloguer mensual',
+                
+                // Meeting Rooms
+                'meeting-title': 'Sales de Reunions',
+                'meeting-subtitle': 'A RealBrave, cada empresa gestiona i organitza els seus propis espais de reunió dins del seu espai arrendat. No oferim sales de reunions compartides, garantint així la màxima privacitat i control total sobre les vostres necessitats empresarials.',
+                
+                // Business Services
+                'business-title': 'Serveis Empresarials',
+                'business-subtitle': 'Suport professional per al creixement del teu negoci',
+                
+                // CTA
+                'cta-title': 'Descobreix Tots els Nostres Serveis',
+                'cta-subtitle': 'Programa una visita per veure de primera mà totes les comoditats i serveis que oferim.',
+                'cta-button': 'Programa una Visita',
+                
+                // Footer
+                'footer-description': 'Espais d\'oficina a Terrassa dissenyats per a empreses amb entorn tranquil.',
+                'footer-quick-links': 'Enllaços Ràpids',
+                'footer-contact': 'Contacte',
+                'footer-legal': 'Legal',
+                'footer-privacy': 'Política de Privacitat',
+                'footer-cookies': 'Política de Cookies',
+                'footer-legal-notice': 'Avís Legal',
+                'footer-rights': 'Tots els drets reservats.'
+            },
+            es: {
+                // Page title
+                'page-title': 'RealBrave - Servicios',
+                
+                // Navigation
+                'nav-home': 'Inicio',
+                'nav-building': 'El Edificio',
+                'nav-spaces': 'Espacios',
+                'nav-amenities': 'Servicios',
+                'nav-location': 'Ubicación',
+                'nav-contact': 'Contacto',
+                
+                // Hero Section
+                'hero-title': 'Servicios y Comodidades',
+                'hero-subtitle': 'Todo lo que necesitas para hacer crecer tu negocio',
+                
+                // Core Amenities
+                'core-title': 'Servicios Incluidos',
+                'core-subtitle': 'Los servicios esenciales incluidos (no todos) en tu alquiler mensual',
+                
+                // Meeting Rooms
+                'meeting-title': 'Salas de Reuniones',
+                'meeting-subtitle': 'En RealBrave, cada empresa gestiona y organiza sus propios espacios de reunión dentro de su espacio arrendado. No ofrecemos salas de reuniones compartidas, garantizando así la máxima privacidad y control total sobre vuestras necesidades empresariales.',
+                
+                // Business Services
+                'business-title': 'Servicios Empresariales',
+                'business-subtitle': 'Soporte profesional para el crecimiento de tu negocio',
+                
+                // CTA
+                'cta-title': 'Descubre Todos Nuestros Servicios',
+                'cta-subtitle': 'Programa una visita para ver de primera mano todas las comodidades y servicios que ofrecemos.',
+                // Footer
+                'footer-description': 'Espacios de oficina en Terrassa diseñados para empresas con entorno tranquilo.',
+                'footer-quick-links': 'Enlaces Rápidos',
+                'footer-contact': 'Contacto',
+                'footer-legal': 'Legal',
+                'footer-privacy': 'Política de Privacidad',
+                'footer-cookies': 'Política de Cookies',
+                'footer-legal-notice': 'Aviso Legal',
+                'footer-rights': 'Todos los derechos reservados.'
+            },
+            en: {
+                // Page title
+                'page-title': 'RealBrave - Amenities',
+                
+                // Navigation
+                'nav-home': 'Home',
+                'nav-building': 'The Building',
+                'nav-spaces': 'Spaces',
+                'nav-amenities': 'Amenities',
+                'nav-location': 'Location',
+                'nav-contact': 'Contact',
+                
+                // Hero Section
+                'hero-title': 'Services and Amenities',
+                'hero-subtitle': 'Everything you need to grow your business',
+                
+                // Core Amenities
+                'core-title': 'Included Services',
+                'core-subtitle': 'Essential services included (not all) in your monthly rent',
+                
+                // Meeting Rooms
+                'meeting-title': 'Meeting Rooms',
+                'meeting-subtitle': 'At RealBrave, each company manages and organizes its own meeting spaces within their rented space. We do not offer shared meeting rooms, thus guaranteeing maximum privacy and total control over your business needs.',
+                
+                // Business Services
+                'business-title': 'Business Services',
+                'business-subtitle': 'Professional support for your business growth',
+                
+                // CTA
+                'cta-title': 'Discover All Our Services',
+                'cta-subtitle': 'Schedule a visit to see firsthand all the amenities and services we offer.',
+                'cta-button': 'Schedule Visit',
+                
+                // Footer
+                'footer-description': 'Office spaces in Terrassa designed for businesses with a peaceful environment.',
+                'footer-quick-links': 'Quick Links',
+                'footer-contact': 'Contact',
+                'footer-legal': 'Legal',
+                'footer-privacy': 'Privacy Policy',
+                'footer-cookies': 'Cookie Policy',
+                'footer-legal-notice': 'Legal Notice',
+                'footer-rights': 'All rights reserved.'
+            },
+            es: {
+                // Page title
+                'page-title': 'RealBrave - Servicios',
+                
+                // Navigation
+                'nav-home': 'Inicio',
+                'nav-building': 'El Edificio',
+                'nav-spaces': 'Espacios',
+                'nav-amenities': 'Servicios',
+                'nav-location': 'Ubicación',
+                'nav-contact': 'Contacto',
+                
+                // Hero Section
+                'hero-title': 'Servicios y Amenidades',
+                'hero-subtitle': 'Todo lo que necesitas para hacer crecer tu negocio',
+                
+                // Core Amenities
+                'core-title': 'Servicios Incluidos',
+                'core-subtitle': 'Servicios esenciales incluidos (no todos) en tu alquiler mensual',
+                
+                // Meeting Rooms
+                'meeting-title': 'Salas de Reuniones',
+                'meeting-subtitle': 'En RealBrave, cada empresa gestiona y organiza sus propios espacios de reunión dentro de su espacio alquilado. No ofrecemos salas de reuniones compartidas, garantizando así la máxima privacidad y control total sobre las necesidades de tu negocio.',
+                
+                // Business Services
+                'business-title': 'Servicios Empresariales',
+                'business-subtitle': 'Apoyo profesional para el crecimiento de tu negocio',
+                
+                // CTA
+                'cta-title': 'Descubre Todos Nuestros Servicios',
+                'cta-subtitle': 'Programa una visita para ver de primera mano todas las amenidades y servicios que ofrecemos.',
+                'cta-button': 'Programar Visita',
+                
+                // Footer
+                'footer-description': 'Espacios de oficina en Terrassa diseñados para empresas con entorno tranquilo.',
+                'footer-quick-links': 'Enlaces Rápidos',
+                'footer-contact': 'Contacto',
+                'footer-legal': 'Legal',
+                'footer-privacy': 'Política de Privacidad',
+                'footer-cookies': 'Política de Cookies',
+                'footer-legal-notice': 'Aviso Legal',
+                'footer-rights': 'Todos los derechos reservados.'
+            },
+            en: {
+                // Page title
+                'page-title': 'RealBrave - Amenities',
+                
+                // Navigation
+                'nav-home': 'Home',
+                'nav-building': 'The Building',
+                'nav-spaces': 'Spaces',
+                'nav-amenities': 'Amenities',
+                'nav-location': 'Location',
+                'nav-contact': 'Contact',
+                
+                // Hero Section
+                'hero-title': 'Services and Amenities',
+                'hero-subtitle': 'Everything you need to grow your business',
+                
+                // Core Amenities
+                'core-title': 'Included Services',
+                'core-subtitle': 'Essential services included (not all) in your monthly rent',
+                
+                // Meeting Rooms
+                'meeting-title': 'Meeting Rooms',
+                'meeting-subtitle': 'At RealBrave, each company manages and organizes its own meeting spaces within its leased area. We don\'t offer shared meeting rooms, ensuring maximum privacy and total control over your business needs.',
+                
+                // Business Services
+                'business-title': 'Business Services',
+                'business-subtitle': 'Professional support for your business growth',
+                
+                // CTA
+                'cta-title': 'Discover All Our Services',
+                'cta-subtitle': 'Schedule a visit to see firsthand all the amenities and services we offer.',
+                'cta-button': 'Schedule Visit',
+                
+                // Footer
+                'footer-description': 'Premium office spaces in Terrassa designed for businesses with a peaceful environment.',
+                'footer-quick-links': 'Quick Links',
+                'footer-contact': 'Contact',
+                'footer-legal': 'Legal',
+                'footer-privacy': 'Privacy Policy',
+                'footer-cookies': 'Cookie Policy',
+                'footer-legal-notice': 'Legal Notice',
+                'footer-rights': 'All rights reserved.'
+            }
+        };
+
+        // Current language state
+        let currentLanguage = localStorage.getItem('smartplaces-language') || 'cat';
+
+        // Language switching functionality
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('smartplaces-language', lang);
+            updateContent();
+            updateLanguageButtons();
+            updatePageLanguage();
+        }
+
+        function updateContent() {
+            const elements = document.querySelectorAll('[data-translate]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-translate');
+                if (translations[currentLanguage] && translations[currentLanguage][key]) {
+                    element.textContent = translations[currentLanguage][key];
+                }
+            });
+            
+            // Update page title
+            document.title = translations[currentLanguage]['page-title'];
+        }
+
+        function updateLanguageButtons() {
+            const buttons = document.querySelectorAll('.language-selector');
+            buttons.forEach(button => {
+                const lang = button.getAttribute('data-lang');
+                if (lang === currentLanguage) {
+                    button.className = 'language-selector text-xs px-2 py-1 rounded bg-primary text-white';
+                } else {
+                    button.className = 'language-selector text-xs px-2 py-1 rounded border border-gray-300';
+                }
+            });
+        }
+
+        function updatePageLanguage() {
+            document.documentElement.lang = currentLanguage;
+        }
+
+        // Initialize language system
         document.addEventListener('DOMContentLoaded', function() {
+            // Set up language switchers
+            const languageButtons = document.querySelectorAll('.language-selector');
+            languageButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const lang = button.getAttribute('data-lang');
+                    switchLanguage(lang);
+                });
+            });
+
+            // Initialize with saved language or default
+            updateContent();
+            updateLanguageButtons();
+            updatePageLanguage();
+            
+            // Update footer year automatically
             const yearElement = document.getElementById('current-year');
             if (yearElement) {
                 yearElement.textContent = new Date().getFullYear();
+            }
+            
+            // Initialize feather icons
+            try {
+                if (typeof feather !== 'undefined') {
+                    feather.replace();
+                }
+            } catch (error) {
+                console.warn('Feather icons initialization failed:', error);
             }
         });
     </script>

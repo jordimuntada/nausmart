@@ -12,9 +12,9 @@
     <!-- End Google Tag Manager -->
     <title>RealBrave - Premium Office Spaces in Terrassa</title>
     <!-- Favicon and App Icons -->
-    <link rel="icon" type="image/svg+xml" href="realbrave_logo3.svg">
-    <link rel="icon" type="image/svg+xml" href="realbrave_logo3.svg" sizes="any">
-    <link rel="apple-touch-icon" href="realbrave_logo3.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-32x32.png">
     <link rel="mask-icon" href="realbrave_logo3.svg" color="#242954">
     <meta name="theme-color" content="#242954">
     <script src="https://cdn.tailwindcss.com"></script>
@@ -26,6 +26,15 @@
     </script>
     <!-- Typeform embed script -->
     <script src="//embed.typeform.com/next/embed.js"></script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YDM8TFYBP4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-YDM8TFYBP4');
+    </script>
     <!-- Environment configuration -->
     <script>
         // Set environment variables for client-side use
@@ -383,19 +392,19 @@
     <!-- Navigation -->
     <nav class="bg-white shadow-md sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
+            <div class="flex justify-between h-20">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
-                        <img src="realbrave_logo2.svg" alt="RealBrave" class="h-12 w-auto">
+                        <img src="realbrave_logo2.svg" alt="RealBrave" class="h-16 w-auto">
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                    <a href="building.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">The Building</a>
-                    <a href="spaces.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Spaces</a>
-                    <a href="amenities.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Amenities</a>
-                    <a href="location.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Location</a>
-                    <a href="contact.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                    <a href="index.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav.home">Home</a>
+                    <a href="building.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav.building">The Building</a>
+                    <a href="spaces.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav.spaces">Spaces</a>
+                    <a href="amenities.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav.amenities">Amenities</a>
+                    <a href="location.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav.location">Location</a>
+                    <a href="contact.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav.contact">Contact</a>
                     <div class="flex space-x-2">
                         <button class="language-selector text-xs px-2 py-1 rounded bg-primary text-white">CAT</button>
                         <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300">ES</button>
@@ -429,11 +438,11 @@
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
                         <div class="grid md:grid-cols-2 gap-8 items-center">
                             <div>
-                                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">Premium Office Spaces in Terrassa</h1>
-                                <p class="text-xl md:text-2xl mb-8 leading-relaxed">Modern, flexible workspaces designed for growing businesses with state-of-the-art facilities and strategic location.</p>
+                                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6" data-translate="carousel.slide1.title">Premium Office Spaces in Terrassa</h1>
+                                <p class="text-xl md:text-2xl mb-8 leading-relaxed" data-translate="carousel.slide1.subtitle">Modern, flexible workspaces designed for growing businesses with state-of-the-art facilities and strategic location.</p>
                                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                                <a href="#" id="schedule-visit-btn" class="bg-white text-primary px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg"></a>
-                                    <button class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition">Explorar Espais</button>
+                                <a href="contact.html" id="schedule-visit-btn" class="bg-white text-primary px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg" data-translate="carousel.slide1.scheduleVisit"></a>
+                                    <a href="spaces.html" class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition" data-translate="carousel.slide1.exploreSpaces">Explorar Espais</a>
                                 </div>
                             </div>
                             <div class="hidden md:block">
@@ -454,15 +463,15 @@
                 <div class="slide-content">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
                         <div class="refurbishment-content">
-                            <div class="refurbishment-badge">
+                            <div class="refurbishment-badge" data-translate="carousel.slide2.badge">
                                 🚧 Under Renovation
                             </div>
-                            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">Offices Under Refurbishment</h1>
-                            <h2 class="text-2xl md:text-3xl font-semibold mb-8 text-yellow-100">Opening April 2026</h2>
-                            <p class="text-xl md:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto">Currently undergoing renovation. These modern office spaces will be ready for occupancy in April 2026. Experience premium facilities designed for the future of work.</p>
+                            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6" data-translate="carousel.slide2.title">Offices Under Refurbishment</h1>
+                            <h2 class="text-2xl md:text-3xl font-semibold mb-8 text-yellow-100" data-translate="carousel.slide2.subtitle">Opening April 2026</h2>
+                            <p class="text-xl md:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto" data-translate="carousel.slide2.description">Currently undergoing renovation. These modern office spaces will be ready for occupancy in April 2026. Experience premium facilities designed for the future of work.</p>
                             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
-                                <a href="#" class="bg-white text-red-600 px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg">Get Notified When Ready</a>
-                                <button class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition">View Progress Updates</button>
+                                <a href="comunitat.html" class="bg-white text-red-600 px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg" data-translate="carousel.slide2.getNotified">Get Notified When Ready</a>
+                                <a href="building.html" class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition" data-translate="carousel.slide2.viewProgress">View Progress Updates</a>
                             </div>
                         </div>
                     </div>
@@ -476,14 +485,14 @@
                 <div class="slide-content">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
                         <div class="refurbishment-content">
-                            <div class="refurbishment-badge">
+                            <div class="refurbishment-badge" data-translate="carousel.slide3.badge">
                                 🏗️ Projecte en Curs
                             </div>
-                            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">Oficines en construcció i finalitzades el 2026</h1>
-                            <p class="text-xl md:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto">Descobreix els nostres nous espais d'oficines, dissenyats per a la innovació i la productivitat, disponibles a partir del 2026.</p>
+                            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6" data-translate="carousel.slide3.title">Oficines en construcció i finalitzades el 2026</h1>
+                            <p class="text-xl md:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto" data-translate="carousel.slide3.description">Descobreix els nostres nous espais d'oficines, dissenyats per a la innovació i la productivitat, disponibles a partir del 2026.</p>
                             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
-                                <a href="building.html" class="bg-white text-red-600 px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg">Més Informació</a>
-                                <button id="contacta-ns-btn" class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition">Contacta'ns</button>
+                                <a href="building.html" class="bg-white text-red-600 px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg" data-translate="carousel.slide3.moreInfo">Més Informació</a>
+                                <button id="contacta-ns-btn" class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition" data-translate="carousel.slide3.contact">Contacta'ns</button>
                             </div>
                         </div>
                     </div>
@@ -497,14 +506,14 @@
                 <div class="slide-content">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
                         <div class="text-center">
-                            <div class="refurbishment-badge">
+                            <div class="refurbishment-badge" data-translate="carousel.slide4.badge">
                                 🏢 Architectural Vision
                             </div>
-                            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">Future RealBrave Design</h1>
-                            <p class="text-xl md:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto">Discover the architectural vision for RealBrave - a modern office complex designed to inspire innovation and productivity in the heart of Terrassa.</p>
+                            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6" data-translate="carousel.slide4.title">Future RealBrave Design</h1>
+                            <p class="text-xl md:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto" data-translate="carousel.slide4.description">Discover the architectural vision for RealBrave - a modern office complex designed to inspire innovation and productivity in the heart of Terrassa.</p>
                             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
-                                <a href="#" class="bg-white text-primary px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg">Explore Design Features</a>
-                                <button class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition">Schedule a Tour</button>
+                                <a href="building.html" class="bg-white text-primary px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg" data-translate="carousel.slide4.exploreDesign">Explore Design Features</a>
+                                <a href="contact.html" class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition" data-translate="carousel.slide4.scheduleTour">Schedule a Tour</a>
                             </div>
                         </div>
                     </div>
@@ -518,14 +527,14 @@
                 <div class="slide-content">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
                         <div class="text-center">
-                            <div class="refurbishment-badge">
+                            <div class="refurbishment-badge" data-translate="carousel.slide5.badge">
                                 🌟 Premium Spaces
                             </div>
-                            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">Exceptional Office Environment</h1>
-                            <p class="text-xl md:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto">Experience the perfect blend of modern architecture and functional design. Our premium office spaces offer the ideal environment for your business to thrive and grow.</p>
+                            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6" data-translate="carousel.slide5.title">Exceptional Office Environment</h1>
+                            <p class="text-xl md:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto" data-translate="carousel.slide5.description">Experience the perfect blend of modern architecture and functional design. Our premium office spaces offer the ideal environment for your business to thrive and grow.</p>
                             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
-                                <a href="#" class="bg-white text-green-600 px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg">View Available Spaces</a>
-                                <button class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition">Contact Us Today</button>
+                                <a href="spaces.html" class="bg-white text-green-600 px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg" data-translate="carousel.slide5.viewSpaces">View Available Spaces</a>
+                                <a href="contact.html" class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition" data-translate="carousel.slide5.contactToday">Contact Us Today</a>
                             </div>
                         </div>
                     </div>
@@ -546,31 +555,31 @@
                                 </div>
                             </div>
                             <div>
-                                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">Experience Excellence</h1>
-                                <p class="text-xl md:text-2xl mb-8 leading-relaxed">Join a community of innovative businesses in Terrassa's most prestigious office complex. Premium amenities, strategic location, and flexible terms.</p>
+                                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6" data-translate="carousel.slide6.title">Experience Excellence</h1>
+                                <p class="text-xl md:text-2xl mb-8 leading-relaxed" data-translate="carousel.slide6.description">Join a community of innovative businesses in Terrassa's most prestigious office complex. Premium amenities, strategic location, and flexible terms.</p>
                                 <div class="space-y-4 mb-8">
                                     <div class="flex items-center space-x-3">
                                         <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
                                             <i data-feather="check" class="w-4 h-4 text-green-600"></i>
                                         </div>
-                                        <span class="text-lg">24/7 Security & Access</span>
+                                        <span class="text-lg" data-translate="carousel.slide6.features.0">24/7 Security & Access</span>
                                     </div>
                                     <div class="flex items-center space-x-3">
                                         <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
                                             <i data-feather="check" class="w-4 h-4 text-green-600"></i>
                                         </div>
-                                        <span class="text-lg">High-Speed Fiber Internet</span>
+                                        <span class="text-lg" data-translate="carousel.slide6.features.1">High-Speed Fiber Internet</span>
                                     </div>
                                     <div class="flex items-center space-x-3">
                                         <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
                                             <i data-feather="check" class="w-4 h-4 text-green-600"></i>
                                         </div>
-                                        <span class="text-lg">Meeting Rooms & Common Areas</span>
+                                        <span class="text-lg" data-translate="carousel.slide6.features.2">Meeting Rooms & Common Areas</span>
                                     </div>
                                 </div>
                                 <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                                    <a href="#" class="bg-white text-green-600 px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg">Explore Amenities</a>
-                                    <button class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition">View Floor Plans</button>
+                                    <a href="amenities.html" class="bg-white text-green-600 px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg" data-translate="carousel.slide6.exploreAmenities">Explore Amenities</a>
+                                    <a href="building.html" class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition" data-translate="carousel.slide6.viewFloorPlans">View Floor Plans</a>
                                 </div>
                             </div>
                         </div>
@@ -585,14 +594,14 @@
                 <div class="slide-content">
                     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
                         <div class="text-center">
-                            <div class="refurbishment-badge">
+                            <div class="refurbishment-badge" data-translate="carousel.slide7.badge">
                                 ✨ Innovation Hub
                             </div>
-                            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6">Where Ideas Come to Life</h1>
-                            <p class="text-xl md:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto">Step into the future of workspace design. Our innovative office environment fosters creativity, collaboration, and success for forward-thinking businesses.</p>
+                            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6" data-translate="carousel.slide7.title">Where Ideas Come to Life</h1>
+                            <p class="text-xl md:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto" data-translate="carousel.slide7.description">Step into the future of workspace design. Our innovative office environment fosters creativity, collaboration, and success for forward-thinking businesses.</p>
                             <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
-                                <a href="#" class="bg-white text-blue-600 px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg">Discover Innovation</a>
-                                <a href="comunitat.html" class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition text-center">Join Our Community</a>
+                                <a href="amenities.html" class="bg-white text-blue-600 px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg" data-translate="carousel.slide7.discoverInnovation">Discover Innovation</a>
+                                <a href="comunitat.html" class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition text-center" data-translate="carousel.slide7.joinCommunity">Join Our Community</a>
                             </div>
                         </div>
                     </div>
@@ -623,30 +632,30 @@
     <section class="bg-gray-50 py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Why Choose RealBrave</h2>
-                <p class="max-w-2xl mx-auto text-gray-600">Designed to help your business thrive with premium facilities and location advantages</p>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-translate="features.title">Why Choose RealBrave</h2>
+                <p class="max-w-2xl mx-auto text-gray-600" data-translate="features.subtitle">Designed to help your business thrive with premium facilities and location advantages</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
                     <div class="text-primary mb-4">
                         <i data-feather="map-pin" class="w-10 h-10"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Prime Location</h3>
-                    <p class="text-gray-600">Just 30 minutes from Barcelona with excellent transport links and highway access.</p>
+                    <h3 class="text-xl font-bold mb-3" data-translate="features.location.title">Prime Location</h3>
+                    <p class="text-gray-600" data-translate="features.location.description">Just 30 minutes from Barcelona with excellent transport links and highway access.</p>
                 </div>
                 <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
                     <div class="text-primary mb-4">
                         <i data-feather="wifi" class="w-10 h-10"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Modern Infrastructure</h3>
-                    <p class="text-gray-600">High-speed fiber internet, advanced security systems, and climate control throughout.</p>
+                    <h3 class="text-xl font-bold mb-3" data-translate="features.infrastructure.title">Modern Infrastructure</h3>
+                    <p class="text-gray-600" data-translate="features.infrastructure.description">High-speed fiber internet, advanced security systems, and climate control throughout.</p>
                 </div>
                 <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
                     <div class="text-primary mb-4">
                         <i data-feather="layout" class="w-10 h-10"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Flexible Spaces</h3>
-                    <p class="text-gray-600">Customizable office configurations to perfectly match your business needs.</p>
+                    <h3 class="text-xl font-bold mb-3" data-translate="features.flexible.title">Flexible Spaces</h3>
+                    <p class="text-gray-600" data-translate="features.flexible.description">Customizable office configurations to perfectly match your business needs.</p>
                 </div>
             </div>
         </div>
@@ -656,8 +665,8 @@
     <section class="py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Our Building</h2>
-                <p class="max-w-2xl mx-auto text-gray-600">A modern office space designed for productivity and collaboration</p>
+                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-translate="building.title">Our Building</h2>
+                <p class="max-w-2xl mx-auto text-gray-600" data-translate="building.subtitle">A modern office space designed for productivity and collaboration</p>
             </div>
             <div class="grid md:grid-cols-2 gap-8">
                 <div>
@@ -665,27 +674,27 @@
                     <img src="render_2.jpg" alt="RealBrave Architectural Render 2" class="rounded-lg shadow-lg">
                 </div>
                 <div class="flex flex-col justify-center">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4">Modern Architecture Meets Functionality</h3>
-                    <p class="text-gray-600 mb-6">RealBrave offers a total of 2,500 m² spread across 3 floors, recently renovated to provide the perfect professional environment for your business.</p>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-4" data-translate="building.mainTitle">Modern Architecture Meets Functionality</h3>
+                    <p class="text-gray-600 mb-6" data-translate="building.description">RealBrave offers a total of 2,500 m² spread across 3 floors, recently renovated to provide the perfect professional environment for your business.</p>
                     <ul class="space-y-3">
                         <li class="flex items-start">
                             <i data-feather="check" class="text-primary mr-2 mt-1 w-4 h-4"></i>
-                            <span class="text-gray-700">Year of renovation: 2023</span>
+                            <span class="text-gray-700" data-translate="building.features.0">Year of renovation: 2023</span>
                         </li>
                         <li class="flex items-start">
                             <i data-feather="check" class="text-primary mr-2 mt-1 w-4 h-4"></i>
-                            <span class="text-gray-700">Total size: 2,500 m²</span>
+                            <span class="text-gray-700" data-translate="building.features.1">Total size: 2,500 m²</span>
                         </li>
                         <li class="flex items-start">
                             <i data-feather="check" class="text-primary mr-2 mt-1 w-4 h-4"></i>
-                            <span class="text-gray-700">3 floors of office space</span>
+                            <span class="text-gray-700" data-translate="building.features.2">3 floors of office space</span>
                         </li>
                         <li class="flex items-start">
                             <i data-feather="check" class="text-primary mr-2 mt-1 w-4 h-4"></i>
-                            <span class="text-gray-700">Ample parking available</span>
+                            <span class="text-gray-700" data-translate="building.features.3">Ample parking available</span>
                         </li>
                     </ul>
-                    <button class="mt-6 self-start bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-opacity-90 transition">See More Details</button>
+                    <a href="building.html" class="mt-6 self-start bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-opacity-90 transition" data-translate="building.seeMore">See More Details</a>
                 </div>
             </div>
         </div>
@@ -694,9 +703,9 @@
     <!-- Call to Action -->
     <section class="bg-primary text-white py-16">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-6">Ready to Elevate Your Workspace?</h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto">Contact us today to schedule a tour and see how RealBrave can help your business grow.</p>
-            <a href="#" target="_blank" id="book-visit-btn" class="bg-white text-primary px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition text-center inline-block">Programar Visita Ara</a>
+            <h2 class="text-3xl font-bold mb-6" data-translate="cta.title">Ready to Elevate Your Workspace?</h2>
+            <p class="text-xl mb-8 max-w-3xl mx-auto" data-translate="cta.subtitle">Contact us today to schedule a tour and see how RealBrave can help your business grow.</p>
+            <a href="contact.html" target="_blank" id="book-visit-btn" class="bg-white text-primary px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition text-center inline-block" data-translate="cta.button">Programar Visita Ara</a>
         </div>
     </section>
 
@@ -706,45 +715,45 @@
             <div class="grid md:grid-cols-4 gap-8">
                 <div>
                     <h3 class="text-xl font-bold mb-4">RealBrave</h3>
-                    <p class="text-gray-400">Premium office spaces in Terrassa designed for modern businesses.</p>
+                    <p class="text-gray-400" data-translate="footer.description">Premium office spaces in Terrassa designed for modern businesses.</p>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Quick Links</h4>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer.quickLinks">Quick Links</h4>
                     <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-400 hover:text-white">Home</a></li>
-                        <li><a href="building.html" class="text-gray-400 hover:text-white">The Building</a></li>
-                        <li><a href="spaces.html" class="text-gray-400 hover:text-white">Available Spaces</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-white">Contact Us</a></li>
+                        <li><a href="index.html" class="text-gray-400 hover:text-white" data-translate="footer.links.home">Home</a></li>
+                        <li><a href="building.html" class="text-gray-400 hover:text-white" data-translate="footer.links.building">The Building</a></li>
+                        <li><a href="spaces.html" class="text-gray-400 hover:text-white" data-translate="footer.links.spaces">Available Spaces</a></li>
+                        <li><a href="contact.html" class="text-gray-400 hover:text-white" data-translate="footer.links.contact">Contact Us</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer.contact">Contact</h4>
                     <ul class="space-y-2 text-gray-400">
                         <li class="flex items-start">
                             <i data-feather="map-pin" class="mr-2 w-4 h-4 mt-1"></i>
-                            <span>Carretera de Rubí, 292 Terrassa</span>
+                            <span data-translate="footer.contactInfo.address">Carretera de Rubí, 292 Terrassa</span>
                         </li>
                         <li class="flex items-start">
                             <i data-feather="phone" class="mr-2 w-4 h-4 mt-1"></i>
-                            <span>+34 930 107 830</span>
+                            <span data-translate="footer.contactInfo.phone">+34 930 107 830</span>
                         </li>
                         <li class="flex items-start">
                             <i data-feather="mail" class="mr-2 w-4 h-4 mt-1"></i>
-                            <span>admin@canmirgestions.com</span>
+                            <span data-translate="footer.contactInfo.email">admin@canmirgestions.com</span>
                         </li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4">Legal</h4>
+                    <h4 class="text-lg font-semibold mb-4" data-translate="footer.legal">Legal</h4>
                     <ul class="space-y-2">
-                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
-                        <li><a href="cookie-policy.html" class="text-gray-400 hover:text-white">Cookie Policy</a></li>
-                        <li><a href="legal-notice.html" class="text-gray-400 hover:text-white">Legal Notice</a></li>
+                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white" data-translate="footer.legalLinks.privacy">Privacy Policy</a></li>
+                        <li><a href="cookie-policy.html" class="text-gray-400 hover:text-white" data-translate="footer.legalLinks.cookies">Cookie Policy</a></li>
+                        <li><a href="legal-notice.html" class="text-gray-400 hover:text-white" data-translate="footer.legalLinks.legal">Legal Notice</a></li>
                     </ul>
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>© <span id="current-year">2025</span> RealBrave. All rights reserved.</p>
+                <p>© <span id="current-year">2025</span> RealBrave. <span data-translate="footer.copyright">All rights reserved.</span></p>
             </div>
         </div>
     </footer>
@@ -1184,113 +1193,39 @@
             // Update page title
             document.title = t.title;
             
-            // Update navigation
-            const navLinks = document.querySelectorAll('nav a');
-            navLinks[0].textContent = t.nav.home;
-            navLinks[1].textContent = t.nav.building;
-            navLinks[2].textContent = t.nav.spaces;
-            navLinks[3].textContent = t.nav.amenities;
-            navLinks[4].textContent = t.nav.location;
-            navLinks[5].textContent = t.nav.contact;
-            
-            // Update carousel slides
-            updateCarouselSlides(t);
-            
-            // Update features section
-            const featuresSection = document.querySelector('.bg-gray-50');
-            if (featuresSection) {
-                 const h2Element = featuresSection.querySelector('h2');
-                 const pElement = featuresSection.querySelector('p');
-                 if (h2Element) h2Element.textContent = t.features.title;
-                 if (pElement) pElement.textContent = t.features.subtitle;
-
-                const featureCards = featuresSection.querySelectorAll('.feature-card');
-                if (featureCards[0]) {
-                    const h3_0 = featureCards[0].querySelector('h3');
-                    const p_0 = featureCards[0].querySelector('p');
-                    if (h3_0) h3_0.textContent = t.features.location.title;
-                    if (p_0) p_0.textContent = t.features.location.description;
-                }
-                if (featureCards[1]) {
-                    const h3_1 = featureCards[1].querySelector('h3');
-                    const p_1 = featureCards[1].querySelector('p');
-                    if (h3_1) h3_1.textContent = t.features.infrastructure.title;
-                    if (p_1) p_1.textContent = t.features.infrastructure.description;
-                }
-                if (featureCards[2]) {
-                    const h3_2 = featureCards[2].querySelector('h3');
-                    const p_2 = featureCards[2].querySelector('p');
-                    if (h3_2) h3_2.textContent = t.features.flexible.title;
-                    if (p_2) p_2.textContent = t.features.flexible.description;
-                }
-            }
-            
-            // Update building section
-            const buildingSection = document.querySelector('.py-16:not(.bg-gray-50):not(.bg-primary)'); // This targets the first section with py-16 that is not bg-gray-50 or bg-primary
-            if (buildingSection) {
-                const h2Element = buildingSection.querySelector('h2');
-                const pCentered = buildingSection.querySelector('.text-center p');
-                const h3Main = buildingSection.querySelector('h3');
-                const pDescription = buildingSection.querySelector('.flex.flex-col p');
-                const seeMoreButton = buildingSection.querySelector('button');
+            // Generic function to update elements with data-translate attributes
+            function updateElementsWithDataTranslate() {
+                const elementsWithTranslate = document.querySelectorAll('[data-translate]');
                 
-                if (h2Element) h2Element.textContent = t.building.title;
-                if (pCentered) pCentered.textContent = t.building.subtitle;
-                if (h3Main) h3Main.textContent = t.building.mainTitle;
-                if (pDescription) pDescription.textContent = t.building.description;
-                
-                const buildingFeatures = buildingSection.querySelectorAll('li span');
-                t.building.features.forEach((featureText, index) => {
-                    if (buildingFeatures[index]) {
-                        buildingFeatures[index].textContent = featureText;
+                elementsWithTranslate.forEach(element => {
+                    const translateKey = element.getAttribute('data-translate');
+                    const translatedText = getNestedTranslation(t, translateKey);
+                    
+                    if (translatedText !== undefined && translatedText !== null) {
+                        element.textContent = translatedText;
                     }
                 });
-                if (seeMoreButton) seeMoreButton.textContent = t.building.seeMore;
             }
             
-            // Update CTA section
-            const ctaSection = document.querySelector('section.bg-primary'); // More specific selector
-            if (ctaSection) {
-                const h2Cta = ctaSection.querySelector('h2');
-                const pCta = ctaSection.querySelector('p');
-                // const buttonCta = ctaSection.querySelector('a.bg-white');
-                const buttonCta = ctaSection.querySelector('#book-visit-btn'); // Use ID for CTA button
-
-                if (h2Cta) h2Cta.textContent = t.cta.title;
-                if (pCta) pCta.textContent = t.cta.subtitle;
-                if (buttonCta) buttonCta.textContent = t.cta.button;
+            // Helper function to get nested translation values (e.g., "nav.home")
+            function getNestedTranslation(obj, path) {
+                return path.split('.').reduce((current, key) => {
+                    if (current && typeof current === 'object') {
+                        // Handle array access (e.g., "features.0")
+                        if (!isNaN(key)) {
+                            return current[parseInt(key)];
+                        }
+                        return current[key];
+                    }
+                    return undefined;
+                }, obj);
             }
             
-            // Update footer
-            const footer = document.querySelector('footer');
-            if (footer) {
-                const footerDesc = footer.querySelector('div > div.grid > div:first-child > p');
-                if (footerDesc) footerDesc.textContent = t.footer.description;
-                
-                const footerH4s = footer.querySelectorAll('div.grid > div > h4');
-                if (footerH4s[0]) footerH4s[0].textContent = t.footer.quickLinks;
-                if (footerH4s[1]) footerH4s[1].textContent = t.footer.contact;
-                if (footerH4s[2]) footerH4s[2].textContent = t.footer.legal;
-                
-                const footerNavLinks = footer.querySelector('div.grid > div:nth-child(2) ul').querySelectorAll('a');
-                if (footerNavLinks[0]) footerNavLinks[0].textContent = t.footer.links.home;
-                if (footerNavLinks[1]) footerNavLinks[1].textContent = t.footer.links.building;
-                if (footerNavLinks[2]) footerNavLinks[2].textContent = t.footer.links.spaces;
-                if (footerNavLinks[3]) footerNavLinks[3].textContent = t.footer.links.contact;
-                
-                const contactInfoSpans = footer.querySelector('div.grid > div:nth-child(3) ul').querySelectorAll('span');
-                if (contactInfoSpans[0]) contactInfoSpans[0].textContent = t.footer.contactInfo.address;
-                if (contactInfoSpans[1]) contactInfoSpans[1].textContent = t.footer.contactInfo.phone;
-                if (contactInfoSpans[2]) contactInfoSpans[2].textContent = t.footer.contactInfo.email;
-                
-                const legalLinks = footer.querySelector('div.grid > div:nth-child(4) ul').querySelectorAll('a');
-                if (legalLinks[0]) legalLinks[0].textContent = t.footer.legalLinks.privacy;
-                if (legalLinks[1]) legalLinks[1].textContent = t.footer.legalLinks.cookies;
-                if (legalLinks[2]) legalLinks[2].textContent = t.footer.legalLinks.legal;
-                
-                const copyrightElement = footer.querySelector('.border-t p');
-                if (copyrightElement) copyrightElement.innerHTML = `© <span id="current-year">${new Date().getFullYear()}</span> RealBrave. ${t.footer.copyright}`;
-            }
+            // Update all elements with data-translate attributes
+            updateElementsWithDataTranslate();
+            
+            // Update carousel slides with special handling
+            updateCarouselSlides(t);
             
             // Update WhatsApp tooltip when content is updated
             updateWhatsAppTooltip();
