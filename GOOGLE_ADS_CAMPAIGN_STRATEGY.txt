@@ -1,0 +1,471 @@
+================================================================================
+REALBRAVE - GOOGLE ADS CAMPAIGN STRATEGY GUIDE
+================================================================================
+Complete Google Ads Campaign Strategy for Premium Office Spaces in Terrassa
+Website: https://realbrave.eu
+================================================================================
+
+TABLE OF CONTENTS
+-----------------
+1. Business Overview & Unique Selling Points
+2. Target Audience Analysis
+3. Campaign Structure Recommendations
+4. Geographic Targeting Strategy
+5. Budget Recommendations
+6. Bidding Strategy
+7. Performance Metrics & KPIs
+8. Landing Page Optimization
+9. Conversion Tracking Setup
+10. Remarketing Strategies
+11. Seasonal Considerations
+12. Competitive Analysis Tips
+
+================================================================================
+1. BUSINESS OVERVIEW & UNIQUE SELLING POINTS (USPs)
+================================================================================
+
+ABOUT REALBRAVE:
+- Premium office spaces in Terrassa, Barcelona metropolitan area
+- 2,500 m² total across 3 floors
+- Opening: April 2026 (currently under renovation)
+- Address: Carretera de Rubí, 292, Terrassa, 08191
+- Contact: +34 930 107 830 / admin@canmirgestions.com
+
+KEY SELLING POINTS TO HIGHLIGHT IN ADS:
+
+1. STRATEGIC LOCATION
+   - 30 minutes from Barcelona
+   - Excellent highway access
+   - Near public transport
+   - Peaceful natural surroundings
+
+2. FLEXIBLE SPACE OPTIONS
+   - Small Area: 160 m² (12-18 people) - From 1,120€/month
+   - Medium Area: 240 m² (20-30 people) - From 1,680€/month
+   - Full Floor: 480 m² (40-60 people) - From 3,360€/month
+   - Customizable layouts per tenant needs
+
+3. MODERN INFRASTRUCTURE
+   - 24/7 Security with card access and video surveillance
+   - High-speed fiber optic internet
+   - LED lighting and energy efficiency
+   - Climate control (tenant customizable)
+
+4. PREMIUM AMENITIES
+   - 25+ parking spaces
+   - Meeting rooms
+   - Common areas and lobby
+   - Natural environment
+
+5. COMPETITIVE PRICING
+   - From 7€/m² approximately
+   - All utilities ready to connect
+   - No hidden fees for common area maintenance
+
+6. NEW RENOVATION (2026)
+   - Brand new facilities
+   - Modern architecture
+   - State-of-the-art systems
+
+================================================================================
+2. TARGET AUDIENCE ANALYSIS
+================================================================================
+
+PRIMARY AUDIENCES:
+
+A) STARTUPS & ENTREPRENEURS
+   - Demographics: 25-45 years old
+   - Looking for first professional office
+   - Budget-conscious but quality-oriented
+   - Need flexible terms
+   - Keywords focus: "oficina startup", "espacio coworking"
+
+B) GROWING SMES (Small & Medium Enterprises)
+   - Demographics: Business owners 35-55
+   - Team size: 10-50 employees
+   - Need room to scale
+   - Value location and image
+   - Keywords focus: "alquiler oficinas", "oficinas empresas"
+
+C) CORPORATE TEAMS & DEPARTMENTS
+   - Looking for satellite offices
+   - Need entire floors
+   - Value security and parking
+   - Premium positioning
+   - Keywords focus: "oficinas corporativas", "alquiler planta oficinas"
+
+D) PROFESSIONAL SERVICES
+   - Law firms, consultancies, architects, engineers
+   - Need presentable client-facing spaces
+   - Value meeting rooms
+   - Keywords focus: "despacho profesional", "oficina servicios"
+
+E) TECHNOLOGY COMPANIES
+   - Need fiber optic connectivity
+   - Value modern facilities
+   - Growth-oriented
+   - Keywords focus: "oficinas tech", "oficinas IT"
+
+NEGATIVE AUDIENCES TO EXCLUDE:
+- Job seekers looking for "oficina de empleo"
+- Government office searches
+- Virtual office only seekers
+- Very small budget searchers (<500€/month)
+
+================================================================================
+3. CAMPAIGN STRUCTURE RECOMMENDATIONS
+================================================================================
+
+RECOMMENDED CAMPAIGN STRUCTURE:
+
+CAMPAIGN 1: BRAND AWARENESS
+├── Ad Group 1: Brand Terms
+│   └── Keywords: realbrave, real brave, realbrave terrassa
+├── Ad Group 2: Brand + Location
+│   └── Keywords: realbrave oficinas, oficinas brave terrassa
+
+CAMPAIGN 2: OFFICE RENTAL - TERRASSA (Location-Focused)
+├── Ad Group 1: Generic Terrassa
+│   └── Keywords: alquiler oficinas terrassa, oficinas en terrassa
+├── Ad Group 2: Premium Terrassa
+│   └── Keywords: oficinas premium terrassa, oficinas modernas terrassa
+├── Ad Group 3: Sizes Terrassa
+│   └── Keywords: oficinas grandes terrassa, planta oficinas terrassa
+
+CAMPAIGN 3: OFFICE RENTAL - BARCELONA AREA
+├── Ad Group 1: Near Barcelona
+│   └── Keywords: oficinas cerca barcelona, oficinas 30 min barcelona
+├── Ad Group 2: Vallès Occidental
+│   └── Keywords: oficinas valles occidental, oficinas rubí, oficinas sabadell
+
+CAMPAIGN 4: SPACE TYPES
+├── Ad Group 1: Small Offices
+│   └── Keywords: oficina pequeña alquiler, oficina 150m2
+├── Ad Group 2: Medium Offices
+│   └── Keywords: oficina 200m2, oficina mediana alquiler
+├── Ad Group 3: Large/Full Floors
+│   └── Keywords: alquiler planta oficinas, oficinas 500m2
+
+CAMPAIGN 5: TARGET AUDIENCES
+├── Ad Group 1: Startups
+│   └── Keywords: oficina startup, espacio coworking empresas
+├── Ad Group 2: Growing Companies
+│   └── Keywords: oficina empresa crecimiento, ampliar oficina
+├── Ad Group 3: Corporate
+│   └── Keywords: oficinas corporativas, sede empresa
+
+CAMPAIGN 6: REMARKETING
+├── Ad Group 1: Website Visitors
+│   └── Previous site visitors who didn't convert
+├── Ad Group 2: Contact Page Visitors
+│   └── Users who viewed contact but didn't submit
+
+================================================================================
+4. GEOGRAPHIC TARGETING STRATEGY
+================================================================================
+
+PRIMARY TARGETING (Highest Priority):
+- Terrassa and 10km radius
+- Bid adjustment: +30%
+
+SECONDARY TARGETING (High Priority):
+- Barcelona Metropolitan Area
+- Bid adjustment: +20%
+- Cities: Sabadell, Rubí, Sant Cugat, Cerdanyola
+
+TERTIARY TARGETING (Standard):
+- Greater Catalonia
+- Barcelona province
+- Standard bid
+
+EXCLUSIONS:
+- Rest of Spain (unless specifically expanding)
+- Areas more than 1 hour from Terrassa
+
+LANGUAGE TARGETING:
+- Primary: Catalan, Spanish
+- Secondary: English (for international companies)
+
+================================================================================
+5. BUDGET RECOMMENDATIONS
+================================================================================
+
+RECOMMENDED MONTHLY BUDGETS BY PHASE:
+
+PHASE 1: PRE-LAUNCH (Now until March 2026)
+Goal: Build awareness and collect leads before opening
+Budget: 500-1,000€/month
+Focus: Brand awareness, lead generation for waiting list
+
+PHASE 2: LAUNCH (April-June 2026)
+Goal: Fill initial spaces
+Budget: 1,500-2,500€/month
+Focus: High-intent keywords, aggressive bidding
+
+PHASE 3: GROWTH (July 2026+)
+Goal: Maintain occupancy, quality leads
+Budget: 800-1,500€/month
+Focus: Optimize for best-performing keywords
+
+DAILY BUDGET DISTRIBUTION:
+- Weekdays: 70% of budget (business search intent higher)
+- Weekends: 30% of budget (research phase searches)
+
+TIME OF DAY ADJUSTMENTS:
+- 9:00-18:00: +20% bid adjustment (business hours)
+- 18:00-22:00: Standard (after work research)
+- 22:00-9:00: -30% (lower intent)
+
+================================================================================
+6. BIDDING STRATEGY
+================================================================================
+
+RECOMMENDED APPROACH BY CAMPAIGN:
+
+BRAND CAMPAIGNS:
+- Strategy: Target Impression Share (90%+)
+- Max CPC: 0.50-1.00€
+- Goal: Always appear for brand searches
+
+HIGH-INTENT CAMPAIGNS (Office Rental Location):
+- Strategy: Target CPA (Cost Per Acquisition)
+- Target CPA: 30-50€ per lead
+- Start with Manual CPC, transition to automated after 30+ conversions
+
+AWARENESS CAMPAIGNS:
+- Strategy: Maximize Clicks
+- Budget cap: 15€/day initially
+- Review and optimize weekly
+
+SMART BIDDING RECOMMENDATIONS:
+1. Start with Manual CPC for first 2-4 weeks
+2. Collect conversion data (minimum 15-30 conversions)
+3. Switch to Target CPA or Maximize Conversions
+4. Set realistic CPA targets based on your data
+
+================================================================================
+7. PERFORMANCE METRICS & KPIs
+================================================================================
+
+KEY METRICS TO TRACK:
+
+AWARENESS METRICS:
+- Impressions
+- Impression Share
+- Search Lost IS (budget/rank)
+
+ENGAGEMENT METRICS:
+- Click-Through Rate (CTR) - Target: >4%
+- Average CPC - Target: <2€
+- Quality Score - Target: 7+
+
+CONVERSION METRICS:
+- Conversion Rate - Target: >3%
+- Cost Per Lead - Target: <40€
+- Lead Quality Score (internal tracking)
+
+BUSINESS METRICS:
+- Cost Per Visit Scheduled
+- Cost Per Contract Signed
+- Return on Ad Spend (ROAS)
+
+QUALITY BENCHMARKS FOR REAL ESTATE/OFFICE:
+- CTR Industry Average: 2-3%
+- Your Target CTR: 4-6%
+- CPC Industry Average: 1-3€
+- Your Target CPC: 1-2€
+- Conversion Rate Average: 2-4%
+- Your Target: 4-6%
+
+================================================================================
+8. LANDING PAGE OPTIMIZATION
+================================================================================
+
+RECOMMENDED LANDING PAGES BY CAMPAIGN:
+
+GENERAL CAMPAIGNS:
+Landing: https://realbrave.eu/
+Contains: Full overview, all options, carousel
+
+SPECIFIC SPACE CAMPAIGNS:
+Landing: https://realbrave.eu/spaces.html
+Contains: Available spaces, pricing, specifications
+
+LOCATION-FOCUSED CAMPAIGNS:
+Landing: https://realbrave.eu/location.html
+Contains: Map, transport info, area benefits
+
+BUILDING/FEATURES CAMPAIGNS:
+Landing: https://realbrave.eu/building.html
+Contains: Building details, amenities, features
+
+LANDING PAGE REQUIREMENTS CHECKLIST:
+✓ Clear headline matching ad copy
+✓ Visible phone number (+34 930 107 830)
+✓ Contact form above the fold
+✓ WhatsApp contact option
+✓ Pricing information visible
+✓ High-quality images
+✓ Mobile responsive design
+✓ Fast loading speed (<3 seconds)
+✓ Clear call-to-action buttons
+✓ Trust signals (certifications, testimonials)
+
+================================================================================
+9. CONVERSION TRACKING SETUP
+================================================================================
+
+CONVERSIONS TO TRACK:
+
+PRIMARY CONVERSIONS (High Value):
+1. Contact Form Submission
+   - Value: 50€
+   - Counting: One per user
+   
+2. Phone Call (>60 seconds)
+   - Value: 40€
+   - Setup: Call tracking number
+   
+3. WhatsApp Click
+   - Value: 30€
+   - Track outbound clicks
+
+4. Visit Scheduled (via Cal.com/Typeform)
+   - Value: 100€
+   - Most valuable conversion
+
+SECONDARY CONVERSIONS (Engagement):
+1. Newsletter/Community Signup
+   - Value: 10€
+   
+2. Time on Site >3 minutes
+   - Value: 5€
+   
+3. Multiple Pages Viewed (3+)
+   - Value: 5€
+
+GOOGLE TAG MANAGER SETUP:
+- Install GTM container
+- Track all button clicks
+- Track form submissions
+- Track scroll depth
+- Track outbound links (WhatsApp, phone)
+
+================================================================================
+10. REMARKETING STRATEGIES
+================================================================================
+
+REMARKETING AUDIENCES TO CREATE:
+
+AUDIENCE 1: All Website Visitors (30 days)
+- Bid adjustment: +50%
+- Ad message: "Still looking for offices in Terrassa?"
+
+AUDIENCE 2: Spaces Page Visitors (60 days)
+- Bid adjustment: +100%
+- Ad message: "Spaces are filling up - Reserve yours"
+
+AUDIENCE 3: Contact Page Abandonments (90 days)
+- Bid adjustment: +150%
+- Ad message: "Questions? We're here to help"
+
+AUDIENCE 4: Past Converters (365 days)
+- Exclude from acquisition campaigns
+- Use for referral/expansion campaigns
+
+DISPLAY REMARKETING ADS:
+- Create visually appealing banner ads
+- Sizes: 300x250, 728x90, 160x600, 336x280
+- Message: Urgency + Benefits
+- Include office images
+
+================================================================================
+11. SEASONAL CONSIDERATIONS
+================================================================================
+
+OFFICE RENTAL SEASONAL PATTERNS:
+
+HIGH SEASON (Increase budget +30%):
+- January-February: New year business planning
+- September-October: Post-summer business restart
+- Q4: Companies planning for next year
+
+MEDIUM SEASON (Standard budget):
+- March-April: Spring activity
+- November: Pre-holiday planning
+
+LOW SEASON (Reduce budget -20%):
+- July-August: Summer vacation period
+- December (after 15th): Holiday period
+
+SPECIAL EVENTS TO LEVERAGE:
+- Mobile World Congress (Barcelona) - February
+- Tech conferences
+- Business trade shows
+- Local Terrassa events
+
+================================================================================
+12. COMPETITIVE ANALYSIS TIPS
+================================================================================
+
+COMPETITORS TO MONITOR:
+- Regus/IWG (international coworking)
+- WeWork (if present in area)
+- Local office rentals in Terrassa
+- Office spaces in Sabadell, Rubí, Sant Cugat
+
+COMPETITIVE ADVANTAGES TO HIGHLIGHT:
+1. New renovation (2026) vs older buildings
+2. Flexible sizes (not just coworking desks)
+3. Parking included (often extra elsewhere)
+4. Natural surroundings (unique)
+5. Competitive pricing for the area
+6. Full customization options
+
+AUCTION INSIGHTS REVIEW:
+- Check Google Ads Auction Insights weekly
+- Identify top competitors
+- Adjust bids when competition increases
+
+================================================================================
+IMPLEMENTATION CHECKLIST
+================================================================================
+
+WEEK 1: SETUP
+□ Create Google Ads account
+□ Setup conversion tracking (GTM)
+□ Create remarketing audiences
+□ Link Google Analytics
+□ Create campaign structure
+
+WEEK 2: AD CREATION
+□ Write ad copy (see companion document)
+□ Create ad extensions
+□ Design display ads
+□ Setup audience targeting
+
+WEEK 3: LAUNCH
+□ Start with smaller budget
+□ Enable all campaigns
+□ Monitor daily for first week
+□ Adjust bids based on performance
+
+WEEK 4+: OPTIMIZATION
+□ Review search terms report
+□ Add negative keywords
+□ Optimize underperforming ads
+□ Scale successful campaigns
+
+================================================================================
+CONTACT FOR QUESTIONS
+================================================================================
+RealBrave
+Carretera de Rubí, 292
+08191 Terrassa, Barcelona
+Tel: +34 930 107 830
+Email: admin@canmirgestions.com
+Website: https://realbrave.eu
+
+================================================================================
+END OF GOOGLE ADS CAMPAIGN STRATEGY DOCUMENT
+================================================================================
