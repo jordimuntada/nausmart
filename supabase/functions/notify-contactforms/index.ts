@@ -1,6 +1,5 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts";
 import { Resend } from "https://esm.sh/resend@2.0.0";
-import twilio from "https://esm.sh/twilio@4.19.0";
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -143,26 +142,45 @@ async function sendContactFormSMS(data: any) {
   }
 
   try {
-    const client = twilio(accountSid, authToken);
-    
     // Truncate message for SMS
     const messageText = data.message 
       ? (data.message.length > 100 ? data.message.substring(0, 100) + '...' : data.message)
       : 'No message';
     
-    const smsBody = `📞 Contact Form:\nFrom: ${data.name || 'Unknown'}\nEmail: ${data.email || 'N/A'}\nMessage: ${messageText}`;
+    const smsBody = `📞 RealBrave Contact:\nFrom: ${data.full_name || data.name || 'Unknown'}\nEmail: ${data.email || 'N/A'}\nPhone: ${data.phone || 'N/A'}\nMessage: ${messageText}`;
 
-    const result = await client.messages.create({
-      body: smsBody,
-      from: fromNumber,
-      to: toNumber,
+    // Use Twilio REST API directly (more compatible with Deno)
+    const twilioUrl = `https://api.twilio.com/2010-04-01/Accounts/${accountSid}/Messages.json`;
+    const credentials = btoa(`${accountSid}:${authToken}`);
+    
+    const formData = new URLSearchParams();
+    formData.append('To', toNumber);
+    formData.append('From', fromNumber);
+    formData.append('Body', smsBody);
+
+    const response = await fetch(twilioUrl, {
+      method: 'POST',
+      headers: {
+        'Authorization': `Basic ${credentials}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: formData.toString(),
     });
 
-    return { 
-      sent: true, 
-      message: 'SMS sent successfully',
-      sid: result.sid 
-    };
+    const result = await response.json();
+
+    if (response.ok) {
+      return { 
+        sent: true, 
+        message: 'SMS sent successfully',
+        sid: result.sid 
+      };
+    } else {
+      return { 
+        sent: false, 
+        message: result.message || 'SMS sending failed'
+      };
+    }
   } catch (error) {
     return { sent: false, message: error.message };
   }
