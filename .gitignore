@@ -5,3 +5,19 @@
 node_modules
 send-email.js
 test-email.js
+
+# Temp scripts
+send-test-email.js
+send-test-emails.js
+check-domains.js
+
+# Temp files
+nul
+
+# Tool config
+.opencode/
+
+# Personal files
+Fotos planta oficines.zip
+Fotos planta oficines/
+no-watermark-images/
