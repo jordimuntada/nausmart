@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cat">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,706 +10,436 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WBML7DR9');</script>
     <!-- End Google Tag Manager -->
-    <title>RealBrave - Ubicació</title>
-    <!-- Favicon and App Icons -->
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon-32x32.png">
+    <title>RealBrave — Ubicació</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="mask-icon" href="favicon.svg" color="#242954">
-    <meta name="theme-color" content="#242954">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon-32x32.png">
+    <meta name="theme-color" content="#0c0c0c">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1E40AF',
-                        secondary: '#10B981',
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YDM8TFYBP4"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-YDM8TFYBP4');
       gtag('config', 'AW-16640594479');
     </script>
-    
-    <style>
-        .language-selector {
-            transition: all 0.3s ease;
-        }
-        .language-selector:hover {
-            transform: scale(1.1);
-        }
-        .location-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-    </style>    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YDM8TFYBP4"></script>
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+        tailwind.config = { theme: { extend: { colors: { primary: '#1E40AF' }, fontFamily: { editorial: ['"Playfair Display"', 'Georgia', 'serif'] } } } }
+    </script>
+    <style>
+        .font-editorial { font-family: 'Playfair Display', Georgia, serif; }
+        .section-warm { background: #f7f5f2; }
+        .section-dark { background: #0c0c0c; }
+        .spec-rule { height: 1px; background: rgba(0,0,0,0.1); margin-bottom: 2rem; }
+        .spec-col { padding-right: 3rem; }
+        @media (min-width: 768px) {
+            .spec-col + .spec-col { border-left: 1px solid rgba(0,0,0,0.08); padding-left: 3rem; padding-right: 3rem; }
+            .spec-col:last-child { padding-right: 0; }
+        }
+        .eco-row { border-top: 1px solid rgba(0,0,0,0.08); padding-top: 2rem; padding-bottom: 2rem; }
+        .eco-row:last-child { border-bottom: 1px solid rgba(0,0,0,0.08); }
+        .check-item::before { content: '—'; color: #1E40AF; margin-right: 0.75rem; font-weight: 500; }
+        .language-selector { transition: all 0.3s ease; }
+        #mobile-menu { display: none; }
+        #mobile-menu.open { display: block; }
+        .whatsapp-float {
+            position: fixed; width: 58px; height: 58px; bottom: 28px; right: 28px;
+            background-color: #25d366; color: white; border-radius: 50%;
+            box-shadow: 2px 2px 12px rgba(0,0,0,0.2); z-index: 1000; cursor: pointer;
+            transition: all 0.3s ease; display: flex; align-items: center; justify-content: center;
+            animation: wapulse 2.5s infinite;
+        }
+        .whatsapp-float:hover { background-color: #128c7e; transform: scale(1.1); }
+        .whatsapp-tooltip {
+            position: absolute; right: 70px; top: 50%; transform: translateY(-50%);
+            background: rgba(0,0,0,0.82); color: white; padding: 7px 12px;
+            border-radius: 5px; font-size: 13px; white-space: nowrap;
+            opacity: 0; visibility: hidden; transition: all 0.3s ease; pointer-events: none;
+        }
+        .whatsapp-tooltip::after {
+            content: ''; position: absolute; top: 50%; left: 100%; margin-top: -5px;
+            border-width: 5px; border-style: solid;
+            border-color: transparent transparent transparent rgba(0,0,0,0.82);
+        }
+        .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; visibility: visible; }
+        @keyframes wapulse {
+            0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.65); }
+            70% { box-shadow: 0 0 0 10px rgba(37,211,102,0); }
+            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-900" data-page="location">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBML7DR9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-      gtag('config', 'G-YDM8TFYBP4');
-    </script></head>
-<body class="font-sans antialiased">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBML7DR9"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0 flex items-center">
-                        <img src="realbrave_logo2.svg" alt="RealBrave" class="h-16 w-auto">
+    <!-- NAV -->
+    <nav class="bg-white border-b border-black/8 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html"><img src="realbrave_logo2.svg" alt="RealBrave" class="h-12 w-auto" style="filter:brightness(0);"></a>
+                <div class="hidden md:flex items-center space-x-7">
+                    <a href="index.html"     class="text-sm font-medium text-gray-500 hover:text-gray-900 tracking-wide" data-translate="nav.home">Inici</a>
+                    <a href="building.html"  class="text-sm font-medium text-gray-500 hover:text-gray-900 tracking-wide" data-translate="nav.building">L'Edifici</a>
+                    <a href="spaces.html"    class="text-sm font-medium text-gray-500 hover:text-gray-900 tracking-wide" data-translate="nav.spaces">Espais</a>
+                    <a href="amenities.html" class="text-sm font-medium text-gray-500 hover:text-gray-900 tracking-wide" data-translate="nav.amenities">Serveis</a>
+                    <a href="location.html"  class="text-sm font-medium text-gray-900 tracking-wide" data-translate="nav.location">Ubicació</a>
+                    <a href="contact.html"   class="text-sm font-medium text-gray-500 hover:text-gray-900 tracking-wide" data-translate="nav.contact">Contacte</a>
+                    <div class="flex items-center space-x-1 ml-2">
+                        <button class="language-selector text-xs px-2 py-1 rounded border border-primary text-primary font-medium" data-lang="cat">CAT</button>
+                        <button class="language-selector text-xs px-2 py-1 rounded border border-gray-200 text-gray-500" data-lang="es">ES</button>
+                        <button class="language-selector text-xs px-2 py-1 rounded border border-gray-200 text-gray-500" data-lang="en">EN</button>
                     </div>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-home">Inici</a>
-                    <a href="building.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-building">L'Edifici</a>
-                    <a href="spaces.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-spaces">Espais</a>
-                    <a href="amenities.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-amenities">Serveis</a>
-                    <a href="location.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-location">Ubicació</a>
-                    <a href="contact.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-contact">Contacte</a>
-                    <div class="flex space-x-2">
-                        <button class="language-selector text-xs px-2 py-1 rounded bg-primary text-white" data-lang="cat">CAT</button>
-                        <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300" data-lang="es">ES</button>
-                        <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300" data-lang="en">EN</button>
-                    </div>
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100">
-                        <i data-feather="menu"></i>
-                    </button>
-                </div>
+                <button id="mobile-toggle" class="md:hidden p-2" aria-label="Menu">
+                    <svg width="22" height="16" viewBox="0 0 22 16" fill="none" stroke="#374151" stroke-width="2">
+                        <line x1="0" y1="1" x2="22" y2="1"/><line x1="0" y1="8" x2="22" y2="8"/><line x1="0" y1="15" x2="22" y2="15"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-100 px-5 py-4 space-y-3">
+            <a href="index.html"     class="block text-sm font-medium text-gray-600 py-2" data-translate="nav.home">Inici</a>
+            <a href="building.html"  class="block text-sm font-medium text-gray-600 py-2" data-translate="nav.building">L'Edifici</a>
+            <a href="spaces.html"    class="block text-sm font-medium text-gray-600 py-2" data-translate="nav.spaces">Espais</a>
+            <a href="amenities.html" class="block text-sm font-medium text-gray-600 py-2" data-translate="nav.amenities">Serveis</a>
+            <a href="location.html"  class="block text-sm font-medium text-gray-900 py-2" data-translate="nav.location">Ubicació</a>
+            <a href="contact.html"   class="block text-sm font-medium text-gray-600 py-2" data-translate="nav.contact">Contacte</a>
+            <div class="flex space-x-2 pt-2">
+                <button class="language-selector text-xs px-2 py-1 rounded border border-primary text-primary font-medium" data-lang="cat">CAT</button>
+                <button class="language-selector text-xs px-2 py-1 rounded border border-gray-200 text-gray-500" data-lang="es">ES</button>
+                <button class="language-selector text-xs px-2 py-1 rounded border border-gray-200 text-gray-500" data-lang="en">EN</button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-primary to-secondary text-white py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6" data-translate="hero-title">Ubicació Estratègica</h1>
-                <p class="text-xl max-w-3xl mx-auto" data-translate="hero-subtitle">Al cor de Terrassa, amb excel·lents connexions de transport i tots els serveis a l'abast</p>
+    <!-- PAGE HEADER -->
+    <section class="pt-24 pb-20 bg-white border-b border-black/6">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <p class="text-[10px] tracking-[0.28em] text-primary uppercase mb-8 font-medium" data-translate="location.overline">Ubicació</p>
+            <h1 class="font-editorial text-5xl lg:text-7xl text-gray-900 leading-tight max-w-3xl">
+                <span class="block" data-translate="location.headline1">Trenta Minuts</span>
+                <span class="block italic" data-translate="location.headline2">de Barcelona.</span>
+            </h1>
+            <p class="text-gray-500 text-lg font-light max-w-xl leading-relaxed mt-8" data-translate="location.sub">
+                Carretera de Rubí, 292 — Terrassa. FGC Les Fonts a 5 minuts a peu. Aparcament privatiu inclòs.
+            </p>
+        </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="py-24 section-warm">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-0">
+                <div class="pr-8 lg:pr-12 pb-12 lg:pb-0 lg:border-r border-black/10">
+                    <p class="font-editorial text-6xl lg:text-7xl text-gray-900 leading-none mb-3">30'</p>
+                    <p class="text-xs tracking-[0.2em] text-gray-400 uppercase font-medium" data-translate="location.stat1">de Barcelona en cotxe</p>
+                </div>
+                <div class="pl-8 lg:pl-12 lg:pr-12 pb-12 lg:pb-0 lg:border-r border-black/10">
+                    <p class="font-editorial text-6xl lg:text-7xl text-gray-900 leading-none mb-3">5'</p>
+                    <p class="text-xs tracking-[0.2em] text-gray-400 uppercase font-medium" data-translate="location.stat2">a peu del FGC Les Fonts</p>
+                </div>
+                <div class="pr-8 lg:pl-12 lg:pr-12 border-r border-black/10">
+                    <p class="font-editorial text-6xl lg:text-7xl text-gray-900 leading-none mb-3">25+</p>
+                    <p class="text-xs tracking-[0.2em] text-gray-400 uppercase font-medium" data-translate="location.stat3">Places d'aparcament</p>
+                </div>
+                <div class="pl-8 lg:pl-12">
+                    <p class="font-editorial text-6xl lg:text-7xl text-gray-900 leading-none mb-3">A7</p>
+                    <p class="text-xs tracking-[0.2em] text-gray-400 uppercase font-medium" data-translate="location.stat4">Accés directe AP-7 i C-58</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Map Section -->
-    <section class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
+    <!-- MAP + ADDRESS -->
+    <section class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-start">
                 <div>
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6" data-translate="map-title">Al Centre de Tot</h2>
-                    <p class="text-gray-600 mb-6" data-translate="map-subtitle">RealBrave està ubicat en una zona privilegiada de Terrassa, oferint fàcil accés a Barcelona i excel·lents connexions de transport públic i privat.</p>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="bg-primary bg-opacity-10 rounded-full p-2 mr-4">
-                                <i data-feather="map-pin" class="w-5 h-5 text-primary"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-gray-900">Adreça</h3>
-                                <p class="text-gray-600">Carretera de Rubí, 292, 08221 Terrassa, Barcelona</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-primary bg-opacity-10 rounded-full p-2 mr-4">
-                                <i data-feather="clock" class="w-5 h-5 text-primary"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-gray-900">Temps a Barcelona</h3>
-                                <p class="text-gray-600">30 minuts en cotxe, 45 minuts en transport públic</p>
-                            </div>
-                        </div>
-                        <div class="flex items-start">
-                            <div class="bg-primary bg-opacity-10 rounded-full p-2 mr-4">
-                                <i data-feather="navigation" class="w-5 h-5 text-primary"></i>
-                            </div>
-                            <div>
-                                <h3 class="font-bold text-gray-900">Accessibilitat</h3>
-                                <p class="text-gray-600">Accés directe a l'AP-7 i C-58, estació FGC a 5 minuts</p>
-                            </div>
-                        </div>
+                    <p class="text-[10px] tracking-[0.28em] text-primary uppercase mb-8 font-medium" data-translate="location.addrOverline">L'Adreça</p>
+                    <h2 class="font-editorial text-4xl text-gray-900 leading-tight mb-10">
+                        <span class="block" data-translate="location.addrH1">Al Centre</span>
+                        <span class="block italic" data-translate="location.addrH2">de Tot.</span>
+                    </h2>
+                    <div class="eco-row">
+                        <h3 class="font-medium text-gray-900 mb-1" data-translate="location.addrRow1">Adreça exacta</h3>
+                        <p class="text-gray-500 text-sm font-light">Carretera de Rubí, 292<br>08221 Terrassa, Barcelona</p>
                     </div>
+                    <div class="eco-row">
+                        <h3 class="font-medium text-gray-900 mb-1" data-translate="location.addrRow2">Temps a Barcelona</h3>
+                        <p class="text-gray-500 text-sm font-light" data-translate="location.addrRow2Body">30 minuts en cotxe · 45 minuts en transport públic</p>
+                    </div>
+                    <div class="eco-row">
+                        <h3 class="font-medium text-gray-900 mb-1" data-translate="location.addrRow3">Accessos per carretera</h3>
+                        <p class="text-gray-500 text-sm font-light" data-translate="location.addrRow3Body">Connexió directa amb AP-7 i C-58. Sortida senyalitzada des d'ambdues vies.</p>
+                    </div>
+                    <a href="https://maps.google.com?q=Carretera+de+Rubí,+292,+Terrassa" target="_blank" rel="noopener" class="inline-block mt-8 text-xs tracking-[0.15em] uppercase text-primary border-b border-primary/30 hover:border-primary transition-colors pb-0.5"
+                        data-translate="location.addrMapLink">
+                        Obrir a Google Maps →
+                    </a>
                 </div>
-                <div class="rounded-lg h-96 overflow-hidden shadow-lg">
+                <div class="overflow-hidden shadow-sm" style="height:420px;">
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2985.618!2d2.027!3d41.5482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4930000000001%3A0x0!2sCarretera+de+Rub%C3%AD+292%2C+08228+Terrassa!5e0!3m2!1sen!2ses!4v1!5m2!1sen!2ses"
-                        width="100%"
-                        height="100%"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
-                        title="Ubicació de RealBrave - Carretera de Rubí, 292, Terrassa">
+                        title="Ubicació de RealBrave — Carretera de Rubí, 292, Terrassa">
                     </iframe>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Transportation -->
-    <section class="bg-gray-50 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-translate="transport-title">Connexions de Transport</h2>
-                <p class="max-w-2xl mx-auto text-gray-600" data-translate="transport-subtitle">Múltiples opcions de transport per arribar còmodament a RealBrave</p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="location-card bg-white p-6 rounded-lg shadow-md transition duration-300 text-center">
-                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.22.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.5 16c-.83 0-1.5-.67-1.5-1.5S5.67 13 6.5 13s1.5.67 1.5 1.5S7.33 16 6.5 16zm11 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zM5 11l1.5-4.5h11L19 11H5z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold mb-2">En Cotxe</h3>
-                    <p class="text-gray-600 text-sm mb-3">Accés directe des de l'AP-7 i C-58</p>
-                    <ul class="text-sm text-gray-600 space-y-1">
-                        <li>• Barcelona: 30 min</li>
-                        <li>• Sabadell: 15 min</li>
-                        <li>• Manresa: 25 min</li>
+    <!-- TRANSPORT -->
+    <section class="section-warm py-32 lg:py-40">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <p class="text-[10px] tracking-[0.28em] text-primary uppercase mb-16 font-medium" data-translate="location.transOverline">Connexions</p>
+            <div class="grid md:grid-cols-4">
+                <div class="spec-col mb-12 md:mb-0">
+                    <div class="spec-rule"></div>
+                    <p class="text-[10px] tracking-[0.3em] text-primary uppercase mb-6 font-medium" data-translate="location.transLbl1">EN COTXE</p>
+                    <h3 class="font-editorial text-2xl text-gray-900 mb-4">AP-7 / C-58</h3>
+                    <ul class="space-y-2 text-gray-500 text-sm font-light">
+                        <li>Barcelona — 30 min</li>
+                        <li>Sabadell — 15 min</li>
+                        <li>Manresa — 25 min</li>
                     </ul>
                 </div>
-                <div class="location-card bg-white p-6 rounded-lg shadow-md transition duration-300 text-center">
-                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M4 15.5C4 17.43 5.57 19 7.5 19L6 20.5v.5h12v-.5L16.5 19c1.93 0 3.5-1.57 3.5-3.5V5c0-3.5-3.5-4-8-4s-8 .5-8 4v10.5zM8 5h8c1.1 0 2 .9 2 2v7H6V7c0-1.1.9-2 2-2z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold mb-2">FGC</h3>
-                    <p class="text-gray-600 text-sm mb-3">Estació Terrassa Rambla a 5 minuts</p>
-                    <ul class="text-sm text-gray-600 space-y-1">
-                        <li>• Pl. Catalunya: 45 min</li>
-                        <li>• Sabadell: 20 min</li>
-                        <li>• Manresa: 30 min</li>
+                <div class="spec-col mb-12 md:mb-0">
+                    <div class="spec-rule"></div>
+                    <p class="text-[10px] tracking-[0.3em] text-primary uppercase mb-6 font-medium" data-translate="location.transLbl2">FGC</p>
+                    <h3 class="font-editorial text-2xl text-gray-900 mb-4">Estació Les Fonts</h3>
+                    <ul class="space-y-2 text-gray-500 text-sm font-light">
+                        <li>5 min a peu</li>
+                        <li>Pl. Catalunya — 45 min</li>
+                        <li>Sabadell — 20 min</li>
                     </ul>
                 </div>
-                <div class="location-card bg-white p-6 rounded-lg shadow-md transition duration-300 text-center">
-                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5S15.67 14 16.5 14s1.5.67 1.5 1.5S17.33 17 16.5 17zm1.5-6H5V6c0-1 .5-2 4-2h6c3.5 0 4 1 4 2v5z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold mb-2">Autobús</h3>
-                    <p class="text-gray-600 text-sm mb-3">Múltiples línies urbanes i interurbanes</p>
-                    <ul class="text-sm text-gray-600 space-y-1">
-                        <li>• Línies 1, 4, 7</li>
-                        <li>• Parada a 2 minuts</li>
-                        <li>• Connexió Barcelona</li>
+                <div class="spec-col mb-12 md:mb-0">
+                    <div class="spec-rule"></div>
+                    <p class="text-[10px] tracking-[0.3em] text-primary uppercase mb-6 font-medium" data-translate="location.transLbl3">AUTOBÚS</p>
+                    <h3 class="font-editorial text-2xl text-gray-900 mb-4">Línies 1, 4 i 7</h3>
+                    <ul class="space-y-2 text-gray-500 text-sm font-light">
+                        <li>Parada a 2 min</li>
+                        <li>Connexió centre Terrassa</li>
+                        <li>Connexió Barcelona</li>
                     </ul>
                 </div>
-                <div class="location-card bg-white p-6 rounded-lg shadow-md transition duration-300 text-center">
-                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z"/>
-                        </svg>
-                    </div>
-                    <h3 class="text-lg font-bold mb-2">Aeroport</h3>
-                    <p class="text-gray-600 text-sm mb-3">Connexió directa amb l'Aeroport del Prat</p>
-                    <ul class="text-sm text-gray-600 space-y-1">
-                        <li>• 45 min en cotxe</li>
-                        <li>• 1h 15min transport públic</li>
-                        <li>• Servei taxi disponible</li>
+                <div class="spec-col">
+                    <div class="spec-rule"></div>
+                    <p class="text-[10px] tracking-[0.3em] text-primary uppercase mb-6 font-medium" data-translate="location.transLbl4">AEROPORT</p>
+                    <h3 class="font-editorial text-2xl text-gray-900 mb-4">El Prat (BCN)</h3>
+                    <ul class="space-y-2 text-gray-500 text-sm font-light">
+                        <li>45 min en cotxe</li>
+                        <li>1h 15 min transport públic</li>
+                        <li>Servei taxi disponible</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Nearby Services -->
-    <section class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-translate="services-title">Serveis a Prop</h2>
-                <p class="max-w-2xl mx-auto text-gray-600" data-translate="services-subtitle">Tot el que necessites per al dia a dia a pocs minuts de distància</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Restaurants i cafès" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3" data-translate="restaurants-title">Restaurants i Cafès</h3>
-                        <p class="text-gray-600 mb-4" data-translate="restaurants-subtitle">Àmplia varietat gastronòmica per a esmorzars, dinars i reunions de negoci.</p>
-                        <ul class="space-y-2 text-sm text-gray-600">
-                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>Can Casanovas ★4.4 (3 min)</li>
-                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>MIAMI Bar Restaurant ★4.5 (2 min)</li>
-                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>Parc Vall Cafeteria ★4.1 (1 min)</li>
-                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>Braseria Parada ★4.5 (8 min)</li>
-                        </ul>
-                    </div>
+    <!-- DIRECTIONS -->
+    <section class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <div class="grid lg:grid-cols-3 gap-16 lg:gap-24">
+                <div class="lg:sticky lg:top-32 self-start">
+                    <p class="text-[10px] tracking-[0.28em] text-primary uppercase mb-8 font-medium" data-translate="location.dirOverline">Indicacions</p>
+                    <h2 class="font-editorial text-4xl text-gray-900 leading-tight">
+                        <span class="block" data-translate="location.dirH1">Com</span>
+                        <span class="block italic" data-translate="location.dirH2">arribar-hi.</span>
+                    </h2>
+                    <p class="text-gray-500 text-sm leading-relaxed mt-6 font-light" data-translate="location.dirSub">
+                        Des de Barcelona per carretera o en transport públic — les dues opcions estan a menys d'una hora.
+                    </p>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Bancs i serveis" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3" data-translate="banks-title">Bancs i Serveis</h3>
-                        <p class="text-gray-600 mb-4" data-translate="banks-subtitle">Serveis bancaris, farmàcies i altres serveis essencials molt a prop.</p>
-                        <ul class="space-y-2 text-sm text-gray-600">
-                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>Cajero CaixaBank ★4.5 (5 min)</li>
-                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>Farmàcia Rambleta ★4.4 (6 min)</li>
-                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>Banc Sabadell ATM (8 min)</li>
-                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>Farmàcia Segle XX ★3.6 (10 min)</li>
-                        </ul>
+                <div class="lg:col-span-2">
+                    <div class="eco-row">
+                        <p class="text-[10px] tracking-[0.25em] text-gray-300 font-medium uppercase mb-4" data-translate="location.dirCar">Des de Barcelona — En Cotxe (31 min)</p>
+                        <ol class="space-y-3 text-gray-500 text-sm font-light">
+                            <li class="flex gap-4"><span class="font-editorial text-gray-300 text-lg leading-none">1</span><span>Agafa la B-10 a Sant Adrià de Besòs des de la C-31.</span></li>
+                            <li class="flex gap-4"><span class="font-editorial text-gray-300 text-lg leading-none">2</span><span>Pren la C-58 en direcció a Terrassa, seguint indicacions Carrer de l'Anoia.</span></li>
+                            <li class="flex gap-4"><span class="font-editorial text-gray-300 text-lg leading-none">3</span><span>Pren la sortida de la C-58 i continua per Carrer de l'Anoia.</span></li>
+                            <li class="flex gap-4"><span class="font-editorial text-gray-300 text-lg leading-none">4</span><span>Segueix per l'Av. del Tèxtil fins arribar a Carretera de Rubí, 292.</span></li>
+                        </ol>
                     </div>
-                </div>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Fitness i gimnasos" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3" data-translate="fitness-title">Fitness i Gimnasos</h3>
-                        <p class="text-gray-600 mb-4" data-translate="fitness-subtitle">Centres d'entrenament i gimnasos moderns per mantenir-se en forma i saludable.</p>
-                        <ul class="space-y-2 text-sm text-gray-600">
-                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>Q Sport Parc Vallès (8 min)</li>
-                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>ARANAH Terrassa 24h (5 min)</li>
-                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>Fitness Park Universitat (12 min)</li>
-                            <li class="flex items-center"><i data-feather="map-pin" class="w-4 h-4 text-primary mr-2"></i>Segle XX CrossTraining (7 min)</li>
-                        </ul>
+                    <div class="eco-row">
+                        <p class="text-[10px] tracking-[0.25em] text-gray-300 font-medium uppercase mb-4" data-translate="location.dirPublic">Transport Públic (1h 12 min)</p>
+                        <ol class="space-y-3 text-gray-500 text-sm font-light">
+                            <li class="flex gap-4"><span class="font-editorial text-gray-300 text-lg leading-none">1</span><span>Des de Plaça Catalunya, agafa el Tren S1 (FGC) en direcció Terrassa.</span></li>
+                            <li class="flex gap-4"><span class="font-editorial text-gray-300 text-lg leading-none">2</span><span>Baixa a l'estació FGC Les Fonts.</span></li>
+                            <li class="flex gap-4"><span class="font-editorial text-gray-300 text-lg leading-none">3</span><span>Camina 5 minuts per la Carretera de Rubí fins al número 292.</span></li>
+                        </ol>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Parking Information -->
-    <section class="bg-gray-50 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-translate="parking-title">Aparcament i Accessibilitat</h2>
-                <p class="max-w-2xl mx-auto text-gray-600" data-translate="parking-subtitle">Facilitats d'aparcament i accés adaptat per a tothom</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <div class="flex items-center mb-6">
-                        
-                        <h3 class="text-2xl font-bold text-gray-900">
-                            <span class="inline-flex items-center">
-                                <span class="bg-blue-600 text-white font-bold w-8 h-8 rounded flex items-center justify-center mr-2 text-lg">P</span>
-                                Aparcament Privat
-                            </span>
-                        </h3>
-                    </div>
-                    <ul class="space-y-3 text-gray-600">
-                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>50+ places d'aparcament</li>
-                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>Places assignades per oficina</li>
-                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>Accés controlat 24/7</li>
-                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>Videovigilància</li>
-                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>Places per a visitants</li>
-                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>Punts de càrrega elèctrica</li>
-                    </ul>
+    <!-- NEARBY SERVICES -->
+    <section class="section-warm py-32 lg:py-40">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <div class="grid lg:grid-cols-3 gap-16 lg:gap-24">
+                <div class="lg:sticky lg:top-32 self-start">
+                    <p class="text-[10px] tracking-[0.28em] text-primary uppercase mb-8 font-medium" data-translate="location.nearbyOverline">L'Entorn</p>
+                    <h2 class="font-editorial text-4xl text-gray-900 leading-tight">
+                        <span class="block" data-translate="location.nearbyH1">Serveis</span>
+                        <span class="block italic" data-translate="location.nearbyH2">a prop.</span>
+                    </h2>
+                    <p class="text-gray-500 text-sm leading-relaxed mt-6 font-light" data-translate="location.nearbySub">
+                        Tot el que el teu equip necessita per al dia a dia, a pocs minuts a peu o en cotxe.
+                    </p>
                 </div>
-                <div class="bg-white p-8 rounded-lg shadow-md">
-                    <div class="flex items-center mb-6">
-                        <div class="bg-primary bg-opacity-10 rounded-full p-3 mr-4">
-                            <i data-feather="heart" class="w-8 h-8 text-primary"></i>
+                <div class="lg:col-span-2">
+                    <div class="eco-row">
+                        <div class="flex items-baseline gap-6 mb-4">
+                            <span class="text-[10px] tracking-[0.25em] text-gray-300 font-medium uppercase" data-translate="location.nearbyFoodLbl">Gastronomia</span>
+                            <h3 class="font-editorial text-xl text-gray-900" data-translate="location.nearbyFoodTitle">Restaurants i Cafès</h3>
                         </div>
-                        <h3 class="text-2xl font-bold text-gray-900">Accessibilitat</h3>
+                        <ul class="space-y-2 text-gray-500 text-sm font-light">
+                            <li class="check-item">Can Casanovas ★4.4 — 3 min</li>
+                            <li class="check-item">MIAMI Bar Restaurant ★4.5 — 2 min</li>
+                            <li class="check-item">Parc Vall Cafeteria ★4.1 — 1 min</li>
+                            <li class="check-item">Braseria Parada ★4.5 — 8 min</li>
+                        </ul>
                     </div>
-                    <ul class="space-y-3 text-gray-600">
-                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>Accés adaptat per a cadires de rodes</li>
-                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>Ascensor a totes les plantes</li>
-                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>Banys adaptats</li>
-                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>Places d'aparcament reservades</li>
-                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>Senyalització en braille</li>
-                        <li class="flex items-center"><i data-feather="check" class="w-5 h-5 text-primary mr-3"></i>Rampes d'accés</li>
+                    <div class="eco-row">
+                        <div class="flex items-baseline gap-6 mb-4">
+                            <span class="text-[10px] tracking-[0.25em] text-gray-300 font-medium uppercase" data-translate="location.nearbyServicesLbl">Serveis</span>
+                            <h3 class="font-editorial text-xl text-gray-900" data-translate="location.nearbyServicesTitle">Bancs i Farmàcies</h3>
+                        </div>
+                        <ul class="space-y-2 text-gray-500 text-sm font-light">
+                            <li class="check-item">Cajero CaixaBank ★4.5 — 5 min</li>
+                            <li class="check-item">Farmàcia Rambleta ★4.4 — 6 min</li>
+                            <li class="check-item">Banc Sabadell ATM — 8 min</li>
+                            <li class="check-item">Farmàcia Segle XX ★3.6 — 10 min</li>
+                        </ul>
+                    </div>
+                    <div class="eco-row">
+                        <div class="flex items-baseline gap-6 mb-4">
+                            <span class="text-[10px] tracking-[0.25em] text-gray-300 font-medium uppercase" data-translate="location.nearbyFitnessLbl">Benestar</span>
+                            <h3 class="font-editorial text-xl text-gray-900" data-translate="location.nearbyFitnessTitle">Fitness i Gimnasos</h3>
+                        </div>
+                        <ul class="space-y-2 text-gray-500 text-sm font-light">
+                            <li class="check-item">Q Sport Parc Vallès — 8 min</li>
+                            <li class="check-item">ARANAH Terrassa 24h — 5 min</li>
+                            <li class="check-item">Fitness Park Universitat — 12 min</li>
+                            <li class="check-item">Segle XX CrossTraining — 7 min</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PARKING + ACCESSIBILITY -->
+    <section class="py-32 bg-white">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <p class="text-[10px] tracking-[0.28em] text-primary uppercase mb-16 font-medium" data-translate="location.infraOverline">Infraestructura</p>
+            <div class="grid md:grid-cols-2 gap-0">
+                <div class="spec-col mb-16 md:mb-0">
+                    <div class="spec-rule"></div>
+                    <p class="text-[10px] tracking-[0.3em] text-primary uppercase mb-6 font-medium" data-translate="location.parkingLbl">APARCAMENT</p>
+                    <h3 class="font-editorial text-3xl text-gray-900 mb-8" data-translate="location.parkingTitle">Privatiu i Cobert</h3>
+                    <ul class="space-y-3 text-gray-500 text-sm font-light">
+                        <li class="check-item">25+ places assignades per empresa</li>
+                        <li class="check-item">Places addicionals per a visitants</li>
+                        <li class="check-item">Accés controlat 24/7 per targeta</li>
+                        <li class="check-item">Videovigilància permanent</li>
+                        <li class="check-item">Punts de càrrega per a vehicle elèctric</li>
+                    </ul>
+                </div>
+                <div class="spec-col">
+                    <div class="spec-rule"></div>
+                    <p class="text-[10px] tracking-[0.3em] text-primary uppercase mb-6 font-medium" data-translate="location.accessLbl">ACCESSIBILITAT</p>
+                    <h3 class="font-editorial text-3xl text-gray-900 mb-8" data-translate="location.accessTitle">Universal i Inclusiu</h3>
+                    <ul class="space-y-3 text-gray-500 text-sm font-light">
+                        <li class="check-item">Accés adaptat per a cadires de rodes</li>
+                        <li class="check-item">Ascensor a totes les plantes</li>
+                        <li class="check-item">Banys adaptats a cada planta</li>
+                        <li class="check-item">Places d'aparcament reservades PMR</li>
+                        <li class="check-item">Rampes d'accés a l'entrada</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Directions -->
-    <section class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-translate="directions-title">Com Arribar</h2>
-                <p class="max-w-2xl mx-auto text-gray-600" data-translate="directions-subtitle">Instruccions detallades per arribar a RealBrave</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-primary bg-opacity-5 p-8 rounded-lg">
-                    <h3 class="text-xl font-bold text-primary mb-4">Des de Barcelona (31 min)</h3>
-                    <ol class="space-y-3 text-gray-700">
-                        <li class="flex items-start">
-                            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5">1</span>
-                            <span>Agafa B-10 a Sant Adrià de Besòs des de C-31</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5">2</span>
-                            <span>Agafa C-58 direcció Carrer de l'Anoia a Terrassa</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5">3</span>
-                            <span>Sortida de C-58 i segueix per Carrer de l'Anoia</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="bg-primary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5">4</span>
-                            <span>Continua per Av. del Tèxtil fins Carretera de Rubí, 292</span>
-                        </li>
-                    </ol>
-                </div>
-                <div class="bg-secondary bg-opacity-5 p-8 rounded-lg">
-                    <h3 class="text-xl font-bold text-secondary mb-4">Transport Públic (1h 12m)</h3>
-                    <ol class="space-y-3 text-gray-700">
-                        <li class="flex items-start">
-                            <span class="bg-secondary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5">1</span>
-                            <span>Camina fins l'estació i agafa Tren S1 (FGC)</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="bg-secondary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5">2</span>
-                            <span>Agafa Autobús línia 8 cap a Terrassa</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="bg-secondary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5">3</span>
-                            <span>Baixa a la parada més propera</span>
-                        </li>
-                        <li class="flex items-start">
-                            <span class="bg-secondary text-white rounded-full w-6 h-6 flex items-center justify-center text-sm mr-3 mt-0.5">4</span>
-                            <span>Camina fins Carretera de Rubí, 292</span>
-                        </li>
-                    </ol>
-                </div>
+    <!-- DARK CTA -->
+    <section class="section-dark py-32 lg:py-40">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <p class="text-[10px] tracking-[0.28em] text-white/35 uppercase mb-14 font-medium" data-translate="location.ctaOverline">Visita</p>
+            <h2 class="font-editorial text-4xl lg:text-5xl text-white mb-8 max-w-2xl leading-tight">
+                <span class="block" data-translate="location.ctaH1">Vine a descobrir</span>
+                <span class="block italic" data-translate="location.ctaH2">la ubicació.</span>
+            </h2>
+            <p class="text-white/50 text-lg font-light max-w-xl mb-14" data-translate="location.ctaSub">Programa una visita per veure de primera mà les avantatges de la nostra ubicació estratègica — i l'espai que podria ser el vostre.</p>
+            <div class="flex flex-wrap gap-4">
+                <a href="contact.html" class="bg-white text-gray-900 px-8 py-4 text-sm font-medium tracking-wide hover:bg-white/90 transition-colors" data-translate="location.ctaBtn1">Programa una Visita</a>
+                <a href="spaces.html"  class="border border-white/25 text-white px-8 py-4 text-sm font-medium tracking-wide hover:bg-white/10 transition-colors" data-translate="location.ctaBtn2">Veure els Espais</a>
             </div>
         </div>
     </section>
 
-    <!-- Call to Action -->
-    <section class="bg-primary text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-6" data-translate="cta-title">Vine a Descobrir la Ubicació</h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto" data-translate="cta-subtitle">Programa una visita per veure de primera mà les avantatges de la nostra ubicació estratègica.</p>
-            <a href="contact.html" class="bg-white text-primary px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition" data-translate="cta-button">Programa una Visita</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">RealBrave</h3>
-                    <p class="text-gray-400" data-translate="footer-description">Espais d'oficina a Terrassa dissenyats per a empreses amb entorn tranquil.</p>
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div class="md:col-span-2">
+                    <img src="realbrave_logo2.svg" alt="RealBrave" class="h-10 w-auto mb-4" style="filter:brightness(0) invert(1);">
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs" data-translate="footer.description">Espais d'oficina a Terrassa per a empreses amb ambició.</p>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4" data-translate="footer-quick-links">Enllaços Ràpids</h4>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-400 hover:text-white" data-translate="nav-home">Inici</a></li>
-                        <li><a href="building.html" class="text-gray-400 hover:text-white" data-translate="nav-building">L'Edifici</a></li>
-                        <li><a href="spaces.html" class="text-gray-400 hover:text-white" data-translate="nav-spaces">Espais Disponibles</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-white" data-translate="nav-contact">Contacta'ns</a></li>
+                    <h4 class="text-xs font-semibold tracking-[0.15em] uppercase text-gray-500 mb-5" data-translate="footer.nav">Navegació</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html"     class="text-gray-400 hover:text-white text-sm transition-colors" data-translate="nav.home">Inici</a></li>
+                        <li><a href="building.html"  class="text-gray-400 hover:text-white text-sm transition-colors" data-translate="nav.building">L'Edifici</a></li>
+                        <li><a href="spaces.html"    class="text-gray-400 hover:text-white text-sm transition-colors" data-translate="nav.spaces">Espais</a></li>
+                        <li><a href="amenities.html" class="text-gray-400 hover:text-white text-sm transition-colors" data-translate="nav.amenities">Serveis</a></li>
+                        <li><a href="contact.html"   class="text-gray-400 hover:text-white text-sm transition-colors" data-translate="nav.contact">Contacte</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="text-lg font-semibold mb-4" data-translate="footer-contact">Contacte</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li class="flex items-start">
-                            <i data-feather="map-pin" class="mr-2 w-4 h-4 mt-1"></i>
-                            <span>Carretera de Rubí, 292 Terrassa</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="phone" class="mr-2 w-4 h-4 mt-1"></i>
-                            <span>+34 930 107 830</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="mail" class="mr-2 w-4 h-4 mt-1"></i>
-                            <span>admin@canmirgestions.com</span>
-                        </li>
+                    <h4 class="text-xs font-semibold tracking-[0.15em] uppercase text-gray-500 mb-5" data-translate="footer.contact">Contacte</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li>Carretera de Rubí, 292<br>Terrassa, 08191</li>
+                        <li><a href="tel:+34930107830" class="hover:text-white transition-colors">+34 930 107 830</a></li>
+                         <li><a href="mailto:admin@canmirgestions.com" class="hover:text-white transition-colors">admin@canmirgestions.com</a> <span class="text-gray-600 text-xs ml-1">— administració</span></li>
+                        <li><a href="mailto:hello@realbrave.eu" class="hover:text-white transition-colors">hello@realbrave.eu</a> <span class="text-gray-600 text-xs ml-1">— consultes</span></li>
                     </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4" data-translate="footer-legal">Legal</h4>
-                    <ul class="space-y-2">
-                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white" data-translate="footer-privacy">Política de Privacitat</a></li>
-                        <li><a href="cookie-policy.html" class="text-gray-400 hover:text-white" data-translate="footer-cookies">Política de Cookies</a></li>
-                        <li><a href="legal-notice.html" class="text-gray-400 hover:text-white" data-translate="footer-legal-notice">Avís Legal</a></li>
-                    </ul>
+                    <div class="mt-8">
+                        <h4 class="text-xs font-semibold tracking-[0.15em] uppercase text-gray-500 mb-4" data-translate="footer.legal">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="privacy-policy.html" class="text-gray-500 hover:text-white text-xs transition-colors" data-translate="footer.privacy">Política de Privacitat</a></li>
+                            <li><a href="cookie-policy.html"  class="text-gray-500 hover:text-white text-xs transition-colors" data-translate="footer.cookies">Política de Cookies</a></li>
+                            <li><a href="legal-notice.html"   class="text-gray-500 hover:text-white text-xs transition-colors" data-translate="footer.legalNotice">Avís Legal</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>© <span id="current-year">2025</span> RealBrave. <span data-translate="footer-rights">Tots els drets reservats.</span></p>
-            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-600 text-xs">© 2026 RealBrave. <span data-translate="footer.rights">Tots els drets reservats.</span></div>
         </div>
     </footer>
 
+    <!-- WHATSAPP -->
+    <div id="whatsapp-float" class="whatsapp-float" role="button" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" width="27" height="27" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.085"/>
+        </svg>
+        <div class="whatsapp-tooltip">Contacta'ns per WhatsApp</div>
+    </div>
+
+    <script src="i18n.js"></script>
     <script>
-        // Translation system
-        const translations = {
-            cat: {
-                // Page title
-                'page-title': 'RealBrave - Ubicació',
-                
-                // Navigation
-                'nav-home': 'Inici',
-                'nav-building': 'L\'Edifici',
-                'nav-spaces': 'Espais',
-                'nav-amenities': 'Serveis',
-                'nav-location': 'Ubicació',
-                'nav-contact': 'Contacte',
-                
-                // Hero Section
-                'hero-title': 'Ubicació Estratègica',
-                'hero-subtitle': 'Al cor de Terrassa, amb excel·lents connexions de transport i tots els serveis a l\'abast',
-                
-                // Map Section
-                'map-title': 'Al Centre de Tot',
-                'map-subtitle': 'RealBrave està ubicat en una zona privilegiada de Terrassa, oferint fàcil accés a Barcelona i excel·lents connexions de transport públic i privat.',
-                
-                // Transportation
-                'transport-title': 'Connexions de Transport',
-                'transport-subtitle': 'Múltiples opcions de transport per arribar còmodament a RealBrave',
-                
-                // Nearby Services
-                'services-title': 'Serveis a Prop',
-                'services-subtitle': 'Tot el que necessites per al dia a dia a pocs minuts de distància',
-                
-                // Fitness Services
-                'fitness-title': 'Fitness i Gimnasos',
-                'fitness-subtitle': 'Centres d\'entrenament i gimnasos moderns per mantenir-se en forma i saludable.',
-                
-                // Restaurants Services
-                'restaurants-title': 'Restaurants i Cafès',
-                'restaurants-subtitle': 'Àmplia varietat gastronòmica per a esmorzars, dinars i reunions de negoci.',
-                
-                // Banks Services
-                'banks-title': 'Bancs i Serveis',
-                'banks-subtitle': 'Serveis bancaris, farmàcies i altres serveis essencials molt a prop.',
-                
-                // Parking
-                'parking-title': 'Aparcament i Accessibilitat',
-                'parking-subtitle': 'Facilitats d\'aparcament i accés adaptat per a tothom',
-                
-                // Directions
-                'directions-title': 'Com Arribar',
-                'directions-subtitle': 'Instruccions detallades per arribar a RealBrave',
-                
-                // CTA
-                'cta-title': 'Vine a Descobrir la Ubicació',
-                'cta-subtitle': 'Programa una visita per veure de primera mà les avantatges de la nostra ubicació estratègica.',
-                'cta-button': 'Programa una Visita',
-                
-                // Footer
-                'footer-description': 'Espais d\'oficina a Terrassa dissenyats per a empreses amb entorn tranquil.',
-                'footer-quick-links': 'Enllaços Ràpids',
-                'footer-contact': 'Contacte',
-                'footer-legal': 'Legal',
-                'footer-privacy': 'Política de Privacitat',
-                'footer-cookies': 'Política de Cookies',
-                'footer-legal-notice': 'Avís Legal',
-                'footer-rights': 'Tots els drets reservats.'
-            },
-            es: {
-                // Page title
-                'page-title': 'RealBrave - Ubicación',
-                
-                // Navigation
-                'nav-home': 'Inicio',
-                'nav-building': 'El Edificio',
-                'nav-spaces': 'Espacios',
-                'nav-amenities': 'Servicios',
-                'nav-location': 'Ubicación',
-                'nav-contact': 'Contacto',
-                
-                // Hero Section
-                'hero-title': 'Ubicación Estratégica',
-                'hero-subtitle': 'En el corazón de Terrassa, con excelentes conexiones de transporte y todos los servicios al alcance',
-                
-                // Map Section
-                'map-title': 'En el Centro de Todo',
-                'map-subtitle': 'RealBrave está ubicado en una zona privilegiada de Terrassa, ofreciendo fácil acceso a Barcelona y excelentes conexiones de transporte público y privado.',
-                
-                // Transportation
-                'transport-title': 'Conexiones de Transporte',
-                'transport-subtitle': 'Múltiples opciones de transporte para llegar cómodamente a RealBrave',
-                
-                // Nearby Services
-                'services-title': 'Servicios Cercanos',
-                'services-subtitle': 'Todo lo que necesitas para el día a día a pocos minutos de distancia',
-                
-                // Fitness Services
-                'fitness-title': 'Fitness y Gimnasios',
-                'fitness-subtitle': 'Centros de entrenamiento y gimnasios modernos para mantenerse en forma y saludable.',
-                
-                // Restaurants Services
-                'restaurants-title': 'Restaurantes y Cafés',
-                'restaurants-subtitle': 'Amplia variedad gastronómica para desayunos, comidas y reuniones de negocio.',
-                
-                // Banks Services
-                'banks-title': 'Bancos y Servicios',
-                'banks-subtitle': 'Servicios bancarios, farmacias y otros servicios esenciales muy cerca.',
-                
-                // Parking
-                'parking-title': 'Aparcamiento y Accesibilidad',
-                'parking-subtitle': 'Facilidades de aparcamiento y acceso adaptado para todos',
-                
-                // Directions
-                'directions-title': 'Cómo Llegar',
-                'directions-subtitle': 'Instrucciones detalladas para llegar a RealBrave',
-                
-                // CTA
-                'cta-title': 'Ven a Descubrir la Ubicación',
-                'cta-subtitle': 'Programa una visita para ver de primera mano las ventajas de nuestra ubicación estratégica.',
-                'cta-button': 'Programar Visita',
-                
-                // Footer
-                'footer-description': 'Espacios de oficina en Terrassa diseñados para empresas con entorno tranquilo.',
-                'footer-quick-links': 'Enlaces Rápidos',
-                'footer-contact': 'Contacto',
-                'footer-legal': 'Legal',
-                'footer-privacy': 'Política de Privacidad',
-                'footer-cookies': 'Política de Cookies',
-                'footer-legal-notice': 'Aviso Legal',
-                'footer-rights': 'Todos los derechos reservados.'
-            },
-            en: {
-                // Page title
-                'page-title': 'RealBrave - Location',
-                
-                // Navigation
-                'nav-home': 'Home',
-                'nav-building': 'The Building',
-                'nav-spaces': 'Spaces',
-                'nav-amenities': 'Amenities',
-                'nav-location': 'Location',
-                'nav-contact': 'Contact',
-                
-                // Hero Section
-                'hero-title': 'Strategic Location',
-                'hero-subtitle': 'In the heart of Terrassa, with excellent transport connections and all services within reach',
-                
-                // Map Section
-                'map-title': 'At the Center of Everything',
-                'map-subtitle': 'RealBrave is located in a privileged area of Terrassa, offering easy access to Barcelona and excellent public and private transport connections.',
-                
-                // Transportation
-                'transport-title': 'Transport Connections',
-                'transport-subtitle': 'Multiple transport options to conveniently reach RealBrave',
-                
-                // Nearby Services
-                'services-title': 'Nearby Services',
-                'services-subtitle': 'Everything you need for daily life just minutes away',
-                
-                // Fitness Services
-                'fitness-title': 'Fitness & Gyms',
-                'fitness-subtitle': 'Modern training centers and gyms to stay fit and healthy.',
-                
-                // Restaurants Services
-                'restaurants-title': 'Restaurants & Cafés',
-                'restaurants-subtitle': 'Wide gastronomic variety for breakfast, lunch and business meetings.',
-                
-                // Banks Services
-                'banks-title': 'Banks & Services',
-                'banks-subtitle': 'Banking services, pharmacies and other essential services very close by.',
-                
-                // Parking
-                'parking-title': 'Parking and Accessibility',
-                'parking-subtitle': 'Parking facilities and adapted access for everyone',
-                
-                // Directions
-                'directions-title': 'How to Get Here',
-                'directions-subtitle': 'Detailed instructions to reach RealBrave',
-                
-                // CTA
-                'cta-title': 'Come Discover the Location',
-                'cta-subtitle': 'Schedule a visit to see firsthand the advantages of our strategic location.',
-                'cta-button': 'Schedule Visit',
-                
-                // Footer
-                'footer-description': 'Office spaces in Terrassa designed for businesses with a peaceful environment.',
-                'footer-quick-links': 'Quick Links',
-                'footer-contact': 'Contact',
-                'footer-legal': 'Legal',
-                'footer-privacy': 'Privacy Policy',
-                'footer-cookies': 'Cookie Policy',
-                'footer-legal-notice': 'Legal Notice',
-                'footer-rights': 'All rights reserved.'
-            }
-        };
-
-        // Current language state
-        let currentLanguage = localStorage.getItem('smartplaces-language') || 'cat';
-
-        // Language switching functionality
-        function switchLanguage(lang) {
-            currentLanguage = lang;
-            localStorage.setItem('smartplaces-language', lang);
-            updateContent();
-            updateLanguageButtons();
-            updatePageLanguage();
-        }
-
-        function updateContent() {
-            const elements = document.querySelectorAll('[data-translate]');
-            elements.forEach(element => {
-                const key = element.getAttribute('data-translate');
-                if (translations[currentLanguage] && translations[currentLanguage][key]) {
-                    element.textContent = translations[currentLanguage][key];
-                }
-            });
-            
-            // Update page title
-            document.title = translations[currentLanguage]['page-title'];
-        }
-
-        function updateLanguageButtons() {
-            const buttons = document.querySelectorAll('.language-selector');
-            buttons.forEach(button => {
-                const lang = button.getAttribute('data-lang');
-                if (lang === currentLanguage) {
-                    button.className = 'language-selector text-xs px-2 py-1 rounded bg-primary text-white';
-                } else {
-                    button.className = 'language-selector text-xs px-2 py-1 rounded border border-gray-300';
-                }
-            });
-        }
-
-        function updatePageLanguage() {
-            document.documentElement.lang = currentLanguage;
-        }
-
-        // Initialize language system
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set up language switchers
-            const languageButtons = document.querySelectorAll('.language-selector');
-            languageButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const lang = button.getAttribute('data-lang');
-                    switchLanguage(lang);
-                });
-            });
-
-            // Initialize with saved language or default
-            updateContent();
-            updateLanguageButtons();
-            updatePageLanguage();
-            
-            // Update footer year automatically
-            const yearElement = document.getElementById('current-year');
-            if (yearElement) {
-                yearElement.textContent = new Date().getFullYear();
-            }
-            
-            // Initialize feather icons
-            setTimeout(() => {
-                try {
-                    if (typeof feather !== 'undefined') {
-                        feather.replace();
-                    }
-                } catch (error) {
-                    console.warn('Feather icons initialization failed:', error);
-                }
-            }, 100);
+        document.getElementById('mobile-toggle').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('open');
+        });
+        document.getElementById('whatsapp-float').addEventListener('click', function () {
+            window.open(window.RBi18n.generateWAUrl('default'), '_blank');
         });
     </script>
 </body>

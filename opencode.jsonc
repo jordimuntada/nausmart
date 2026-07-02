@@ -16,7 +16,28 @@
       "command": ["npx", "-y", "resend-mcp"],
       "enabled": true,
       "env": {
-        "RESEND_API_KEY": "re_gCJNLExH_NYtaBxyA28Ug29L1m5hGJsQN"
+        "RESEND_API_KEY": "${RESEND_API_KEY}"
+      }
+    },
+    "apify": {
+      "type": "remote",
+      "url": "https://mcp.apify.com",
+      "enabled": true
+    },
+    "brave": {
+      "type": "local",
+      "command": ["npx", "-y", "@brave/brave-search-mcp-server"],
+      "enabled": true,
+      "env": {
+        "BRAVE_API_KEY": "${BRAVE_API_KEY}"
+      }
+    },
+    "cala": {
+      "type": "remote",
+      "url": "https://api.cala.ai/mcp/",
+      "enabled": true,
+      "headers": {
+        "X-API-KEY": "${CALA_API_KEY}"
       }
     }
   },

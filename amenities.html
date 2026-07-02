@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="cat">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,663 +10,317 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WBML7DR9');</script>
     <!-- End Google Tag Manager -->
-    <title>RealBrave - Serveis</title>
-    <!-- Favicon and App Icons -->
+    <title>RealBrave — Serveis</title>
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon-32x32.png">
-    <link rel="mask-icon" href="favicon.svg" color="#242954">
-    <meta name="theme-color" content="#242954">
+    <meta name="theme-color" content="#0c0c0c">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#1E40AF',
-                        secondary: '#10B981',
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .language-selector {
-            transition: all 0.3s ease;
-        }
-        .language-selector:hover {
-            transform: scale(1.1);
-        }
-        .amenity-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-    </style>    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YDM8TFYBP4"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-YDM8TFYBP4');
       gtag('config', 'AW-16640594479');
-    </script></head>
-<body class="font-sans antialiased">
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBML7DR9"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0 flex items-center">
-                        <img src="realbrave_logo2.svg" alt="RealBrave" class="h-16 w-auto">
+    </script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { primary: '#1E40AF' }, fontFamily: { editorial: ['"Playfair Display"', 'Georgia', 'serif'] } } } }
+    </script>
+    <style>
+        .font-editorial { font-family: 'Playfair Display', Georgia, serif; }
+        .section-warm { background: #f7f5f2; }
+        .section-dark { background: #0c0c0c; }
+        .spec-rule { height: 1px; background: rgba(0,0,0,0.1); margin-bottom: 2rem; }
+        .spec-col { padding-right: 3rem; }
+        @media (min-width: 768px) {
+            .spec-col + .spec-col { border-left: 1px solid rgba(0,0,0,0.08); padding-left: 3rem; padding-right: 3rem; }
+            .spec-col:last-child { padding-right: 0; }
+        }
+        .eco-row { border-top: 1px solid rgba(0,0,0,0.08); padding-top: 2rem; padding-bottom: 2rem; }
+        .eco-row:last-child { border-bottom: 1px solid rgba(0,0,0,0.08); }
+        .language-selector { transition: all 0.3s ease; }
+        #mobile-menu { display: none; }
+        #mobile-menu.open { display: block; }
+        .whatsapp-float {
+            position: fixed; width: 58px; height: 58px; bottom: 28px; right: 28px;
+            background-color: #25d366; color: white; border-radius: 50%;
+            box-shadow: 2px 2px 12px rgba(0,0,0,0.2); z-index: 1000; cursor: pointer;
+            transition: all 0.3s ease; display: flex; align-items: center; justify-content: center;
+            animation: wapulse 2.5s infinite;
+        }
+        .whatsapp-float:hover { background-color: #128c7e; transform: scale(1.1); }
+        .whatsapp-tooltip {
+            position: absolute; right: 70px; top: 50%; transform: translateY(-50%);
+            background: rgba(0,0,0,0.82); color: white; padding: 7px 12px;
+            border-radius: 5px; font-size: 13px; white-space: nowrap;
+            opacity: 0; visibility: hidden; transition: all 0.3s ease; pointer-events: none;
+        }
+        .whatsapp-tooltip::after {
+            content: ''; position: absolute; top: 50%; left: 100%; margin-top: -5px;
+            border-width: 5px; border-style: solid;
+            border-color: transparent transparent transparent rgba(0,0,0,0.82);
+        }
+        .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; visibility: visible; }
+        @keyframes wapulse {
+            0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.65); }
+            70% { box-shadow: 0 0 0 10px rgba(37,211,102,0); }
+            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-900" data-page="amenities">
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBML7DR9" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+    <!-- NAV -->
+    <nav class="bg-white border-b border-black/8 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html"><img src="realbrave_logo2.svg" alt="RealBrave" class="h-12 w-auto" style="filter:brightness(0);"></a>
+                <div class="hidden md:flex items-center space-x-7">
+                    <a href="index.html"     class="text-sm font-medium text-gray-500 hover:text-gray-900 tracking-wide" data-translate="nav.home">Inici</a>
+                    <a href="building.html"  class="text-sm font-medium text-gray-500 hover:text-gray-900 tracking-wide" data-translate="nav.building">L'Edifici</a>
+                    <a href="spaces.html"    class="text-sm font-medium text-gray-500 hover:text-gray-900 tracking-wide" data-translate="nav.spaces">Espais</a>
+                    <a href="amenities.html" class="text-sm font-medium text-gray-900 tracking-wide" data-translate="nav.amenities">Serveis</a>
+                    <a href="location.html"  class="text-sm font-medium text-gray-500 hover:text-gray-900 tracking-wide" data-translate="nav.location">Ubicació</a>
+                    <a href="contact.html"   class="text-sm font-medium text-gray-500 hover:text-gray-900 tracking-wide" data-translate="nav.contact">Contacte</a>
+                    <div class="flex items-center space-x-1 ml-2">
+                        <button class="language-selector text-xs px-2 py-1 rounded border border-primary text-primary font-medium" data-lang="cat">CAT</button>
+                        <button class="language-selector text-xs px-2 py-1 rounded border border-gray-200 text-gray-500" data-lang="es">ES</button>
+                        <button class="language-selector text-xs px-2 py-1 rounded border border-gray-200 text-gray-500" data-lang="en">EN</button>
                     </div>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-home">Inici</a>
-                    <a href="building.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-building">L'Edifici</a>
-                    <a href="spaces.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-spaces">Espais</a>
-                    <a href="amenities.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-amenities">Serveis</a>
-                    <a href="location.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-location">Ubicació</a>
-                    <a href="contact.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav-contact">Contacte</a>
-                    <div class="flex space-x-2">
-                        <button class="language-selector text-xs px-2 py-1 rounded bg-primary text-white" data-lang="cat">CAT</button>
-                        <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300" data-lang="es">ES</button>
-                        <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300" data-lang="en">EN</button>
-                    </div>
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100">
-                        <i data-feather="menu"></i>
-                    </button>
-                </div>
+                <button id="mobile-toggle" class="md:hidden p-2" aria-label="Menu">
+                    <svg width="22" height="16" viewBox="0 0 22 16" fill="none" stroke="#374151" stroke-width="2">
+                        <line x1="0" y1="1" x2="22" y2="1"/><line x1="0" y1="8" x2="22" y2="8"/><line x1="0" y1="15" x2="22" y2="15"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-100 px-5 py-4 space-y-3">
+            <a href="index.html"     class="block text-sm font-medium text-gray-600 py-2" data-translate="nav.home">Inici</a>
+            <a href="building.html"  class="block text-sm font-medium text-gray-600 py-2" data-translate="nav.building">L'Edifici</a>
+            <a href="spaces.html"    class="block text-sm font-medium text-gray-600 py-2" data-translate="nav.spaces">Espais</a>
+            <a href="amenities.html" class="block text-sm font-medium text-gray-900 py-2" data-translate="nav.amenities">Serveis</a>
+            <a href="location.html"  class="block text-sm font-medium text-gray-600 py-2" data-translate="nav.location">Ubicació</a>
+            <a href="contact.html"   class="block text-sm font-medium text-gray-600 py-2" data-translate="nav.contact">Contacte</a>
+            <div class="flex space-x-2 pt-2">
+                <button class="language-selector text-xs px-2 py-1 rounded border border-primary text-primary font-medium" data-lang="cat">CAT</button>
+                <button class="language-selector text-xs px-2 py-1 rounded border border-gray-200 text-gray-500" data-lang="es">ES</button>
+                <button class="language-selector text-xs px-2 py-1 rounded border border-gray-200 text-gray-500" data-lang="en">EN</button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="bg-gradient-to-r from-primary to-secondary text-white py-20">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6" data-translate="hero-title">Serveis i Comoditats</h1>
-                <p class="text-xl max-w-3xl mx-auto" data-translate="hero-subtitle">Tot el que necessites per fer créixer el teu negoci</p>
+    <!-- PAGE HEADER -->
+    <section class="pt-24 pb-20 bg-white border-b border-black/6">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <p class="text-[10px] tracking-[0.28em] text-primary uppercase mb-8 font-medium" data-translate="amenities.header.overline">Serveis</p>
+            <h1 class="font-editorial text-5xl lg:text-7xl text-gray-900 leading-tight max-w-3xl">
+                <span class="block" data-translate="amenities.header.headline1">Tot Inclòs.</span>
+                <span class="block italic" data-translate="amenities.header.headline2">Sense Sorpreses.</span>
+            </h1>
+            <p class="text-gray-500 text-lg font-light max-w-xl leading-relaxed mt-8" data-translate="amenities.header.sub">
+                Una quota mensual. Cap cost amagat. Tot el que el teu equip necessita per treballar des del primer dia.
+            </p>
+        </div>
+    </section>
+
+    <!-- INCLUDED SERVICES -->
+    <section class="py-32 section-warm">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <p class="text-[10px] tracking-[0.28em] text-primary uppercase mb-14 font-medium" data-translate="amenities.included.overline">El que Inclou</p>
+            <div class="grid lg:grid-cols-3 gap-16 lg:gap-24">
+                <div class="lg:sticky lg:top-32 self-start">
+                    <h2 class="font-editorial text-4xl text-gray-900 leading-tight">
+                        <span class="block" data-translate="amenities.included.headline1">Inclòs al teu</span>
+                        <span class="block italic" data-translate="amenities.included.headline2">espai.</span>
+                    </h2>
+                    <p class="text-gray-500 text-sm leading-relaxed mt-6 font-light" data-translate="amenities.included.sub">
+                        No som un coworking. Cada empresa té el seu propi espai, les seves pròpies claus, el seu propi caràcter.
+                    </p>
+                </div>
+                <div class="lg:col-span-2">
+                    <div class="eco-row">
+                        <div class="flex items-baseline gap-6 mb-3">
+                            <span class="text-[10px] tracking-[0.25em] text-gray-300 font-medium uppercase">01</span>
+                            <h3 class="font-editorial text-xl text-gray-900" data-translate="amenities.included.i1.title">Connectivitat sense Límits</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed font-light" data-translate="amenities.included.i1.body">Fibra òptica d'alta velocitat i cobertura WiFi integral per a tota la planta. La connexió que necessites per a videoconferències, càrrega de fitxers i treball simultani de tot l'equip — sense interrupcions.</p>
+                    </div>
+                    <div class="eco-row">
+                        <div class="flex items-baseline gap-6 mb-3">
+                            <span class="text-[10px] tracking-[0.25em] text-gray-300 font-medium uppercase">02</span>
+                            <h3 class="font-editorial text-xl text-gray-900" data-translate="amenities.included.i2.title">Seguretat Permanent</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed font-light" data-translate="amenities.included.i2.body">Videovigilància i control d'accés per targeta les 24 hores, 365 dies l'any. El teu equip entra amb la seva credencial. Ningú més.</p>
+                    </div>
+                    <div class="eco-row">
+                        <div class="flex items-baseline gap-6 mb-3">
+                            <span class="text-[10px] tracking-[0.25em] text-gray-300 font-medium uppercase">03</span>
+                            <h3 class="font-editorial text-xl text-gray-900" data-translate="amenities.included.i3.title">Climatització Integral</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed font-light" data-translate="amenities.included.i3.body">Sistema de climatització independent per a cada espai. Temperatura a elecció de l'empresa inquilina. Calefacció a l'hivern, aire condicionat a l'estiu — inclòs en el lloguer.</p>
+                    </div>
+                    <div class="eco-row">
+                        <div class="flex items-baseline gap-6 mb-3">
+                            <span class="text-[10px] tracking-[0.25em] text-gray-300 font-medium uppercase">04</span>
+                            <h3 class="font-editorial text-xl text-gray-900" data-translate="amenities.included.i4.title">Aparcament Privatiu</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed font-light" data-translate="amenities.included.i4.body">25+ places d'aparcament exclusiu per a empreses inquilines i els seus visitants. L'únic complex d'oficines de la zona amb aparcament cobert integrat.</p>
+                    </div>
+                    <div class="eco-row">
+                        <div class="flex items-baseline gap-6 mb-3">
+                            <span class="text-[10px] tracking-[0.25em] text-gray-300 font-medium uppercase">05</span>
+                            <h3 class="font-editorial text-xl text-gray-900" data-translate="amenities.included.i5.title">Recepció Virtual</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed font-light" data-translate="amenities.included.i5.body">Servei de recepció virtual per a gestió de paqueteria, anunci de visites i atenció personalitzada. Una presència professional des del primer moment, sense necessitat de recepcionista pròpia.</p>
+                    </div>
+                    <div class="eco-row">
+                        <div class="flex items-baseline gap-6 mb-3">
+                            <span class="text-[10px] tracking-[0.25em] text-gray-300 font-medium uppercase">06</span>
+                            <h3 class="font-editorial text-xl text-gray-900" data-translate="amenities.included.i6.title">Manteniment i Neteja</h3>
+                        </div>
+                        <p class="text-gray-500 text-sm leading-relaxed font-light" data-translate="amenities.included.i6.body">Manteniment de zones comunes i neteja periòdica inclosa. Gestió d'incidències tècniques per part de RealBrave. Tu et concentres en el teu negoci.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Core Amenities -->
-    <section class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-translate="core-title">Serveis Inclosos</h2>
-                <p class="max-w-2xl mx-auto text-gray-600" data-translate="core-subtitle">Els serveis essencials inclosos (no tots) en el teu lloguer mensual</p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="amenity-card bg-white p-6 rounded-lg shadow-md transition duration-300">
-                    <div class="text-primary mb-4">
-                        <i data-feather="wifi" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Internet d'Alta Velocitat</h3>
-                    <p class="text-gray-600">Fibra òptica d'última generació.</p>
-                </div>
-                <div class="amenity-card bg-white p-6 rounded-lg shadow-md transition duration-300">
-                    <div class="text-primary mb-4">
-                        <i data-feather="shield" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Seguretat 24/7</h3>
-                    <p class="text-gray-600">Sistema de videovigilància i control d'accés per targeta.</p>
-                </div>
-                <div class="amenity-card bg-white p-6 rounded-lg shadow-md transition duration-300">
-                    <div class="text-primary mb-4">
-                        <i data-feather="thermometer" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Climatització</h3>
-                    <p class="text-gray-600">Sistema de climatització independent per cada empresa inquilina.</p>
-                </div>
-                <div class="amenity-card bg-white p-6 rounded-lg shadow-md transition duration-300">
-                    <div class="text-primary mb-4">
-                        <i data-feather="car" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Aparcament Privat</h3>
-                    <p class="text-gray-600">Places d'aparcament assignades.</p>
-                </div>
-                <div class="amenity-card bg-white p-6 rounded-lg shadow-md transition duration-300">
-                    <div class="text-primary mb-4">
-                        <i data-feather="phone" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Recepció Virtual</h3>
-                    <p class="text-gray-600">Servei de recepció de paquets i correspondència.</p>
-                </div>
-                <div class="amenity-card bg-white p-6 rounded-lg shadow-md transition duration-300">
-                    <div class="text-primary mb-4">
-                        <i data-feather="tool" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Manteniment</h3>
-                    <p class="text-gray-600">Servei de manteniment i neteja.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- IMAGE BREAK -->
+    <div class="w-full overflow-hidden" style="max-height:520px;">
+        <img src="no-watermark-images/unwatermarked_working-space-1-canmir-2.png" alt="Espai RealBrave" class="w-full object-cover object-center" style="max-height:520px;">
+    </div>
 
-    <!-- Meeting Rooms -->
-    <section class="bg-gray-50 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-translate="meeting-title">Sales de Reunions</h2>
-                <p class="max-w-3xl mx-auto text-gray-600" data-translate="meeting-subtitle">A RealBrave, cada empresa gestiona i organitza els seus propis espais de reunió dins del seu espai arrendat. No oferim sales de reunions compartides, garantint així la màxima privacitat i control total sobre les vostres necessitats empresarials.</p>
-            </div>
-            <div class="grid lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="bg-white rounded-lg shadow-lg p-8">
-                    <div class="text-primary mb-6">
-                        <i data-feather="home" class="w-12 h-12"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Espais Privats Exclusius</h3>
-                    <p class="text-gray-600 mb-6">Cada empresa disposa del seu espai privat on pot configurar les sales de reunions segons les seves necessitats específiques, sense compartir amb altres inquilins.</p>
-                    <ul class="space-y-3 text-gray-600">
-                        <li class="flex items-start"><i data-feather="check" class="w-5 h-5 text-primary mr-3 mt-1 flex-shrink-0"></i>Control total sobre la configuració</li>
-                        <li class="flex items-start"><i data-feather="check" class="w-5 h-5 text-primary mr-3 mt-1 flex-shrink-0"></i>Privacitat absoluta per a les vostres reunions</li>
-                        <li class="flex items-start"><i data-feather="check" class="w-5 h-5 text-primary mr-3 mt-1 flex-shrink-0"></i>Disponibilitat 24/7 sense reserves</li>
-                    </ul>
+    <!-- MEETING ROOMS (dark) -->
+    <section class="section-dark py-32 lg:py-40">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-32 items-start">
+                <div>
+                    <p class="text-[10px] tracking-[0.28em] text-white/35 uppercase mb-12 font-medium" data-translate="amenities.meetings.overline">Sales de Reunions</p>
+                    <h2 class="font-editorial text-4xl lg:text-5xl text-white leading-tight">
+                        <span class="block" data-translate="amenities.meetings.headline1">El teu Client</span>
+                        <span class="block italic" data-translate="amenities.meetings.headline2">mai compartit.</span>
+                    </h2>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg p-8">
-                    <div class="text-primary mb-6">
-                        <i data-feather="settings" class="w-12 h-12"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Personalització Completa</h3>
-                    <p class="text-gray-600 mb-6">Dissenyeu i equipeu les vostres sales de reunions segons la vostra identitat corporativa i requisits operatius, creant un entorn que reflecteixi la vostra marca.</p>
-                    <ul class="space-y-3 text-gray-600">
-                        <li class="flex items-start"><i data-feather="check" class="w-5 h-5 text-primary mr-3 mt-1 flex-shrink-0"></i>Equipament personalitzat segons necessitats</li>
-                        <li class="flex items-start"><i data-feather="check" class="w-5 h-5 text-primary mr-3 mt-1 flex-shrink-0"></i>Decoració i ambientació pròpia</li>
-                        <li class="flex items-start"><i data-feather="check" class="w-5 h-5 text-primary mr-3 mt-1 flex-shrink-0"></i>Tecnologia integrada a mida</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="mt-12 text-center">
-                <div class="bg-blue-50 border border-blue-200 rounded-lg p-6 max-w-3xl mx-auto">
-                    <div class="flex items-center justify-center mb-4">
-                        <i data-feather="info" class="w-6 h-6 text-blue-600 mr-2"></i>
-                        <h4 class="text-lg font-semibold text-blue-900">Filosofia d'Espais Privats</h4>
-                    </div>
-                    <p class="text-blue-800 leading-relaxed">
-                        Creiem que cada empresa mereix un espai totalment privatiu per conduir els seus negocis. Per això, no oferim sales de reunions compartides. El vostre espai arrendat és completament vostre, amb la llibertat de crear les sales de reunions que millor s'adaptin a la vostra manera de treballar.
+                <div class="self-center">
+                    <p class="font-editorial text-xl text-white/70 italic leading-relaxed mb-8" data-translate="amenities.meetings.quote">
+                        "No oferim sales de reunions compartides. Cada empresa té les seves sales pròpies — privacitat absoluta per a les teves converses que importen."
+                    </p>
+                    <p class="text-white/50 text-sm font-light leading-relaxed mb-4" data-translate="amenities.meetings.body1">
+                        Cada espai de 160 m² o superior inclou possibilitat de configurar zones de reunió privades. Personalitzes el layout, tu decideixes quantes sales vols i de quina mida.
+                    </p>
+                    <p class="text-white/50 text-sm font-light leading-relaxed" data-translate="amenities.meetings.body2">
+                        Per a espais de 480 m² (planta completa), disponibilitat de fins a 4 sales de reunions independents, sala de presentacions i zona de benvinguda client pròpia.
                     </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Additional Services -->
-    <section class="py-16 hidden" data-section="additional-services">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Serveis Addicionals</h2>
-                <p class="max-w-2xl mx-auto text-gray-600">Serveis opcionals per millorar la teva experiència de treball</p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <i data-feather="printer" class="w-8 h-8 text-primary"></i>
-                    </div>
-                    <h3 class="text-lg font-bold mb-2">Impressió i Escaneig</h3>
-                    <p class="text-gray-600 text-sm mb-3">Impressores multifunció d'alta qualitat disponibles 24/7</p>
-                    <div class="text-primary font-medium">0,10€/pàgina</div>
+    <!-- TECHNICAL DETAILS -->
+    <section class="py-32 lg:py-40 bg-white">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <p class="text-[10px] tracking-[0.28em] text-primary uppercase mb-16 font-medium" data-translate="amenities.specs.overline">Detalls Tècnics</p>
+            <div class="grid md:grid-cols-3">
+                <div class="spec-col mb-12 md:mb-0">
+                    <div class="spec-rule"></div>
+                    <p class="text-[10px] tracking-[0.3em] text-primary uppercase mb-6 font-medium" data-translate="amenities.specs.s1.label">L'HORARI</p>
+                    <h3 class="font-editorial text-2xl text-gray-900 mb-4" data-translate="amenities.specs.s1.title">Accés Total</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm font-light" data-translate="amenities.specs.s1.body">L'accés a les instal·lacions és il·limitat — el teu espai és teu les 24 hores. No depens dels horaris d'obertura d'un coworking.</p>
                 </div>
-                <div class="text-center">
-                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <i data-feather="coffee" class="w-8 h-8 text-primary"></i>
-                    </div>
-                    <h3 class="text-lg font-bold mb-2">Servei de Cafè</h3>
-                    <p class="text-gray-600 text-sm mb-3">Màquina de cafè professional amb varietat de begudes</p>
-                    <div class="text-primary font-medium">Inclòs</div>
+                <div class="spec-col mb-12 md:mb-0">
+                    <div class="spec-rule"></div>
+                    <p class="text-[10px] tracking-[0.3em] text-primary uppercase mb-6 font-medium" data-translate="amenities.specs.s2.label">EL CONTRACTE</p>
+                    <h3 class="font-editorial text-2xl text-gray-900 mb-4" data-translate="amenities.specs.s2.title">Des d'1 Any</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm font-light" data-translate="amenities.specs.s2.body">Contractes de lloguer d'1 any mínim amb opcions de renovació. Estabilitat per al teu equip, flexibilitat per a la teva empresa a llarg termini.</p>
                 </div>
-                <div class="text-center">
-                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <i data-feather="truck" class="w-8 h-8 text-primary"></i>
-                    </div>
-                    <h3 class="text-lg font-bold mb-2">Servei de Missatgeria</h3>
-                    <p class="text-gray-600 text-sm mb-3">Recollida i lliurament de paquets i documentació</p>
-                    <div class="text-primary font-medium">15€/servei</div>
-                </div>
-                <div class="text-center">
-                    <div class="bg-primary bg-opacity-10 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <i data-feather="headphones" class="w-8 h-8 text-primary"></i>
-                    </div>
-                    <h3 class="text-lg font-bold mb-2">Suport Tècnic</h3>
-                    <p class="text-gray-600 text-sm mb-3">Assistència tècnica per a equipament i sistemes</p>
-                    <div class="text-primary font-medium">50€/hora</div>
+                <div class="spec-col">
+                    <div class="spec-rule"></div>
+                    <p class="text-[10px] tracking-[0.3em] text-primary uppercase mb-6 font-medium" data-translate="amenities.specs.s3.label">LA PERSONALITZACIÓ</p>
+                    <h3 class="font-editorial text-2xl text-gray-900 mb-4" data-translate="amenities.specs.s3.title">El teu Disseny</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm font-light" data-translate="amenities.specs.s3.body">Distribuïu l'espai com vulgueu. Pintura, mobiliari, senyalística de marca. L'espai és un llenç en blanc que el teu equip pot fer seu.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Common Areas -->
-    <section class="bg-gray-50 py-16 hidden" data-section="common-areas">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Zones Comunes</h2>
-                <p class="max-w-2xl mx-auto text-gray-600">Espais compartits per al descans, networking i col·laboració</p>
+    <!-- DARK CTA -->
+    <section class="section-dark py-32 lg:py-40">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <p class="text-[10px] tracking-[0.28em] text-white/35 uppercase mb-14 font-medium" data-translate="amenities.cta.overline">Parlem</p>
+            <h2 class="font-editorial text-4xl lg:text-5xl text-white mb-8 max-w-2xl leading-tight">
+                <span class="block" data-translate="amenities.cta.headline1">Parlem de</span>
+                <span class="block italic" data-translate="amenities.cta.headline2">les teves necessitats.</span>
+            </h2>
+            <p class="text-white/50 text-lg font-light max-w-xl mb-14" data-translate="amenities.cta.sub">Cada empresa és diferent. Fes-nos saber quants sou, com treballeu i quan voleu entrar-hi.</p>
+            <div class="flex flex-wrap gap-4">
+                <a href="contact.html" class="bg-white text-gray-900 px-8 py-4 text-sm font-medium tracking-wide hover:bg-white/90 transition-colors" data-translate="amenities.cta.cta1">Sol·licitar Informació</a>
+                <a href="spaces.html"  class="border border-white/25 text-white px-8 py-4 text-sm font-medium tracking-wide hover:bg-white/10 transition-colors" data-translate="amenities.cta.cta2">Explorar Espais</a>
             </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="http://static.photos/office/800x600/17" alt="Àrea de descans" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Àrea de Descans</h3>
-                        <p class="text-gray-600 mb-4">Espai còmode per relaxar-se i fer networking informal.</p>
-                        <ul class="space-y-2 text-sm text-gray-600">
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Sofàs i seients còmodes</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Zona de cafè i snacks</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Revistes i premsa diària</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>WiFi d'alta velocitat</li>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div class="md:col-span-2">
+                    <img src="realbrave_logo2.svg" alt="RealBrave" class="h-10 w-auto mb-4" style="filter:brightness(0) invert(1);">
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs" data-translate="footer.description">Espais d'oficina a Terrassa per a empreses amb ambició.</p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-semibold tracking-[0.15em] uppercase text-gray-500 mb-5" data-translate="footer.nav">Navegació</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html"     class="text-gray-400 hover:text-white text-sm transition-colors" data-translate="nav.home">Inici</a></li>
+                        <li><a href="building.html"  class="text-gray-400 hover:text-white text-sm transition-colors" data-translate="nav.building">L'Edifici</a></li>
+                        <li><a href="spaces.html"    class="text-gray-400 hover:text-white text-sm transition-colors" data-translate="nav.spaces">Espais</a></li>
+                        <li><a href="amenities.html" class="text-gray-400 hover:text-white text-sm transition-colors" data-translate="nav.amenities">Serveis</a></li>
+                        <li><a href="contact.html"   class="text-gray-400 hover:text-white text-sm transition-colors" data-translate="nav.contact">Contacte</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-xs font-semibold tracking-[0.15em] uppercase text-gray-500 mb-5" data-translate="footer.contact">Contacte</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li>Carretera de Rubí, 292<br>Terrassa, 08191</li>
+                        <li><a href="tel:+34930107830" class="hover:text-white transition-colors">+34 930 107 830</a></li>
+                         <li><a href="mailto:admin@canmirgestions.com" class="hover:text-white transition-colors">admin@canmirgestions.com</a> <span class="text-gray-600 text-xs ml-1">— administració</span></li>
+                        <li><a href="mailto:hello@realbrave.eu" class="hover:text-white transition-colors">hello@realbrave.eu</a> <span class="text-gray-600 text-xs ml-1">— consultes</span></li>
+                    </ul>
+                    <div class="mt-8">
+                        <h4 class="text-xs font-semibold tracking-[0.15em] uppercase text-gray-500 mb-4" data-translate="footer.legal">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="privacy-policy.html" class="text-gray-500 hover:text-white text-xs transition-colors" data-translate="footer.privacy">Política de Privacitat</a></li>
+                            <li><a href="cookie-policy.html"  class="text-gray-500 hover:text-white text-xs transition-colors" data-translate="footer.cookies">Política de Cookies</a></li>
+                            <li><a href="legal-notice.html"   class="text-gray-500 hover:text-white text-xs transition-colors" data-translate="footer.legalNotice">Avís Legal</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                    <img src="http://static.photos/office/800x600/18" alt="Terrassa exterior" class="w-full h-48 object-cover">
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold mb-3">Terrassa Exterior</h3>
-                        <p class="text-gray-600 mb-4">Espai a l'aire lliure per a reunions informals i descans.</p>
-                        <ul class="space-y-2 text-sm text-gray-600">
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Mobiliari exterior</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Zona enjardinada</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Vistes panoràmiques</li>
-                            <li class="flex items-center"><i data-feather="check" class="w-4 h-4 text-primary mr-2"></i>Accés controlat</li>
-                        </ul>
-                    </div>
-                </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Business Services -->
-    <section class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-translate="business-title">Serveis Empresarials</h2>
-                <p class="max-w-2xl mx-auto text-gray-600" data-translate="business-subtitle">Suport professional per al creixement del teu negoci</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="text-primary mb-4">
-                        <i data-feather="briefcase" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Domiciliació Fiscal</h3>
-                    <p class="text-gray-600 mb-4">Utilitza la nostra adreça per a la teva activitat empresarial.</p>
-                    <div class="text-primary font-bold">50€/mes</div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="text-primary mb-4">
-                        <i data-feather="users" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Networking Events</h3>
-                    <p class="text-gray-600 mb-4">Esdeveniments mensuals per connectar amb altres empreses.</p>
-                    <div class="text-primary font-bold">Inclòs</div>
-                </div>
-                <div class="bg-white p-6 rounded-lg shadow-md">
-                    <div class="text-primary mb-4">
-                        <i data-feather="book-open" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Consultoria</h3>
-                    <p class="text-gray-600 mb-4">Assessorament empresarial i legal amb professionals.</p>
-                    <div class="text-primary font-bold">Sota consulta</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Call to Action -->
-    <section class="bg-primary text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-6" data-translate="cta-title">Descobreix Tots els Nostres Serveis</h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto" data-translate="cta-subtitle">Programa una visita per veure de primera mà totes les comoditats i serveis que oferim.</p>
-            <a href="contact.html" class="bg-white text-primary px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition" data-translate="cta-button">Programa una Visita</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">RealBrave</h3>
-                    <p class="text-gray-400" data-translate="footer-description">Espais d'oficina a Terrassa dissenyats per a empreses amb entorn tranquil.</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4" data-translate="footer-quick-links">Enllaços Ràpids</h4>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-400 hover:text-white" data-translate="nav-home">Inici</a></li>
-                        <li><a href="building.html" class="text-gray-400 hover:text-white" data-translate="nav-building">L'Edifici</a></li>
-                        <li><a href="spaces.html" class="text-gray-400 hover:text-white" data-translate="nav-spaces">Espais Disponibles</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-white" data-translate="nav-contact">Contacta'ns</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4" data-translate="footer-contact">Contacte</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li class="flex items-start">
-                            <i data-feather="map-pin" class="mr-2 w-4 h-4 mt-1"></i>
-                            <span>Carretera de Rubí, 292 Terrassa</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="phone" class="mr-2 w-4 h-4 mt-1"></i>
-                            <span>+34 930 107 830</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="mail" class="mr-2 w-4 h-4 mt-1"></i>
-                            <span>admin@canmirgestions.com</span>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4" data-translate="footer-legal">Legal</h4>
-                    <ul class="space-y-2">
-                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white" data-translate="footer-privacy">Política de Privacitat</a></li>
-                        <li><a href="cookie-policy.html" class="text-gray-400 hover:text-white" data-translate="footer-cookies">Política de Cookies</a></li>
-                        <li><a href="legal-notice.html" class="text-gray-400 hover:text-white" data-translate="footer-legal-notice">Avís Legal</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>© <span id="current-year">2025</span> RealBrave. <span data-translate="footer-rights">Tots els drets reservats.</span></p>
-            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-600 text-xs">© 2026 RealBrave. <span data-translate="footer.rights">Tots els drets reservats.</span></div>
         </div>
     </footer>
 
+    <!-- WHATSAPP -->
+    <div id="whatsapp-float" class="whatsapp-float" role="button" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" width="27" height="27" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.085"/>
+        </svg>
+        <div class="whatsapp-tooltip">Contacta'ns per WhatsApp</div>
+    </div>
+
+    <script src="i18n.js"></script>
     <script>
-        // Translation system
-        const translations = {
-            cat: {
-                // Page title
-                'page-title': 'RealBrave - Serveis',
-                
-                // Navigation
-                'nav-home': 'Inici',
-                'nav-building': 'L\'Edifici',
-                'nav-spaces': 'Espais',
-                'nav-amenities': 'Serveis',
-                'nav-location': 'Ubicació',
-                'nav-contact': 'Contacte',
-                
-                // Hero Section
-                'hero-title': 'Serveis i Comoditats',
-                'hero-subtitle': 'Tot el que necessites per fer créixer el teu negoci',
-                
-                // Core Amenities
-                'core-title': 'Serveis Inclosos',
-                'core-subtitle': 'Els serveis essencials inclosos (no tots) en el teu lloguer mensual',
-                
-                // Meeting Rooms
-                'meeting-title': 'Sales de Reunions',
-                'meeting-subtitle': 'A RealBrave, cada empresa gestiona i organitza els seus propis espais de reunió dins del seu espai arrendat. No oferim sales de reunions compartides, garantint així la màxima privacitat i control total sobre les vostres necessitats empresarials.',
-                
-                // Business Services
-                'business-title': 'Serveis Empresarials',
-                'business-subtitle': 'Suport professional per al creixement del teu negoci',
-                
-                // CTA
-                'cta-title': 'Descobreix Tots els Nostres Serveis',
-                'cta-subtitle': 'Programa una visita per veure de primera mà totes les comoditats i serveis que oferim.',
-                'cta-button': 'Programa una Visita',
-                
-                // Footer
-                'footer-description': 'Espais d\'oficina a Terrassa dissenyats per a empreses amb entorn tranquil.',
-                'footer-quick-links': 'Enllaços Ràpids',
-                'footer-contact': 'Contacte',
-                'footer-legal': 'Legal',
-                'footer-privacy': 'Política de Privacitat',
-                'footer-cookies': 'Política de Cookies',
-                'footer-legal-notice': 'Avís Legal',
-                'footer-rights': 'Tots els drets reservats.'
-            },
-            es: {
-                // Page title
-                'page-title': 'RealBrave - Servicios',
-                
-                // Navigation
-                'nav-home': 'Inicio',
-                'nav-building': 'El Edificio',
-                'nav-spaces': 'Espacios',
-                'nav-amenities': 'Servicios',
-                'nav-location': 'Ubicación',
-                'nav-contact': 'Contacto',
-                
-                // Hero Section
-                'hero-title': 'Servicios y Comodidades',
-                'hero-subtitle': 'Todo lo que necesitas para hacer crecer tu negocio',
-                
-                // Core Amenities
-                'core-title': 'Servicios Incluidos',
-                'core-subtitle': 'Los servicios esenciales incluidos (no todos) en tu alquiler mensual',
-                
-                // Meeting Rooms
-                'meeting-title': 'Salas de Reuniones',
-                'meeting-subtitle': 'En RealBrave, cada empresa gestiona y organiza sus propios espacios de reunión dentro de su espacio arrendado. No ofrecemos salas de reuniones compartidas, garantizando así la máxima privacidad y control total sobre vuestras necesidades empresariales.',
-                
-                // Business Services
-                'business-title': 'Servicios Empresariales',
-                'business-subtitle': 'Soporte profesional para el crecimiento de tu negocio',
-                
-                // CTA
-                'cta-title': 'Descubre Todos Nuestros Servicios',
-                'cta-subtitle': 'Programa una visita para ver de primera mano todas las comodidades y servicios que ofrecemos.',
-                // Footer
-                'footer-description': 'Espacios de oficina en Terrassa diseñados para empresas con entorno tranquilo.',
-                'footer-quick-links': 'Enlaces Rápidos',
-                'footer-contact': 'Contacto',
-                'footer-legal': 'Legal',
-                'footer-privacy': 'Política de Privacidad',
-                'footer-cookies': 'Política de Cookies',
-                'footer-legal-notice': 'Aviso Legal',
-                'footer-rights': 'Todos los derechos reservados.'
-            },
-            en: {
-                // Page title
-                'page-title': 'RealBrave - Amenities',
-                
-                // Navigation
-                'nav-home': 'Home',
-                'nav-building': 'The Building',
-                'nav-spaces': 'Spaces',
-                'nav-amenities': 'Amenities',
-                'nav-location': 'Location',
-                'nav-contact': 'Contact',
-                
-                // Hero Section
-                'hero-title': 'Services and Amenities',
-                'hero-subtitle': 'Everything you need to grow your business',
-                
-                // Core Amenities
-                'core-title': 'Included Services',
-                'core-subtitle': 'Essential services included (not all) in your monthly rent',
-                
-                // Meeting Rooms
-                'meeting-title': 'Meeting Rooms',
-                'meeting-subtitle': 'At RealBrave, each company manages and organizes its own meeting spaces within their rented space. We do not offer shared meeting rooms, thus guaranteeing maximum privacy and total control over your business needs.',
-                
-                // Business Services
-                'business-title': 'Business Services',
-                'business-subtitle': 'Professional support for your business growth',
-                
-                // CTA
-                'cta-title': 'Discover All Our Services',
-                'cta-subtitle': 'Schedule a visit to see firsthand all the amenities and services we offer.',
-                'cta-button': 'Schedule Visit',
-                
-                // Footer
-                'footer-description': 'Office spaces in Terrassa designed for businesses with a peaceful environment.',
-                'footer-quick-links': 'Quick Links',
-                'footer-contact': 'Contact',
-                'footer-legal': 'Legal',
-                'footer-privacy': 'Privacy Policy',
-                'footer-cookies': 'Cookie Policy',
-                'footer-legal-notice': 'Legal Notice',
-                'footer-rights': 'All rights reserved.'
-            },
-            es: {
-                // Page title
-                'page-title': 'RealBrave - Servicios',
-                
-                // Navigation
-                'nav-home': 'Inicio',
-                'nav-building': 'El Edificio',
-                'nav-spaces': 'Espacios',
-                'nav-amenities': 'Servicios',
-                'nav-location': 'Ubicación',
-                'nav-contact': 'Contacto',
-                
-                // Hero Section
-                'hero-title': 'Servicios y Amenidades',
-                'hero-subtitle': 'Todo lo que necesitas para hacer crecer tu negocio',
-                
-                // Core Amenities
-                'core-title': 'Servicios Incluidos',
-                'core-subtitle': 'Servicios esenciales incluidos (no todos) en tu alquiler mensual',
-                
-                // Meeting Rooms
-                'meeting-title': 'Salas de Reuniones',
-                'meeting-subtitle': 'En RealBrave, cada empresa gestiona y organiza sus propios espacios de reunión dentro de su espacio alquilado. No ofrecemos salas de reuniones compartidas, garantizando así la máxima privacidad y control total sobre las necesidades de tu negocio.',
-                
-                // Business Services
-                'business-title': 'Servicios Empresariales',
-                'business-subtitle': 'Apoyo profesional para el crecimiento de tu negocio',
-                
-                // CTA
-                'cta-title': 'Descubre Todos Nuestros Servicios',
-                'cta-subtitle': 'Programa una visita para ver de primera mano todas las amenidades y servicios que ofrecemos.',
-                'cta-button': 'Programar Visita',
-                
-                // Footer
-                'footer-description': 'Espacios de oficina en Terrassa diseñados para empresas con entorno tranquilo.',
-                'footer-quick-links': 'Enlaces Rápidos',
-                'footer-contact': 'Contacto',
-                'footer-legal': 'Legal',
-                'footer-privacy': 'Política de Privacidad',
-                'footer-cookies': 'Política de Cookies',
-                'footer-legal-notice': 'Aviso Legal',
-                'footer-rights': 'Todos los derechos reservados.'
-            },
-            en: {
-                // Page title
-                'page-title': 'RealBrave - Amenities',
-                
-                // Navigation
-                'nav-home': 'Home',
-                'nav-building': 'The Building',
-                'nav-spaces': 'Spaces',
-                'nav-amenities': 'Amenities',
-                'nav-location': 'Location',
-                'nav-contact': 'Contact',
-                
-                // Hero Section
-                'hero-title': 'Services and Amenities',
-                'hero-subtitle': 'Everything you need to grow your business',
-                
-                // Core Amenities
-                'core-title': 'Included Services',
-                'core-subtitle': 'Essential services included (not all) in your monthly rent',
-                
-                // Meeting Rooms
-                'meeting-title': 'Meeting Rooms',
-                'meeting-subtitle': 'At RealBrave, each company manages and organizes its own meeting spaces within its leased area. We don\'t offer shared meeting rooms, ensuring maximum privacy and total control over your business needs.',
-                
-                // Business Services
-                'business-title': 'Business Services',
-                'business-subtitle': 'Professional support for your business growth',
-                
-                // CTA
-                'cta-title': 'Discover All Our Services',
-                'cta-subtitle': 'Schedule a visit to see firsthand all the amenities and services we offer.',
-                'cta-button': 'Schedule Visit',
-                
-                // Footer
-                'footer-description': 'Premium office spaces in Terrassa designed for businesses with a peaceful environment.',
-                'footer-quick-links': 'Quick Links',
-                'footer-contact': 'Contact',
-                'footer-legal': 'Legal',
-                'footer-privacy': 'Privacy Policy',
-                'footer-cookies': 'Cookie Policy',
-                'footer-legal-notice': 'Legal Notice',
-                'footer-rights': 'All rights reserved.'
-            }
-        };
-
-        // Current language state
-        let currentLanguage = localStorage.getItem('smartplaces-language') || 'cat';
-
-        // Language switching functionality
-        function switchLanguage(lang) {
-            currentLanguage = lang;
-            localStorage.setItem('smartplaces-language', lang);
-            updateContent();
-            updateLanguageButtons();
-            updatePageLanguage();
-        }
-
-        function updateContent() {
-            const elements = document.querySelectorAll('[data-translate]');
-            elements.forEach(element => {
-                const key = element.getAttribute('data-translate');
-                if (translations[currentLanguage] && translations[currentLanguage][key]) {
-                    element.textContent = translations[currentLanguage][key];
-                }
-            });
-            
-            // Update page title
-            document.title = translations[currentLanguage]['page-title'];
-        }
-
-        function updateLanguageButtons() {
-            const buttons = document.querySelectorAll('.language-selector');
-            buttons.forEach(button => {
-                const lang = button.getAttribute('data-lang');
-                if (lang === currentLanguage) {
-                    button.className = 'language-selector text-xs px-2 py-1 rounded bg-primary text-white';
-                } else {
-                    button.className = 'language-selector text-xs px-2 py-1 rounded border border-gray-300';
-                }
-            });
-        }
-
-        function updatePageLanguage() {
-            document.documentElement.lang = currentLanguage;
-        }
-
-        // Initialize language system
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set up language switchers
-            const languageButtons = document.querySelectorAll('.language-selector');
-            languageButtons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const lang = button.getAttribute('data-lang');
-                    switchLanguage(lang);
-                });
-            });
-
-            // Initialize with saved language or default
-            updateContent();
-            updateLanguageButtons();
-            updatePageLanguage();
-            
-            // Update footer year automatically
-            const yearElement = document.getElementById('current-year');
-            if (yearElement) {
-                yearElement.textContent = new Date().getFullYear();
-            }
-            
-            // Initialize feather icons
-            try {
-                if (typeof feather !== 'undefined') {
-                    feather.replace();
-                }
-            } catch (error) {
-                console.warn('Feather icons initialization failed:', error);
-            }
+        document.getElementById('mobile-toggle').addEventListener('click', function () {
+            document.getElementById('mobile-menu').classList.toggle('open');
+        });
+        document.getElementById('whatsapp-float').addEventListener('click', function () {
+            window.open(window.RBi18n.generateWAUrl('amenities'), '_blank');
         });
     </script>
 </body>

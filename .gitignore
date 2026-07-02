@@ -16,6 +16,9 @@ nul
 
 # Tool config
 .opencode/
+.claude/
+.next/
+supabase/.temp/
 
 # Personal files
 Fotos planta oficines.zip

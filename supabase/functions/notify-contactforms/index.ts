@@ -6,6 +6,8 @@ const corsHeaders = {
   'Access-Control-Allow-Headers': 'authorization, x-client-info, apikey, content-type',
 };
 
+const WELCOME_TEMPLATE_ID = '8ce16d9a-0d76-487d-b756-9c5ef8719825';
+
 serve(async (req) => {
   if (req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders });
@@ -23,16 +25,20 @@ serve(async (req) => {
 
     const newData = record;
     
-    // Send both notifications
-    const emailResult = await sendContactFormEmail(newData);
-    const smsResult = await sendContactFormSMS(newData);
+    // Send admin notification + SMS + welcome to submitter
+    const [emailResult, smsResult, welcomeResult] = await Promise.all([
+      sendContactFormEmail(newData),
+      sendContactFormSMS(newData),
+      sendWelcomeEmail(newData),
+    ]);
 
     return new Response(
       JSON.stringify({ 
         success: true, 
         message: 'Contact form notifications sent',
         email: emailResult,
-        sms: smsResult
+        sms: smsResult,
+        welcome: welcomeResult
       }),
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
@@ -48,6 +54,43 @@ serve(async (req) => {
     );
   }
 });
+
+async function sendWelcomeEmail(data: any) {
+  if (!data.email) {
+    return { sent: false, message: 'No email address provided' };
+  }
+
+  const resendApiKey = Deno.env.get('RESEND_API_KEY');
+  const fromEmail = Deno.env.get('FROM_EMAIL') || 'contact@yourdomain.com';
+
+  if (!resendApiKey) {
+    return { sent: false, message: 'RESEND_API_KEY not set' };
+  }
+
+  const name = data.full_name || data.name || '';
+
+  try {
+    const resend = new Resend(resendApiKey);
+
+    const { data: result, error } = await resend.emails.send({
+      from: `RealBrave <${fromEmail}>`,
+      to: [data.email],
+      subject: 'Gràcies per contactar amb RealBrave',
+      template: {
+        id: WELCOME_TEMPLATE_ID,
+        variables: name ? { FIRST_NAME: name } : undefined,
+      },
+    });
+
+    return {
+      sent: !error,
+      message: error ? error.message : 'Welcome email sent',
+      id: result?.id,
+    };
+  } catch (error) {
+    return { sent: false, message: error.message };
+  }
+}
 
 async function sendContactFormEmail(data: any) {
   const resendApiKey = Deno.env.get('RESEND_API_KEY');

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="cat">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEO Meta Tags -->
     <meta name="description" content="Espais de treball moderns i flexibles dissenyats per a empreses en creixement amb instal·lacions d'última generació i ubicació estratègica. Programar Visita">
     <meta name="keywords" content="oficines Terrassa, espais oficina premium, coworking Terrassa, alquiler oficinas, oficines Barcelona, espais treball moderns, Real Brave">
@@ -14,7 +14,7 @@
     <meta name="geo.placename" content="Terrassa">
     <meta name="geo.position" content="41.5605;2.0052">
     <meta name="ICBM" content="41.5605, 2.0052">
-    
+
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://realbrave.eu/">
@@ -28,7 +28,7 @@
     <meta property="og:locale" content="ca_ES">
     <meta property="og:locale:alternate" content="es_ES">
     <meta property="og:locale:alternate" content="en_US">
-    
+
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://realbrave.eu/">
@@ -36,19 +36,22 @@
     <meta name="twitter:description" content="Espais de treball moderns i flexibles dissenyats per a empreses en creixement amb instal·lacions d'última generació i ubicació estratègica a Terrassa.">
     <meta name="twitter:image" content="https://realbrave.eu/logo-realbrave-long.png">
     <meta name="twitter:image:alt" content="RealBrave Logo - Premium Office Spaces in Terrassa">
-    
+
     <!-- Additional SEO -->
     <link rel="canonical" href="https://realbrave.eu/">
     <meta name="theme-color" content="#242954">
     <meta name="msapplication-TileColor" content="#242954">
+
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
     j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    'https://www.googletagmanager.com/gtag/js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-WBML7DR9');</script>
     <!-- End Google Tag Manager -->
-    <title>RealBrave - Premium Office Spaces in Terrassa</title>
+
+    <title>RealBrave - Espais d'Oficina Premium a Terrassa</title>
+
     <!-- Favicon and App Icons -->
     <link rel="icon" type="image/svg+xml" href="favicon.svg">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -56,65 +59,55 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon-32x32.png">
     <link rel="mask-icon" href="favicon.svg" color="#242954">
-    <meta name="theme-color" content="#242954">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/feather-icons"></script>
-    <script src="https://cdn.jsdelivr.net/npm/feather-icons/dist/feather.min.js"></script>
-    <!-- Cal.com embed script -->
-    <script type="text/javascript">
-        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.q = cal.q || []; p(cal, ar); return; } }; C.Cal.ns = {}; C.Cal.q = C.Cal.q || []; d.head.appendChild(d.createElement("script")).src = A; })(window, "https://app.cal.com/embed/embed.js");
-    </script>
-    <!-- Typeform embed script -->
-    <script src="//embed.typeform.com/next/embed.js"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YDM8TFYBP4"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-
       gtag('config', 'G-YDM8TFYBP4');
       gtag('config', 'AW-16640594479');
     </script>
-    <!-- Environment configuration -->
+
+    <!-- WhatsApp config -->
     <script>
-        // Set environment variables for client-side use
-        // In production, this should be replaced with actual environment variable injection
-        window.WHATSAPP_PHONE = '+34626381615'; // WhatsApp number from .env
-        
-        // Configuration for RealBrave
+        window.WHATSAPP_PHONE = '+34626381615';
         const CONFIG = {
-            // WhatsApp configuration
-            WHATSAPP_PHONE: window.WHATSAPP_PHONE || '+34626381615', // Default fallback number
-            
-            // WhatsApp message templates by language
+            WHATSAPP_PHONE: window.WHATSAPP_PHONE || '+34626381615',
             WHATSAPP_MESSAGES: {
                 cat: 'Hola! M\'agradaria programar una visita a RealBrave per veure els espais d\'oficina disponibles.',
                 es: 'Hola! Me gustaría programar una visita a RealBrave para ver los espacios de oficina disponibles.',
                 en: 'Hello! I would like to schedule a visit to RealBrave to see the available office spaces.'
             }
         };
-
-        // Function to generate WhatsApp URL
         function generateWhatsAppURL(language = 'cat') {
-            const phone = CONFIG.WHATSAPP_PHONE.replace(/[^\d]/g, ''); // Remove non-digits
+            const phone = CONFIG.WHATSAPP_PHONE.replace(/[^\d]/g, '');
             const message = encodeURIComponent(CONFIG.WHATSAPP_MESSAGES[language] || CONFIG.WHATSAPP_MESSAGES.cat);
             return `https://wa.me/${phone}?text=${message}`;
         }
     </script>
+
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        primary: '#1E40AF',
-                        secondary: '#10B981',
-                    }
+                    colors: { primary: '#1E40AF', secondary: '#10B981' },
+                    fontFamily: { editorial: ['"Playfair Display"', 'Georgia', 'serif'] }
                 }
             }
         }
     </script>
-    
+
     <!-- Structured Data (JSON-LD) for SEO -->
     <script type="application/ld+json">
     {
@@ -147,10 +140,7 @@
                     "telephone": "+34-930-107-830",
                     "contactType": "customer service",
                     "availableLanguage": ["Catalan", "Spanish", "English"]
-                },
-                "sameAs": [
-                    "https://realbrave.eu"
-                ]
+                }
             },
             {
                 "@type": "WebSite",
@@ -158,1890 +148,791 @@
                 "url": "https://realbrave.eu",
                 "name": "RealBrave - Espais d'Oficina Premium a Terrassa",
                 "description": "Espais de treball moderns i flexibles dissenyats per a empreses en creixement amb instal·lacions d'última generació i ubicació estratègica a Terrassa.",
-                "publisher": {
-                    "@id": "https://realbrave.eu/#organization"
-                },
+                "publisher": { "@id": "https://realbrave.eu/#organization" },
                 "inLanguage": ["ca-ES", "es-ES", "en-US"]
-            },
-            {
-                "@type": "WebPage",
-                "@id": "https://realbrave.eu/#webpage",
-                "url": "https://realbrave.eu",
-                "name": "RealBrave - Espais d'Oficina Premium a Terrassa",
-                "description": "Espais de treball moderns i flexibles dissenyats per a empreses en creixement amb instal·lacions d'última generació i ubicació estratègica a Terrassa. Obertura Abril 2026.",
-                "isPartOf": {
-                    "@id": "https://realbrave.eu/#website"
-                },
-                "about": {
-                    "@id": "https://realbrave.eu/#organization"
-                },
-                "primaryImageOfPage": {
-                    "@type": "ImageObject",
-                    "url": "https://realbrave.eu/working-space-1-canmir.png"
-                }
-            },
-            {
-                "@type": "Place",
-                "@id": "https://realbrave.eu/#place",
-                "name": "RealBrave Office Building",
-                "description": "Modern office building in Terrassa offering premium workspace solutions",
-                "address": {
-                    "@type": "PostalAddress",
-                    "streetAddress": "Carretera de Rubí, 292",
-                    "addressLocality": "Terrassa",
-                    "addressRegion": "Catalunya",
-                    "postalCode": "08191",
-                    "addressCountry": "ES"
-                },
-                "geo": {
-                    "@type": "GeoCoordinates",
-                    "latitude": "41.5605",
-                    "longitude": "2.0052"
-                }
             }
         ]
     }
     </script>
-    
+
     <style>
-        .hero-gradient {
-            background: linear-gradient(135deg, rgba(30,64,175,0.9) 0%, rgba(16,185,129,0.7) 100%);
+        /* --- Editorial type system --- */
+        .font-editorial { font-family: 'Playfair Display', Georgia, serif; }
+
+        /* --- Navigation --- */
+        #site-nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 50;
+            transition: background 0.5s ease, box-shadow 0.5s ease;
         }
-        .language-selector {
-            transition: all 0.3s ease;
+        #site-nav .nav-logo { transition: filter 0.5s ease; filter: brightness(0) invert(1); }
+        #site-nav .nav-link { color: rgba(255,255,255,0.85); transition: color 0.3s; }
+        #site-nav .nav-link:hover { color: white; }
+        #site-nav .nav-link-active { color: white; }
+        #site-nav .lang-btn {
+            color: rgba(255,255,255,0.6);
+            border-color: rgba(255,255,255,0.2);
+            background: transparent;
+            transition: all 0.3s;
         }
-        .language-selector:hover {
-            transform: scale(1.1);
-        }
-        .feature-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-        }
-        
-        /* Carousel Styles */
-        .hero-carousel {
+        #site-nav .lang-btn.active { color: white; border-color: rgba(255,255,255,0.6); }
+        #site-nav .lang-btn:hover { color: white; }
+
+        #site-nav.nav-scrolled { background: rgba(255,255,255,0.97); box-shadow: 0 1px 0 rgba(0,0,0,0.07); backdrop-filter: blur(12px); }
+        #site-nav.nav-scrolled .nav-logo { filter: brightness(0); }
+        #site-nav.nav-scrolled .nav-link { color: #6b7280; }
+        #site-nav.nav-scrolled .nav-link:hover { color: #1E40AF; }
+        #site-nav.nav-scrolled .nav-link-active { color: #111827; }
+        #site-nav.nav-scrolled .lang-btn { color: #6b7280; border-color: #d1d5db; }
+        #site-nav.nav-scrolled .lang-btn.active { color: #1E40AF; border-color: #1E40AF; background: transparent; }
+        #site-nav.nav-scrolled .lang-btn:hover { color: #1E40AF; }
+
+        /* --- Hero --- */
+        .hero-ambient {
             position: relative;
-            overflow: hidden;
             height: 100vh;
-            min-height: 600px;
+            min-height: 680px;
+            overflow: hidden;
         }
-        
-        .carousel-container {
-            display: flex;
-            transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
-            height: 100%;
-        }
-        
-        .carousel-slide {
-            min-width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            position: relative;
-        }
-        
-        .slide-background {
+        .hero-bg {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            inset: 0;
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
+            transform: scale(1.04);
+            transition: transform 7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
         }
-        
-        .slide-overlay {
+        .hero-bg.loaded { transform: scale(1); }
+        .hero-overlay {
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(135deg, rgba(30,64,175,0.9) 0%, rgba(16,185,129,0.7) 100%);
+            inset: 0;
+            background: linear-gradient(165deg, rgba(8,8,8,0.5) 0%, rgba(8,8,8,0.72) 100%);
         }
-        
-        .slide-content {
+        .hero-content {
             position: relative;
             z-index: 10;
-            width: 100%;
-            color: white;
-        }
-        
-        /* Navigation Dots */
-        .carousel-dots {
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
+            height: 100%;
             display: flex;
-            gap: 12px;
-            z-index: 20;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding-bottom: 7rem;
         }
-        
-        .carousel-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.5);
-            cursor: pointer;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
+
+        /* --- Sections --- */
+        .section-warm { background: #f7f5f2; }
+        .section-dark { background: #0c0c0c; }
+
+        /* --- Specs --- */
+        .spec-rule { height: 1px; background: rgba(0,0,0,0.1); margin-bottom: 2rem; }
+        .spec-col { padding-right: 3rem; }
+        @media (min-width: 768px) {
+            .spec-col + .spec-col { border-left: 1px solid rgba(0,0,0,0.08); padding-left: 3rem; padding-right: 3rem; }
+            .spec-col:last-child { padding-right: 0; }
         }
-        
-        .carousel-dot.active {
-            background: white;
-            transform: scale(1.2);
-        }
-        
-        .carousel-dot:hover {
-            background: rgba(255, 255, 255, 0.8);
-        }
-        
-        /* Pause/Play Controls */
-        .carousel-controls {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            z-index: 20;
-        }
-        
-        .carousel-control-btn {
-            background: rgba(255, 255, 255, 0.2);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: all 0.3s ease;
-        }
-        
-        .carousel-control-btn:hover {
-            background: rgba(255, 255, 255, 0.3);
-        }
-        
-        /* Refurbishment slide specific styles */
-        .refurbishment-slide {
-            background: linear-gradient(135deg, rgba(239, 68, 68, 0.9) 0%, rgba(245, 101, 101, 0.8) 100%);
-        }
-        
-        .refurbishment-content {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .refurbishment-badge {
-            display: inline-block;
-            background: rgba(255, 255, 255, 0.2);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 14px;
-            font-weight: 600;
-            margin-bottom: 20px;
-            border: 1px solid rgba(255, 255, 255, 0.3);
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .hero-carousel {
-                height: 80vh;
-                min-height: 500px;
-            }
-            
-            .carousel-dots {
-                bottom: 20px;
-            }
-            
-            .carousel-controls {
-                top: 15px;
-                right: 15px;
-            }
-            
-            .carousel-control-btn {
-                width: 35px;
-                height: 35px;
-            }
-        }
-        
-        /* Animation for slide content */
-        .slide-content {
-            opacity: 1;
-            transform: translateY(0);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
-        
-        .slide-content.fade-in {
-            animation: slideContentFadeIn 0.8s ease-out;
-        }
-        
-        @keyframes slideContentFadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-        
-        /* Screen reader only content */
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0, 0, 0, 0);
-            white-space: nowrap;
-            border-width: 0;
-        }
-        
-        /* WhatsApp Floating Button Styles */
+
+        /* --- Manifesto pull-quote --- */
+        .pull-quote { border-left: 2px solid #1E40AF; padding-left: 1.75rem; }
+
+        /* --- Ecosystem rows --- */
+        .eco-row { border-top: 1px solid rgba(0,0,0,0.08); padding-top: 2rem; padding-bottom: 2rem; }
+        .eco-row:last-child { border-bottom: 1px solid rgba(0,0,0,0.08); }
+
+        /* --- Dark section formats --- */
+        .format-row { border-top: 1px solid rgba(255,255,255,0.1); }
+        .format-row:last-child { border-bottom: 1px solid rgba(255,255,255,0.1); }
+
+        /* --- Language selector --- */
+        .language-selector { transition: all 0.3s ease; }
+
+        /* --- WhatsApp float --- */
         .whatsapp-float {
             position: fixed;
-            width: 60px;
-            height: 60px;
-            bottom: 25px;
-            right: 25px;
+            width: 58px; height: 58px;
+            bottom: 28px; right: 28px;
             background-color: #25d366;
             color: white;
             border-radius: 50%;
-            text-align: center;
-            font-size: 30px;
-            box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+            box-shadow: 2px 2px 12px rgba(0,0,0,0.2);
             z-index: 1000;
             cursor: pointer;
             transition: all 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            animation: pulse 2s infinite;
+            display: flex; align-items: center; justify-content: center;
+            animation: wapulse 2.5s infinite;
         }
-        
-        .whatsapp-float:hover {
-            background-color: #128c7e;
-            transform: scale(1.1);
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-        }
-        
-        .whatsapp-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            height: 100%;
-        }
-        
+        .whatsapp-float:hover { background-color: #128c7e; transform: scale(1.1); }
         .whatsapp-tooltip {
             position: absolute;
-            right: 70px;
-            top: 50%;
+            right: 70px; top: 50%;
             transform: translateY(-50%);
-            background-color: rgba(0, 0, 0, 0.8);
+            background: rgba(0,0,0,0.82);
             color: white;
-            padding: 8px 12px;
-            border-radius: 6px;
-            font-size: 14px;
+            padding: 7px 12px;
+            border-radius: 5px;
+            font-size: 13px;
             white-space: nowrap;
-            opacity: 0;
-            visibility: hidden;
+            opacity: 0; visibility: hidden;
             transition: all 0.3s ease;
             pointer-events: none;
         }
-        
         .whatsapp-tooltip::after {
             content: '';
             position: absolute;
-            top: 50%;
-            left: 100%;
+            top: 50%; left: 100%;
             margin-top: -5px;
-            border-width: 5px;
-            border-style: solid;
-            border-color: transparent transparent transparent rgba(0, 0, 0, 0.8);
+            border-width: 5px; border-style: solid;
+            border-color: transparent transparent transparent rgba(0,0,0,0.82);
         }
-        
-        .whatsapp-float:hover .whatsapp-tooltip {
+        .whatsapp-float:hover .whatsapp-tooltip { opacity: 1; visibility: visible; }
+        @keyframes wapulse {
+            0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.65); }
+            70% { box-shadow: 0 0 0 10px rgba(37,211,102,0); }
+            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+        }
+        @media (max-width: 640px) {
+            .whatsapp-float { width: 52px; height: 52px; bottom: 20px; right: 20px; }
+            .hero-content { padding-bottom: 4.5rem; }
+        }
+
+        /* --- Mobile menu --- */
+        #mobile-menu { display: none; }
+        #mobile-menu.open { display: block; }
+
+        /* --- Newsletter popup --- */
+        .newsletter-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.45);
+            backdrop-filter: blur(2px);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+        }
+        .newsletter-overlay.show {
             opacity: 1;
             visibility: visible;
         }
-        
-        @keyframes pulse {
-            0% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 10px rgba(37, 211, 102, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-            }
+        .newsletter-modal {
+            background: #fff;
+            max-width: 420px;
+            width: 90%;
+            padding: 48px 40px 40px;
+            position: relative;
+            box-shadow: 0 24px 80px rgba(0,0,0,0.2);
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.5s ease 0.15s, transform 0.5s ease 0.15s;
         }
-        
-        /* Mobile responsive adjustments */
-        @media (max-width: 768px) {
-            .whatsapp-float {
-                width: 55px;
-                height: 55px;
-                bottom: 20px;
-                right: 20px;
-            }
-            
-            .whatsapp-tooltip {
-                right: 65px;
-                font-size: 12px;
-                padding: 6px 10px;
-            }
+        .newsletter-overlay.show .newsletter-modal {
+            opacity: 1;
+            transform: translateY(0);
         }
-        
-        @media (max-width: 480px) {
-            .whatsapp-float {
-                width: 50px;
-                height: 50px;
-                bottom: 15px;
-                right: 15px;
-            }
-            
-            .whatsapp-icon svg {
-                width: 24px;
-                height: 24px;
-            }
+        .newsletter-close {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #9ca3af;
+            cursor: pointer;
+            padding: 4px;
+            line-height: 1;
+            transition: color 0.2s;
+        }
+        .newsletter-close:hover { color: #374151; }
+        .newsletter-overline {
+            font-size: 10px;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: #3b5a4b;
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+        .newsletter-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            color: #111827;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+        .newsletter-text {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.6;
+            margin-bottom: 28px;
+            font-weight: 300;
+        }
+        .newsletter-input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #d1d5db;
+            font-size: 14px;
+            color: #111827;
+            outline: none;
+            transition: border-color 0.2s;
+            background: #fff;
+            box-sizing: border-box;
+        }
+        .newsletter-input:focus { border-color: #3b5a4b; }
+        .newsletter-input::placeholder { color: #9ca3af; }
+        .newsletter-consent {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-top: 14px;
+            cursor: pointer;
+        }
+        .newsletter-consent input[type="checkbox"] {
+            margin-top: 2px;
+            flex-shrink: 0;
+            width: 14px;
+            height: 14px;
+            accent-color: #3b5a4b;
+        }
+        .newsletter-consent span {
+            font-size: 11px;
+            color: #9ca3af;
+            line-height: 1.4;
+        }
+        .newsletter-consent a {
+            color: #3b5a4b;
+            text-decoration: underline;
+        }
+        .newsletter-submit {
+            width: 100%;
+            margin-top: 20px;
+            padding: 14px;
+            background: #111827;
+            color: #fff;
+            border: none;
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .newsletter-submit:hover { background: #374151; }
+        .newsletter-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+        .newsletter-error {
+            font-size: 12px;
+            color: #dc2626;
+            margin-top: 10px;
+            display: none;
+        }
+        .newsletter-error.show { display: block; }
+        .newsletter-success {
+            display: none;
+            text-align: center;
+            padding: 20px 0;
+        }
+        .newsletter-success.show { display: block; }
+        .newsletter-success-icon {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 16px;
+            background: #ecfdf5;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #059669;
+        }
+        .newsletter-success h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            color: #111827;
+            margin-bottom: 8px;
+        }
+        .newsletter-success p {
+            font-size: 13px;
+            color: #6b7280;
+            font-weight: 300;
+        }
+        @media (max-width: 640px) {
+            .newsletter-modal { padding: 40px 28px 32px; }
+            .newsletter-title { font-size: 24px; }
         }
     </style>
 </head>
-<body class="font-sans antialiased">
+<body class="font-sans antialiased text-gray-900" data-page="index">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WBML7DR9"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0 flex items-center" itemscope itemtype="https://schema.org/Organization">
-                        <link itemprop="url" href="https://realbrave.eu">
-                        <img src="realbrave_logo2.svg"
-                             alt="RealBrave - Premium Office Spaces in Terrassa"
-                             itemprop="logo"
-                             class="h-14 w-auto"
-                             style="max-height: 56px; width: auto;">
-                        <meta itemprop="name" content="RealBrave">
+
+    <!-- ═══════════════════════════════════════
+         NAVIGATION
+    ═══════════════════════════════════════ -->
+    <nav id="site-nav">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <div class="flex justify-between items-center h-20">
+
+                <a href="index.html" class="flex-shrink-0">
+                    <img id="nav-logo" src="realbrave_logo2.svg" alt="RealBrave" class="nav-logo h-12 w-auto">
+                </a>
+
+                <!-- Desktop links -->
+                <div class="hidden md:flex items-center space-x-7">
+                    <a href="index.html"    class="nav-link nav-link-active text-sm font-medium tracking-wide" data-translate="nav.home">Inici</a>
+                    <a href="building.html" class="nav-link text-sm font-medium tracking-wide" data-translate="nav.building">L'Edifici</a>
+                    <a href="spaces.html"   class="nav-link text-sm font-medium tracking-wide" data-translate="nav.spaces">Espais</a>
+                    <a href="amenities.html" class="nav-link text-sm font-medium tracking-wide" data-translate="nav.amenities">Serveis</a>
+                    <a href="location.html" class="nav-link text-sm font-medium tracking-wide" data-translate="nav.location">Ubicació</a>
+                    <a href="contact.html"  class="nav-link text-sm font-medium tracking-wide" data-translate="nav.contact">Contacte</a>
+                    <div class="flex items-center space-x-1 ml-2">
+                        <button class="language-selector lang-btn text-xs px-2 py-1 rounded border" data-lang="cat">CAT</button>
+                        <button class="language-selector lang-btn text-xs px-2 py-1 rounded border" data-lang="es">ES</button>
+                        <button class="language-selector lang-btn text-xs px-2 py-1 rounded border" data-lang="en">EN</button>
                     </div>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="text-gray-900 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav.home">Home</a>
-                    <a href="building.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav.building">The Building</a>
-                    <a href="spaces.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav.spaces">Spaces</a>
-                    <a href="amenities.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav.amenities">Amenities</a>
-                    <a href="location.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav.location">Location</a>
-                    <a href="contact.html" class="text-gray-500 hover:text-primary px-3 py-2 rounded-md text-sm font-medium" data-translate="nav.contact">Contact</a>
-                    <div class="flex space-x-2">
-                        <button class="language-selector text-xs px-2 py-1 rounded bg-primary text-white">CAT</button>
-                        <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300">ES</button>
-                        <button class="language-selector text-xs px-2 py-1 rounded border border-gray-300">EN</button>
-                    </div>
-                </div>
-                <div class="md:hidden flex items-center">
-                    <button type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-gray-500 hover:bg-gray-100">
-                        <i data-feather="menu"></i>
-                    </button>
-                </div>
+
+                <!-- Mobile hamburger -->
+                <button id="mobile-toggle" class="md:hidden p-2" aria-label="Menu">
+                    <svg id="hamburger-icon" width="22" height="16" viewBox="0 0 22 16" fill="none" stroke="white" stroke-width="2">
+                        <line x1="0" y1="1" x2="22" y2="1"/>
+                        <line x1="0" y1="8" x2="22" y2="8"/>
+                        <line x1="0" y1="15" x2="22" y2="15"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t border-gray-100 px-5 py-4 space-y-3">
+            <a href="index.html"    class="block text-sm font-medium text-gray-800 py-2" data-translate="nav.home">Inici</a>
+            <a href="building.html" class="block text-sm font-medium text-gray-600 py-2" data-translate="nav.building">L'Edifici</a>
+            <a href="spaces.html"   class="block text-sm font-medium text-gray-600 py-2" data-translate="nav.spaces">Espais</a>
+            <a href="amenities.html" class="block text-sm font-medium text-gray-600 py-2" data-translate="nav.amenities">Serveis</a>
+            <a href="location.html" class="block text-sm font-medium text-gray-600 py-2" data-translate="nav.location">Ubicació</a>
+            <a href="contact.html"  class="block text-sm font-medium text-gray-600 py-2" data-translate="nav.contact">Contacte</a>
+            <div class="flex space-x-2 pt-2">
+                <button class="language-selector text-xs px-3 py-1.5 rounded border border-gray-200 bg-primary text-white" data-lang="cat">CAT</button>
+                <button class="language-selector text-xs px-3 py-1.5 rounded border border-gray-200 text-gray-600" data-lang="es">ES</button>
+                <button class="language-selector text-xs px-3 py-1.5 rounded border border-gray-200 text-gray-600" data-lang="en">EN</button>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Carousel Section -->
-    <section class="hero-carousel" id="heroCarousel" aria-label="Hero carousel">
-        <!-- Screen reader announcement region -->
-        <div class="sr-only" aria-live="polite" aria-atomic="true" id="carouselStatus">
-            Slide 1 of 7
-        </div>
-        
-        <!-- Carousel Container -->
-        <div class="carousel-container" id="carouselContainer">
-            
-            <!-- Slide 1: Main Hero Content -->
-            <div class="carousel-slide" data-slide="0">
-                <div class="slide-background" style="background-image: url('working-space-1-canmir.png');"></div>
-                <div class="slide-overlay"></div>
-                <div class="slide-content">
-                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-                        <div class="grid md:grid-cols-2 gap-8 items-center">
-                            <div>
-                                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6" data-translate="carousel.slide1.title">Premium Office Spaces in Terrassa</h1>
-                                <p class="text-xl md:text-2xl mb-8 leading-relaxed" data-translate="carousel.slide1.subtitle">Modern, flexible workspaces designed for growing businesses with state-of-the-art facilities and strategic location.</p>
-                                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                                <a href="contact.html" id="schedule-visit-btn" class="bg-white text-primary px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg" data-translate="carousel.slide1.scheduleVisit"></a>
-                                    <a href="spaces.html" class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition" data-translate="carousel.slide1.exploreSpaces">Explorar Espais</a>
-                                </div>
-                            </div>
-                            <div class="hidden md:block">
-                                <div class="relative">
-                                    <img id="hero-rotating-image" src="render_1.jpg" alt="RealBrave Building Interior" class="rounded-lg shadow-2xl transition-opacity duration-1000">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide 2: Refurbishment Notice -->
-            <div class="carousel-slide" data-slide="1">
-                <div class="slide-background"></div>
-                <div class="slide-overlay refurbishment-slide"></div>
-                <div class="slide-content">
-                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-                        <div class="refurbishment-content">
-                            <div class="refurbishment-badge" data-translate="carousel.slide2.badge">
-                                🚧 Under Renovation
-                            </div>
-                            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6" data-translate="carousel.slide2.title">Offices Under Refurbishment</h1>
-                            <h2 class="text-2xl md:text-3xl font-semibold mb-8 text-yellow-100" data-translate="carousel.slide2.subtitle">Opening April 2026</h2>
-                            <p class="text-xl md:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto" data-translate="carousel.slide2.description">Currently undergoing renovation. These modern office spaces will be ready for occupancy in April 2026. Experience premium facilities designed for the future of work.</p>
-                            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
-                                <a href="comunitat.html" class="bg-white text-red-600 px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg" data-translate="carousel.slide2.getNotified">Get Notified When Ready</a>
-                                <a href="building.html" class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition" data-translate="carousel.slide2.viewProgress">View Progress Updates</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide 3: New Construction/Completion Notice -->
-            <div class="carousel-slide" data-slide="2">
-                <div class="slide-background"></div>
-                <div class="slide-overlay refurbishment-slide"></div>
-                <div class="slide-content">
-                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-                        <div class="refurbishment-content">
-                            <div class="refurbishment-badge" data-translate="carousel.slide3.badge">
-                                🏗️ Projecte en Curs
-                            </div>
-                            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6" data-translate="carousel.slide3.title">Oficines en construcció i finalitzades el 2026</h1>
-                            <p class="text-xl md:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto" data-translate="carousel.slide3.description">Descobreix els nostres nous espais d'oficines, dissenyats per a la innovació i la productivitat, disponibles a partir del 2026.</p>
-                            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
-                                <a href="building.html" class="bg-white text-red-600 px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg" data-translate="carousel.slide3.moreInfo">Més Informació</a>
-                                <button id="contacta-ns-btn" class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition" data-translate="carousel.slide3.contact">Contacta'ns</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide 4: Render 1 -->
-            <div class="carousel-slide" data-slide="3">
-                <div class="slide-background" style="background-image: url('working-space-1-canmir-2.png');"></div>
-                <div class="slide-overlay" style="background: linear-gradient(135deg, rgba(30,64,175,0.8) 0%, rgba(16,185,129,0.6) 100%);"></div>
-                <div class="slide-content">
-                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-                        <div class="text-center">
-                            <div class="refurbishment-badge" data-translate="carousel.slide4.badge">
-                                🏢 Architectural Vision
-                            </div>
-                            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6" data-translate="carousel.slide4.title">Future RealBrave Design</h1>
-                            <p class="text-xl md:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto" data-translate="carousel.slide4.description">Discover the architectural vision for RealBrave - a modern office complex designed to inspire innovation and productivity in the heart of Terrassa.</p>
-                            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
-                                <a href="building.html" class="bg-white text-primary px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg" data-translate="carousel.slide4.exploreDesign">Explore Design Features</a>
-                                <a href="contact.html" class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition" data-translate="carousel.slide4.scheduleTour">Schedule a Tour</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide 5: Render 2 -->
-            <div class="carousel-slide" data-slide="4">
-                <div class="slide-background" style="background-image: url('working-space-1-canmir-3.png');"></div>
-                <div class="slide-overlay" style="background: linear-gradient(135deg, rgba(16,185,129,0.8) 0%, rgba(5,150,105,0.6) 100%);"></div>
-                <div class="slide-content">
-                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-                        <div class="text-center">
-                            <div class="refurbishment-badge" data-translate="carousel.slide5.badge">
-                                🌟 Premium Spaces
-                            </div>
-                            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6" data-translate="carousel.slide5.title">Exceptional Office Environment</h1>
-                            <p class="text-xl md:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto" data-translate="carousel.slide5.description">Experience the perfect blend of modern architecture and functional design. Our premium office spaces offer the ideal environment for your business to thrive and grow.</p>
-                            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
-                                <a href="spaces.html" class="bg-white text-green-600 px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg" data-translate="carousel.slide5.viewSpaces">View Available Spaces</a>
-                                <a href="contact.html" class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition" data-translate="carousel.slide5.contactToday">Contact Us Today</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide 6: Additional Content -->
-            <div class="carousel-slide" data-slide="5">
-                <div class="slide-background" style="background-image: url('working-space-1-canmir-4.png');"></div>
-                <div class="slide-overlay" style="background: linear-gradient(135deg, rgba(16,185,129,0.9) 0%, rgba(5,150,105,0.8) 100%);"></div>
-                <div class="slide-content">
-                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-                        <div class="grid md:grid-cols-2 gap-8 items-center">
-                            <div class="hidden md:block">
-                                <div class="relative">
-                                    <img src="working-space-1-canmir-4.png" alt="RealBrave Amenities" class="rounded-lg shadow-2xl">
-                                    <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-lg"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6" data-translate="carousel.slide6.title">Experience Excellence</h1>
-                                <p class="text-xl md:text-2xl mb-8 leading-relaxed" data-translate="carousel.slide6.description">Join a community of innovative businesses in Terrassa's most prestigious office complex. Premium amenities, strategic location, and flexible terms.</p>
-                                <div class="space-y-4 mb-8">
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                                            <i data-feather="check" class="w-4 h-4 text-green-600"></i>
-                                        </div>
-                                        <span class="text-lg" data-translate="carousel.slide6.features.0">24/7 Security & Access</span>
-                                    </div>
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                                            <i data-feather="check" class="w-4 h-4 text-green-600"></i>
-                                        </div>
-                                        <span class="text-lg" data-translate="carousel.slide6.features.1">High-Speed Fiber Internet</span>
-                                    </div>
-                                    <div class="flex items-center space-x-3">
-                                        <div class="w-6 h-6 bg-white rounded-full flex items-center justify-center">
-                                            <i data-feather="check" class="w-4 h-4 text-green-600"></i>
-                                        </div>
-                                        <span class="text-lg" data-translate="carousel.slide6.features.2">Meeting Rooms & Common Areas</span>
-                                    </div>
-                                </div>
-                                <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-                                    <a href="amenities.html" class="bg-white text-green-600 px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg" data-translate="carousel.slide6.exploreAmenities">Explore Amenities</a>
-                                    <a href="building.html" class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition" data-translate="carousel.slide6.viewFloorPlans">View Floor Plans</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Slide 7: New Render 2 Slide -->
-            <div class="carousel-slide" data-slide="6">
-                <div class="slide-background"></div>
-                <div class="slide-overlay" style="background: linear-gradient(135deg, rgba(59,130,246,0.8) 0%, rgba(147,51,234,0.6) 100%);"></div>
-                <div class="slide-content">
-                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-32">
-                        <div class="text-center">
-                            <div class="refurbishment-badge" data-translate="carousel.slide7.badge">
-                                ✨ Innovation Hub
-                            </div>
-                            <h1 class="text-4xl md:text-6xl font-bold leading-tight mb-6" data-translate="carousel.slide7.title">Where Ideas Come to Life</h1>
-                            <p class="text-xl md:text-2xl mb-8 leading-relaxed max-w-4xl mx-auto" data-translate="carousel.slide7.description">Step into the future of workspace design. Our innovative office environment fosters creativity, collaboration, and success for forward-thinking businesses.</p>
-                            <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4 justify-center">
-                                <a href="amenities.html" class="bg-white text-blue-600 px-8 py-4 rounded-md font-semibold hover:bg-opacity-90 transition text-center shadow-lg" data-translate="carousel.slide7.discoverInnovation">Discover Innovation</a>
-                                <a href="comunitat.html" class="border-2 border-white text-white px-8 py-4 rounded-md font-semibold hover:bg-white hover:bg-opacity-10 transition text-center" data-translate="carousel.slide7.joinCommunity">Join Our Community</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Navigation Dots -->
-        <div class="carousel-dots" id="carouselDots" role="tablist" aria-label="Carousel navigation">
-            <button class="carousel-dot active" data-slide="0" role="tab" aria-label="Go to slide 1" aria-selected="true"></button>
-            <button class="carousel-dot" data-slide="1" role="tab" aria-label="Go to slide 2" aria-selected="false"></button>
-            <button class="carousel-dot" data-slide="2" role="tab" aria-label="Go to slide 3" aria-selected="false"></button>
-            <button class="carousel-dot" data-slide="3" role="tab" aria-label="Go to slide 4" aria-selected="false"></button>
-            <button class="carousel-dot" data-slide="4" role="tab" aria-label="Go to slide 5" aria-selected="false"></button>
-            <button class="carousel-dot" data-slide="5" role="tab" aria-label="Go to slide 6" aria-selected="false"></button>
-            <button class="carousel-dot" data-slide="6" role="tab" aria-label="Go to slide 7" aria-selected="false"></button>
-        </div>
-        
-        <!-- Pause/Play Controls -->
-        <div class="carousel-controls">
-            <button class="carousel-control-btn" id="carouselPlayPause" aria-label="Pause carousel">
-                <i data-feather="pause" id="playPauseIcon"></i>
-            </button>
-        </div>
-    </section>
-
-    <!-- Quick Features -->
-    <section class="bg-gray-50 py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-translate="features.title">Why Choose RealBrave</h2>
-                <p class="max-w-2xl mx-auto text-gray-600" data-translate="features.subtitle">Designed to help your business thrive with premium facilities and location advantages</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
-                    <div class="text-primary mb-4">
-                        <i data-feather="map-pin" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3" data-translate="features.location.title">Prime Location</h3>
-                    <p class="text-gray-600" data-translate="features.location.description">Just 30 minutes from Barcelona with excellent transport links and highway access.</p>
-                </div>
-                <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
-                    <div class="text-primary mb-4">
-                        <i data-feather="wifi" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3" data-translate="features.infrastructure.title">Modern Infrastructure</h3>
-                    <p class="text-gray-600" data-translate="features.infrastructure.description">High-speed fiber internet, advanced security systems, and climate control throughout.</p>
-                </div>
-                <div class="feature-card bg-white p-8 rounded-lg shadow-md transition duration-300">
-                    <div class="text-primary mb-4">
-                        <i data-feather="layout" class="w-10 h-10"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3" data-translate="features.flexible.title">Flexible Spaces</h3>
-                    <p class="text-gray-600" data-translate="features.flexible.description">Customizable office configurations to perfectly match your business needs.</p>
+    <!-- ═══════════════════════════════════════
+         SECTION 1 — AMBIENT HERO
+    ═══════════════════════════════════════ -->
+    <section class="hero-ambient">
+        <div class="hero-bg" id="heroBg" style="background-image: url('no-watermark-images/unwatermarked_working-space-1-canmir.png');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="max-w-7xl mx-auto px-5 sm:px-8 w-full">
+                <p class="text-xs tracking-[0.22em] text-white/50 uppercase mb-8 font-light" data-translate="hero.overline">Terrassa — 2026</p>
+                <h1 class="font-editorial text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-normal text-white leading-tight mb-7 max-w-4xl">
+                    <span class="block" data-translate="hero.headline1">L'oficina ha mort.</span>
+                    <span class="block italic" data-translate="hero.headline2">Visca el lloc de treball.</span>
+                </h1>
+                <p class="text-white/65 text-lg max-w-xl leading-relaxed mb-10 font-light" data-translate="hero.sub">
+                    RealBrave. Un espai de referència al cor de Terrassa, dissenyat per inspirar presència, fomentar la col·laboració i projectar prestigi.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="contact.html" class="bg-white text-gray-900 px-7 py-3.5 text-sm font-medium tracking-wide hover:bg-white/90 transition-colors" data-translate="hero.cta1">Sol·licitar Visita</a>
+                    <a href="spaces.html"  class="border border-white/45 text-white px-7 py-3.5 text-sm font-medium tracking-wide hover:bg-white/10 transition-colors" data-translate="hero.cta2">Explorar Espais</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Building Showcase -->
-    <section class="py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4" data-translate="building.title">Our Building</h2>
-                <p class="max-w-2xl mx-auto text-gray-600" data-translate="building.subtitle">A modern office space designed for productivity and collaboration</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-8">
+    <!-- ═══════════════════════════════════════
+         SECTION 2 — THE MANIFESTO
+    ═══════════════════════════════════════ -->
+    <section class="py-32 lg:py-40 bg-white">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-start">
+
+                <!-- Left: headline + body -->
                 <div>
-                    <img src="render_1.jpg" alt="RealBrave Architectural Render 1" class="rounded-lg shadow-lg mb-4">
-                    <img src="render_2.jpg" alt="RealBrave Architectural Render 2" class="rounded-lg shadow-lg">
+                    <p class="text-[10px] tracking-[0.28em] text-primary uppercase mb-10 font-medium" data-translate="manifesto.overline">La Filosofia</p>
+                    <h2 class="font-editorial text-4xl lg:text-5xl text-gray-900 leading-tight mb-9">
+                        <span class="block" data-translate="manifesto.headline1">Una Destinació,</span>
+                        <span class="block italic" data-translate="manifesto.headline2">No una Obligació.</span>
+                    </h2>
+                    <p class="text-gray-500 leading-relaxed text-lg font-light" data-translate="manifesto.body">
+                        Les empreses no necessiten taules; necessiten un ancoratge cultural. Hem construït RealBrave al voltant de l'experiència sensorial humana. Un ecosistema on la concentració profunda coexisteix naturalment amb l'impuls col·lectiu.
+                    </p>
                 </div>
-                <div class="flex flex-col justify-center">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-4" data-translate="building.mainTitle">Modern Architecture Meets Functionality</h3>
-                    <p class="text-gray-600 mb-6" data-translate="building.description">RealBrave offers a total of 2,500 m² spread across 3 floors, recently renovated to provide the perfect professional environment for your business.</p>
+
+                <!-- Right: pull-quote + image -->
+                <div class="lg:pt-28">
+                    <div class="pull-quote mb-16">
+                        <p class="font-editorial text-2xl text-gray-700 italic leading-relaxed">
+                            <span class="block" data-translate="manifesto.pullquote1">Un espai que el teu equip triarà anar,</span>
+                            <span class="block" data-translate="manifesto.pullquote2">no haurà d'anar.</span>
+                        </p>
+                    </div>
+                    <img src="render_1.jpg" alt="RealBrave Building" class="w-full object-cover" style="max-height:380px; object-fit:cover;">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SECTION 3 — SENSORY SPECIFICATIONS
+    ═══════════════════════════════════════ -->
+    <section class="py-32 lg:py-40 section-warm">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+            <p class="text-[10px] tracking-[0.28em] text-primary uppercase mb-16 font-medium" data-translate="specs.overline">Les Especificacions</p>
+
+            <div class="grid md:grid-cols-3">
+
+                <!-- 01 -->
+                <div class="spec-col mb-12 md:mb-0">
+                    <div class="spec-rule"></div>
+                    <p class="text-[10px] tracking-[0.3em] text-primary uppercase mb-6 font-medium" data-translate="specs.s1.label">L'ATMOSFERA</p>
+                    <h3 class="font-editorial text-2xl text-gray-900 mb-4" data-translate="specs.s1.title">Climatització Integral</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm font-light" data-translate="specs.s1.body">
+                        Control total de temperatura, humitat i qualitat de l'aire a totes les plantes. L'energia cognitiva del teu equip, protegida per disseny.
+                    </p>
+                </div>
+
+                <!-- 02 -->
+                <div class="spec-col mb-12 md:mb-0">
+                    <div class="spec-rule"></div>
+                    <p class="text-[10px] tracking-[0.3em] text-primary uppercase mb-6 font-medium" data-translate="specs.s2.label">LA CONNECTIVITAT</p>
+                    <h3 class="font-editorial text-2xl text-gray-900 mb-4" data-translate="specs.s2.title">Fibra Simètrica</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm font-light" data-translate="specs.s2.body">
+                        Alta velocitat amb redundància integrada. El teu equip treballa sense interrupcions, en local o en remot, sense compromís de rendiment.
+                    </p>
+                </div>
+
+                <!-- 03 -->
+                <div class="spec-col">
+                    <div class="spec-rule"></div>
+                    <p class="text-[10px] tracking-[0.3em] text-primary uppercase mb-6 font-medium" data-translate="specs.s3.label">LA SEGURETAT</p>
+                    <h3 class="font-editorial text-2xl text-gray-900 mb-4" data-translate="specs.s3.title">Accés i Control 24/7</h3>
+                    <p class="text-gray-500 leading-relaxed text-sm font-light" data-translate="specs.s3.body">
+                        Accés ininterromput, control d'entrada i aparcament propi. El teu focus en el treball; la seguretat, la nostra responsabilitat.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SECTION 4 — THE CANVAS
+    ═══════════════════════════════════════ -->
+    <section class="py-32 lg:py-40 bg-white">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+
+                <!-- Image -->
+                <div>
+                    <img src="realbrave_entrance_hall_brave_hub_2.png" alt="RealBrave Entrance Hall" class="w-full object-cover" style="max-height:500px; object-fit:cover;">
+                </div>
+
+                <!-- Text -->
+                <div>
+                    <p class="text-[10px] tracking-[0.28em] text-primary uppercase mb-10 font-medium" data-translate="canvas.overline">El Canvas</p>
+                    <h2 class="font-editorial text-4xl lg:text-5xl text-gray-900 leading-tight mb-8">
+                        <span class="block" data-translate="canvas.headline1">Tres Plantes.</span>
+                        <span class="block italic" data-translate="canvas.headline2">Un Llenç en Blanc.</span>
+                    </h2>
+                    <p class="text-gray-500 leading-relaxed text-lg font-light mb-10" data-translate="canvas.body">
+                        Cada planta ofereix 480 m² sense condicions. Llogues la superfície; tu decideixes la història que explica.
+                    </p>
+                    <a href="spaces.html" class="text-primary text-sm font-medium tracking-wide hover:opacity-60 transition-opacity" data-translate="canvas.cta">Explorar els Espais →</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SECTION 5 — THE ECOSYSTEM
+    ═══════════════════════════════════════ -->
+    <section class="py-32 lg:py-40 section-warm">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <div class="grid lg:grid-cols-3 gap-16 lg:gap-24">
+
+                <!-- Left: section intro -->
+                <div class="lg:sticky lg:top-32 self-start">
+                    <p class="text-[10px] tracking-[0.28em] text-primary uppercase mb-10 font-medium" data-translate="ecosystem.overline">L'Ecosistema</p>
+                    <h2 class="font-editorial text-4xl text-gray-900 leading-tight mb-8">
+                        <span class="block" data-translate="ecosystem.headline1">Dissenyat</span>
+                        <span class="block italic" data-translate="ecosystem.headline2">per als qui hi Viuen.</span>
+                    </h2>
+                    <a href="amenities.html" class="text-primary text-sm font-medium tracking-wide hover:opacity-60 transition-opacity" data-translate="ecosystem.cta">Veure tots els Serveis →</a>
+                </div>
+
+                <!-- Right: ecosystem rows -->
+                <div class="lg:col-span-2">
+                    <div class="eco-row">
+                        <h3 class="font-editorial text-xl text-gray-900 mb-3" data-translate="ecosystem.items.0.label">El Vestíbul</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed font-light" data-translate="ecosystem.items.0.body">Primera impressió de presència. L'espai comú gestionat per RealBrave estableix el to per als teus clients i visites des de l'entrada.</p>
+                    </div>
+                    <div class="eco-row">
+                        <h3 class="font-editorial text-xl text-gray-900 mb-3" data-translate="ecosystem.items.1.label">L'Aparcament</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed font-light" data-translate="ecosystem.items.1.body">Ampli aparcament privat adjacent a l'edifici. Mobilitat sense fricció per a tot l'equip, cada dia.</p>
+                    </div>
+                    <div class="eco-row">
+                        <h3 class="font-editorial text-xl text-gray-900 mb-3" data-translate="ecosystem.items.2.label">Les Zones Verdes</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed font-light" data-translate="ecosystem.items.2.body">Entorn envoltat de vegetació i naturalesa. Moments de desconnexió a peu de l'edifici, sense sortir del campus.</p>
+                    </div>
+                    <div class="eco-row">
+                        <h3 class="font-editorial text-xl text-gray-900 mb-3" data-translate="ecosystem.items.3.label">Les Sales de Reunions</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed font-light" data-translate="ecosystem.items.3.body">Configurades per cada inquilí dins del seu espai. Zones de deliberació integrades, no compartides ni reservables per hores.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         SECTION 6 — AVAILABLE FORMATS (dark CTA)
+    ═══════════════════════════════════════ -->
+    <section class="section-dark py-32 lg:py-40">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+
+            <p class="text-[10px] tracking-[0.28em] text-white/35 uppercase mb-14 font-medium" data-translate="available.overline">Disponibilitat</p>
+            <h2 class="font-editorial text-4xl lg:text-5xl text-white mb-14" data-translate="available.headline">Formats Disponibles</h2>
+
+            <!-- Format rows -->
+            <div class="mb-14">
+                <div class="format-row">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline py-5 gap-1">
+                        <span class="font-editorial text-xl text-white" data-translate="available.f1.label">Planta 1 — Àrea A</span>
+                        <span class="text-white/35 text-sm tracking-wide" data-translate="available.f1.detail">160 m² · 12–18 persones · Disponible</span>
+                    </div>
+                </div>
+                <div class="format-row">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline py-5 gap-1">
+                        <span class="font-editorial text-xl text-white" data-translate="available.f2.label">Planta 1 — Completa</span>
+                        <span class="text-white/35 text-sm tracking-wide" data-translate="available.f2.detail">480 m² · 40–60 persones · Disponible</span>
+                    </div>
+                </div>
+                <div class="format-row">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline py-5 gap-1">
+                        <span class="font-editorial text-xl text-white" data-translate="available.f3.label">Planta 2 — Àrea A</span>
+                        <span class="text-white/35 text-sm tracking-wide" data-translate="available.f3.detail">240 m² · 20–30 persones · Disponible</span>
+                    </div>
+                </div>
+                <div class="format-row">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline py-5 gap-1">
+                        <span class="font-editorial text-xl text-white/45 italic" data-translate="available.f4.label">Planta 2 — Àrea B</span>
+                        <span class="text-white/25 text-sm tracking-wide" data-translate="available.f4.detail">240 m² · 20–30 persones · Pre-llogada</span>
+                    </div>
+                </div>
+                <div class="format-row">
+                    <div class="flex flex-col sm:flex-row sm:justify-between sm:items-baseline py-5 gap-1">
+                        <span class="font-editorial text-xl text-white" data-translate="available.f5.label">Planta 3</span>
+                        <span class="text-white/35 text-sm tracking-wide" data-translate="available.f5.detail">480 m² · 40–60 persones · Disponible</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTAs -->
+            <div class="flex flex-wrap gap-4">
+                <a href="contact.html" class="bg-white text-gray-900 px-8 py-4 text-sm font-medium tracking-wide hover:bg-white/90 transition-colors" data-translate="available.cta1">Sol·licitar una Visita Privada</a>
+                <a href="contact.html" class="border border-white/25 text-white px-8 py-4 text-sm font-medium tracking-wide hover:bg-white/10 transition-colors" data-translate="available.cta2">Contacta'ns</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════ -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div class="md:col-span-2">
+                    <img src="realbrave_logo2.svg" alt="RealBrave" class="h-10 w-auto mb-4" style="filter: brightness(0) invert(1);">
+                    <p class="text-gray-400 text-sm leading-relaxed max-w-xs" data-translate="footer.description">Espais d'oficina a Terrassa per a empreses amb ambició.</p>
+                </div>
+                <div>
+                    <h4 class="text-xs font-semibold tracking-[0.15em] uppercase text-gray-500 mb-5" data-translate="footer.nav">Navegació</h4>
                     <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i data-feather="check" class="text-primary mr-2 mt-1 w-4 h-4"></i>
-                            <span class="text-gray-700" data-translate="building.features.0">Year of renovation: 2023</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="check" class="text-primary mr-2 mt-1 w-4 h-4"></i>
-                            <span class="text-gray-700" data-translate="building.features.1">Total size: 2,500 m²</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="check" class="text-primary mr-2 mt-1 w-4 h-4"></i>
-                            <span class="text-gray-700" data-translate="building.features.2">3 floors of office space</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="check" class="text-primary mr-2 mt-1 w-4 h-4"></i>
-                            <span class="text-gray-700" data-translate="building.features.3">Ample parking available</span>
-                        </li>
+                        <li><a href="index.html"    class="text-gray-400 hover:text-white text-sm transition-colors" data-translate="nav.home">Inici</a></li>
+                        <li><a href="building.html" class="text-gray-400 hover:text-white text-sm transition-colors" data-translate="nav.building">L'Edifici</a></li>
+                        <li><a href="spaces.html"   class="text-gray-400 hover:text-white text-sm transition-colors" data-translate="nav.spaces">Espais</a></li>
+                        <li><a href="amenities.html" class="text-gray-400 hover:text-white text-sm transition-colors" data-translate="nav.amenities">Serveis</a></li>
+                        <li><a href="contact.html"  class="text-gray-400 hover:text-white text-sm transition-colors" data-translate="nav.contact">Contacte</a></li>
                     </ul>
-                    <a href="building.html" class="mt-6 self-start bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-opacity-90 transition" data-translate="building.seeMore">See More Details</a>
                 </div>
-            </div>
-        </div>
-    </section>
-
-<!-- Fitspace Section (hidden) -->
-    <!--
-    <section id="fitspace">
-        <div style="background: linear-gradient(135deg, #1E40AF 0%, #10B981 100%);" class="relative overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center text-white relative z-10">
-                <div class="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full text-sm font-semibold border border-white/30" style="background: rgba(255,255,255,0.15);">
-                    <i data-feather="zap" class="w-4 h-4"></i>
-                    <span data-translate="fitspace.badge">Exclusiu a RealBrave</span>
-                </div>
-                <h2 class="text-4xl md:text-5xl font-bold mb-4" data-translate="fitspace.title">Fitspace</h2>
-                <p class="text-xl max-w-2xl mx-auto" style="color: rgba(255,255,255,0.9);" data-translate="fitspace.subtitle">El gimnàs exclusiu integrat a l'edifici RealBrave — dissenyat per a entrenadors professionals i per als empleats de les empreses inquilines.</p>
-            </div>
-        </div>
-        <div class="bg-gray-50 py-16">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                    <div class="feature-card bg-white rounded-xl shadow-md p-8 transition duration-300" style="border-top: 4px solid #1E40AF;">
-                        <div class="w-14 h-14 rounded-lg flex items-center justify-center mb-6" style="background: #EFF6FF;">
-                            <i data-feather="user-check" class="w-8 h-8 text-primary"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3" data-translate="fitspace.pt.title">Per a Entrenadors Personals</h3>
-                        <p class="text-gray-600 mb-6" data-translate="fitspace.pt.description">Un espai professional per impartir classes grupals i sessions individuals en un entorn exclusiu i ben equipat.</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start text-gray-700">
-                                <i data-feather="check" class="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0"></i>
-                                <span data-translate="fitspace.pt.features.0">Sala equipada per a sessions 1-a-1 i classes grupals</span>
-                            </li>
-                            <li class="flex items-start text-gray-700">
-                                <i data-feather="check" class="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0"></i>
-                                <span data-translate="fitspace.pt.features.1">Horaris flexibles i personalitzables</span>
-                            </li>
-                            <li class="flex items-start text-gray-700">
-                                <i data-feather="check" class="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0"></i>
-                                <span data-translate="fitspace.pt.features.2">Entorn professional dins d'un edifici d'oficines premium</span>
-                            </li>
-                            <li class="flex items-start text-gray-700">
-                                <i data-feather="check" class="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0"></i>
-                                <span data-translate="fitspace.pt.features.3">Accés directe a una clientela corporativa integrada</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="feature-card bg-white rounded-xl shadow-md p-8 transition duration-300" style="border-top: 4px solid #10B981;">
-                        <div class="w-14 h-14 rounded-lg flex items-center justify-center mb-6" style="background: #ECFDF5;">
-                            <i data-feather="briefcase" class="w-8 h-8" style="color: #10B981;"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold text-gray-900 mb-3" data-translate="fitspace.corporate.title">Per a Empreses Inquilines</h3>
-                        <p class="text-gray-600 mb-6" data-translate="fitspace.corporate.description">Una comoditat exclusiva per als empleats de les empreses que lloguen oficines a RealBrave, sense sortir de l'edifici.</p>
-                        <ul class="space-y-3">
-                            <li class="flex items-start text-gray-700">
-                                <i data-feather="check" class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #10B981;"></i>
-                                <span data-translate="fitspace.corporate.features.0">Accés prioritari per als treballadors de l'edifici</span>
-                            </li>
-                            <li class="flex items-start text-gray-700">
-                                <i data-feather="check" class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #10B981;"></i>
-                                <span data-translate="fitspace.corporate.features.1">Benestar i productivitat al mateix lloc de treball</span>
-                            </li>
-                            <li class="flex items-start text-gray-700">
-                                <i data-feather="check" class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #10B981;"></i>
-                                <span data-translate="fitspace.corporate.features.2">Sense desplaçaments: gimnàs integrat a l'edifici</span>
-                            </li>
-                            <li class="flex items-start text-gray-700">
-                                <i data-feather="check" class="w-5 h-5 mr-3 mt-0.5 flex-shrink-0" style="color: #10B981;"></i>
-                                <span data-translate="fitspace.corporate.features.3">Incentiu de benestar i retenció de talent per als teus equips</span>
-                            </li>
+                <div>
+                    <h4 class="text-xs font-semibold tracking-[0.15em] uppercase text-gray-500 mb-5" data-translate="footer.contact">Contacte</h4>
+                    <ul class="space-y-3 text-gray-400 text-sm">
+                        <li>Carretera de Rubí, 292<br>Terrassa, 08191</li>
+                        <li><a href="tel:+34930107830" class="hover:text-white transition-colors">+34 930 107 830</a></li>
+                        <li><a href="mailto:admin@canmirgestions.com" class="hover:text-white transition-colors">admin@canmirgestions.com</a> <span class="text-gray-600 text-xs ml-1">— administració</span></li>
+                        <li><a href="mailto:hello@realbrave.eu" class="hover:text-white transition-colors">hello@realbrave.eu</a> <span class="text-gray-600 text-xs ml-1">— consultes</span></li>
+                    </ul>
+                    <div class="mt-8">
+                        <h4 class="text-xs font-semibold tracking-[0.15em] uppercase text-gray-500 mb-4" data-translate="footer.legal">Legal</h4>
+                        <ul class="space-y-2">
+                            <li><a href="privacy-policy.html"  class="text-gray-500 hover:text-white text-xs transition-colors" data-translate="footer.privacy">Política de Privacitat</a></li>
+                            <li><a href="cookie-policy.html"   class="text-gray-500 hover:text-white text-xs transition-colors" data-translate="footer.cookies">Política de Cookies</a></li>
+                            <li><a href="legal-notice.html"    class="text-gray-500 hover:text-white text-xs transition-colors" data-translate="footer.legalNotice">Avís Legal</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="mt-12 text-center">
-                    <a href="contact.html" class="bg-primary text-white px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition inline-block shadow-md" data-translate="fitspace.cta">Informa't sobre Fitspace</a>
-                </div>
             </div>
-        </div>
-    </section>
-    -->
-
-    <!-- Call to Action -->
-    <section class="bg-primary text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-6" data-translate="cta.title">Ready to Elevate Your Workspace?</h2>
-            <p class="text-xl mb-8 max-w-3xl mx-auto" data-translate="cta.subtitle">Contact us today to schedule a tour and see how RealBrave can help your business grow.</p>
-            <a href="contact.html" target="_blank" id="book-visit-btn" class="bg-white text-primary px-8 py-4 rounded-md font-bold hover:bg-opacity-90 transition text-center inline-block" data-translate="cta.button">Programar Visita Ara</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">RealBrave</h3>
-                    <p class="text-gray-400" data-translate="footer.description">Premium office spaces in Terrassa designed for modern businesses.</p>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4" data-translate="footer.quickLinks">Quick Links</h4>
-                    <ul class="space-y-2">
-                        <li><a href="index.html" class="text-gray-400 hover:text-white" data-translate="footer.links.home">Home</a></li>
-                        <li><a href="building.html" class="text-gray-400 hover:text-white" data-translate="footer.links.building">The Building</a></li>
-                        <li><a href="spaces.html" class="text-gray-400 hover:text-white" data-translate="footer.links.spaces">Available Spaces</a></li>
-                        <li><a href="contact.html" class="text-gray-400 hover:text-white" data-translate="footer.links.contact">Contact Us</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4" data-translate="footer.contact">Contact</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li class="flex items-start">
-                            <i data-feather="map-pin" class="mr-2 w-4 h-4 mt-1"></i>
-                            <span data-translate="footer.contactInfo.address">Carretera de Rubí, 292 Terrassa</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="phone" class="mr-2 w-4 h-4 mt-1"></i>
-                            <span data-translate="footer.contactInfo.phone">+34 930 107 830</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i data-feather="mail" class="mr-2 w-4 h-4 mt-1"></i>
-                            <span data-translate="footer.contactInfo.email">admin@canmirgestions.com</span>
-                        </li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="text-lg font-semibold mb-4" data-translate="footer.legal">Legal</h4>
-                    <ul class="space-y-2">
-                        <li><a href="privacy-policy.html" class="text-gray-400 hover:text-white" data-translate="footer.legalLinks.privacy">Privacy Policy</a></li>
-                        <li><a href="cookie-policy.html" class="text-gray-400 hover:text-white" data-translate="footer.legalLinks.cookies">Cookie Policy</a></li>
-                        <li><a href="legal-notice.html" class="text-gray-400 hover:text-white" data-translate="footer.legalLinks.legal">Legal Notice</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>© <span id="current-year">2025</span> RealBrave. <span data-translate="footer.copyright">All rights reserved.</span></p>
+            <div class="border-t border-gray-800 mt-12 pt-8 text-center text-gray-600 text-xs">
+                © 2026 RealBrave. <span data-translate="footer.rights">Tots els drets reservats.</span>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <div id="whatsapp-float" class="whatsapp-float" aria-label="Contact us on WhatsApp">
-        <div class="whatsapp-icon">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor">
-                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.085"/>
-            </svg>
-        </div>
-        <div class="whatsapp-tooltip">
-            <span id="whatsapp-tooltip-text">Contacta'ns per WhatsApp</span>
+    <!-- ═══════════════════════════════════════
+         WHATSAPP FLOAT
+    ═══════════════════════════════════════ -->
+    <div id="whatsapp-float" class="whatsapp-float" role="button" aria-label="Contacta'ns per WhatsApp">
+        <svg viewBox="0 0 24 24" width="27" height="27" fill="currentColor">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.465 3.085"/>
+        </svg>
+        <div class="whatsapp-tooltip" id="whatsapp-tooltip-text">Contacta'ns per WhatsApp</div>
+    </div>
+
+    <!-- ═══════════════════════════════════════
+         NEWSLETTER POPUP
+    ═══════════════════════════════════════ -->
+    <div id="newsletter-popup" class="newsletter-overlay">
+        <div class="newsletter-modal">
+            <button id="newsletter-close" class="newsletter-close" aria-label="Tancar">×</button>
+            <div id="newsletter-form-view">
+                <p class="newsletter-overline">RealBrave</p>
+                <h3 class="newsletter-title">Rep les novetats</h3>
+                <p class="newsletter-text" data-translate="newsletter.text">Sigues el primer a conèixer disponibilitat, ofertes i novetats de RealBrave.</p>
+                <form id="newsletter-popup-form">
+                    <input type="email" id="nl-email" class="newsletter-input" placeholder="El teu email" required autocomplete="email">
+                    <input type="text" id="nl-hp" style="position:absolute;left:-9999px" tabindex="-1" autocomplete="off">
+                    <label class="newsletter-consent">
+                        <input type="checkbox" id="nl-consent" required>
+                        <span>He llegit i accepto la <a href="privacy-policy.html" target="_blank">política de privacitat</a></span>
+                    </label>
+                    <button type="submit" id="nl-submit" class="newsletter-submit" data-translate="newsletter.submit">Subscriure'm</button>
+                    <p id="nl-error" class="newsletter-error"></p>
+                </form>
+            </div>
+            <div id="nl-success" class="newsletter-success">
+                <div class="newsletter-success-icon">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                </div>
+                <h4 data-translate="newsletter.successTitle">Gràcies!</h4>
+                <p data-translate="newsletter.successText">Rebràs les nostres novetats a la teva bústia.</p>
+            </div>
         </div>
     </div>
 
+    <!-- ═══════════════════════════════════════
+         SCRIPTS
+    ═══════════════════════════════════════ -->
+    <script src="i18n.js"></script>
     <script>
-        // Initialize feather icons with error handling
-        document.addEventListener('DOMContentLoaded', function() {
-            try {
-                if (typeof feather !== 'undefined' && feather.replace) {
-                    feather.replace();
-                }
-            } catch (error) {
-                console.warn('Feather icons initialization failed:', error);
-            }
+        const siteNav = document.getElementById('site-nav');
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY > 72;
+            siteNav.classList.toggle('nav-scrolled', scrolled);
+            const hIcon = document.getElementById('hamburger-icon');
+            if (hIcon) hIcon.setAttribute('stroke', scrolled ? '#374151' : 'white');
+        }, { passive: true });
+
+        document.getElementById('mobile-toggle').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('open');
         });
-    </script>
-    <script>
-        // Internationalization data
-        const translations = {
-            en: {
-                title: "RealBrave - Premium Office Spaces in Terrassa",
-                nav: {
-                    home: "Home",
-                    building: "The Building",
-                    spaces: "Spaces",
-                    amenities: "Amenities",
-                    location: "Location",
-                    contact: "Contact"
-                },
-                hero: {
-                    title: "Premium Office Spaces in Terrassa",
-                    subtitle: "Modern, flexible workspaces designed for growing businesses with state-of-the-art facilities and strategic location.",
-                    scheduleVisit: "Schedule a Visit",
-                    exploreSpaces: "Explore Spaces"
-                },
-                features: {
-                    title: "Why Choose RealBrave",
-                    subtitle: "Designed to help your business thrive with premium facilities and location advantages",
-                    location: {
-                        title: "Prime Location",
-                        description: "Just 30 minutes from Barcelona with excellent transport links and highway access."
-                    },
-                    infrastructure: {
-                        title: "Modern Infrastructure",
-                        description: "High-speed fiber internet, advanced security systems, and climate control throughout."
-                    },
-                    flexible: {
-                        title: "Flexible Spaces",
-                        description: "Customizable office configurations to perfectly match your business needs."
-                    }
-                },
-                building: {
-                    title: "Our Building",
-                    subtitle: "A modern office space designed for productivity and collaboration",
-                    mainTitle: "Modern Architecture Meets Functionality",
-                    description: "RealBrave offers a total of 2,500 m² spread across 3 floors, recently renovated to provide the perfect professional environment for your business.",
-                    features: [
-                        "Year of renovation: 2023",
-                        "Total size: 2,500 m²",
-                        "3 floors of office space",
-                        "Ample parking available"
-                    ],
-                    seeMore: "See More Details"
-                },
-                fitspace: {
-                    title: "Fitspace",
-                    subtitle: "The exclusive gym within RealBrave, designed for personal trainers and corporate tenants",
-                    pt: {
-                        title: "For Personal Trainers",
-                        description: "A professional space to host group classes and one-on-one sessions in a premium environment.",
-                        features: [
-                            "Equipped space for classes and 1-on-1 sessions",
-                            "Flexible access and customizable schedules",
-                            "Exclusive environment within the RealBrave building"
-                        ]
-                    },
-                    corporate: {
-                        title: "For Corporate Tenants",
-                        description: "An exclusive amenity for employees of companies renting offices at RealBrave.",
-                        features: [
-                            "Preferred access for building employees",
-                            "Wellness and productivity at the same workplace",
-                            "No commuting: gym in the building"
-                        ]
-                    },
-                    cta: "Inquire about Fitspace"
-                },
-                cta: {
-                    title: "Ready to Elevate Your Workspace?",
-                    subtitle: "Contact us today to schedule a tour and see how RealBrave can help your business grow.",
-                    button: "Schedule a Tour Now"
-                },
-                footer: {
-                    description: "Premium office spaces in Terrassa designed for modern businesses.",
-                    quickLinks: "Quick Links",
-                    contact: "Contact",
-                    legal: "Legal",
-                    links: {
-                        home: "Home",
-                        building: "The Building",
-                        spaces: "Available Spaces",
-                        contact: "Contact Us"
-                    },
-                    contactInfo: {
-                        address: "Carretera de Rubí, 292 Terrassa",
-                        phone: "+34 123 456 789",
-                        email: "admin@canmirgestions.com"
-                    },
-                    legalLinks: {
-                        privacy: "Privacy Policy",
-                        cookies: "Cookie Policy",
-                        legal: "Legal Notice"
-                    },
-                    copyright: "All rights reserved."
-                },
-                carousel: {
-                    slide1: {
-                        title: "Premium Office Spaces in Terrassa",
-                        subtitle: "Modern, flexible workspaces designed for growing businesses with state-of-the-art facilities and strategic location.",
-                        scheduleVisit: "Schedule a Visit",
-                        exploreSpaces: "Explore Spaces"
-                    },
-                    slide2: {
-                        badge: "🚧 Under Renovation",
-                        title: "Offices Under Refurbishment",
-                        subtitle: "Opening April 2026",
-                        description: "Currently undergoing renovation. These modern office spaces will be ready for occupancy in April 2026. Experience premium facilities designed for the future of work.",
-                        getNotified: "Get Notified When Ready",
-                        viewProgress: "View Progress Updates"
-                    },
-                    slide3: {
-                        badge: "🏗️ Project in Progress",
-                        title: "Offices under construction and completed in 2026",
-                        description: "Discover our new office spaces, designed for innovation and productivity, available from 2026.",
-                        moreInfo: "More Information",
-                        contact: "Contact Us"
-                    },
-                    slide4: {
-                        badge: "🏢 Architectural Vision",
-                        title: "Future RealBrave Design",
-                        description: "Discover the architectural vision for RealBrave - a modern office complex designed to inspire innovation and productivity in the heart of Terrassa.",
-                        exploreDesign: "Explore Design Features",
-                        scheduleTour: "Schedule a Tour"
-                    },
-                    slide5: {
-                        badge: "🌟 Premium Spaces",
-                        title: "Exceptional Office Environment",
-                        description: "Experience the perfect blend of modern architecture and functional design. Our premium office spaces offer the ideal environment for your business to thrive and grow.",
-                        viewSpaces: "View Available Spaces",
-                        contactToday: "Contact Us Today"
-                    },
-                    slide6: {
-                        title: "Experience Excellence",
-                        description: "Join a community of innovative businesses in Terrassa's most prestigious office complex. Premium amenities, strategic location, and flexible terms.",
-                        features: [
-                            "24/7 Security & Access",
-                            "High-Speed Fiber Internet",
-                            "Meeting Rooms & Common Areas"
-                        ],
-                        exploreAmenities: "Explore Amenities",
-                        viewFloorPlans: "View Floor Plans"
-                    },
-                    slide7: {
-                        badge: "✨ Innovation Hub",
-                        title: "Where Ideas Come to Life",
-                        description: "Step into the future of workspace design. Our innovative office environment fosters creativity, collaboration, and success for forward-thinking businesses.",
-                        discoverInnovation: "Discover Innovation",
-                        joinCommunity: "Join Our Community"
-                    }
-                }
-            },
-            es: {
-                title: "RealBrave - Espacios de Oficina Premium en Terrassa",
-                nav: {
-                    home: "Inicio",
-                    building: "El Edificio",
-                    spaces: "Espacios",
-                    amenities: "Servicios",
-                    location: "Ubicación",
-                    contact: "Contacto"
-                },
-                hero: {
-                    title: "Espacios de Oficina Premium en Terrassa",
-                    subtitle: "Espacios de trabajo modernos y flexibles diseñados para empresas en crecimiento con instalaciones de última generación y ubicación estratégica.",
-                    scheduleVisit: "Programar Visita",
-                    exploreSpaces: "Explorar Espacios"
-                },
-                features: {
-                    title: "Por Qué Elegir RealBrave",
-                    subtitle: "Diseñado para ayudar a tu negocio a prosperar con instalaciones premium y ventajas de ubicación",
-                    location: {
-                        title: "Ubicación Privilegiada",
-                        description: "A solo 30 minutos de Barcelona con excelentes conexiones de transporte y acceso a autopistas."
-                    },
-                    infrastructure: {
-                        title: "Infraestructura Moderna",
-                        description: "Internet de fibra de alta velocidad, sistemas de seguridad avanzados y climatización en todo el edificio."
-                    },
-                    flexible: {
-                        title: "Espacios Flexibles",
-                        description: "Configuraciones de oficina personalizables para adaptarse perfectamente a las necesidades de tu negocio."
-                    }
-                },
-                building: {
-                    title: "Nuestro Edificio",
-                    subtitle: "Un espacio de oficina moderno diseñado para la productividad y la colaboración",
-                    mainTitle: "La Arquitectura Moderna se Encuentra con la Funcionalidad",
-                    description: "RealBrave ofrece un total de 2.500 m² distribuidos en 3 plantas, recientemente renovado para proporcionar el entorno profesional perfecto para tu negocio.",
-                    features: [
-                        "Año de renovación: 2023",
-                        "Superficie total: 2.500 m²",
-                        "3 plantas de espacio de oficina",
-                        "Amplio aparcamiento disponible"
-                    ],
-                    seeMore: "Ver Más Detalles"
-                },
-                fitspace: {
-                    title: "Fitspace",
-                    subtitle: "El gimnasio exclusivo dentro de RealBrave, diseñado para entrenadores personales y empresas inquilinas",
-                    pt: {
-                        title: "Para Entrenadores Personales",
-                        description: "Un espacio profesional para impartir clases grupales y sesiones individuales en un entorno premium.",
-                        features: [
-                            "Espacio equipado para clases y sesiones 1-a-1",
-                            "Acceso flexible y horarios personalizables",
-                            "Entorno exclusivo dentro del edificio RealBrave"
-                        ]
-                    },
-                    corporate: {
-                        title: "Para Empresas Inquilinas",
-                        description: "Una comodidad exclusiva para los empleados de las empresas que alquilan oficinas en RealBrave.",
-                        features: [
-                            "Acceso preferente para los trabajadores del edificio",
-                            "Bienestar y productividad en el mismo lugar de trabajo",
-                            "Sin desplazamientos: gimnasio en el edificio"
-                        ]
-                    },
-                    cta: "Infórmate sobre Fitspace"
-                },
-                cta: {
-                    title: "¿Listo para Elevar tu Espacio de Trabajo?",
-                    subtitle: "Contáctanos hoy para programar una visita y ver cómo RealBrave puede ayudar a crecer tu negocio.",
-                    button: "Programar Visita Ahora"
-                },
-                footer: {
-                    description: "Espacios de oficina premium en Terrassa diseñados para empresas modernas.",
-                    quickLinks: "Enlaces Rápidos",
-                    contact: "Contacto",
-                    legal: "Legal",
-                    links: {
-                        home: "Inicio",
-                        building: "El Edificio",
-                        spaces: "Espacios Disponibles",
-                        contact: "Contáctanos"
-                    },
-                    contactInfo: {
-                        address: "Carretera de Rubí, 292 Terrassa",
-                        phone: "+34 930 107 830",
-                        email: "admin@canmirgestions.com"
-                    },
-                    legalLinks: {
-                        privacy: "Política de Privacidad",
-                        cookies: "Política de Cookies",
-                        legal: "Aviso Legal"
-                    },
-                    copyright: "Todos los derechos reservados."
-                },
-                carousel: {
-                    slide1: {
-                        title: "Espacios de Oficina Premium en Terrassa",
-                        subtitle: "Espacios de trabajo modernos y flexibles diseñados para empresas en crecimiento con instalaciones de última generación y ubicación estratégica.",
-                        scheduleVisit: "Programar Visita",
-                        exploreSpaces: "Explorar Espacios"
-                    },
-                    slide2: {
-                        badge: "🚧 En Renovación",
-                        title: "Oficinas en Reforma",
-                        subtitle: "Apertura Abril 2026",
-                        description: "Actualmente en renovación. Estos modernos espacios de oficina estarán listos para ocupación en abril de 2026. Experimenta instalaciones premium diseñadas para el futuro del trabajo.",
-                        getNotified: "Recibir Notificación",
-                        viewProgress: "Ver Actualizaciones"
-                    },
-                    slide3: {
-                        badge: "🏗️ Proyecto en Curso",
-                        title: "Oficinas en construcción y finalizadas en 2026",
-                        description: "Descubre nuestros nuevos espacios de oficina, diseñados para la innovación y la productividad, disponibles a partir de 2026.",
-                        moreInfo: "Más Información",
-                        contact: "Contáctanos"
-                    },
-                    slide4: {
-                        badge: "🏢 Visión Arquitectónica",
-                        title: "Diseño Futuro de RealBrave",
-                        description: "Descubre la visión arquitectónica de RealBrave: un complejo de oficinas moderno diseñado para inspirar innovación y productividad en el corazón de Terrassa.",
-                        exploreDesign: "Explorar Características",
-                        scheduleTour: "Programar Visita"
-                    },
-                    slide5: {
-                        badge: "🌟 Espacios Premium",
-                        title: "Entorno de Oficina Excepcional",
-                        description: "Experimenta la combinación perfecta de arquitectura moderna y diseño funcional. Nuestros espacios de oficina premium ofrecen el entorno ideal para que tu negocio prospere y crezca.",
-                        viewSpaces: "Ver Espacios Disponibles",
-                        contactToday: "Contáctanos Hoy"
-                    },
-                    slide6: {
-                        title: "Experimenta la Excelencia",
-                        description: "Únete a una comunidad de empresas innovadoras en el complejo de oficinas más prestigioso de Terrassa. Servicios premium, ubicación estratégica y términos flexibles.",
-                        features: [
-                            "Seguridad y Acceso 24/7",
-                            "Internet de Fibra de Alta Velocidad",
-                            "Salas de Reuniones y Áreas Comunes"
-                        ],
-                        exploreAmenities: "Explorar Servicios",
-                        viewFloorPlans: "Ver Planos"
-                    },
-                    slide7: {
-                        badge: "✨ Centro de Innovación",
-                        title: "Donde las Ideas Cobran Vida",
-                        description: "Adéntrate en el futuro del diseño de espacios de trabajo. Nuestro entorno de oficina innovador fomenta la creatividad, colaboración y éxito para empresas visionarias.",
-                        discoverInnovation: "Descubrir Innovación",
-                        joinCommunity: "Únete a Nuestra Comunidad"
-                    }
-                }
-            },
-            cat: {
-                title: "RealBrave - Espais d'Oficina Premium a Terrassa",
-                nav: {
-                    home: "Inici",
-                    building: "L'Edifici",
-                    spaces: "Espais",
-                    amenities: "Serveis",
-                    location: "Ubicació",
-                    contact: "Contacte"
-                },
-                hero: {
-                    title: "Espais d'Oficina Premium a Terrassa",
-                    subtitle: "Espais de treball moderns i flexibles dissenyats per a empreses en creixement amb instal·lacions d'última generació i ubicació estratègica.",
-                    scheduleVisit: "Programar Visita",
-                    exploreSpaces: "Explorar Espais"
-                },
-                features: {
-                    title: "Per Què Triar RealBrave",
-                    subtitle: "Dissenyat per ajudar el teu negoci a prosperar amb instal·lacions premium i avantatges d'ubicació",
-                    location: {
-                        title: "Ubicació Privilegiada",
-                        description: "A només 30 minuts de Barcelona amb excel·lents connexions de transport i accés a autopistes."
-                    },
-                    infrastructure: {
-                        title: "Infraestructura Moderna",
-                        description: "Internet de fibra d'alta velocitat, sistemes de seguretat avançats i climatització a tot l'edifici."
-                    },
-                    flexible: {
-                        title: "Espais Flexibles",
-                        description: "Configuracions d'oficina personalitzables per adaptar-se perfectament a les necessitats del teu negoci."
-                    }
-                },
-                building: {
-                    title: "El Nostre Edifici",
-                    subtitle: "Un espai d'oficina modern dissenyat per a la productivitat i la col·laboració",
-                    mainTitle: "L'Arquitectura Moderna es Troba amb la Funcionalitat",
-                    description: "RealBrave ofereix un total de 2.500 m² distribuïts en 3 plantes, recentment renovat per proporcionar l'entorn professional perfecte per al teu negoci.",
-                    features: [
-                        "Any de renovació: 2023",
-                        "Superfície total: 2.500 m²",
-                        "3 plantes d'espai d'oficina",
-                        "Ampli aparcament disponible"
-                    ],
-                    seeMore: "Veure Més Detalls"
-                },
-                fitspace: {
-                    title: "Fitspace",
-                    subtitle: "El gimnàs exclusiu dins de RealBrave, dissenyat per a entrenadors personals i empreses inquilines",
-                    pt: {
-                        title: "Per a Entrenadors Personals",
-                        description: "Un espai professional per impartir classes grupals i sessions individuals en un entorn premium.",
-                        features: [
-                            "Espai equipat per a classes i sessions 1-a-1",
-                            "Accés flexible i horaris personalitzables",
-                            "Entorn exclusiu dins de l'edifici RealBrave"
-                        ]
-                    },
-                    corporate: {
-                        title: "Per a Empreses Inquilines",
-                        description: "Una comoditat exclusiva per als empleats de les empreses que lloguen oficines a RealBrave.",
-                        features: [
-                            "Accés preferent per als treballadors de l'edifici",
-                            "Benestar i productivitat al mateix lloc de treball",
-                            "Sense desplaçaments: gimnàs a l'edifici"
-                        ]
-                    },
-                    cta: "Informa't sobre Fitspace"
-                },
-                cta: {
-                    title: "Preparat per Elevar el teu Espai de Treball?",
-                    subtitle: "Contacta'ns avui per programar una visita i veure com RealBrave pot ajudar a fer créixer el teu negoci.",
-                    button: "Programar Visita Ara"
-                },
-                footer: {
-                    description: "Espais d'oficina premium a Terrassa dissenyats per a empreses modernes.",
-                    quickLinks: "Enllaços Ràpids",
-                    contact: "Contacte",
-                    legal: "Legal",
-                    links: {
-                        home: "Inici",
-                        building: "L'Edifici",
-                        spaces: "Espais Disponibles",
-                        contact: "Contacta'ns"
-                    },
-                    contactInfo: {
-                        address: "Carretera de Rubí, 292 Terrassa",
-                        phone: "+34 930 107 830",
-                        email: "admin@canmirgestions.com"
-                    },
-                    legalLinks: {
-                        privacy: "Política de Privacitat",
-                        cookies: "Política de Cookies",
-                        legal: "Avís Legal"
-                    },
-                    copyright: "Tots els drets reservats."
-                },
-                carousel: {
-                    slide1: {
-                        title: "Espais d'Oficina Premium a Terrassa",
-                        subtitle: "Espais de treball moderns i flexibles dissenyats per a empreses en creixement amb instal·lacions d'última generació i ubicació estratègica.",
-                        scheduleVisit: "Programar Visita",
-                        exploreSpaces: "Explorar Espais"
-                    },
-                    slide2: {
-                        badge: "🚧 En Renovació",
-                        title: "Oficines en Reforma",
-                        subtitle: "Obertura Abril 2026",
-                        description: "Actualment en renovació. Aquests moderns espais d'oficina estaran llestos per a l'ocupació l'abril de 2026. Experimenta instal·lacions premium dissenyades per al futur del treball.",
-                        getNotified: "Rebre Notificació",
-                        viewProgress: "Veure Actualitzacions"
-                    },
-                    slide3: {
-                        badge: "🏗️ Projecte en Curs",
-                        title: "Oficines en construcció i finalitzades el 2026",
-                        description: "Descobreix els nostres nous espais d'oficines, dissenyats per a la innovació i la productivitat, disponibles a partir del 2026.",
-                        moreInfo: "Més Informació",
-                        contact: "Contacta'ns"
-                    },
-                    slide4: {
-                        badge: "🏢 Visió Arquitectònica",
-                        title: "Disseny Futur de RealBrave",
-                        description: "Descobreix la visió arquitectònica de RealBrave: un complex d'oficines modern dissenyat per inspirar innovació i productivitat al cor de Terrassa.",
-                        exploreDesign: "Explorar Característiques",
-                        scheduleTour: "Programar Visita"
-                    },
-                    slide5: {
-                        badge: "🌟 Espais Premium",
-                        title: "Entorn d'Oficina Excepcional",
-                        description: "Experimenta la combinació perfecta d'arquitectura moderna i disseny funcional. Els nostres espais d'oficina premium ofereixen l'entorn ideal perquè el teu negoci prosperi i creixi.",
-                        viewSpaces: "Veure Espais Disponibles",
-                        contactToday: "Contacta'ns Avui"
-                    },
-                    slide6: {
-                        title: "Experimenta l'Excel·lència",
-                        description: "Uneix-te a una comunitat d'empreses innovadores al complex d'oficines més prestigiós de Terrassa. Serveis premium, ubicació estratègica i termes flexibles.",
-                        features: [
-                            "Seguretat i Accés 24/7",
-                            "Internet de Fibra d'Alta Velocitat",
-                            "Sales de Reunions i Àrees Comunes"
-                        ],
-                        exploreAmenities: "Explorar Serveis",
-                        viewFloorPlans: "Veure Plànols"
-                    },
-                    slide7: {
-                        badge: "✨ Centre d'Innovació",
-                        title: "On les Idees Prenen Vida",
-                        description: "Endinsa't en el futur del disseny d'espais de treball. El nostre entorn d'oficina innovador fomenta la creativitat, col·laboració i èxit per a empreses visionàries.",
-                        discoverInnovation: "Descobrir Innovació",
-                        joinCommunity: "Uneix-te a la Nostra Comunitat"
-                    }
-                }
-            }
-        };
 
-        // Current language state
-        let currentLanguage = 'cat';
-
-        // Language switching functionality
-        function switchLanguage(lang) {
-            currentLanguage = lang;
-            localStorage.setItem('smartplaces-language', lang);
-            updateContent();
-            updateLanguageButtons();
-            updatePageLanguage();
-            updateWhatsAppTooltip(); // Update WhatsApp tooltip when language changes
-        }
-
-        function updateContent() {
-            const t = translations[currentLanguage];
-            
-            // Update page title
-            document.title = t.title;
-            
-            // Generic function to update elements with data-translate attributes
-            function updateElementsWithDataTranslate() {
-                const elementsWithTranslate = document.querySelectorAll('[data-translate]');
-                
-                elementsWithTranslate.forEach(element => {
-                    const translateKey = element.getAttribute('data-translate');
-                    const translatedText = getNestedTranslation(t, translateKey);
-                    
-                    if (translatedText !== undefined && translatedText !== null) {
-                        element.textContent = translatedText;
-                    }
-                });
-            }
-            
-            // Helper function to get nested translation values (e.g., "nav.home")
-            function getNestedTranslation(obj, path) {
-                return path.split('.').reduce((current, key) => {
-                    if (current && typeof current === 'object') {
-                        // Handle array access (e.g., "features.0")
-                        if (!isNaN(key)) {
-                            return current[parseInt(key)];
-                        }
-                        return current[key];
-                    }
-                    return undefined;
-                }, obj);
-            }
-            
-            // Update all elements with data-translate attributes
-            updateElementsWithDataTranslate();
-            
-            // Update carousel slides with special handling
-            updateCarouselSlides(t);
-            
-            // Update WhatsApp tooltip when content is updated
-            updateWhatsAppTooltip();
-        }
-
-        function updateCarouselSlides(t) {
-            // Update Slide 1 (Main Hero)
-            const slide1 = document.querySelector('[data-slide="0"]');
-            if (slide1 && t.carousel && t.carousel.slide1) {
-                const title = slide1.querySelector('h1');
-                const subtitle = slide1.querySelector('p');
-                const scheduleBtn = slide1.querySelector('a#schedule-visit-btn');
-                const exploreBtn = slide1.querySelector('button:not(#schedule-visit-btn)');
-                
-                if (title) title.textContent = t.carousel.slide1.title;
-                if (subtitle) subtitle.textContent = t.carousel.slide1.subtitle;
-                if (scheduleBtn) scheduleBtn.textContent = t.carousel.slide1.scheduleVisit;
-                if (exploreBtn) exploreBtn.textContent = t.carousel.slide1.exploreSpaces;
-            }
-
-            // Update Slide 2 (Refurbishment)
-            const slide2 = document.querySelector('[data-slide="1"]');
-            if (slide2 && t.carousel && t.carousel.slide2) {
-                const badge = slide2.querySelector('.refurbishment-badge');
-                const title = slide2.querySelector('h1');
-                const subtitle = slide2.querySelector('h2');
-                const description = slide2.querySelector('p');
-                const buttons = slide2.querySelectorAll('a, button');
-                
-                if (badge) badge.textContent = t.carousel.slide2.badge;
-                if (title) title.textContent = t.carousel.slide2.title;
-                if (subtitle) subtitle.textContent = t.carousel.slide2.subtitle;
-                if (description) description.textContent = t.carousel.slide2.description;
-                if (buttons[0]) buttons[0].textContent = t.carousel.slide2.getNotified;
-                if (buttons[1]) buttons[1].textContent = t.carousel.slide2.viewProgress;
-            }
-
-            // Update Slide 3 (Construction)
-            const slide3 = document.querySelector('[data-slide="2"]');
-            if (slide3 && t.carousel && t.carousel.slide3) {
-                const badge = slide3.querySelector('.refurbishment-badge');
-                const title = slide3.querySelector('h1');
-                const description = slide3.querySelector('p');
-                const buttons = slide3.querySelectorAll('a, button');
-                
-                if (badge) badge.textContent = t.carousel.slide3.badge;
-                if (title) title.textContent = t.carousel.slide3.title;
-                if (description) description.textContent = t.carousel.slide3.description;
-                if (buttons[0]) buttons[0].textContent = t.carousel.slide3.moreInfo;
-                if (buttons[1]) buttons[1].textContent = t.carousel.slide3.contact;
-            }
-
-            // Update Slide 4 (Render 1)
-            const slide4 = document.querySelector('[data-slide="3"]');
-            if (slide4 && t.carousel && t.carousel.slide4) {
-                const badge = slide4.querySelector('.refurbishment-badge');
-                const title = slide4.querySelector('h1');
-                const description = slide4.querySelector('p');
-                const buttons = slide4.querySelectorAll('a, button');
-                
-                if (badge) badge.textContent = t.carousel.slide4.badge;
-                if (title) title.textContent = t.carousel.slide4.title;
-                if (description) description.textContent = t.carousel.slide4.description;
-                if (buttons[0]) buttons[0].textContent = t.carousel.slide4.exploreDesign;
-                if (buttons[1]) buttons[1].textContent = t.carousel.slide4.scheduleTour;
-            }
-
-            // Update Slide 5 (Render 2)
-            const slide5 = document.querySelector('[data-slide="4"]');
-            if (slide5 && t.carousel && t.carousel.slide5) {
-                const badge = slide5.querySelector('.refurbishment-badge');
-                const title = slide5.querySelector('h1');
-                const description = slide5.querySelector('p');
-                const buttons = slide5.querySelectorAll('a, button');
-                
-                if (badge) badge.textContent = t.carousel.slide5.badge;
-                if (title) title.textContent = t.carousel.slide5.title;
-                if (description) description.textContent = t.carousel.slide5.description;
-                if (buttons[0]) buttons[0].textContent = t.carousel.slide5.viewSpaces;
-                if (buttons[1]) buttons[1].textContent = t.carousel.slide5.contactToday;
-            }
-
-            // Update Slide 6 (Excellence)
-            const slide6 = document.querySelector('[data-slide="5"]');
-            if (slide6 && t.carousel && t.carousel.slide6) {
-                const title = slide6.querySelector('h1');
-                const description = slide6.querySelector('p');
-                const features = slide6.querySelectorAll('.flex.items-center span');
-                const buttons = slide6.querySelectorAll('a, button');
-                
-                if (title) title.textContent = t.carousel.slide6.title;
-                if (description) description.textContent = t.carousel.slide6.description;
-                
-                // Update feature list
-                if (t.carousel.slide6.features && features.length >= 3) {
-                    features[0].textContent = t.carousel.slide6.features[0];
-                    features[1].textContent = t.carousel.slide6.features[1];
-                    features[2].textContent = t.carousel.slide6.features[2];
-                }
-                
-                if (buttons[0]) buttons[0].textContent = t.carousel.slide6.exploreAmenities;
-                if (buttons[1]) buttons[1].textContent = t.carousel.slide6.viewFloorPlans;
-            }
-
-            // Update Slide 7 (Innovation Hub)
-            const slide7 = document.querySelector('[data-slide="6"]');
-            if (slide7 && t.carousel && t.carousel.slide7) {
-                const badge = slide7.querySelector('.refurbishment-badge');
-                const title = slide7.querySelector('h1');
-                const description = slide7.querySelector('p');
-                const buttons = slide7.querySelectorAll('a, button');
-                
-                if (badge) badge.textContent = t.carousel.slide7.badge;
-                if (title) title.textContent = t.carousel.slide7.title;
-                if (description) description.textContent = t.carousel.slide7.description;
-                if (buttons[0]) buttons[0].textContent = t.carousel.slide7.discoverInnovation;
-                if (buttons[1]) buttons[1].textContent = t.carousel.slide7.joinCommunity;
-            }
-        }
-
-        function updateLanguageButtons() {
-            const buttons = document.querySelectorAll('.language-selector');
-            buttons.forEach(button => {
-                button.classList.remove('bg-primary', 'text-white');
-                button.classList.add('border-gray-300');
-            });
-            
-            const activeButton = document.querySelector(`[data-lang="${currentLanguage}"]`);
-            if (activeButton) {
-                activeButton.classList.add('bg-primary', 'text-white');
-                activeButton.classList.remove('border-gray-300');
-            }
-        }
-
-        function updatePageLanguage() {
-            document.documentElement.lang = currentLanguage;
-        }
-
-        // Initialize language system
-        function initializeLanguage() {
-            // Load saved language or default to Catalan
-            const savedLanguage = localStorage.getItem('smartplaces-language') || 'cat';
-            currentLanguage = savedLanguage;
-            
-            // Add data attributes to language buttons
-            const buttons = document.querySelectorAll('.language-selector');
-            buttons[0].setAttribute('data-lang', 'cat');
-            buttons[1].setAttribute('data-lang', 'es');
-            buttons[2].setAttribute('data-lang', 'en');
-            
-            // Add click event listeners
-            buttons.forEach(button => {
-                button.addEventListener('click', () => {
-                    const lang = button.getAttribute('data-lang');
-                    switchLanguage(lang);
-                });
-            });
-            
-            // Update content and UI
-            updateContent();
-            updateLanguageButtons();
-            updatePageLanguage();
-        }
-
-        // Typeform configuration
-        const TYPEFORM_CONFIG = {
-            formId: 'YOUR_TYPEFORM_ID', // Replace with your actual Typeform ID
-            calLink: 'smartplaces/visit' // Your Cal.com booking link
-        };
-
-        // Initialize WhatsApp booking flow
-        function initializeBookingFlow() {
-            console.log('Initializing booking flow...');
-            
-            // Set up scheduling buttons with WhatsApp links
-            const scheduleBtn = document.getElementById('schedule-visit-btn');
-            const bookBtn = document.getElementById('book-visit-btn');
-            const contactaNsBtn = document.getElementById('contacta-ns-btn');
-            
-            console.log('Schedule button:', scheduleBtn);
-            console.log('Book button:', bookBtn);
-            console.log('Contacta\'ns button:', contactaNsBtn);
-            
-            if (scheduleBtn) {
-                scheduleBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    console.log('Schedule button clicked');
-                    openWhatsAppChat();
-                });
-            }
-            
-            if (bookBtn) {
-                bookBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    console.log('Book button clicked');
-                    openWhatsAppChat();
-                });
-            }
-            
-            if (contactaNsBtn) {
-                contactaNsBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    console.log('Contacta\'ns button clicked');
-                    openWhatsAppChat();
-                });
-            }
-            
-            // Handle all "Programar Visitar" buttons and links in carousel and page
-            const allElements = document.querySelectorAll('button, a');
-            allElements.forEach(element => {
-                const text = element.textContent.trim().toLowerCase();
-                if (text.includes('programar') || text.includes('book') || text.includes('visitar')) {
-                    console.log('Adding WhatsApp handler to element:', element.textContent);
-                    element.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        console.log('Element clicked:', element.textContent);
-                        openWhatsAppChat();
-                    });
-                    
-                    // Remove any existing href to prevent conflicts and set cursor
-                    if (element.tagName === 'A') {
-                        element.removeAttribute('href');
-                        element.style.cursor = 'pointer';
-                    }
-                }
-                
-                // Handle "Explorar Espais" buttons - redirect to spaces.html
-                if (text.includes('explorar espais') || text.includes('explore spaces') || text.includes('explorar espacios')) {
-                    console.log('Adding spaces.html redirect to element:', element.textContent);
-                    element.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        console.log('Explorar Espais button clicked:', element.textContent);
-                        window.location.href = 'spaces.html';
-                    });
-                    
-                    // Set cursor pointer style
-                    element.style.cursor = 'pointer';
-                }
-            });
-            // Initialize WhatsApp floating button
-            initializeWhatsAppFloat();
-        }
-        
-        // Initialize WhatsApp floating button
-        function initializeWhatsAppFloat() {
-            const whatsappFloat = document.getElementById('whatsapp-float');
-            
-            if (whatsappFloat) {
-                whatsappFloat.addEventListener('click', function() {
-                    console.log('WhatsApp float button clicked');
-                    openWhatsAppChat();
-                });
-                
-                // Update tooltip text based on current language
-                updateWhatsAppTooltip();
-            }
-        }
-        
-        // Update WhatsApp tooltip text based on current language
-        function updateWhatsAppTooltip() {
-            const tooltipText = document.getElementById('whatsapp-tooltip-text');
-            if (tooltipText) {
-                const tooltipTranslations = {
-                    cat: "Contacta'ns per WhatsApp",
-                    es: "Contáctanos por WhatsApp",
-                    en: "Contact us on WhatsApp"
-                };
-                tooltipText.textContent = tooltipTranslations[currentLanguage] || tooltipTranslations.cat;
-            }
-        }
-
-        // Open WhatsApp chat
-        function openWhatsAppChat() {
-            console.log('Opening WhatsApp chat...');
-            const whatsappURL = generateWhatsAppURL(currentLanguage);
-            console.log('WhatsApp URL:', whatsappURL);
-            window.open(whatsappURL, '_blank');
-        }
-
-        // Update footer year automatically
-        document.addEventListener('DOMContentLoaded', function() {
-            const yearElement = document.getElementById('current-year');
-            if (yearElement) {
-                yearElement.textContent = new Date().getFullYear();
-            }
+        window.addEventListener('load', () => {
+            const bg = document.getElementById('heroBg');
+            if (bg) bg.classList.add('loaded');
         });
-        
-        // Carousel functionality
-        let currentSlide = 0;
-        let isPlaying = true;
-        let carouselInterval;
-        const totalSlides = 7;
-        const slideInterval = 7000; // 7 seconds
 
-        // Initialize carousel
-        function initializeCarousel() {
-            try {
-                const carouselContainer = document.getElementById('carouselContainer');
-                const dots = document.querySelectorAll('.carousel-dot');
-                const playPauseBtn = document.getElementById('carouselPlayPause');
-                const playPauseIcon = document.getElementById('playPauseIcon');
-                const heroCarousel = document.getElementById('heroCarousel');
+        document.getElementById('whatsapp-float').addEventListener('click', () => {
+            window.open(window.RBi18n.generateWAUrl('default'), '_blank');
+        });
 
-                if (!carouselContainer) {
-                    console.warn('Carousel container not found');
-                    return;
-                }
+        /* --- Newsletter popup --- */
+        (function() {
+            var LS_KEY = 'nl_popup_closed';
+            var closed = localStorage.getItem(LS_KEY);
+            if (closed && (Date.now() - parseInt(closed, 10) < 2592000000)) return;
 
-                if (!dots.length) {
-                    console.warn('Carousel dots not found');
-                    return;
-                }
+            var supabaseUrl = 'https://ofqxvygsjneccemymtws.supabase.co';
+            var supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im9mcXh2eWdzam5lY2NlbXltdHdzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU5MDc4MzQsImV4cCI6MjA2MTQ4MzgzNH0.Ko5b4QaVUZT2sbhl_PjZ8nE7NN0kp6__jOE29dc1-3g';
+            var sb = window.supabase.createClient(supabaseUrl, supabaseKey);
 
-                if (!playPauseBtn) {
-                    console.warn('Play/pause button not found');
-                    return;
-                }
+            var overlay = document.getElementById('newsletter-popup');
+            var form = document.getElementById('newsletter-popup-form');
+            var emailInput = document.getElementById('nl-email');
+            var hpInput = document.getElementById('nl-hp');
+            var consentInput = document.getElementById('nl-consent');
+            var submitBtn = document.getElementById('nl-submit');
+            var errorEl = document.getElementById('nl-error');
+            var formView = document.getElementById('newsletter-form-view');
+            var successView = document.getElementById('nl-success');
 
-                if (!heroCarousel) {
-                    console.warn('Hero carousel not found');
-                    return;
-                }
-
-                // Start auto-advance
-                startCarousel();
-
-                // Dot navigation
-                dots.forEach((dot, index) => {
-                    if (dot) {
-                        dot.addEventListener('click', () => {
-                            goToSlide(index);
-                        });
-                    }
-                });
-
-                // Play/Pause button
-                if (playPauseBtn) {
-                    playPauseBtn.addEventListener('click', () => {
-                        togglePlayPause();
-                    });
-                }
-
-                // Pause on hover
-                if (heroCarousel) {
-                    heroCarousel.addEventListener('mouseenter', () => {
-                        if (isPlaying) {
-                            pauseCarousel();
-                        }
-                    });
-
-                    heroCarousel.addEventListener('mouseleave', () => {
-                        if (isPlaying) {
-                            startCarousel();
-                        }
-                    });
-
-                    // Touch/swipe support for mobile
-                    let startX = 0;
-                    let endX = 0;
-
-                    heroCarousel.addEventListener('touchstart', (e) => {
-                        if (e.touches && e.touches[0]) {
-                            startX = e.touches[0].clientX;
-                        }
-                    });
-
-                    heroCarousel.addEventListener('touchend', (e) => {
-                        if (e.changedTouches && e.changedTouches[0]) {
-                            endX = e.changedTouches[0].clientX;
-                            handleSwipe();
-                        }
-                    });
-
-                    function handleSwipe() {
-                        const swipeThreshold = 50;
-                        const diff = startX - endX;
-
-                        if (Math.abs(diff) > swipeThreshold) {
-                            if (diff > 0) {
-                                // Swipe left - next slide
-                                goToSlide(currentSlide + 1);
-                            } else {
-                                // Swipe right - previous slide
-                                goToSlide(currentSlide - 1);
-                            }
-                        }
-                    }
-                }
-
-                // Keyboard navigation
-                document.addEventListener('keydown', (e) => {
-                    if (e.key === 'ArrowLeft') {
-                        goToSlide(currentSlide - 1);
-                    } else if (e.key === 'ArrowRight') {
-                        goToSlide(currentSlide + 1);
-                    } else if (e.key === ' ') {
-                        e.preventDefault();
-                        togglePlayPause();
-                    }
-                });
-
-                console.log('Carousel initialized successfully');
-            } catch (error) {
-                console.error('Error initializing carousel:', error);
+            function showPopup() {
+                overlay.classList.add('show');
             }
-        }
 
-        function goToSlide(slideIndex) {
-            try {
-                const carouselContainer = document.getElementById('carouselContainer');
-                const dots = document.querySelectorAll('.carousel-dot');
+            function hidePopup() {
+                overlay.classList.remove('show');
+                localStorage.setItem(LS_KEY, String(Date.now()));
+            }
 
-                if (!carouselContainer) {
-                    console.warn('Carousel container not found in goToSlide');
+            document.getElementById('newsletter-close').addEventListener('click', hidePopup);
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay) hidePopup();
+            });
+
+            setTimeout(showPopup, 15000);
+
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                errorEl.classList.remove('show');
+                errorEl.textContent = '';
+
+                if (hpInput.value) return;
+
+                var email = emailInput.value.trim();
+                if (!email || !consentInput.checked) {
+                    errorEl.textContent = window.RBi18n ? window.RBi18n.getTranslation('newsletter.validation') || 'Si us plau, completa tots els camps.' : 'Si us plau, completa tots els camps.';
+                    errorEl.classList.add('show');
                     return;
                 }
 
-                // Handle wrap-around
-                if (slideIndex >= totalSlides) {
-                    slideIndex = 0;
-                } else if (slideIndex < 0) {
-                    slideIndex = totalSlides - 1;
-                }
+                submitBtn.disabled = true;
+                submitBtn.textContent = window.RBi18n ? window.RBi18n.getTranslation('newsletter.sending') || 'Enviant…' : 'Enviant…';
 
-                currentSlide = slideIndex;
-
-                // Move carousel
-                const translateX = -currentSlide * 100;
-                carouselContainer.style.transform = `translateX(${translateX}%)`;
-
-                // Update dots
-                dots.forEach((dot, index) => {
-                    if (dot) {
-                        dot.classList.toggle('active', index === currentSlide);
-                        dot.setAttribute('aria-selected', index === currentSlide ? 'true' : 'false');
-                    }
-                });
-
-                // Update screen reader announcement
-                const carouselStatus = document.getElementById('carouselStatus');
-                if (carouselStatus) {
-                    carouselStatus.textContent = `Slide ${currentSlide + 1} of ${totalSlides}`;
-                }
-
-                // Restart auto-advance if playing
-                if (isPlaying) {
-                    clearInterval(carouselInterval);
-                    startCarousel();
-                }
-            } catch (error) {
-                console.error('Error in goToSlide:', error);
-            }
-        }
-
-        function nextSlide() {
-            goToSlide(currentSlide + 1);
-        }
-
-        function startCarousel() {
-            try {
-                if (carouselInterval) {
-                    clearInterval(carouselInterval);
-                }
-                carouselInterval = setInterval(nextSlide, slideInterval);
-            } catch (error) {
-                console.error('Error starting carousel:', error);
-            }
-        }
-
-        function pauseCarousel() {
-            try {
-                if (carouselInterval) {
-                    clearInterval(carouselInterval);
-                }
-            } catch (error) {
-                console.error('Error pausing carousel:', error);
-            }
-        }
-
-        function togglePlayPause() {
-            try {
-                const playPauseIcon = document.getElementById('playPauseIcon');
-                const playPauseBtn = document.getElementById('carouselPlayPause');
-
-                isPlaying = !isPlaying;
-
-                if (isPlaying) {
-                    startCarousel();
-                    if (playPauseIcon) {
-                        playPauseIcon.setAttribute('data-feather', 'pause');
-                    }
-                    if (playPauseBtn) {
-                        playPauseBtn.setAttribute('aria-label', 'Pause carousel');
-                    }
-                } else {
-                    pauseCarousel();
-                    if (playPauseIcon) {
-                        playPauseIcon.setAttribute('data-feather', 'play');
-                    }
-                    if (playPauseBtn) {
-                        playPauseBtn.setAttribute('aria-label', 'Play carousel');
-                    }
-                }
-
-                // Re-render feather icons with error handling
                 try {
-                    if (typeof feather !== 'undefined' && feather.replace) {
-                        feather.replace();
-                    }
-                } catch (error) {
-                    console.warn('Feather icons re-render failed:', error);
+                    var result = await sb
+                        .from('Realbrave-contactforms')
+                        .insert([{
+                            full_name: email,
+                            email: email,
+                            message: 'Subscripció newsletter via popup',
+                            privacy_consent: true,
+                            newsletter_subscription: true,
+                            source: 'newsletter_popup'
+                        }]);
+
+                    if (result.error) throw result.error;
+
+                    formView.style.display = 'none';
+                    successView.classList.add('show');
+                    localStorage.setItem(LS_KEY, String(Date.now()));
+                    setTimeout(hidePopup, 4000);
+                } catch (err) {
+                    errorEl.textContent = window.RBi18n ? window.RBi18n.getTranslation('newsletter.error') || 'Hi ha hagut un error. Torna-ho a intentar.' : 'Hi ha hagut un error. Torna-ho a intentar.';
+                    errorEl.classList.add('show');
+                } finally {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = window.RBi18n ? window.RBi18n.getTranslation('newsletter.submit') || 'Subscriure\'m' : 'Subscriure\'m';
                 }
-            } catch (error) {
-                console.error('Error toggling play/pause:', error);
-            }
-        }
-
-        // Hero image rotation functionality removed - now handled by carousel
-
-        // Mobile menu toggle functionality would go here
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize language system
-            initializeLanguage();
-            
-            // Initialize booking flow (Typeform + Cal.com)
-            initializeBookingFlow();
-            
-            // Initialize carousel
-            initializeCarousel();
-            
-            // Animation for feature cards
-            const featureCards = document.querySelectorAll('.feature-card');
-            featureCards.forEach(card => {
-                card.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
             });
-        });
+        })();
     </script>
 </body>
 </html>
