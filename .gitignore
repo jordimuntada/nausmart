@@ -14,11 +14,21 @@ check-domains.js
 # Temp files
 nul
 
-# Tool config
+# Tool config (may contain hardcoded credentials)
 .opencode/
 .claude/
+.roo/
 .next/
 supabase/.temp/
+next-env.d.ts
+
+# Secret-prone file types
+*.pem
+*.key
+*.p12
+*.pfx
+service-account*.json
+credentials.json
 
 # Personal files
 Fotos planta oficines.zip
