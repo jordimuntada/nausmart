@@ -25,11 +25,12 @@ serve(async (req) => {
 
     const newData = record;
     
-    // Send admin notification + SMS + welcome to submitter
-    const [emailResult, smsResult, welcomeResult] = await Promise.all([
+    // Send admin notification + SMS + welcome to submitter + Telegram
+    const [emailResult, smsResult, welcomeResult, telegramResult] = await Promise.all([
       sendContactFormEmail(newData),
       sendContactFormSMS(newData),
       sendWelcomeEmail(newData),
+      sendTelegramNotification(newData),
     ]);
 
     return new Response(
@@ -38,7 +39,8 @@ serve(async (req) => {
         message: 'Contact form notifications sent',
         email: emailResult,
         sms: smsResult,
-        welcome: welcomeResult
+        welcome: welcomeResult,
+        telegram: telegramResult,
       }),
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     );
@@ -168,6 +170,60 @@ async function sendContactFormEmail(data: any) {
       sent: !error, 
       message: error ? error.message : 'Email sent successfully',
       id: emailData?.id 
+    };
+  } catch (error) {
+    return { sent: false, message: error.message };
+  }
+}
+
+async function sendTelegramNotification(data: any) {
+  const botToken = Deno.env.get('TELEGRAM_BOT_TOKEN');
+  const chatId = Deno.env.get('TELEGRAM_CHAT_ID');
+
+  if (!botToken || !chatId) {
+    return { sent: false, message: 'Telegram credentials not set' };
+  }
+
+  const name = data.full_name || data.name || data.email || 'Unknown';
+  const email = data.email || 'N/A';
+  const phone = data.phone || 'N/A';
+  const spaceType = data.space_type || '';
+  const budget = data.budget || '';
+  const message = data.message
+    ? (data.message.length > 200 ? data.message.substring(0, 200) + '...' : data.message)
+    : 'N/A';
+  const source = data.source || 'contact_form';
+
+  const extra = [spaceType, budget].filter(Boolean).join(' · ');
+  const sourceLabel = source === 'newsletter_popup' ? '📬 Newsletter' : '📋 Contacte';
+
+  const text = `${sourceLabel} · RealBrave
+
+👤 ${name}
+📧 ${email}
+📞 ${phone}
+${extra ? `📝 ${extra}\n` : ''}
+💬 ${message}`;
+
+  try {
+    const response = await fetch(
+      `https://api.telegram.org/bot${botToken}/sendMessage`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          chat_id: parseInt(chatId, 10),
+          text,
+          parse_mode: 'HTML',
+        }),
+      }
+    );
+
+    const result = await response.json();
+
+    return {
+      sent: response.ok,
+      message: result.ok ? 'Telegram sent' : result.description || 'Telegram send failed',
     };
   } catch (error) {
     return { sent: false, message: error.message };
