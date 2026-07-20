@@ -10,7 +10,7 @@
 
 ## Grupo Prodesco
 **To:** info@prodesco.es
-**Subject:** Nueva plataforma en Terrassa — ¿necesitáis oficinas al lado?
+**Subject:** Grupo Prodesco — oficinas en Terrassa junto a vuestra nueva plataforma
 
 Hola,
 
@@ -32,7 +32,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ## Qida
 **To:** empleo@qida.es
-**Subject:** €37M y 300 personas de oficina — ¿caben todos en vuestra sede?
+**Subject:** Qida — espacio para 300 personas en Terrassa
 
 Hola,
 
@@ -52,7 +52,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ## Ocean Ecostructures
 **To:** info@oceanecostructures.com
-**Subject:** Top 12 Nasdaq Emerging Companies — ¿oficina para el equipo?
+**Subject:** Ocean Ecostructures — oficina para el equipo en Terrassa
 
 Hola,
 
@@ -72,7 +72,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ## Landbot
 **To:** press@landbot.io
-**Subject:** Clientes como Allianz y Nestlé — ¿necesitáis espacio para crecer?
+**Subject:** Landbot — espacio para el equipo en Terrassa
 
 Hola,
 
@@ -92,7 +92,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ## Delfos Energy
 **To:** info@delfos.energy
-**Subject:** 10.000 activos renovables monitorizados — ¿espacio para el equipo?
+**Subject:** Delfos Energy — espacio en Terrassa para el equipo
 
 Hola,
 
@@ -112,7 +112,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ## Pastisart
 **To:** info@pastisart.com
-**Subject:** €112M de facturación y fábrica en expansión — ¿y las oficinas?
+**Subject:** Pastisart — oficinas en Terrassa para vuestra dirección y gestión
 
 Hola,
 
@@ -132,7 +132,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ## Cooltra
 **To:** info@cooltra.com
-**Subject:** €60M de facturación y líder europeo — ¿hub en el Vallès?
+**Subject:** Cooltra — hub en el Vallès para Europa
 
 Hola,
 
@@ -152,7 +152,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ## Plusfresc
 **To:** xsocials@plusfresc.es
-**Subject:** Primera tienda en Terrassa — ¿y vuestro equipo de expansión?
+**Subject:** Plusfresc — base de operaciones en Terrassa
 
 Hola,
 
@@ -172,7 +172,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ## Able Human Motion
 **To:** hello@ablehumanmotion.com
-**Subject:** 7 prototipos, 200 pacientes — ¿vuestro equipo tiene espacio para escalar?
+**Subject:** Able Human Motion — espacio para escalar en Terrassa
 
 Hola,
 
@@ -192,7 +192,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ## Neuroelectrics
 **To:** info@neuroelectrics.com
-**Subject:** 100 instituciones de investigación como clientes — ¿espacio para el siguiente paso?
+**Subject:** Neuroelectrics — espacio para el siguiente paso en Terrassa
 
 Hola,
 
@@ -212,7 +212,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ## IOMED
 **To:** info@iomed.health
-**Subject:** 50 hospitales, varias rondas — ¿el equipo tiene espacio para crecer?
+**Subject:** IOMED — espacio para el equipo en Terrassa
 
 Hola,
 
@@ -232,7 +232,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ## Theker
 **To:** info@theker.eu
-**Subject:** La mayor ronda seed de España — ¿dónde crece el equipo?
+**Subject:** Theker — espacio para crecer en Terrassa
 
 Hola,
 
@@ -252,7 +252,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ## Bo de Debò
 **To:** info@bodedebo.com
-**Subject:** 20% de crecimiento anual — ¿las oficinas van al mismo ritmo?
+**Subject:** Bo de Debò — oficinas a la altura de vuestro crecimiento
 
 Hola,
 
@@ -272,7 +272,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ## B-Grup (Begudes del Vallès)
 **To:** info@bgrup.es
-**Subject:** San Miguel, Pepsi, Schweppes — y oficinas en Terrassa
+**Subject:** B-Grup — oficinas en Terrassa para la gestión
 
 Hola,
 

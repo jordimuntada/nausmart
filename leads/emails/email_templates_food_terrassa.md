@@ -12,7 +12,7 @@
 
 ### 1. Grupo Prodesco
 **Para:** info@prodesco.es
-**Asunto:** Nueva plataforma en Terrassa — ¿necesitáis oficinas al lado?
+**Asunto:** Grupo Prodesco — oficinas en Terrassa junto a vuestra nueva plataforma
 
 Hola,
 
@@ -34,7 +34,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ### 2. Pastisart
 **Para:** info@pastisart.com
-**Asunto:** €112M de facturación y fábrica en expansión — ¿y las oficinas?
+**Asunto:** Pastisart — oficinas en Terrassa para vuestra dirección y gestión
 
 Hola,
 
@@ -58,7 +58,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ### 3. Qida
 **Para:** empleo@qida.es
-**Asunto:** €37M y 300 personas de oficina — ¿caben todos en vuestra sede?
+**Asunto:** Qida — espacio para 300 personas en Terrassa
 
 Hola,
 
@@ -78,7 +78,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ### 4. Plusfresc
 **Para:** (LinkedIn: plusfresc)
-**Asunto:** Primera tienda en Terrassa — ¿y vuestro equipo de expansión?
+**Asunto:** Plusfresc — base de operaciones en Terrassa
 
 Hola,
 
@@ -98,7 +98,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ### 5. Landbot
 **Para:** press@landbot.io
-**Asunto:** Clientes como Allianz y Nestlé — ¿necesitáis espacio para crecer?
+**Asunto:** Landbot — espacio para el equipo en Terrassa
 
 Hola,
 
@@ -118,7 +118,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ### 6. Able Human Motion
 **Para:** hello@ablehumanmotion.com
-**Asunto:** 7 prototipos, 200 pacientes — ¿vuestro equipo tiene espacio para escalar?
+**Asunto:** Able Human Motion — espacio para escalar en Terrassa
 
 Hola,
 
@@ -142,7 +142,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ### 7. Delfos Energy
 **Para:** info@delfos.energy
-**Asunto:** 10.000 activos renovables monitorizados — ¿espacio para el equipo?
+**Asunto:** Delfos Energy — espacio en Terrassa para el equipo
 
 Hola,
 
@@ -162,7 +162,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ### 8. Neuroelectrics
 **Para:** info@neuroelectrics.com
-**Asunto:** 100 instituciones de investigación como clientes — ¿espacio para el siguiente paso?
+**Asunto:** Neuroelectrics — espacio para el siguiente paso en Terrassa
 
 Hola,
 
@@ -182,7 +182,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ### 9. IOMED
 **Para:** info@iomed.health
-**Asunto:** 50 hospitales, varias rondas — ¿el equipo tiene espacio para crecer?
+**Asunto:** IOMED — espacio para el equipo en Terrassa
 
 Hola,
 
@@ -202,7 +202,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ### 10. Bo de Debò
 **Para:** info@bodedebo.com
-**Asunto:** 20% de crecimiento anual — ¿las oficinas van al mismo ritmo?
+**Asunto:** Bo de Debò — oficinas a la altura de vuestro crecimiento
 
 Hola,
 
@@ -222,7 +222,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ### 11. B-Grup (Begudes del Vallès)
 **Para:** info@bgrup.es
-**Asunto:** San Miguel, Pepsi, Schweppes — y oficinas en Terrassa
+**Asunto:** B-Grup — oficinas en Terrassa para la gestión
 
 Hola,
 
@@ -246,7 +246,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ### 12. Theker
 **Para:** (LinkedIn: theker)
-**Asunto:** La mayor ronda seed de España — ¿dónde crece el equipo?
+**Asunto:** Theker — espacio para crecer en Terrassa
 
 Hola,
 
@@ -266,7 +266,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ### 13. Cooltra
 **Para:** (LinkedIn: cooltra)
-**Asunto:** €60M de facturación y líder europeo — ¿hub en el Vallès?
+**Asunto:** Cooltra — hub en el Vallès para Europa
 
 Hola,
 
@@ -286,7 +286,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ### 14. Ocean Ecostructures
 **Para:** (LinkedIn: ocean-ecostructures)
-**Asunto:** Top 12 Nasdaq Emerging Companies — ¿oficina para el equipo?
+**Asunto:** Ocean Ecostructures — oficina para el equipo en Terrassa
 
 Hola,
 

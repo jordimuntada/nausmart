@@ -387,7 +387,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ### 19. Grupo Prodesco
 **Para:** info@prodesco.es
-**Asunto:** Nueva plataforma en Terrassa — ¿necesitáis oficinas al lado?
+**Asunto:** Grupo Prodesco — oficinas en Terrassa junto a vuestra nueva plataforma
 
 Hola,
 
@@ -409,7 +409,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ### 20. Pastisart
 **Para:** info@pastisart.com
-**Asunto:** €112M de facturación y fábrica en expansión — ¿y las oficinas?
+**Asunto:** Pastisart — oficinas en Terrassa para vuestra dirección y gestión
 
 Hola,
 
@@ -915,7 +915,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ### 43. Qida
 **Para:** empleo@qida.es
-**Asunto:** €37M y 300 personas de oficina — ¿caben todos en vuestra sede?
+**Asunto:** Qida — espacio para 300 personas en Terrassa
 
 Hola,
 
@@ -1454,7 +1454,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ### 68. Ocean Ecostructures
 **Para:** info@oceanecostructures.com
-**Asunto:** De 4 a 20 personas — ¿dónde ubicáis al equipo?
+**Asunto:** Ocean Ecostructures — oficina para el equipo en Terrassa
 
 Hola,
 
@@ -1542,7 +1542,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ### 72. Bo de Debò
 **Para:** info@bodedebo.com
-**Asunto:** 20% de crecimiento anual — ¿las oficinas van al mismo ritmo?
+**Asunto:** Bo de Debò — oficinas a la altura de vuestro crecimiento
 
 Hola,
 
@@ -1562,7 +1562,7 @@ RealBrave - Can Mir Gestions | realbrave.eu
 
 ### 73. B-Grup (Begudes del Vallès)
 **Para:** info@bgrup.es
-**Asunto:** San Miguel, Pepsi, Schweppes — y oficinas en Terrassa
+**Asunto:** B-Grup — oficinas en Terrassa para la gestión
 
 Hola,
 

@@ -22,7 +22,10 @@
     "apify": {
       "type": "remote",
       "url": "https://mcp.apify.com",
-      "enabled": true
+      "enabled": true,
+      "headers": {
+        "Authorization": "Bearer ${APIFY_API_KEY}"
+      }
     },
     "brave": {
       "type": "local",
