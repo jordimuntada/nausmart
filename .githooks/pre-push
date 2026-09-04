@@ -1,0 +1,9 @@
+#!/bin/sh
+# Defense-in-depth: re-scans all tracked files before anything leaves the machine.
+# Catches a secret that slipped in via `git commit --no-verify`.
+# Installed via: git config core.hooksPath .githooks
+# Bypass (use sparingly, only for confirmed false positives): git push --no-verify
+
+hook_dir="$(cd "$(dirname "$0")" && pwd)"
+node "$hook_dir/scan-secrets.js" --all
+exit $?

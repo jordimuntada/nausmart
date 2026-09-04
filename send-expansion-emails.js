@@ -1,5 +1,9 @@
 const { Resend } = require('resend');
-const resend = new Resend('re_gCJNLExH_NYtaBxyA28Ug29L1m5hGJsQN');
+if (!process.env.RESEND_API_KEY) {
+  console.error('Missing RESEND_API_KEY in environment. Load .env before running this script.');
+  process.exit(1);
+}
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const FROM = 'Jordi de RealBrave <hello@realbrave.eu>';
 

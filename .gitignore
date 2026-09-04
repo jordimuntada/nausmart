@@ -12,13 +12,15 @@ send-test-emails.js
 check-domains.js
 send-pending-campaigns.js
 scripts/upsert-fitness-included.js
+send-fitness-included.js
+send-pending-food-leads.js
 
 # Temp files
 nul
 
-# Tool config (may contain hardcoded credentials)
+# Tool config (may contain hardcoded credentials) - keep shareable skills/agents tracked
 .opencode/
-.claude/
+.claude/settings.json
 .roo/
 .next/
 supabase/.temp/

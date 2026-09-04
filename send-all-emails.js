@@ -1,5 +1,9 @@
 const { Resend } = require('resend');
-const resend = new Resend('re_gCJNLExH_NYtaBxyA28Ug29L1m5hGJsQN');
+if (!process.env.RESEND_API_KEY) {
+  console.error('Missing RESEND_API_KEY in environment. Load .env before running this script.');
+  process.exit(1);
+}
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const emails = [
   { to: 'info@miteksystems.com', subject: 'Nuevo edificio de oficinas en Terrassa - ¿podría interesaros?', body: `<p>Hola,</p><p>Me llamo Jordi y trabajo en RealBrave, la nueva marca de oficinas de Can Mir Gestions.</p><p>Os escribo porque hemos visto que vuestro crecimiento en Sant Cugat es impresionante: de 40 a casi 200 empleados desde 2017. Quizás en algún momento necesitéis expandiros fuera de Sant Cugat.</p><p>Nosotros estamos desarrollando un nuevo edificio de oficinas en Terrassa, en el Vallès Occidental, y nos gustaría presentaros la opción cuando sea el momento adecuado para vosotros.</p><p>No queremos molestaros si no es el momento. Pero si algún día necesitáis espacio en la zona, estaremos encantados de enseñaros lo que tenemos.</p><p>Un saludo cordial,<br>Jordi<br>RealBrave - Can Mir Gestions | <a href="https://realbrave.eu">realbrave.eu</a></p>` },

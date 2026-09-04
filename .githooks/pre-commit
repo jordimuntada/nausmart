@@ -1,0 +1,8 @@
+#!/bin/sh
+# Blocks commits that stage secrets, credentials, or other confidential values.
+# Installed via: git config core.hooksPath .githooks
+# Bypass (use sparingly, only for confirmed false positives): git commit --no-verify
+
+hook_dir="$(cd "$(dirname "$0")" && pwd)"
+node "$hook_dir/scan-secrets.js"
+exit $?
